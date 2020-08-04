@@ -1,7 +1,7 @@
-import AufPluginField from "./components/fields/AufPluginField.vue";
+import BackgroundField from "./components/fields/BackgroundField.vue";
 
-panel.plugin('auf/plugin', {
+panel.plugin('auf/style', {
   fields: {
-    aufpluginfield: AufPluginField
+    auf_style_background: BackgroundField
   }
 });

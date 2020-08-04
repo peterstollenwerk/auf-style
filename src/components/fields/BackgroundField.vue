@@ -1,0 +1,60 @@
+<template>
+
+  <div>
+
+    <h1>AUF Background Field</h1>
+
+    <k-fieldset v-model="background" @input="input" :fields="{
+      
+      background_type: {
+        label: 'Background Type',
+        type: 'select',
+        width: '1/1',
+        options: [
+          {'text': 'Image', 'value': 'image'},
+          {'text': 'Gradient', 'value': 'gradient'},
+        ]
+      }
+
+
+    }" />
+
+  </div>
+
+</template>
+
+<script>
+export default {
+  props: {
+    help: String,
+    label: String,
+    after: String,
+    before: String,
+    disabled: Boolean,
+    required: Boolean,
+    value: String,
+  },
+  data() {
+    return {
+      background: {}
+    }
+  },
+  created() {
+    this.load();
+  },
+  methods: {
+    load() {},
+    input() {
+      this.$emit("input", JSON.stringify(this.background, function(key, value){
+        // only store actual values
+        if (value.length < 1) { return undefined; }
+        return value;
+      }));
+    },
+  }
+}
+</script>
+
+<style>
+  /* optional scoped styles for the component */
+</style>

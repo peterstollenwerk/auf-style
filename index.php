@@ -10,9 +10,9 @@ load([
   'auf\\plugin\\testclass' => 'lib/TestClass.php'
 ], __DIR__);
 
-Kirby::plugin('auf/plugin', [
+Kirby::plugin('auf/style', [
     'fields' => [
-        'aufpluginfield' => [
+        'auf_style_background' => [
           // here we could define the backend logic for our field if needed
         ]
     ]

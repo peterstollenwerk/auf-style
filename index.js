@@ -8884,7 +8884,7 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"components/fields/AufPluginField.vue":[function(require,module,exports) {
+},{}],"components/fields/BackgroundField.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8916,91 +8916,79 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   props: {
+    help: String,
+    label: String,
     after: String,
     before: String,
     disabled: Boolean,
-    help: String,
-    label: String,
     required: Boolean,
     value: String
   },
   data: function data() {
     return {
-      counter: 1
+      background: {}
     };
   },
-  computed: {
-    isCustom: function isCustom() {
-      this.counter += 1;
-      return this.value === 'custom';
-    }
+  created: function created() {
+    this.load();
   },
   methods: {
-    onChange: function onChange(value) {
-      this.$emit("input", value);
+    load: function load() {},
+    input: function input() {
+      this.$emit("input", JSON.stringify(this.background, function (key, value) {
+        // only store actual values
+        if (value.length < 1) {
+          return undefined;
+        }
+
+        return value;
+      }));
     }
   }
 };
 exports.default = _default;
-        var $b977c2 = exports.default || module.exports;
+        var $b94d40 = exports.default || module.exports;
       
-      if (typeof $b977c2 === 'function') {
-        $b977c2 = $b977c2.options;
+      if (typeof $b94d40 === 'function') {
+        $b94d40 = $b94d40.options;
       }
     
         /* template */
-        Object.assign($b977c2, (function () {
+        Object.assign($b94d40, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "k-field",
-    {
-      staticClass: "k-grid-field",
-      attrs: {
-        disabled: _vm.disabled,
-        help: _vm.help,
-        label: _vm.label,
-        required: _vm.required
-      }
-    },
+    "div",
     [
-      _c("k-input", {
+      _c("h1", [_vm._v("AUF Background Field")]),
+      _vm._v(" "),
+      _c("k-fieldset", {
         attrs: {
-          options: [
-            { value: "main", text: "Main" },
-            { value: "aside", text: "Aside" },
-            { value: "custom", text: "Custom..." }
-          ],
-          name: "grid__column__class",
-          type: "select",
-          theme: "field"
+          fields: {
+            background_type: {
+              label: "Background Type",
+              type: "select",
+              width: "1/1",
+              options: [
+                { text: "Image", value: "image" },
+                { text: "Gradient", value: "gradient" }
+              ]
+            }
+          }
         },
-        on: { input: _vm.onChange },
+        on: { input: _vm.input },
         model: {
-          value: _vm.value,
+          value: _vm.background,
           callback: function($$v) {
-            _vm.value = $$v
+            _vm.background = $$v
           },
-          expression: "value"
+          expression: "background"
         }
-      }),
-      _vm._v(" "),
-      _c("p", [_vm._v("OOpsi")]),
-      _vm._v(" "),
-      _vm.isCustom ? _c("div", [_vm._v("Custom Column! ; )")]) : _vm._e(),
-      _vm._v(" "),
-      _c("p", [_vm._v("Counter: " + _vm._s(_vm.counter))])
+      })
     ],
     1
   )
@@ -9025,9 +9013,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$b977c2', $b977c2);
+            api.createRecord('$b94d40', $b94d40);
           } else {
-            api.reload('$b977c2', $b977c2);
+            api.reload('$b94d40', $b94d40);
           }
         }
 
@@ -9041,16 +9029,16 @@ render._withStripped = true
 },{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _AufPluginField = _interopRequireDefault(require("./components/fields/AufPluginField.vue"));
+var _BackgroundField = _interopRequireDefault(require("./components/fields/BackgroundField.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-panel.plugin('auf/plugin', {
+panel.plugin('auf/style', {
   fields: {
-    aufpluginfield: _AufPluginField.default
+    auf_style_background: _BackgroundField.default
   }
 });
-},{"./components/fields/AufPluginField.vue":"components/fields/AufPluginField.vue"}],"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/fields/BackgroundField.vue":"components/fields/BackgroundField.vue"}],"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9078,7 +9066,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52478" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54172" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

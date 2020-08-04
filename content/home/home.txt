@@ -2,4 +2,8 @@ Title: AUF Style Plugin
 
 ----
 
+Auf-style-background: {}
+
+----
+
 Aufpluginfield: custom

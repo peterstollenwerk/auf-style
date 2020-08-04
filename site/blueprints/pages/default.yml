@@ -1,6 +1,6 @@
 title: Default Page
 preset: page
 fields:
-  aufpluginfield:
-    type: aufpluginfield
+  auf_style_background:
+    type: auf_style_background
 
