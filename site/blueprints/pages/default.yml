@@ -2,13 +2,18 @@ title: Default Page
 preset: page
 fields:
   backgrounds:
-    label: Backgrounds
+    label: Background Themes
     type: structure
+    columns:
+      uid:
+        before: "--bg-"
+      label:
+      background:
     fields:
       uid:
         label: UID (css variable)
         type: text
-        before: --
+        before: --bg-
         converter: slug
         help: never change this when already in use!
         width: 1/2
@@ -28,6 +33,41 @@ fields:
               image: Image
               gradient: Gradient
               custom: Custom...
+          # CUSTOM START
+          custom:
+            label: Custom
+            type: textarea
+            buttons: false
+            help: >
+              <p>
+              This will be generated:<br>
+              <code>--your-background-uid: <strong>XXXXX_YOUR_CUSTOM_CODE_XXXXX</strong> ;</code>
+              </p>
+              <p>Example:</p>
+              <code>
+                --your-background-uid: <strong>linear-gradient(red, blue),
+                    conic-gradient(red, orange, yellow, green, blue), ...</strong> ;
+                    <br>
+                    <br>
+              </code>
+              <p>Usage: </p>
+              <code>
+                .your-box {
+                  background: var(--your-background-uid);
+                }
+              </code>
+              <p></p>
+              <p>
+                Fields Below have no effect, but please scroll down and<br>
+                press ok-button to store the your custom background. ; )
+              </p>
+            when:
+              type: custom
+          custom_line:
+            type: line
+            when:
+              type: custom
+          # CUSTOM END
           # IMAGE
           image:
             label: Image
@@ -45,9 +85,9 @@ fields:
                 label: Gradient Type
                 type: select
                 options:
-                  linear-gradient: Linear Gradient
-                  repeating-linear-gradient: Repeating Linear Gradient
-              linear_gradient_color_stops:
+                  linear_gradient: Linear Gradient
+                  repeating_linear_gradient: Repeating Linear Gradient
+              gradient_color_stops:
                 type: structure
                 label: Gradient Color Stops
                 fields:
@@ -67,58 +107,78 @@ fields:
                 label: Linear Gradient Direction
                 type: select
                 options:
-                  from_to: from to
+                  to: to
                   deg: deg
                   turn: turn
-              linear_gradient_direction_from:
-                label: Linear Gradient Direction From
+              linear_gradient_direction_to_x:
+                label: Linear Gradient Direction X
                 type: select
                 width: 1/2
                 when:
-                  linear_gradient_direction: from_to
+                  linear_gradient_direction: to
                 options:
                   top
                   bottom
-                  left
-                  right
-                  center
-              linear_gradient_direction_to:
-                label: Linear Gradient Direction To
+              linear_gradient_direction_to_y:
+                label: Linear Gradient Direction Y
                 type: select
                 width: 1/2
                 when:
-                  linear_gradient_direction: from_to
+                  linear_gradient_direction: to
                 options:
-                  top
-                  bottom
                   left
                   right
-                  center
+              linear_gradient_direction_deg:
+                label: Linear Gradient Direction Degree
+                type: text
+                after: °
+                steps: 1
+                help: from -360° to 360° 
+                when:
+                  linear_gradient_direction: deg
+              linear_gradient_direction_turn:
+                label: Linear Gradient Direction Turn
+                type: text
+                after: turn
+                help: from -1.00 to 1.00
+                when:
+                  linear_gradient_direction: turn
+
+
+
           # GRADIENT END
           # SIZE START
+          size_headline:
+            type: headline
+            label: Size
+            number: false
           size:
             type: select
             label: Size
             options:
               contain
               cover
-              custom...
+              custom: custom...
           size_x:
             type: text
             label: Width
-            help: 50%, 100px, 3rem, 100vw
+            help: 50%, 100px, ...
             width: 1/2
             when:
-              size: custom...
+              size: custom
           size_y:
             type: text
             label: Height
-            help: 50%, 100px, 3rem, 100vw
+            help: 50%, 100px, ...
             width: 1/2
             when:
-              size: custom...
+              size: custom
           # SIZE END
           # POSITION START
+          position_headline:
+            type: headline
+            label: Position
+            number: false
           position_x:
             type: select
             label: Position X
@@ -127,7 +187,14 @@ fields:
               left
               center
               right
-              custom...
+              custom: custom...
+          position_x_custom:
+            type: text
+            label: Position X Custom
+            help: 20%, 15px, ...
+            width: 1/2
+            when:
+              position_x: custom
           position_y:
             type: select
             label: Position Y
@@ -136,9 +203,20 @@ fields:
               top
               center
               bottom
-              custom...
+              custom: custom...
+          position_y_custom:
+            type: text
+            label: Position Y Custom
+            help: 20%, 15px, ...
+            width: 1/2
+            when:
+              position_y: custom
           # POSITION END
           # REPEAT START
+          repeat_headline:
+            type: headline
+            label: Repeat
+            number: false
           repeat:
             type: select
             options:
@@ -147,10 +225,15 @@ fields:
               repeat-y
               no-repeat
           # REPEAT END
+          pro_settings_divider:
+            type: line
+          # ATTACHMENT START
+          attachment:
+            type: select
+            label: Attachment
+            options:
+              scroll: Scroll (initial)
+              fixed: Fixed
+              local: Local
+          # ATTACHMENT END
           
-
-
-
-
-
-                  

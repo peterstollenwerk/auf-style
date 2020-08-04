@@ -10,6 +10,7 @@ Backgrounds:
   background:
     - 
       type: image
+      custom: ""
       image:
         - 04ali-superjumbo.jpg
       gradient: [ ]
@@ -17,14 +18,177 @@ Backgrounds:
       size_x: ""
       size_y: ""
       position_x: center
+      position_x_custom: ""
       position_y: center
+      position_y_custom: ""
+      repeat: repeat
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: red
+              start: ""
+              end: ""
+            - 
+              color: blue
+              start: ""
+              end: ""
+          linear_gradient_direction: ""
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+          linear_gradient_direction_from: ""
+          linear_gradient_direction_to: ""
+          linear_gradient_color_stops: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
     - 
       type: image
+      custom: ""
       image:
         - np_heart_888700_000000.svg
       gradient: [ ]
       size: contain
       size_x: ""
       size_y: ""
-      position_x: center
+      position_x: ""
+      position_x_custom: ""
       position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops: [ ]
+          linear_gradient_direction: deg
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: "-360"
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: 300px
+      size_y: 300px
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: repeat
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
+- 
+  uid: my-super-background
+  label: Super Background
+  background:
+    - 
+      type: image
+      custom: ""
+      image:
+        - 04ali-superjumbo.jpg
+      gradient: [ ]
+      size: ""
+      size_x: 300px
+      size_y: ""
+      position_x: right
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: repeat
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
+- 
+  uid: custom
+  label: Custom
+  background:
+    - 
+      type: custom
+      custom: ""
+      image: [ ]
+      gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
+- 
+  uid: testing
+  label: Testing
+  background:
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: orange
+              start: ""
+              end: ""
+            - 
+              color: blue
+              start: ""
+              end: ""
+          linear_gradient_direction: deg
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: "222"
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: left
+      position_x_custom: ""
+      position_y: top
+      position_y_custom: ""
+      repeat: repeat-y
+      attachment: ""
+      custom_line: null
+      position_headline: null
+      pro_settings_divider: null
+      size_headline: null
