@@ -1,6 +1,156 @@
 title: Default Page
 preset: page
 fields:
-  auf_style_background:
-    type: auf_style_background
+  backgrounds:
+    label: Backgrounds
+    type: structure
+    fields:
+      uid:
+        label: UID (css variable)
+        type: text
+        before: --
+        converter: slug
+        help: never change this when already in use!
+        width: 1/2
+      label:
+        label: Label
+        type: text
+        width: 1/2
+      # BACKGROUND
+      background:
+        label: Background
+        type: structure
+        fields:
+          type:
+            label: Type
+            type: select
+            options:
+              image: Image
+              gradient: Gradient
+              custom: Custom...
+          # IMAGE
+          image:
+            label: Image
+            type: files
+            when:
+              type: image
+          # GRADIENT START
+          gradient:
+            label: Gradient
+            type: structure
+            when: 
+              type: gradient
+            fields:
+              gradient_type:
+                label: Gradient Type
+                type: select
+                options:
+                  linear-gradient: Linear Gradient
+                  repeating-linear-gradient: Repeating Linear Gradient
+              linear_gradient_color_stops:
+                type: structure
+                label: Gradient Color Stops
+                fields:
+                  color: 
+                    type: text
+                    label: Color
+                    width: 2/6
+                  start:
+                    type: text
+                    label: Start
+                    width: 2/6
+                  end:
+                    type: text
+                    label: End
+                    width: 2/6
+              linear_gradient_direction:
+                label: Linear Gradient Direction
+                type: select
+                options:
+                  from_to: from to
+                  deg: deg
+                  turn: turn
+              linear_gradient_direction_from:
+                label: Linear Gradient Direction From
+                type: select
+                width: 1/2
+                when:
+                  linear_gradient_direction: from_to
+                options:
+                  top
+                  bottom
+                  left
+                  right
+                  center
+              linear_gradient_direction_to:
+                label: Linear Gradient Direction To
+                type: select
+                width: 1/2
+                when:
+                  linear_gradient_direction: from_to
+                options:
+                  top
+                  bottom
+                  left
+                  right
+                  center
+          # GRADIENT END
+          # SIZE START
+          size:
+            type: select
+            label: Size
+            options:
+              contain
+              cover
+              custom...
+          size_x:
+            type: text
+            label: Width
+            help: 50%, 100px, 3rem, 100vw
+            width: 1/2
+            when:
+              size: custom...
+          size_y:
+            type: text
+            label: Height
+            help: 50%, 100px, 3rem, 100vw
+            width: 1/2
+            when:
+              size: custom...
+          # SIZE END
+          # POSITION START
+          position_x:
+            type: select
+            label: Position X
+            width: 1/2
+            options:
+              left
+              center
+              right
+              custom...
+          position_y:
+            type: select
+            label: Position Y
+            width: 1/2
+            options:
+              top
+              center
+              bottom
+              custom...
+          # POSITION END
+          # REPEAT START
+          repeat:
+            type: select
+            options:
+              repeat
+              repeat-x
+              repeat-y
+              no-repeat
+          # REPEAT END
+          
 
+
+
+
+
+                  

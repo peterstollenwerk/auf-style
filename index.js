@@ -8916,6 +8916,22 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
     help: String,
@@ -8964,19 +8980,35 @@ exports.default = _default;
   return _c(
     "div",
     [
-      _c("h1", [_vm._v("AUF Background Field")]),
-      _vm._v(" "),
       _c("k-fieldset", {
         attrs: {
           fields: {
+            background_uid: {
+              label: "Background UID",
+              type: "text",
+              width: "1/3"
+            },
+
+            background_label: {
+              label: "Background Label",
+              type: "text",
+              width: "1/3"
+            },
+
             background_type: {
               label: "Background Type",
               type: "select",
-              width: "1/1",
+              width: "1/3",
               options: [
                 { text: "Image", value: "image" },
-                { text: "Gradient", value: "gradient" }
+                { text: "Gradient", value: "gradient" },
+                { text: "Custom...", value: "custom" }
               ]
+            },
+
+            background_image: {
+              label: "Background Image",
+              type: "files"
             }
           }
         },

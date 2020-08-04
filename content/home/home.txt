@@ -2,8 +2,29 @@ Title: AUF Style Plugin
 
 ----
 
-Auf-style-background: {}
+Backgrounds:
 
-----
-
-Aufpluginfield: custom
+- 
+  uid: mohammad
+  label: Mohammad
+  background:
+    - 
+      type: image
+      image:
+        - 04ali-superjumbo.jpg
+      gradient: [ ]
+      size: contain
+      size_x: ""
+      size_y: ""
+      position_x: center
+      position_y: center
+    - 
+      type: image
+      image:
+        - np_heart_888700_000000.svg
+      gradient: [ ]
+      size: contain
+      size_x: ""
+      size_y: ""
+      position_x: center
+      position_y: ""

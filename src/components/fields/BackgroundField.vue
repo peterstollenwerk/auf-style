@@ -1,19 +1,35 @@
 <template>
 
   <div>
-
-    <h1>AUF Background Field</h1>
-
+    
     <k-fieldset v-model="background" @input="input" :fields="{
-      
+
+      background_uid: {
+        label: 'Background UID',
+        type: 'text',
+        width: '1/3'
+      },
+
+      background_label: {
+        label: 'Background Label',
+        type: 'text',
+        width: '1/3'
+      },
+
       background_type: {
         label: 'Background Type',
         type: 'select',
-        width: '1/1',
+        width: '1/3',
         options: [
           {'text': 'Image', 'value': 'image'},
           {'text': 'Gradient', 'value': 'gradient'},
+          {'text': 'Custom...', 'value': 'custom'},
         ]
+      },
+
+      background_image: {
+        label: 'Background Image',
+        type: 'files'
       }
 
 
