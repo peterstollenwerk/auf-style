@@ -19,8 +19,8 @@
     },
     "require": {
         "getkirby/composer-installer": "^1.1",
-        "hananils/kirby-colors": "^1.1",
-        "timoetting/kirby-color": "dev-master"
+        "timoetting/kirby-color": "dev-master",
+        "hananils/kirby-colors": "^1.1"
     },
     "repositories": [
         {
