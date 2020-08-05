@@ -1,1 +1,114 @@
 Title: Auf-Style-Plugin
+
+----
+
+Files:
+
+- np_heart_888700_000000.svg
+- 04ali-superjumbo.jpg
+
+----
+
+Background-themes:
+
+- 
+  uid: black-hearts-pattern-small
+  label: Black Hearts – Pattern (small)
+  background:
+    - 
+      type: image
+      custom: ""
+      image:
+        - np_heart_888700_000000.svg
+      gradient: [ ]
+      size: custom
+      size_x: 100px
+      size_y: ""
+      position_x: left
+      position_x_custom: ""
+      position_y: top
+      position_y_custom: ""
+      repeat: repeat-x
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: repeating_linear_gradient
+          gradient_color_stops:
+            - 
+              color: '#ccc'
+              start: "0"
+              end: 10px
+            - 
+              color: transparent
+              start: 10px
+              end: 20px
+            - 
+              color: ""
+              start: ""
+              end: ""
+          linear_gradient_direction: deg
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: "45"
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+  info: null
+- 
+  uid: muhammad-superjumbo-cover
+  label: Muhammad Superjumbo Cover
+  background:
+    - 
+      type: image
+      custom: ""
+      image:
+        - 04ali-superjumbo.jpg
+      gradient: [ ]
+      size: cover
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+  info: null
