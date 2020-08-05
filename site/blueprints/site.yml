@@ -1,283 +1,35 @@
 title: Site
 fields:
+  colors:
+    type: structure
+    label: Colors
+    fields:
+      variable:
+        label: Variable
+        type: select
+        options:
+          color: --color
+          background_color: --background-color
+      color:
+        label: Color
+        type: colors
+        alpha: true
+      background_color:
+        type: color
+        label: Background Color
   files:
     type: files
     label: Files
+  color_themes:
+    extends: auf_style/blueprints/fields/color_themes
   background_themes:
-    label: Background Themes
-    type: structure
-    columns:
-      uid:
-        before: "--bg-"
-      label:
-      background:
-    fields:
-      uid:
-        label: UID
-        type: text
-        before: --bg-
-        converter: slug
-        help: >
-          never change the UID when background is already in use!
-      label:
-        label: Label
-        type: text
-      # BACKGROUND
-      background:
-        label: Background
-        type: structure
-        columns:
-          type:
-          image:
-          gradient:
-          custom:
-          size:
-          size_x:
-          size_y:
-          position_x:
-          position_y:
-          repeat:
-          attachment:
-          origin:
-          clip:
-        fields:
-          type:
-            label: Type
-            type: select
-            options:
-              image: Image
-              gradient: Gradient
-              custom: Custom...
-          # CUSTOM START
-          custom:
-            label: Custom
-            type: textarea
-            buttons: false
-            help: >
-              <p>
-              This will be generated:<br>
-              <code>--your-background-uid: <strong>XXXXX_YOUR_CUSTOM_CODE_XXXXX</strong> ;</code>
-              </p>
-              <p>Example:</p>
-              <code>
-                --your-background-uid: <strong>linear-gradient(red, blue),
-                    conic-gradient(red, orange, yellow, green, blue), ...</strong> ;
-                    <br>
-                    <br>
-              </code>
-            when:
-              type: custom
-          custom_line:
-            type: line
-            when:
-              type: custom
-          # CUSTOM END
-          # IMAGE
-          image:
-            label: Image
-            type: files
-            when:
-              type: image
-          # GRADIENT START
-          gradient:
-            label: Gradient
-            type: structure
-            when: 
-              type: gradient
-            fields:
-              gradient_type:
-                label: Gradient Type
-                type: select
-                options:
-                  linear_gradient: Linear Gradient
-                  repeating_linear_gradient: Repeating Linear Gradient
-              gradient_color_stops:
-                type: structure
-                label: Gradient Color Stops
-                fields:
-                  color: 
-                    type: text
-                    label: Color
-                    width: 2/6
-                  start:
-                    type: text
-                    label: Start
-                    width: 2/6
-                  end:
-                    type: text
-                    label: End
-                    width: 2/6
-              linear_gradient_direction:
-                label: Linear Gradient Direction
-                type: select
-                options:
-                  to: to
-                  deg: deg
-                  turn: turn
-              linear_gradient_direction_to_x:
-                label: Linear Gradient Direction X
-                type: select
-                width: 1/2
-                when:
-                  linear_gradient_direction: to
-                options:
-                  top
-                  bottom
-              linear_gradient_direction_to_y:
-                label: Linear Gradient Direction Y
-                type: select
-                width: 1/2
-                when:
-                  linear_gradient_direction: to
-                options:
-                  left
-                  right
-              linear_gradient_direction_deg:
-                label: Linear Gradient Direction Degree
-                type: text
-                after: °
-                steps: 1
-                help: from -360° to 360° 
-                when:
-                  linear_gradient_direction: deg
-              linear_gradient_direction_turn:
-                label: Linear Gradient Direction Turn
-                type: text
-                after: turn
-                help: from -1.00 to 1.00
-                when:
-                  linear_gradient_direction: turn
+    extends: auf_style/blueprints/fields/background_themes
+  border_themes:
+    extends: auf_style/blueprints/fields/border_themes
+  box_shadow_themes:
+    extends: auf_style/blueprints/fields/box_shadow_themes
+  box_themes:
+    extends: auf_style/blueprints/fields/box_themes
 
-
-
-          # GRADIENT END
-          # SIZE START
-          size_headline:
-            type: headline
-            label: Size
-            number: false
-          size:
-            type: select
-            label: Size
-            options:
-              contain
-              cover
-              custom: custom...
-          size_x:
-            type: text
-            label: Width
-            help: 50%, 100px, ...
-            width: 1/2
-            when:
-              size: custom
-          size_y:
-            type: text
-            label: Height
-            help: 50%, 100px, ...
-            width: 1/2
-            when:
-              size: custom
-          # SIZE END
-          # POSITION START
-          position_headline:
-            type: headline
-            label: Position
-            number: false
-          position_x:
-            type: select
-            label: Position X
-            width: 1/2
-            options:
-              left
-              center
-              right
-              custom: custom...
-          position_x_custom:
-            type: text
-            label: Position X Custom
-            help: 20%, 15px, ...
-            width: 1/2
-            when:
-              position_x: custom
-          position_y:
-            type: select
-            label: Position Y
-            width: 1/2
-            options:
-              top
-              center
-              bottom
-              custom: custom...
-          position_y_custom:
-            type: text
-            label: Position Y Custom
-            help: 20%, 15px, ...
-            width: 1/2
-            when:
-              position_y: custom
-          # POSITION END
-          # REPEAT START
-          repeat_headline:
-            type: headline
-            label: Repeat
-            number: false
-          repeat:
-            type: select
-            options:
-              repeat
-              repeat-x
-              repeat-y
-              no-repeat
-          # REPEAT END
-          # ATTACHMENT START
-          attachment_headline:
-            type: headline
-            label: Attachment
-          attachment:
-            type: select
-            label: Attachment
-            options:
-              scroll: Scroll
-              fixed: Fixed
-              local: Local
-          # ATTACHMENT END
-          # ORIGIN START
-          origin_headline:
-            type: headline
-            label: Origin
-          origin:
-            type: select
-            label: Origin
-            options:
-              - border-box
-              - padding-box
-              - content-box
-          # ORIGIN END
-          # CLIP START
-          clip_headline:
-            type: headline
-            label: Clip
-          clip:
-            type: select
-            label: Clip
-            options:
-              - border-box
-              - padding-box
-              - content-box
-              - text
-          # CLIP END
-      # INFO START
-      info:
-        type: info
-        text: >
-          creates a css-variable and a css-class based on the uid:<br>
-          <code>
-          :root {
-            --background-uid: XXXXXXXXXXXX ;
-          }
-          <br>
-          .background-uid {
-            background: var(--background-uid);
-          }
-          </code>
-      # INFO END      
+  
+    

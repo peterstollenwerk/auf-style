@@ -2,6 +2,23 @@ Title: Auf-Style-Plugin
 
 ----
 
+Color: #FF0000
+
+----
+
+Colors:
+
+- 
+  variable: color
+  color: 'hsla(25, 100%, 50%)'
+  background_color: '#973F3F6E'
+- 
+  variable: background_color
+  color: 'hsla(0, 0%, 88%)'
+  background_color: '#8C2222'
+
+----
+
 Files:
 
 - np_heart_888700_000000.svg
@@ -9,10 +26,41 @@ Files:
 
 ----
 
+Color-themes:
+
+- 
+  uid: page-daymode
+  label: Page (Night-Mode)
+  color_theme:
+    - 
+      variable: color
+      color: white
+    - 
+      variable: background_color
+      color: black
+    - 
+      variable: border_color
+      color: white
+- 
+  uid: "1"
+  label: Orange-Text Pink-Background/Border
+  color_theme:
+    - 
+      variable: color
+      color: orange
+    - 
+      variable: background_color
+      color: pink
+    - 
+      variable: border_color
+      color: orange
+
+----
+
 Background-themes:
 
 - 
-  uid: black-hearts-pattern-small
+  uid: "1"
   label: Black Hearts – Pattern (small)
   background:
     - 
@@ -84,7 +132,7 @@ Background-themes:
       clip_headline: null
   info: null
 - 
-  uid: muhammad-superjumbo-cover
+  uid: "2"
   label: Muhammad Superjumbo Cover
   background:
     - 
@@ -112,3 +160,54 @@ Background-themes:
       origin_headline: null
       clip_headline: null
   info: null
+
+----
+
+Border-themes:
+
+- 
+  uid: "1"
+  label: 'Default (border: 2px solid; border-Radius: 5px)'
+  border_width: 2px
+  border_style: solid
+  border_radius: 5px
+  border_headline: null
+  border_image: null
+
+----
+
+Box-shadow-themes:
+
+- 
+  uid: "1"
+  label: Level 1
+  box_shadow: null
+- 
+  uid: "2"
+  label: Level 2
+  box_shadow: null
+- 
+  uid: "3"
+  label: Level 3
+  box_shadow: null
+- 
+  uid: "4"
+  label: Level 4
+  box_shadow: null
+- 
+  uid: "5"
+  label: Level 5
+  box_shadow: null
+
+----
+
+Box-themes:
+
+- 
+  uid: primary-button
+  label: Primary Button
+  color_theme: "1"
+  border_theme: "1"
+  background_theme: "1"
+  box_shadow_theme: "1"
+  theme_divider: null

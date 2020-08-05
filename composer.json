@@ -18,8 +18,16 @@
         "optimize-autoloader": true
     },
     "require": {
-        "getkirby/composer-installer": "^1.1"
+        "getkirby/composer-installer": "^1.1",
+        "hananils/kirby-colors": "^1.1",
+        "timoetting/kirby-color": "dev-master"
     },
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "git@github.com:sylvainjule/kirby-color.git"
+        }
+    ],
     "require-dev": {
         "getkirby/cms": "^3.3",
         "phpunit/phpunit": "^7.5",

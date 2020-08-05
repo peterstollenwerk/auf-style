@@ -4,16 +4,23 @@
 # set them in the composer json
 # to make the classes work with php unit!
 
-@include_once __DIR__.'/vendor/autoload.php'; # all classes set in composer.json > psr-4 are loaded here!
+@include_once __DIR__ . '/vendor/autoload.php'; # all classes set in composer.json > psr-4 are loaded here!
 
 load([
-  'auf\\plugin\\testclass' => 'lib/TestClass.php'
+    'auf\\plugin\\testclass' => 'lib/TestClass.php'
 ], __DIR__);
 
 Kirby::plugin('auf/style', [
     'fields' => [
         'auf_style_background' => [
-          // here we could define the backend logic for our field if needed
+            // here we could define the backend logic for our field if needed
         ]
-    ]
+    ],
+    'blueprints' => [
+        'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
+        'auf_style/blueprints/fields/background_themes' => __DIR__ . '/blueprints/fields/background_themes.yml',
+        'auf_style/blueprints/fields/border_themes' => __DIR__ . '/blueprints/fields/border_themes.yml',
+        'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
+        'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
+    ],
 ]);

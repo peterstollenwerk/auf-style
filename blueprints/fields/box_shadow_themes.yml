@@ -1,0 +1,23 @@
+label: Box-Shadow Themes
+type: structure
+columns:
+  uid:
+    before: "--box-shadow-theme-"
+  label:
+  box_shadows:
+fields:
+  uid:
+    label: UID
+    type: text
+    before: --box-shadow-theme-
+    converter: slug
+    help: >
+      never change the UID when background is already in use!
+  label:
+    label: Label
+    type: text
+  # BACKGROUND
+  box_shadow:
+    label: Box Shadow
+    type: info
+    text: customisation comming soon...

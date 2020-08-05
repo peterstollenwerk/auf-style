@@ -1,0 +1,60 @@
+type: structure
+label: Box Themes
+columns:
+  uid:
+    before: --box-theme-
+  label:
+  color_theme:
+  border_theme:
+  background_theme:
+  box_shadow_theme:
+fields:
+  uid:
+    type: text
+    label: UID
+    before: --box-
+    width: 1/2
+  label:
+    type: text
+    label: Label
+    width: 1/2
+  theme_divider:
+    type: headline
+    label: Themes
+  color_theme:
+    type: select
+    label: Color Theme
+    width: 1/2
+    options: query
+    query: 
+      fetch: site.color_themes.toStructure
+      text: "{{ structureItem.label }}"
+      value: "{{ structureItem.uid }}"
+  border_theme:
+    type: select
+    label: Border Theme
+    width: 1/2
+    options: query
+    query: 
+      fetch: site.border_themes.toStructure
+      text: "{{ structureItem.label }}"
+      value: "{{ structureItem.uid }}"
+  background_theme:
+    type: select
+    label: Background Theme
+    width: 1/2
+    options: query
+    query: 
+      fetch: site.background_themes.toStructure
+      text: "{{ structureItem.label }}"
+      value: "{{ structureItem.uid }}"
+  box_shadow_theme:
+    type: select
+    label: Box Shadow Theme
+    width: 1/2
+    options: query
+    query: 
+      fetch: site.box_shadow_themes.toStructure
+      text: "{{ structureItem.label }}"
+      value: "{{ structureItem.uid }}"
+

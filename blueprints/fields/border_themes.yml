@@ -1,0 +1,47 @@
+type: structure
+label: Border Themes
+columns:
+  uid:
+    before: --border-theme-
+  label:
+  border_theme:
+fields:
+  uid:
+    type: text
+    label: UID
+    before: --border-theme-
+    width: 1/2
+  label:
+    type: text
+    label: Label
+    width: 1/2
+  border_headline:
+    type: headline
+    label: Border
+  border_width:
+    label: Width
+    type: text
+    width: 1/4
+  border_style:
+    label: Style
+    type: select
+    width: 1/4
+    options:
+      solid
+      dotted
+      dashed
+      solid
+      double
+      groove
+      ridge
+      inset
+      outset
+  border_radius:
+    label: Radius
+    width: 1/4
+    type: text
+  border_image:
+    label: Image
+    width: 1/4
+    type: info
+    text: coming soon...
