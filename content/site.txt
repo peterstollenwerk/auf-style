@@ -2,23 +2,6 @@ Title: Auf-Style-Plugin
 
 ----
 
-Color: #FF0000
-
-----
-
-Colors:
-
-- 
-  variable: color
-  color: 'hsla(25, 100%, 50%)'
-  background_color: '#973F3F6E'
-- 
-  variable: background_color
-  color: 'hsla(0, 0%, 88%)'
-  background_color: '#8C2222'
-
-----
-
 Files:
 
 - np_heart_888700_000000.svg
@@ -29,31 +12,34 @@ Files:
 Color-themes:
 
 - 
-  uid: page-daymode
-  label: Page (Night-Mode)
-  color_theme:
-    - 
-      variable: color
-      color: white
-    - 
-      variable: background_color
-      color: black
-    - 
-      variable: border_color
-      color: white
+  uid: --page-day-mode
+  label: Page (Day Mode)
+  color: '#34B0D47A'
+  background: '#D8D8D8'
+  border: '#3E3E3E'
+  outline: '#3E3E3E'
+  text_shadow: '#3E3E3E'
+  box_shadow: '#3E3E3E'
+  text: '#3E3E3E'
 - 
-  uid: "1"
-  label: Orange-Text Pink-Background/Border
-  color_theme:
-    - 
-      variable: color
-      color: orange
-    - 
-      variable: background_color
-      color: pink
-    - 
-      variable: border_color
-      color: orange
+  uid: --page--night-mode
+  label: Page (Night Mode)
+  color: '#E0E0E0'
+  background: '#2B2B2B'
+  border: '#E0E0E0'
+  outline: '#E0E0E0'
+  text_shadow: '#1C1C1C'
+  box_shadow: '#2D2D2D'
+  text: '#E0E0E0'
+- 
+  uid: --color-theme-1
+  label: Theme-1
+  color: '#6FBCCA'
+  background: '#9D57FF'
+  border: '#677B4C'
+  outline: '#FF4747'
+  text_shadow: '#C96767'
+  box_shadow: '#FF9191'
 
 ----
 
@@ -206,8 +192,39 @@ Box-themes:
 - 
   uid: primary-button
   label: Primary Button
-  color_theme: "1"
+  is_custom: 'false'
+  custom: ""
+  color_theme: ""
   border_theme: "1"
   background_theme: "1"
   box_shadow_theme: "1"
   theme_divider: null
+- 
+  uid: super
+  label: Super Box
+  is_custom: 'false'
+  custom: ""
+  color_theme: --page-day-mode
+  border_theme: ""
+  background_theme: "1"
+  box_shadow_theme: ""
+  theme_divider: null
+
+----
+
+My-select-color: primary
+
+----
+
+Colors:
+
+- 
+  uid: primary
+  color: '#FF6800'
+- 
+  uid: secondary
+  color: '#4259AE'
+
+----
+
+Color: #FF0000

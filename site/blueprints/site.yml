@@ -1,25 +1,9 @@
 title: Site
 fields:
-  colors:
-    type: structure
-    label: Colors
-    fields:
-      variable:
-        label: Variable
-        type: select
-        options:
-          color: --color
-          background_color: --background-color
-      color:
-        label: Color
-        type: colors
-        alpha: true
-      background_color:
-        type: color
-        label: Background Color
   files:
     type: files
     label: Files
+
   color_themes:
     extends: auf_style/blueprints/fields/color_themes
   background_themes:

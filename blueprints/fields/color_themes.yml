@@ -1,35 +1,50 @@
-label: Color Themes
 type: structure
-columns:
-  uid:
-    before: "--color-theme-"
-  label:
-  color_theme:
+label: Color Themes
 fields:
   uid:
+    type: text
     label: UID
-    type: text
-    before: --color-theme-
-    converter: slug
-    help: >
-      never change the UID when background is already in use!
   label:
-    label: Label
     type: text
-  color_theme:
-    label: Color Theme
-    type: structure
-    fields:
-      variable:
-        type: select
-        label: Variable
-        options:
-          color: --color
-          background_color: --background-color
-          border_color: --border-color
-          outline_color: --outline-color
-          box_shadow_ambient_color: --box-shadow-ambient-color
-          box_shadow_direct_color: --box-shadow-direct-color
-      color:
-        type: text
-        label: Color
+    label: Label
+  color:
+    type: color
+    label: --color
+    default:
+    presets:
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+      - "#D434347A"
+    width: 1/6
+  background:
+    type: color
+    label: --background-color
+    default:
+    width: 1/6
+  border:
+    type: color
+    label: --border-color
+    default:
+    width: 1/6
+  outline:
+    type: color
+    label: --outline-color
+    default:
+    width: 1/6
+  text_shadow:
+    label: --text-shadow-color
+    type: color
+    default:
+    width: 1/6
+  box_shadow:
+    label: --box-shadow-color
+    type: color
+    default:
+    width: 1/6
