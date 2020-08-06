@@ -1,8 +1,8 @@
 type: structure
 label: Color Themes
 help: >
-  creates css-variables: <br>
-  <code>--colors-UID: { --color: red; --background-color: black; ... }</code>
+  creates css-classes: <br>
+  <code>.color-theme--UID: { --color: red; --background-color: black; ... }</code>
 columns:
   uid:
     width: 1/10

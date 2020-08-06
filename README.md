@@ -5,8 +5,6 @@
 Color Convert Methods:
 <https://github.com/hananils/kirby-colors>
 
-Blueprint Field:
-<https://github.com/TimOetting/kirby-color>
 
 ## TODO
 
