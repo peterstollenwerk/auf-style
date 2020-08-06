@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffa491f27ce1f3877a7075b68307c246",
+    "content-hash": "88b62c160171e8d4a03387f627eee3e3",
     "packages": [
         {
             "name": "getkirby/composer-installer",
@@ -79,48 +79,6 @@
             ],
             "description": "A color field for Kirby 3",
             "time": "2019-07-19T11:07:21+00:00"
-        },
-        {
-            "name": "timoetting/kirby-color",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sylvainjule/kirby-color.git",
-                "reference": "29abb0dff602253e2a093e468a6c7a27d3c46bef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-color/zipball/29abb0dff602253e2a093e468a6c7a27d3c46bef",
-                "reference": "29abb0dff602253e2a093e468a6c7a27d3c46bef",
-                "shasum": ""
-            },
-            "type": "plugin",
-            "autoload": {
-                "files": [
-                    "config.php"
-                ]
-            },
-            "scripts": {
-                "build": [
-                    "composer update --ignore-platform-reqs; composer dumpautoload -o;"
-                ],
-                "zip": [
-                    "rm kirby-color.zip; composer update --ignore-platform-reqs; composer dumpautoload -o; zip -r kirby-color.zip . -x *.git*; composer dumpautoload -o;"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Ötting",
-                    "email": "no@email.com"
-                }
-            ],
-            "support": {
-                "source": "https://github.com/sylvainjule/kirby-color/tree/master"
-            },
-            "time": "2019-01-13T18:55:23+00:00"
         }
     ],
     "packages-dev": [
@@ -3330,9 +3288,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "timoetting/kirby-color": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
