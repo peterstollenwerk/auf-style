@@ -1,16 +1,17 @@
 label: Background Themes
 type: structure
+help: >
+  creates css-variables: <br>
+  <code>--background-UID: { --background: linear-gradient(red, blue), ... }</code>
 columns:
   uid:
-    before: "--bg-theme-"
+    width: 1/10
   label:
   background:
 fields:
   uid:
     label: UID
     type: text
-    before: --bg-
-    converter: slug
     help: >
       never change the UID when background is already in use!
   label:

@@ -1,15 +1,19 @@
 type: structure
 label: Border Themes
+help: >
+  creates css-variables: <br>
+  <code>--border-UID: { --border-width: 2px; --border-style: solid; ... }</code>
 columns:
   uid:
-    before: --border-theme-
+    width: 1/10
   label:
-  border_theme:
+  border_width:
+  border_style:
+  border_radius:
 fields:
   uid:
     type: text
     label: UID
-    before: --border-theme-
     width: 1/2
   label:
     type: text

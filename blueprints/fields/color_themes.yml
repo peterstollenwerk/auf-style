@@ -1,15 +1,28 @@
 type: structure
 label: Color Themes
+help: >
+  creates css-variables: <br>
+  <code>--colors-UID: { --color: red; --background-color: black; ... }</code>
+columns:
+  uid:
+    width: 1/10
+  label:
+  color:
+  background:
+  border:
+  outline:
+  text_shadow:
+  box_shadow:
 fields:
   uid:
-    type: text
     label: UID
-  label:
     type: text
+  label:
     label: Label
+    type: text
   color:
+    label: Color
     type: color
-    label: --color
     default:
     presets:
       - "#D434347A"
@@ -24,27 +37,27 @@ fields:
       - "#D434347A"
     width: 1/6
   background:
+    label: Background
     type: color
-    label: --background-color
     default:
     width: 1/6
   border:
+    label: Border
     type: color
-    label: --border-color
     default:
     width: 1/6
   outline:
+    label: Outline
     type: color
-    label: --outline-color
     default:
     width: 1/6
   text_shadow:
-    label: --text-shadow-color
+    label: Text-Shadow
     type: color
     default:
     width: 1/6
   box_shadow:
-    label: --box-shadow-color
+    label: Box-Shadow
     type: color
     default:
     width: 1/6

@@ -1,15 +1,17 @@
 label: Box-Shadow Themes
 type: structure
+help: >
+  creates css-variables: <br>
+  <code>--box-shadow-UID: { ... }</code>
 columns:
   uid:
-    before: "--box-shadow-theme-"
+    width: 1/10
   label:
   box_shadows:
 fields:
   uid:
     label: UID
     type: text
-    before: --box-shadow-theme-
     converter: slug
     help: >
       never change the UID when background is already in use!

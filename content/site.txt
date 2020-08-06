@@ -12,9 +12,9 @@ Files:
 Color-themes:
 
 - 
-  uid: --page-day-mode
+  uid: day-mode
   label: Page (Day Mode)
-  color: '#34B0D47A'
+  color: '#3E3E3E'
   background: '#D8D8D8'
   border: '#3E3E3E'
   outline: '#3E3E3E'
@@ -22,7 +22,7 @@ Color-themes:
   box_shadow: '#3E3E3E'
   text: '#3E3E3E'
 - 
-  uid: --page--night-mode
+  uid: night-mode
   label: Page (Night Mode)
   color: '#E0E0E0'
   background: '#2B2B2B'
@@ -32,7 +32,7 @@ Color-themes:
   box_shadow: '#2D2D2D'
   text: '#E0E0E0'
 - 
-  uid: --color-theme-1
+  uid: "1"
   label: Theme-1
   color: '#6FBCCA'
   background: '#9D57FF'
@@ -194,7 +194,7 @@ Box-themes:
   label: Primary Button
   is_custom: 'false'
   custom: ""
-  color_theme: ""
+  color_theme: "1"
   border_theme: "1"
   background_theme: "1"
   box_shadow_theme: "1"
@@ -204,7 +204,7 @@ Box-themes:
   label: Super Box
   is_custom: 'false'
   custom: ""
-  color_theme: --page-day-mode
+  color_theme: ""
   border_theme: ""
   background_theme: "1"
   box_shadow_theme: ""

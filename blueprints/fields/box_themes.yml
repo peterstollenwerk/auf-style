@@ -1,38 +1,31 @@
 type: structure
 label: Box Themes
+help: >
+  creates css-variables: <br>
+  <code>--box-UID: { --color: var(--color-UID); --background: var(--background-UID); }</code>
 columns:
   uid:
-    before: --box-theme-
+    width: 1/10
   label:
   color_theme:
   border_theme:
   background_theme:
   box_shadow_theme:
+  custom_theme:
 fields:
   uid:
     type: text
     label: UID
-    before: --box-
-    width: 1/3
+    width: 1/2
   label:
     type: text
     label: Label
-    width: 1/3
-  is_custom:
-    type: toggle
-    label: Custom
-    width: 1/3
-
-  custom:
-    type: textarea
-    label: Custom
-    buttons: false
-    when:
-      is_custom: true
+    width: 1/2
 
   theme_divider:
     type: headline
     label: Themes
+
   color_theme:
     type: select
     label: Color Theme
@@ -70,3 +63,8 @@ fields:
       text: "{{ structureItem.label }}"
       value: "{{ structureItem.uid }}"
 
+  custom_theme:
+    type: textarea
+    label: Custom Theme
+    buttons: false
+  
