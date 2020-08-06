@@ -16,6 +16,9 @@ Kirby::plugin('auf/style', [
             // here we could define the backend logic for our field if needed
         ]
     ],
+    'snippets' => [
+        'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
+    ],
     'blueprints' => [
         'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
         'auf_style/blueprints/fields/background_themes' => __DIR__ . '/blueprints/fields/background_themes.yml',
