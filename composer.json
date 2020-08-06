@@ -19,7 +19,8 @@
     },
     "require": {
         "getkirby/composer-installer": "^1.1",
-        "hananils/kirby-colors": "^1.1"
+        "hananils/kirby-colors": "^1.1",
+        "sylvainjule/previews": "^1.0"
     },
     "require-dev": {
         "getkirby/cms": "^3.3",

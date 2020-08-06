@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88b62c160171e8d4a03387f627eee3e3",
+    "content-hash": "a64f3c301ad53c708bdfac814172f8a1",
     "packages": [
         {
             "name": "getkirby/composer-installer",
@@ -79,6 +79,40 @@
             ],
             "description": "A color field for Kirby 3",
             "time": "2019-07-19T11:07:21+00:00"
+        },
+        {
+            "name": "sylvainjule/previews",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sylvainjule/kirby-previews.git",
+                "reference": "47002a11f11f956bd1a0a1d4696262366f333284"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-previews/zipball/47002a11f11f956bd1a0a1d4696262366f333284",
+                "reference": "47002a11f11f956bd1a0a1d4696262366f333284",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "previews"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sylvain Julé",
+                    "email": "contact@sylvain-jule.fr"
+                }
+            ],
+            "description": "Add some missing structure previews",
+            "time": "2020-04-10T14:18:57+00:00"
         }
     ],
     "packages-dev": [

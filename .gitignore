@@ -22,6 +22,7 @@ Icon
 /node_modules
 /.cache
 /site/plugins/kirby-colors
+/site/plugins/previews
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
