@@ -10,6 +10,8 @@ fields:
     extends: auf_style/blueprints/fields/background_themes
   border_themes:
     extends: auf_style/blueprints/fields/border_themes
+  outline_themes:
+    extends: auf_style/blueprints/fields/outline_themes
   box_shadow_themes:
     extends: auf_style/blueprints/fields/box_shadow_themes
   

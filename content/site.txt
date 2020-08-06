@@ -14,32 +14,32 @@ Color-themes:
 - 
   uid: day-mode
   label: Page (Day Mode)
-  color: '#3E3E3E'
-  background: '#D8D8D8'
-  border: '#3E3E3E'
-  outline: '#3E3E3E'
-  text_shadow: '#3E3E3E'
-  box_shadow: '#3E3E3E'
+  color: 'hsla(25, 100%, 50%)'
+  background: 'hsla(225, 10%, 20%)'
+  border: 'hsla(225, 10%, 20%)'
+  outline: 'hsla(30, 5%, 15%)'
+  text_shadow: ""
+  box_shadow: ""
   text: '#3E3E3E'
 - 
   uid: night-mode
   label: Page (Night Mode)
-  color: '#E0E0E0'
+  color: '#E8E6E3'
   background: '#2B2B2B'
-  border: '#E0E0E0'
-  outline: '#E0E0E0'
-  text_shadow: '#1C1C1C'
-  box_shadow: '#2D2D2D'
+  border: '#E8E6E3'
+  outline: '#E8E6E3'
+  text_shadow: '#'
+  box_shadow: '#'
   text: '#E0E0E0'
 - 
   uid: "1"
   label: Theme-1
-  color: '#6FBCCA'
-  background: '#9D57FF'
-  border: '#677B4C'
-  outline: '#FF4747'
-  text_shadow: '#C96767'
-  box_shadow: '#FF9191'
+  color: '#FF6C00'
+  background: '#000000'
+  border: '#FF6C00'
+  outline: '#FF6C00'
+  text_shadow: ""
+  box_shadow: ""
 
 ----
 
@@ -162,6 +162,18 @@ Border-themes:
 
 ----
 
+Outline-themes:
+
+- 
+  uid: "1"
+  label: '2px solid; offset: 5px'
+  outline_width: 2px
+  outline_style: solid
+  outline_offset: 5px
+  outline_headline: null
+
+----
+
 Box-shadow-themes:
 
 - 
@@ -192,22 +204,24 @@ Box-themes:
 - 
   uid: primary-button
   label: Primary Button
-  is_custom: 'false'
-  custom: ""
   color_theme: "1"
   border_theme: "1"
   background_theme: "1"
   box_shadow_theme: "1"
+  custom_theme: ""
+  is_custom: 'false'
+  custom: ""
   theme_divider: null
 - 
   uid: super
   label: Super Box
-  is_custom: 'false'
-  custom: ""
   color_theme: ""
   border_theme: ""
   background_theme: "1"
   box_shadow_theme: ""
+  custom_theme: '--padding: calc(1rem -2px);'
+  is_custom: 'false'
+  custom: ""
   theme_divider: null
 
 ----

@@ -2,11 +2,31 @@
 
 <?php
 
-  $c1 = $site->colors()->toStructure()->first()->color()->toColor('hex');
-  $c2 = $site->colors()->toStructure()->first()->background_color()->toColor('hsl');
-
-  var_dump($c1);
-  var_dump($c2);
+  $colorThemes = $site->color_themes()->toStructure();
 
 ?>
 
+<?php foreach($colorThemes as $theme): ?>
+
+  <?php 
+      $uid = $theme->uid();
+      $css_class = '.color-theme--'. $uid;
+
+      $color = $theme->color();
+  ?>
+  
+  <pre>
+    <?= $css_class ?> {
+      
+    <?php if($color->isNotEmpty()): ?>
+    --color: <?= $color->toColor('hsl') ?>;
+    <?php endif?>
+
+    }
+  </pre>
+
+<?php endforeach?>
+
+
+377
+12:45

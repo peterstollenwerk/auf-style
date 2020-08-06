@@ -22,42 +22,31 @@ fields:
     type: text
   color:
     label: Color
-    type: color
-    default:
-    presets:
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-      - "#D434347A"
-    width: 1/6
+    type: colors
+    alpha: true
+    width: 1/2
   background:
     label: Background
-    type: color
-    default:
-    width: 1/6
+    type: colors
+    alpha: true
+    width: 1/2
   border:
     label: Border
-    type: color
-    default:
-    width: 1/6
+    type: colors
+    alpha: true
+    width: 1/2
   outline:
     label: Outline
-    type: color
-    default:
-    width: 1/6
+    type: colors
+    alpha: true
+    width: 1/2
   text_shadow:
     label: Text-Shadow
-    type: color
-    default:
-    width: 1/6
+    type: colors
+    alpha: true
+    width: 1/2
   box_shadow:
     label: Box-Shadow
-    type: color
-    default:
-    width: 1/6
+    type: colors
+    alpha: true
+    width: 1/2
