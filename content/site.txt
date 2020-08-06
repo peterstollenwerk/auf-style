@@ -17,10 +17,9 @@ Color-themes:
   color: 'hsla(25, 100%, 50%)'
   background: 'hsla(225, 10%, 20%)'
   border: 'hsla(225, 10%, 20%)'
-  outline: 'hsla(30, 5%, 15%)'
+  outline: 'hsla(25, 100%, 50%)'
   text_shadow: ""
   box_shadow: ""
-  text: '#3E3E3E'
 - 
   uid: night-mode
   label: Page (Night Mode)
@@ -28,9 +27,8 @@ Color-themes:
   background: '#2B2B2B'
   border: '#E8E6E3'
   outline: '#E8E6E3'
-  text_shadow: '#'
-  box_shadow: '#'
-  text: '#E0E0E0'
+  text_shadow: ""
+  box_shadow: ""
 - 
   uid: "1"
   label: Theme-1
@@ -40,6 +38,13 @@ Color-themes:
   outline: '#FF6C00'
   text_shadow: ""
   box_shadow: ""
+
+----
+
+Background-files:
+
+- 04ali-superjumbo.jpg
+- np_heart_888700_000000.svg
 
 ----
 
@@ -98,6 +103,30 @@ Background-themes:
           linear_gradient_direction_to_y: ""
           linear_gradient_direction_deg: "45"
           linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+    - 
+      type: image
+      custom: ""
+      image:
+        - 04ali-superjumbo.jpg
+      gradient: [ ]
       size: ""
       size_x: ""
       size_y: ""

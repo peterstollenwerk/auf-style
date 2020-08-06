@@ -4,6 +4,7 @@ fields:
     type: files
     label: Files
 
+
   color_themes:
     extends: auf_style/blueprints/fields/color_themes
   background_themes:
@@ -17,6 +18,3 @@ fields:
   
   box_themes:
     extends: auf_style/blueprints/fields/box_themes
-
-  
-    
