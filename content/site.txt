@@ -75,6 +75,30 @@ Background-themes:
       size: ""
       size_x: ""
       size_y: ""
+      position_x: custom
+      position_x_custom: 200px
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+    - 
+      type: image
+      custom: ""
+      image:
+        - 04ali-superjumbo.jpg
+      gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
       position_x: ""
       position_x_custom: ""
       position_y: ""
@@ -104,30 +128,6 @@ Background-themes:
       position_y: top
       position_y_custom: ""
       repeat: repeat-x
-      attachment: ""
-      origin: ""
-      clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-    - 
-      type: image
-      custom: ""
-      image:
-        - 04ali-superjumbo.jpg
-      gradient: [ ]
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
       attachment: ""
       origin: ""
       clip: ""
