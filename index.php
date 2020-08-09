@@ -18,6 +18,7 @@ Kirby::plugin('auf/style', [
     ],
     'snippets' => [
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
+        'auf-style/background-themes' => __DIR__ . '/snippets/background-themes.php',
     ],
     'blueprints' => [
         'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
