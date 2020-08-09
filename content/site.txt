@@ -171,7 +171,23 @@ Background-themes:
       type: gradient
       custom: ""
       image: [ ]
-      gradient: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: red
+              start: ""
+              end: ""
+            - 
+              color: blue
+              start: ""
+              end: ""
+          linear_gradient_direction: ""
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
       size: ""
       size_x: ""
       size_y: ""

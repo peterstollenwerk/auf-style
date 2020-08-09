@@ -41,24 +41,28 @@
           'clip'
         ];
 
-        $hasPosition = array_key_exists('position', $vars);
-        $hasSize = array_key_exists('size', $vars);
-        $showSlash = ($hasPosition && $hasSize) ? true : false;
 
-        $bgKey = '--background-' . $index;
-        $bgValue = [];
-        foreach($varOrder as $key) {
-          if(array_key_exists($key, $vars)) {
-            array_push($bgValue, $vars[$key]);
-            if($key == 'position' && $showSlash) {
-              array_push($bgValue, '/');
+        if(count($vars)) {
+          $hasPosition = array_key_exists('position', $vars);
+          $hasSize = array_key_exists('size', $vars);
+          $showSlash = ($hasPosition && $hasSize) ? true : false;
+
+          $bgKey = '--background-' . $index;
+          $bgValue = [];
+          foreach($varOrder as $key) {
+            if(array_key_exists($key, $vars)) {
+              array_push($bgValue, $vars[$key]);
+              if($key == 'position' && $showSlash) {
+                array_push($bgValue, '/');
+              }
             }
           }
-        }
-        
-        echo $bgKey . ': ' . implode(' ', $bgValue) . ';';
-        
-        array_push($backgrounds, $bgKey);
+          
+          echo $bgKey . ': ' . implode(' ', $bgValue) . ';';
+          
+          array_push($backgrounds, $bgKey);
+
+        };
 
         /*
         --background-1-image: url(https://www.dw.com/image/19306161_303.jpg);
@@ -84,7 +88,7 @@
      <?php endforeach?>
 
       <?php
-        $key = '--background';
+        
         $value = function() use ($backgrounds) {
           $vs = [];
           foreach($backgrounds as $background) {
@@ -93,8 +97,8 @@
           }
           return implode(', ' , $vs);
         };
-
-          echo $backgroundVariable = $key .': '. $value() . ';';
+        $key = '--background';
+        echo $backgroundVariable = $key .': '. $value() . ';';
         
     ?>
 
