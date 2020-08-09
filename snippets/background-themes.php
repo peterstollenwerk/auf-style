@@ -15,28 +15,50 @@
 
     <?php 
       $uid = $backgroundTheme->uid();
-      $css_theme_variable = '--background-theme--'. $uid;
+      $css_theme_variable = '.background-theme--'. $uid;
       $label = $backgroundTheme->label();
-
-      $backgrounds = $backgroundTheme->background()->toStructure()->flip();
-
-      
-      ?>
+      $backgrounds = [];
+    ?>
     
     <?php /* START CLASS --------------------- */ ?>
-    <?= $css_theme_variable ?> { 
-      
-      <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
 
-      <?php 
-        $backgroundImageVariables = [];
-      ?>
+    <?= $css_theme_variable ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
 
-      <?php foreach($backgrounds as $index => $background): ?>
+      <?php foreach($backgroundTheme->background()->toStructure() as $index => $background): ?>
         
       <?php 
+
+        include('css-background.php');
+        $vars = $getBackgroundVars();
+
+        $varOrder = [
+          'image',
+          'position',
+          'size',
+          'repeat',
+          'attachment',
+          'origin',
+          'clip'
+        ];
+
+        $hasPosition = array_key_exists('position', $vars);
+        $hasSize = array_key_exists('size', $vars);
+        $showSlash = ($hasPosition && $hasSize) ? true : false;
+
+        $bgKey = '--background-' . $index;
+        $bgValue = [];
+        foreach($varOrder as $key) {
+          if(array_key_exists($key, $vars)) {
+            array_push($bgValue, $vars[$key]);
+            if($key == 'position' && $showSlash) {
+              array_push($bgValue, '/');
+            }
+          }
+        }
         
-        $type = $background->type();
+        echo $bgKey . ': ' . implode(' ', $bgValue) . ';';
+        
+        array_push($backgrounds, $bgKey);
 
         /*
         --background-1-image: url(https://www.dw.com/image/19306161_303.jpg);
@@ -57,40 +79,31 @@
             var(--background-1-clip)
           ;
           */
-
-        
-        include('css-background.php');
-
         ?>
      
      <?php endforeach?>
 
-    <?php 
-        $backgroundImageVariables = array_reverse($backgroundImageVariables);
-        
-        foreach($backgroundImageVariables as $index => $variable) {
-          echo $index . ': ' . $variable . '; <br>';
-        }
-
-        $combine = function($backgroundImageVariables) {
-          $bg = [];
-          foreach($backgroundImageVariables as $index => $variable) {
-            array_push($bg, 'var('. $index . ')');
+      <?php
+        $key = '--background';
+        $value = function() use ($backgrounds) {
+          $vs = [];
+          foreach($backgrounds as $background) {
+            $v = 'var('. $background . ')';
+            array_push($vs, $v);
           }
-          return implode(', ', $bg);
+          return implode(', ' , $vs);
         };
 
-        echo '--background: ' . $combine($backgroundImageVariables) . ';';
+          echo $backgroundVariable = $key .': '. $value() . ';';
+        
+    ?>
 
-  ?>
-    
     }
 
-    <h1><?= $themeIndex ?></h1>
-    
   <?php endforeach?>
   <?php /* END CLASS --------------------- */ ?>
   
+
   <?php if($wrapTag): ?>
     </<?= $wrapTag ?>>
   <?php endif?>

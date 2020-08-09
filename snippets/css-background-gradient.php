@@ -1,6 +1,5 @@
 <?php 
-if($type == 'gradient') {
-  $key = '--background-gradient--'.$index.'';
+$getBackgroundGradientValue = function() use ($background) {
   $gradients = $background->gradient()->toStructure();
   $gradientCssTypeMap = [
     'linear_gradient' => 'linear-gradient',
@@ -9,55 +8,62 @@ if($type == 'gradient') {
   $gradientValues = [];
   
   // GRADIENT start
-  
   foreach($gradients as $gradient) {
-    $gradientValue = '';
     $gradientType = $gradientCssTypeMap[$gradient->gradient_type()->value()];
-    $gradientFunctionValues = [];
 
     // DIRECTION start
-    $directionType = $gradient->linear_gradient_direction();
-    $directionValue = false;
-    if($directionType == 'to') {
-      $x = $gradient->linear_gradient_direction_to_x();
-      $y = $gradient->linear_gradient_direction_to_y();
-      if($x->isNotEmpty() || $y->isNotEmpty()) {
-        $directionValue = implode(' ', [$directionType, $x, $y]);
+    $getDirectionValue = function () use ($gradient) {
+      $directionType = $gradient->linear_gradient_direction();
+      if($directionType == 'to') {
+        $x = $gradient->linear_gradient_direction_to_x();
+        $y = $gradient->linear_gradient_direction_to_y();
+        if($x->isNotEmpty() || $y->isNotEmpty()) {
+          return implode(' ', [$directionType, $x, $y]);
+        }
       }
-    }
-    if($directionType == 'deg'){
-      $degrees = $gradient->linear_gradient_direction_deg();
-      $directionValue = $degrees.$directionType;
-    }
-    if($directionType == 'turn'){
-      $turns = $gradient->linear_gradient_direction_turn();
-      $directionValue = $turns.$directionType;
-    }
-    if($directionValue) {
-      array_push($gradientFunctionValues, $directionValue);
-    }
+      if($directionType == 'deg'){
+        $degrees = $gradient->linear_gradient_direction_deg();
+        return $degrees.$directionType;
+      }
+      if($directionType == 'turn'){
+        $turns = $gradient->linear_gradient_direction_turn();
+        return $turns.$directionType;
+      }
+    };
     // DIRECTION end
+
     // COLOR STOPS start
-    $gradientColorStopValues = [];
-    foreach($gradient->gradient_color_stops()->toStructure() as $colorStop) {
-      $color = $colorStop->color()->value();
-      $start = $colorStop->start()->value();
-      $end = $colorStop->end()->value();
-      $value = array_filter([$color, $start, $end]);
-      if(count($value)) {
-        array_push($gradientColorStopValues, implode(' ', $value));
+    $getColorStops = function() use ($gradient) {
+      $gradientColorStopValues = [];
+      foreach($gradient->gradient_color_stops()->toStructure() as $colorStop) {
+        $color = $colorStop->color()->value();
+        $start = $colorStop->start()->value();
+        $end = $colorStop->end()->value();
+        $value = array_filter([$color, $start, $end]);
+        if(count($value)) {
+          array_push($gradientColorStopValues, implode(' ', $value));
+        }
       }
-    }
-    $gradientColorStops = implode(', ', $gradientColorStopValues);
-    array_push($gradientFunctionValues, $gradientColorStops);
+      return $gradientColorStops = implode(', ', $gradientColorStopValues);
+    };
     // COLOR STOPS end
+    $gradientFunctionValues = [];
 
+    if($colorStops = $getColorStops()) {
+      array_push($gradientFunctionValues, $colorStops);
+    }
+    if($value = $getDirectionValue()) {
+      array_push($gradientFunctionValues, $value);
+    }
 
-    $gradientValue = $gradientType . '('. implode(', ', $gradientFunctionValues) .')';
+    if(array_filter($gradientFunctionValues)) {
+      $gradientValue = $gradientType . '('. implode(', ', $gradientFunctionValues) .')';
+    }
+
     array_push($gradientValues, $gradientValue);
+  
   }
-  // GRADIENT end
-  $backgroundImageVariables[$key] = implode(', ', $gradientValues);
-}
-// GRADIENTS END
-/* BACKGROUND end */
+  return implode(' ', $gradientValues);
+};
+
+?>

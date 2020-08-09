@@ -77,7 +77,7 @@ Background-themes:
       size_y: ""
       position_x: custom
       position_x_custom: 200px
-      position_y: ""
+      position_y: bottom
       position_y_custom: ""
       repeat: ""
       attachment: ""
@@ -96,17 +96,17 @@ Background-themes:
       image:
         - 04ali-superjumbo.jpg
       gradient: [ ]
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
+      size: custom
+      size_x: 50ch
+      size_y: 333px
+      position_x: left
       position_x_custom: ""
-      position_y: ""
+      position_y: bottom
       position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
+      repeat: no-repeat
+      attachment: scroll
+      origin: border-box
+      clip: text
       custom_line: null
       size_headline: null
       position_headline: null
