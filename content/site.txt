@@ -44,82 +44,6 @@ Color-themes:
 Background-themes:
 
 - 
-  uid: direction-type-tests
-  label: Direction Type tests
-  background:
-    - 
-      type: gradient
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_color_stops:
-            - 
-              color: red
-              start: ""
-              end: ""
-            - 
-              color: blue
-              start: ""
-              end: ""
-          linear_gradient_direction: to
-          linear_gradient_direction_to_x: top
-          linear_gradient_direction_to_y: right
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-        - 
-          gradient_type: linear_gradient
-          gradient_color_stops:
-            - 
-              color: orange
-              start: ""
-              end: ""
-            - 
-              color: purple
-              start: ""
-              end: ""
-          linear_gradient_direction: deg
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: "345"
-          linear_gradient_direction_turn: ""
-        - 
-          gradient_type: repeating_linear_gradient
-          gradient_color_stops:
-            - 
-              color: green
-              start: ""
-              end: ""
-            - 
-              color: brown
-              start: ""
-              end: ""
-          linear_gradient_direction: turn
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: "0.5"
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-  info: null
-- 
   uid: "1"
   label: Black Hearts – Pattern (small)
   background:
@@ -248,6 +172,78 @@ Background-themes:
       custom: ""
       image: [ ]
       gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+  info: null
+- 
+  uid: direction-type-tests
+  label: Direction Type tests
+  background:
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: red
+              start: ""
+              end: ""
+            - 
+              color: blue
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: top
+          linear_gradient_direction_to_y: right
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: orange
+              start: ""
+              end: ""
+          linear_gradient_direction: deg
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: "345"
+          linear_gradient_direction_turn: ""
+        - 
+          gradient_type: repeating_linear_gradient
+          gradient_color_stops:
+            - 
+              color: green
+              start: ""
+              end: ""
+            - 
+              color: brown
+              start: ""
+              end: ""
+          linear_gradient_direction: turn
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: "0.5"
       size: ""
       size_x: ""
       size_y: ""

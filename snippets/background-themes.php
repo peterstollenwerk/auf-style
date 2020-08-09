@@ -11,38 +11,40 @@
 
   <h2>Background Themes</h2>
 
-  <?php foreach($backgroundThemes->toStructure() as $backgroundTheme): ?>
+  <?php foreach($backgroundThemes->toStructure() as $themeIndex => $backgroundTheme): ?>
 
-  <?php 
+    <?php 
       $uid = $backgroundTheme->uid();
-      $css_class = '--background-theme--'. $uid;
+      $css_theme_variable = '--background-theme--'. $uid;
       $label = $backgroundTheme->label();
       $backgrounds = $backgroundTheme->background()->toStructure()->flip();
       ?>
-<?php /* START CLASS --------------------- */ ?>
-    <?= $css_class ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
+    
+    <?php /* START CLASS --------------------- */ ?>
+    <?= $css_theme_variable ?> { 
+      
+      <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
 
       <?php 
-
-      
-
+        $backgroundImageVariables = [];
       ?>
 
       <?php foreach($backgrounds as $index => $background): ?>
-        <?php 
         
+        <?php 
           $type = $background->type();
-          $variables = [];
+
           // IMAGE START
           if($type == 'image') {
             $key = '--background-image--'.$index.'';
             $value = $background->image()->toFile()->url();
-            $variables[$key] = $value;
+            $backgroundImageVariables[$key] = $value;
           }
           // IMAGE END
+
           // GRADIENTS START
           if($type == 'gradient') {
-            $key = '--background-image--'.$index.'';
+            $key = '--background-gradient--'.$index.'';
             $gradients = $background->gradient()->toStructure();
             $gradientCssTypeMap = [
               'linear_gradient' => 'linear-gradient',
@@ -65,7 +67,14 @@
                   $directionValue = implode(' ', [$directionType, $x, $y]);
                 }
               }
-              // NEXT Direction Deg
+              if($directionType == 'deg'){
+                $degrees = $gradient->linear_gradient_direction_deg();
+                $directionValue = $degrees.$directionType;
+              }
+              if($directionType == 'turn'){
+                $turns = $gradient->linear_gradient_direction_turn();
+                $directionValue = $turns.$directionType;
+              }
               if($directionValue) {
                 array_push($gradientFunctionValues, $directionValue);
               }
@@ -90,26 +99,38 @@
               array_push($gradientValues, $gradientValue);
             }
             // GRADIENT end
-            $variables[$key] = implode(', ', $gradientValues);
+            $backgroundImageVariables[$key] = implode(', ', $gradientValues);
           }
           // GRADIENTS END
-          
-          // render variables;
-          foreach($variables as $index => $variable) {
+          /* BACKGROUND end */ 
+          ?>
+        <?php endforeach?>
+
+      <?php 
+          // -------------------- OUTPUT --------------------------------
+          $backgroundImageVariables = array_reverse($backgroundImageVariables);
+          foreach($backgroundImageVariables as $index => $variable) {
             echo $index . ': ' . $variable . ';';
+            echo '<br>';
           }
-          
-        ?>
+          $combine = function($backgroundImageVariables) {
+            $bg = [];
+            foreach($backgroundImageVariables as $index => $variable) {
+              array_push($bg, 'var('. $index . ')');
+            }
+            return implode(', ', $bg);
+          };
 
-      <?php endforeach?>
-
-      
-
+          echo '--background: ' . $combine($backgroundImageVariables) . ';';
+    
+    ?>
+    
     }
 
-    <?php /* END CLASS --------------------- */ ?>
-
+    <h1><?= $themeIndex ?></h1>
+    
   <?php endforeach?>
+  <?php /* END CLASS --------------------- */ ?>
   
   <?php if($wrapTag): ?>
     </<?= $wrapTag ?>>
