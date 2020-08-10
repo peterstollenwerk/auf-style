@@ -1,6 +1,4 @@
 :root {
-  --color: black;
-
   --padding: 1.62rem;
   --margin: 1.62rem;
 }
@@ -34,32 +32,47 @@ hr {
   --page-background: linear-gradient(hsl(225, 10%, 20%), hsl(225, 10%, 10%));
   --color: white;
   --background-color: black;
+  
 }
 .page {
   --color: var(--page-color);
+  --inverted-color: var(--background-color);
+  --inverted-background-color: var(--color);
   background: var(--page-background);
   background-color: var(--page-background-color);
 }
 
 /* BOX ---------------------------------- */
 
-
 .box,
 .boxes > * {
   list-style: none;
   padding: var(--padding);
-  border: 2px solid black;
   background: var(--background);
   background-color: var(--background-color);
 }
-.safe-text,
-.safe-texts > * {
-  /* TODO  IMPLEMENT BACKGROUND VARIABLE */
-  --background-color: hsl(25, 100%, 50%);
+.box--inverted {
+  --color: var(--inverted-color);
+  --background-color: var(--inverted-background-color);
+}
+
+.box--safe-text {
+  --text-shadow-color: var(--background-color);
+  text-shadow:
+    0px 1px 2px var(--text-shadow-color),
+    0 0   1rem var(--text-shadow-color),
+    0 0 0.2rem var(--text-shadow-color);
+}
+
+.box--extra-safe-text,
+.box--extra-safe-texts > * {
+  /* TODO  IMPLEMENT BACKGROUND VARIABLE  in --background-theme!!!!! */
   padding: var(--padding);
   background: initial;
   background-color: var(--background-color);
 }
+
+
 .safe-texts > .flex {
   padding: initial;
   --background-color: initial;

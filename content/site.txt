@@ -185,7 +185,7 @@ Background-themes:
       size_y: ""
       position_x: center
       position_x_custom: ""
-      position_y: center
+      position_y: top
       position_y_custom: ""
       repeat: ""
       attachment: ""
