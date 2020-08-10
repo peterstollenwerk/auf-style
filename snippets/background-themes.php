@@ -7,12 +7,7 @@
 
 <?php if($backgroundThemes->isNotEmpty()): ?>
 
-  <?php if($wrapTag): ?>
-    <<?= $wrapTag ?>>
-  <?php endif?>
-
   <?php foreach($backgroundThemes->toStructure() as $themeIndex => $backgroundTheme): ?>
-
 
     <?php 
       $uid = $backgroundTheme->uid();
@@ -20,15 +15,18 @@
       $label = $backgroundTheme->label();
       $backgrounds = [];
     ?>
-    
 
     <?php if($preview): ?>
       <h2>.<?= $css_theme_variable ?></h2>
-      <div class="box <?= $css_theme_variable ?>"></div>
+      <div class="box <?= $css_theme_variable ?>" style="height: 33vh"></div>
     <?php endif?>
 
     <?php /* START CLASS --------------------- */ ?>
 
+    <?php if($wrapTag): ?>
+      <<?= $wrapTag ?>>
+    <?php endif?>
+    
     .<?= $css_theme_variable ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
 
       <?php foreach($backgroundTheme->background()->toStructure() as $index => $background): ?>
@@ -111,12 +109,15 @@
 
     }
 
-  <?php endforeach?>
-  <?php /* END CLASS --------------------- */ ?>
-  
 
   <?php if($wrapTag): ?>
     </<?= $wrapTag ?>>
   <?php endif?>
+
+  <?php endforeach?>
+  <?php /* END CLASS --------------------- */ ?>
+  
+
+  
 
 <?php endif?>

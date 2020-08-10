@@ -12,32 +12,59 @@ Files:
 Color-themes:
 
 - 
-  uid: day-mode
+  uid: page-day
   label: Page (Day Mode)
-  color: 'hsla(25, 100%, 50%)'
-  background: 'hsla(225, 10%, 20%)'
-  border: 'hsla(225, 10%, 20%)'
-  outline: 'hsla(25, 100%, 50%)'
+  color: 'hsla(225, 10%, 15%)'
+  background: 'hsla(25, 10%, 95%)'
+  border: 'hsla(225, 10%, 15%)'
+  outline: 'hsla(25, 10%, 15%)'
   text_shadow: ""
   box_shadow: ""
 - 
-  uid: night-mode
+  uid: box-day-mode
+  label: Box (Day Mode)
+  color: '#000000'
+  background: '#ffffff'
+  border: '#000000'
+  outline: '#000000'
+  text_shadow: null
+  box_shadow: null
+- 
+  uid: page-night-mode
   label: Page (Night Mode)
-  color: '#E8E6E3'
-  background: '#2B2B2B'
-  border: '#E8E6E3'
-  outline: '#E8E6E3'
+  color: 'hsla(25, 10%, 95%)'
+  background: 'hsla(225, 10%, 15%)'
+  border: 'hsla(25, 10%, 95%)'
+  outline: 'hsla(25, 10%, 95%)'
   text_shadow: ""
   box_shadow: ""
+- 
+  uid: box-night-mode
+  label: Box (Night Mode)
+  color: '#ffffff'
+  background: '#000000'
+  border: '#000000'
+  outline: '#000000'
+  text_shadow: null
+  box_shadow: null
 - 
   uid: "1"
-  label: Theme-1
+  label: Orange on Black
   color: '#FF6C00'
   background: '#000000'
   border: '#FF6C00'
   outline: '#FF6C00'
   text_shadow: ""
   box_shadow: ""
+- 
+  uid: "2"
+  label: Black on Orange
+  color: 'hsla(0, 0%, 0%)'
+  background: 'hsla(25, 100%, 50%)'
+  border: null
+  outline: null
+  text_shadow: null
+  box_shadow: null
 
 ----
 
@@ -225,11 +252,6 @@ Background-themes:
   label: ""
   background: [ ]
   info: null
-- 
-  uid: image-empty test
-  label: ""
-  background: [ ]
-  info: null
 
 ----
 
@@ -297,9 +319,11 @@ Box-themes:
   custom: ""
   theme_divider: null
 - 
-  uid: super
-  label: Super Box
-  color_theme: ""
+  uid: "2"
+  label: >
+    Black on orange with Hearts-Pattern
+    small
+  color_theme: "2"
   border_theme: ""
   background_theme: "1"
   box_shadow_theme: ""
