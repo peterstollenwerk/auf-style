@@ -48,38 +48,19 @@ Background-themes:
   label: Black Hearts – Pattern (small)
   background:
     - 
-      type: gradient
+      type: image
       custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: repeating_linear_gradient
-          gradient_color_stops:
-            - 
-              color: '#ccc'
-              start: "0"
-              end: 10px
-            - 
-              color: transparent
-              start: 10px
-              end: 20px
-            - 
-              color: ""
-              start: ""
-              end: ""
-          linear_gradient_direction: to
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: "45"
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
+      image:
+        - np_heart_888700_000000.svg
+      gradient: [ ]
+      size: custom
+      size_x: 10px
       size_y: ""
-      position_x: custom
-      position_x_custom: 200px
-      position_y: bottom
+      position_x: center
+      position_x_custom: ""
+      position_y: center
       position_y_custom: ""
-      repeat: ""
+      repeat: repeat
       attachment: ""
       origin: ""
       clip: ""
@@ -91,43 +72,34 @@ Background-themes:
       origin_headline: null
       clip_headline: null
     - 
-      type: image
+      type: gradient
       custom: ""
-      image:
-        - 04ali-superjumbo.jpg
-      gradient: [ ]
-      size: custom
-      size_x: 50ch
-      size_y: 333px
-      position_x: left
-      position_x_custom: ""
-      position_y: bottom
-      position_y_custom: ""
-      repeat: no-repeat
-      attachment: scroll
-      origin: border-box
-      clip: text
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-    - 
-      type: image
-      custom: ""
-      image:
-        - np_heart_888700_000000.svg
-      gradient: [ ]
-      size: custom
-      size_x: 100px
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: red
+              start: ""
+              end: ""
+            - 
+              color: orange
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: top
+          linear_gradient_direction_to_y: right
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
       size_y: ""
-      position_x: left
+      position_x: ""
       position_x_custom: ""
-      position_y: top
+      position_y: ""
       position_y_custom: ""
-      repeat: repeat-x
+      repeat: ""
       attachment: ""
       origin: ""
       clip: ""
@@ -152,48 +124,9 @@ Background-themes:
       size: cover
       size_x: ""
       size_y: ""
-      position_x: ""
+      position_x: center
       position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-    - 
-      type: gradient
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_color_stops:
-            - 
-              color: red
-              start: ""
-              end: ""
-            - 
-              color: blue
-              start: ""
-              end: ""
-          linear_gradient_direction: ""
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
+      position_y: center
       position_y_custom: ""
       repeat: ""
       attachment: ""
@@ -217,16 +150,20 @@ Background-themes:
       image: [ ]
       gradient:
         - 
-          gradient_type: linear_gradient
+          gradient_type: repeating_linear_gradient
           gradient_color_stops:
             - 
               color: red
-              start: ""
-              end: ""
+              start: "0"
+              end: 10px
             - 
               color: blue
-              start: ""
-              end: ""
+              start: 10px
+              end: 12px
+            - 
+              color: transparent
+              start: 12px
+              end: 30px
           linear_gradient_direction: to
           linear_gradient_direction_to_x: top
           linear_gradient_direction_to_y: right
@@ -237,6 +174,10 @@ Background-themes:
           gradient_color_stops:
             - 
               color: orange
+              start: ""
+              end: ""
+            - 
+              color: yellow
               start: ""
               end: ""
           linear_gradient_direction: deg

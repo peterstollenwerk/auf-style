@@ -1,6 +1,8 @@
 <?php
-  $wrapTag = $wrapTag ? $wrapTag : false;
+  $wrapTag = isset($wrapTag) ? $wrapTag : false;
+  $preview = isset($preview) ? $preview : false;
   $backgroundThemes = $site->background_themes();
+
 ?>
 
 <?php if($backgroundThemes->isNotEmpty()): ?>
@@ -9,20 +11,25 @@
     <<?= $wrapTag ?>>
   <?php endif?>
 
-  <h2>Background Themes</h2>
-
   <?php foreach($backgroundThemes->toStructure() as $themeIndex => $backgroundTheme): ?>
+
 
     <?php 
       $uid = $backgroundTheme->uid();
-      $css_theme_variable = '.background-theme--'. $uid;
+      $css_theme_variable = 'background-theme--'. $uid;
       $label = $backgroundTheme->label();
       $backgrounds = [];
     ?>
     
+
+    <?php if($preview): ?>
+      <h2>.<?= $css_theme_variable ?></h2>
+      <div class="box <?= $css_theme_variable ?>"></div>
+    <?php endif?>
+
     <?php /* START CLASS --------------------- */ ?>
 
-    <?= $css_theme_variable ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
+    .<?= $css_theme_variable ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
 
       <?php foreach($backgroundTheme->background()->toStructure() as $index => $background): ?>
         

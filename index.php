@@ -4,11 +4,14 @@
 # set them in the composer json
 # to make the classes work with php unit!
 
+use Kirby\Cms\Page;
+
 @include_once __DIR__ . '/vendor/autoload.php'; # all classes set in composer.json > psr-4 are loaded here!
 
 load([
     'auf\\plugin\\testclass' => 'lib/TestClass.php'
 ], __DIR__);
+
 
 Kirby::plugin('auf/style', [
     'fields' => [
@@ -28,4 +31,22 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
     ],
+    'templates' => [
+        'style-tests' => __DIR__ . '/templates/style-tests.php',
+    ],
+    'routes' => [
+        [
+          'pattern' => 'style-tests',
+          'action'  => function () {
+                return Page::factory([
+                    'slug' => 'style-tests',
+                    'template' => 'style-tests',
+                    'model' => 'style-tests',
+                    'content' => [
+                        'title' => 'Style Tests',
+                    ]
+                ]);
+          }
+        ]
+    ]
 ]);

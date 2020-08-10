@@ -1,0 +1,14 @@
+:root {
+  --color: white;
+  --background-color: black;
+  --padding: 1rem;
+}
+
+.box {
+  height: 33vw;
+  color: var(--color);
+  background: var(--background);
+  padding: var(--padding);
+  border: var(--border);
+  background-color: var(--background-color);
+}

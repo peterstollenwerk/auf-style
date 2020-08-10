@@ -1,5 +1,5 @@
 <?php
-  $wrapTag = $wrapTag ? $wrapTag : false;
+  $wrapTag = isset($wrapTag) ? $wrapTag : false;
   $colorThemes = $site->color_themes();
 ?>
 

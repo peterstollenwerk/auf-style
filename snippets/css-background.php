@@ -50,7 +50,11 @@ $getBackgroundVars = function() use ($background, $index) {
   $positionValues = function() use ($positionXValue, $positionYValue) {
     $positions = [$positionXValue(), $positionYValue()];
     $positions = array_filter($positions);
-    return implode(' ', $positions);
+    if(count($positions)) {
+      return implode(' ', $positions);
+    } else {
+      return $defaultPosition = 'top left';
+    }
   };
 
   if($pos = $positionValues()) {

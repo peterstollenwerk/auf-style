@@ -49,13 +49,14 @@ $getBackgroundGradientValue = function() use ($background) {
     // --------------------------------------------------------
     $gradientFunctionValues = [];
 
-    if($colorStops = $getColorStops()) {
-      array_push($gradientFunctionValues, $colorStops);
-    }
+    // Direction first
     if($value = $getDirectionValue()) {
       array_push($gradientFunctionValues, $value);
     }
-
+    // Color Stops second
+    if($colorStops = $getColorStops()) {
+      array_push($gradientFunctionValues, $colorStops);
+    }
     if(array_filter($gradientFunctionValues)) {
       $gradientValue = $gradientType . '('. implode(', ', $gradientFunctionValues) .')';
     }
@@ -64,7 +65,7 @@ $getBackgroundGradientValue = function() use ($background) {
   
   }
 
-  return implode(' ', $gradientValues);
+  return implode(', ', $gradientValues);
 
 };
 
