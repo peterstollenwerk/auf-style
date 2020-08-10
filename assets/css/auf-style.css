@@ -1,23 +1,13 @@
 :root {
   --padding: 1.62rem;
   --margin: 1.62rem;
+  
 }
 * {
   color: var(--color);
+  
 }
-button {
-  --padding: 1rem;
-  --border: 1px solid var(--color);
-  --border-radius: 4px;
-  padding: var(--padding);
-  border: var(--border);
-  border-radius: var(--border-radius);
-  background-color: var(--background-color);
-}
-hr {
-  border: 0;
-  border-top: 1px solid var(--color);
-}
+
 /* PAGE THEMES ---------------------------------- */
 .page--day-theme {
   --page-color:  hsl(25, 10%, 10%);
@@ -25,6 +15,8 @@ hr {
   --page-background: linear-gradient(hsl(25, 10%, 90%), hsl(25, 10%, 80%));
   --color: black;
   --background-color: white;
+  --box-shadow-color: hsla(25, 10%, 10%, 0.5);
+  --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);
 }
 .page--night-theme {
   --page-color: hsl(225, 10%, 95%);
@@ -32,7 +24,8 @@ hr {
   --page-background: linear-gradient(hsl(225, 10%, 20%), hsl(225, 10%, 10%));
   --color: white;
   --background-color: black;
-  
+  --box-shadow-color: hsla(25, 10%, 0%, 0.5);
+  --box-shadow-ambient-color: hsla(25, 10%, 0%, 0.5);
 }
 .page {
   --color: var(--page-color);
@@ -56,7 +49,7 @@ hr {
   --background-color: var(--inverted-background-color);
 }
 
-.box--safe-text {
+.safe-text {
   --text-shadow-color: var(--background-color);
   text-shadow:
     0px 1px 2px var(--text-shadow-color),
@@ -64,8 +57,8 @@ hr {
     0 0 0.2rem var(--text-shadow-color);
 }
 
-.box--extra-safe-text,
-.box--extra-safe-texts > * {
+.extra-safe-text,
+.extra-safe-texts > * {
   /* TODO  IMPLEMENT BACKGROUND VARIABLE  in --background-theme!!!!! */
   padding: var(--padding);
   background: initial;
@@ -153,4 +146,115 @@ hr {
 }
 .align-items--stretch {
   align-items: stretch;
+}
+
+/* ========================================= */
+/* box-shadows  */
+
+.box-shadow {
+
+  /* 
+    
+  to create realsitic shadows, we need two shadows:
+
+  1. Cast by direct light -> neutral grey
+  2. Cast by ambient light -> box background color
+  
+  */
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  --box-shadow-offset-x: 0;
+  --box-shadow-offset-y: 1px;
+  --box-shadow-blur-radius: 3px;
+  --box-shadow-spread-radius: 0;
+
+  --box-shadow-ambient-offset-x: 0;
+  --box-shadow-ambient-offset-y: 1px;
+  --box-shadow-ambient-blur-radius: 3px;
+  --box-shadow-ambient-spread-radius: 0;
+
+  /* this is the background-color with new alpha value! */
+
+  box-shadow: 
+    /* direct-shadow */ var(--box-shadow-offset-x)
+      var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
+      var(--box-shadow-spread-radius) var(--box-shadow-color),
+
+    /* ambient shadow */ var(--box-shadow-ambient-offset-x)
+      var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
+      var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+}
+.box-shadow--inset {
+  box-shadow: 
+    /* direct-shadow */ inset var(--box-shadow-offset-x)
+      var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
+      var(--box-shadow-spread-radius) var(--box-shadow-color),
+
+    /* ambient shadow */ inset var(--box-shadow-ambient-offset-x)
+      var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
+      var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+}
+
+/* Direct Light Settings */
+
+.box-shadow--level-1 {
+  /* default */
+}
+.box-shadow--level-2 {
+  --box-shadow-offset-y: 4px;
+  --box-shadow-blur-radius: 11px;
+}
+.box-shadow--level-3 {
+  --box-shadow-offset-y: 7px;
+  --box-shadow-blur-radius: 19px;
+}
+.box-shadow--level-4 {
+  --box-shadow-offset-y: 11px;
+  --box-shadow-blur-radius: 27px;
+}
+.box-shadow--level-5 {
+  --box-shadow-offset-y: 15px;
+  --box-shadow-blur-radius: 35px;
+}
+
+/* Ambient Settings */
+
+.box-shadow--level-1 {
+  --box-shadow-ambient-offset-y: 1px;
+  --box-shadow-ambient-blur-radius: 2px;
+}
+.box-shadow--level-2 {
+  --box-shadow-ambient-offset-y: 2px;
+  --box-shadow-ambient-blur-radius: 4px;
+}
+.box-shadow--level-3 {
+  --box-shadow-ambient-offset-y: 3px;
+  --box-shadow-ambient-blur-radius: 7px;
+}
+.box-shadow--level-4 {
+  --box-shadow-ambient-offset-y: 4px;
+  --box-shadow-ambient-blur-radius: 9px;
+}
+.box-shadow--level-5 {
+  --box-shadow-ambient-offset-y: 4px;
+  --box-shadow-ambient-blur-radius: 11px;
+}
+
+
+
+
+
+/* =============================================== */
+/* DEFAULT STYLES */
+
+button {
+  --padding: 1rem;
+  padding: var(--padding);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--color);
 }

@@ -28,7 +28,11 @@
   
   <h1><?= $page->title() ?></h1>
   
-  <p><a href="<?= url('style-tests') ?>"><button class="box box--inverted">Go to Style Tests Page</button></a></p>
+  <p>
+    <a href="<?= url('style-tests') ?>">
+      <button class="box box--inverted box-shadow box-shadow--level-1">Go to Style Tests Page</button>
+    </a>
+  </p>
   
   <hr>
 
@@ -61,12 +65,12 @@
   
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sint quis eveniet quos! Voluptatibus natus accusamus iste, veniam aut similique. Hic natus explicabo dolorum. Molestiae numquam quo a sed?</p>
   
-  <section id="test" class="box background-theme--1 flex align-items--center">
+  <section id="test" class="box safe-text color-theme--2 background-theme--1 flex align-items--center">
     <h2 class="safe-text">Some Bullets</h2>
     <figure>
       <img src="" alt="image in a box">
     </figure>
-    <ul class="flex flex-direction--row boxes box--extra-safe-texts">
+    <ul class="flex flex-direction--row extra-safe-text">
       <li>1. Dolor molestias, adipisci repudiandae unde asperiores facilis est assumenda nesciunt culpa iste sit quis, cumque vel ipsum labore voluptates consectetur ducimus id?</li>
       <li>2. Fuga nulla vero fugit. Molestias, autem. Provident praesentium dignissimos eaque, neque soluta accusamus beatae animi deleniti doloremque officiis vel iusto ad dicta.</li>
       <li>3. Ipsam nobis reprehenderit esse sit earum voluptates ratione sint vero enim eligendi ipsum, pariatur vel quas, magnam error molestias reiciendis asperiores repellendus.</li>
@@ -75,6 +79,8 @@
     </ul>
     <button class="safe-text">Click Me Twice!</button>
   </section>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magni omnis velit atque, quaerat odio explicabo veniam! Quisquam placeat, dolores sunt cumque provident, aliquid, deserunt laborum dolorum eum voluptate sit.</p>
 
 </body>
 </html>
