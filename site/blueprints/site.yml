@@ -1,20 +1,40 @@
 title: Site
-fields:
+tabs:
+  #CONTENT-TAB
+  content:
+    sections:
+      published:
+        headline: Published
+        type: pages
+        status: listed
+      unlisted:
+        headline: Unlisted
+        type: pages
+        status: unlisted
+      drafts:
+        headline: Drafts
+        type: pages
+        status: draft  
+  #STYLES-TAB
+  styles:
+    fields:
+      color_themes:
+        extends: auf_style/blueprints/fields/color_themes
+      background_themes:
+        extends: auf_style/blueprints/fields/background_themes
+      border_themes:
+        extends: auf_style/blueprints/fields/border_themes
+      outline_themes:
+        extends: auf_style/blueprints/fields/outline_themes
+      box_shadow_themes:
+        extends: auf_style/blueprints/fields/box_shadow_themes
+      
+      box_themes:
+        extends: auf_style/blueprints/fields/box_themes
+
+  #FILES-TAB
   files:
-    type: files
-    label: Files
-
-
-  color_themes:
-    extends: auf_style/blueprints/fields/color_themes
-  background_themes:
-    extends: auf_style/blueprints/fields/background_themes
-  border_themes:
-    extends: auf_style/blueprints/fields/border_themes
-  outline_themes:
-    extends: auf_style/blueprints/fields/outline_themes
-  box_shadow_themes:
-    extends: auf_style/blueprints/fields/box_shadow_themes
-  
-  box_themes:
-    extends: auf_style/blueprints/fields/box_themes
+    fields:
+      files:
+        type: files
+        label: Files

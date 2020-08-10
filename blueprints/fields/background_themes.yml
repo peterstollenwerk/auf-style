@@ -91,7 +91,8 @@ fields:
             label: Gradient Color Stops
             fields:
               color: 
-                type: text
+                type: colors
+                alpha: true
                 label: Color
                 width: 2/6
               start:

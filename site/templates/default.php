@@ -10,12 +10,14 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
     }
     * + * {
-      margin-top: 1rem;
+      margin-top: var(--margin);
     }
     body > * {
-      max-width: 1200px;
+      max-width: 80ch;
       margin-left: auto;
       margin-right: auto;
     }
@@ -24,10 +26,13 @@
 <body class="page page--day-theme">
   
   <h1><?= $page->title() ?></h1>
+  
   <p><a href="<?= url('style-tests') ?>"><button>Go to Style Tests Page</button></a></p>
+  
   <hr>
   
   <div>
+
     <article>
       <h2>Page</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae voluptatem facere libero iusto esse sint tenetur cumque dolorem nemo! Officiis, ex soluta amet itaque possimus eos. Veritatis quia adipisci officia.</p>
@@ -47,19 +52,22 @@
 
     </section>
 
-    <section class="box background-theme--1 flex--start safe-text">
-      <h2>Some Bullets</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quasi? Aspernatur eaque dolorem ut consequuntur. Laudantium similique voluptatibus illum velit totam libero, fuga quam minima ut fugiat dolores, error nam.</p>
+    <p class="box background-theme--2 color-theme--page-night-mode">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, quidem. Optio itaque sit ab debitis repellat quaerat, temporibus facilis nemo ad perferendis fuga molestias, vero necessitatibus aliquam voluptate perspiciatis earum?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sint quis eveniet quos! Voluptatibus natus accusamus iste, veniam aut similique. Hic natus explicabo dolorum. Molestiae numquam quo a sed?</p>
+    <section id="test" class="box background-theme--1 flex align-items--center">
+      <h2 class="safe-text">Some Bullets</h2>
       <figure>
         <img src="" alt="image in a box">
       </figure>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+      <ul class="flex flex-direction--row boxes safe-texts">
+        <li>1. Dolor molestias, adipisci repudiandae unde asperiores facilis est assumenda nesciunt culpa iste sit quis, cumque vel ipsum labore voluptates consectetur ducimus id?</li>
+        <li>2. Fuga nulla vero fugit. Molestias, autem. Provident praesentium dignissimos eaque, neque soluta accusamus beatae animi deleniti doloremque officiis vel iusto ad dicta.</li>
+        <li>3. Ipsam nobis reprehenderit esse sit earum voluptates ratione sint vero enim eligendi ipsum, pariatur vel quas, magnam error molestias reiciendis asperiores repellendus.</li>
+        <!-- <li>4. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam nobis reprehenderit esse sit earum voluptates ratione sint vero enim eligendi ipsum, pariatur vel quas, magnam error molestias reiciendis asperiores repellendus.</li>
+        <li>5. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam nobis reprehenderit esse sit earum voluptates ratione sint vero enim eligendi ipsum, pariatur vel quas, magnam error molestias reiciendis asperiores repellendus.</li> -->
       </ul>
-      <button>Click Me Twice!</button>
+      <button class="safe-text">Click Me Twice!</button>
     </section>
 
   </div>

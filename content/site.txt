@@ -2,13 +2,6 @@ Title: Auf-Style-Plugin
 
 ----
 
-Files:
-
-- np_heart_888700_000000.svg
-- 04ali-superjumbo.jpg
-
-----
-
 Color-themes:
 
 - 
@@ -61,8 +54,8 @@ Color-themes:
   label: Black on Orange
   color: 'hsla(0, 0%, 0%)'
   background: 'hsla(25, 100%, 50%)'
-  border: null
-  outline: null
+  border: '#000000'
+  outline: '#000000'
   text_shadow: null
   box_shadow: null
 
@@ -74,6 +67,45 @@ Background-themes:
   uid: "1"
   label: Black Hearts – Pattern (small)
   background:
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: 'hsla(0, 100%, 50%, 0.75)'
+              start: ""
+              end: ""
+            - 
+              color: 'hsla(32, 100%, 50%, 0.75)'
+              start: ""
+              end: ""
+          linear_gradient_direction: ""
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
     - 
       type: image
       custom: ""
@@ -247,11 +279,6 @@ Background-themes:
       origin_headline: null
       clip_headline: null
   info: null
-- 
-  uid: empty-test
-  label: ""
-  background: [ ]
-  info: null
 
 ----
 
@@ -308,8 +335,8 @@ Box-shadow-themes:
 Box-themes:
 
 - 
-  uid: primary-button
-  label: Primary Button
+  uid: button-primary
+  label: Button (Primary)
   color_theme: "1"
   border_theme: "1"
   background_theme: "1"
@@ -331,6 +358,13 @@ Box-themes:
   is_custom: 'false'
   custom: ""
   theme_divider: null
+
+----
+
+Files:
+
+- np_heart_888700_000000.svg
+- 04ali-superjumbo.jpg
 
 ----
 
