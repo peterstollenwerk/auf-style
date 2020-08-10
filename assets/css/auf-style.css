@@ -1,6 +1,5 @@
 :root {
   --color: black;
-  --background-color: white;
 
   --padding: 1.62rem;
   --margin: 1.62rem;
@@ -26,41 +25,36 @@ hr {
   --page-color:  hsl(25, 10%, 10%);
   --page-background-color: hsl(25, 10%, 90%);
   --page-background: linear-gradient(hsl(25, 10%, 90%), hsl(25, 10%, 80%));
-  --box-color: black;
-  --box-background-color: white;
+  --color: black;
+  --background-color: white;
 }
 .page--night-theme {
   --page-color: hsl(225, 10%, 95%);
   --page-background-color:hsl(225, 10%, 10%);
   --page-background: linear-gradient(hsl(225, 10%, 20%), hsl(225, 10%, 10%));
-  --box-color: white;
-  --box-background-color: black;
+  --color: white;
+  --background-color: black;
 }
 .page {
   --color: var(--page-color);
   background: var(--page-background);
   background-color: var(--page-background-color);
 }
-.page .box {
-  --color: var(--box-color);
-  --background-color: var(--box-background-color);  
-}
-.page .box--inverted {
-  --color: var(--box-background-color);
-  --background-color: var(--box-color);  
-}
+
 /* BOX ---------------------------------- */
+
 
 .box,
 .boxes > * {
   list-style: none;
-  color: var(--color);
+  padding: var(--padding);
+  border: 2px solid black;
   background: var(--background);
   background-color: var(--background-color);
-  padding: var(--padding);
 }
 .safe-text,
 .safe-texts > * {
+  /* TODO  IMPLEMENT BACKGROUND VARIABLE */
   --background-color: hsl(25, 100%, 50%);
   padding: var(--padding);
   background: initial;

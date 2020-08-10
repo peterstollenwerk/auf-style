@@ -23,7 +23,8 @@
     }
   </style>
 </head>
-<body class="page page--day-theme">
+
+<body class="page page--night-theme">
   
   <h1><?= $page->title() ?></h1>
   
@@ -53,8 +54,11 @@
     </section>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quasi? Aspernatur eaque dolorem ut consequuntur. Laudantium similique voluptatibus illum velit totam libero, fuga quam minima ut fugiat dolores, error nam.</p>
-    <p class="box background-theme--2 color-theme--page-night-mode">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, quidem. Optio itaque sit ab debitis repellat quaerat, temporibus facilis nemo ad perferendis fuga molestias, vero necessitatibus aliquam voluptate perspiciatis earum?</p>
+    
+    <p class="box background-theme--2 color-theme--1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, quidem. Optio itaque sit ab debitis repellat quaerat, temporibus facilis nemo ad perferendis fuga molestias, vero necessitatibus aliquam voluptate perspiciatis earum?</p>
+    
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sint quis eveniet quos! Voluptatibus natus accusamus iste, veniam aut similique. Hic natus explicabo dolorum. Molestiae numquam quo a sed?</p>
+    
     <section id="test" class="box background-theme--1 flex align-items--center">
       <h2 class="safe-text">Some Bullets</h2>
       <figure>
