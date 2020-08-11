@@ -3,14 +3,14 @@
   --color: black;
   
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
-  --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);  
   
   --border-width: 2px;
   --border-style: solid;
   --border-color: black;
 
-  --outline-color:grey;
   --outline-width: 0.25rem;
+  --outline-style: dashed;
+  --outline-color:grey;
   --outline-offset: 0.25rem;
 
   --padding: 1.62rem;
@@ -147,6 +147,7 @@
   --box-shadow-ambient-offset-y: 1px;
   --box-shadow-ambient-blur-radius: 3px;
   --box-shadow-ambient-spread-radius: 0;
+  --box-shadow-ambient-color: var(--background-color);
 
   /* this is the background-color with new alpha value! */
 
