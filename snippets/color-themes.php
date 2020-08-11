@@ -49,8 +49,12 @@
   .<?= $css_class ?> {
     
     <?php if($color->isNotEmpty()): ?>--color: <?= $color ?>;<?php endif?>
-
+    
+    <?php if($backgroundColor->isNotEmpty()): ?>--inverted-color: <?= $backgroundColor ?>;<?php endif?>
+        
     <?php if($backgroundColor->isNotEmpty()): ?>--background-color: <?= $backgroundColor ?>;<?php endif?>
+    
+    <?php if($color->isNotEmpty()): ?>--inverted-background-color: <?= $color ?>;<?php endif?>
       
     <?php if($borderColor->isNotEmpty()): ?>--border-color: <?= $borderColor ?>;<?php endif?>
     

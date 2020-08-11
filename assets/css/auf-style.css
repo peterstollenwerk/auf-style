@@ -1,7 +1,6 @@
 /* ROOT/FALLBACK VARIABLES ---------------------------------- */
 :root {
   --color: black;
-  
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
   
   --border-width: 2px;
@@ -32,7 +31,7 @@
   --border-color: var(--color);
   --background-color: white;
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
-  --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);
+  --box-shadow-ambient-color: hsla(25, 10%, 90%, 0.5);
 }
 .page-theme--dark {
   --page-color: hsl(225, 10%, 95%);
@@ -43,7 +42,7 @@
   --border-color: var(--color);
   --background-color: black;
   --box-shadow-color: hsla(25, 10%, 0%, 0.5);
-  --box-shadow-ambient-color: hsla(25, 10%, 0%, 0.5);
+  --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);
 }
 .page {
   --color: var(--page-color);
@@ -295,6 +294,8 @@
 /* =============================================== */
 /* DEFAULT STYLES */
 
+/* headlines ---------------------------------- */
+
 h1 {
   font-size: 2.62rem;
 }
@@ -308,18 +309,40 @@ h4 {
   font-size: 1.14rem;
 }
 
+/* buttons ---------------------------------- */
+
 button {
   --padding: 1rem;
-  border: 0;
-  border-width: var(--border-width);
-  border-style: var(--border-style);
-  border-color: var(--background-color);
+  --color: var(--inverted-color);
+  --background-color: var(--inverted-background-color);
+  --border-color: var(--inverted-background-color);
+
+  cursor: pointer;
+
+  padding: var(--padding);
+
+  border-width:  var(--border-width);
+  border-style:  var(--border-style);
+  border-color:  var(--border-color);
   border-radius: var(--border-radius); 
-  background-color: var(--background-color);
-  background-color: red;
+  
+  background-color: var(--background-color); 
+}
+.button--secondary {
+  --color: var(--color);
+  --background-color: transparent;
+}
+.button--tertiary {
+  --color: var(--color);
+  --border-color: transparent;
+  --background-color: transparent;
 }
 
+button + button {
+  margin-left: 1rem;
+}
 
+/* hrs ---------------------------------- */
 
 hr {
   border: 0;

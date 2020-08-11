@@ -26,7 +26,7 @@
     }
   </style>
 </head>
-<body class="page page-theme--dark" data-active-theme="page-theme--dark">
+<body class="page page-theme--light" data-active-theme="page-theme--light">
 
 <h1><?= $page->title() ?></h1>
 
@@ -43,6 +43,33 @@
   </ol>
 </nav>
 <hr>
+
+<br>
+
+<section>
+  <h2>Button Themes</h2>
+  <section class="box">
+    <h2>default</h2>
+    <button class="theme-toggle">default.box-shadow</button>
+    <button class="theme-toggle button--secondary">.button--secondary</button>
+    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+  </section>
+
+  <section class="box color-theme--2">
+    <h2>.color-theme--2</h2>
+    <button class="theme-toggle">default.box-shadow</button>
+    <button class="theme-toggle button--secondary">.button--secondary</button>
+    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+  </section>
+
+  <section class="box color-theme--1">
+    <h2>.color-theme--1</h2>
+    <button class="theme-toggle">default.box-shadow</button>
+    <button class="theme-toggle button--secondary">.button--secondary</button>
+    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+  </section>
+
+</section>
 
 <section>
   <h2 id="color-themes">Color-Themes</h2>
