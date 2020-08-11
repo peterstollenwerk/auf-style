@@ -24,21 +24,21 @@
 
   <?php if($preview): ?>
     <article class="box box-shadow--level-5 <?= $css_class ?>" style="min-height: 33vh;">
-      <h2>.<?= $css_class ?></h2>
+      <h3>.<?= $css_class ?></h3>
       <p>Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Dicta quod ea culpa, accusantium vel cumque quam earum corporis. Nobis quos veniam, architecto molestiae odio aspernatur amet enim optio soluta ipsum?</p>
       <section class="border">
-        <h3>.border</h3>
+        <h4>.border</h4>
         <p class="border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam illo, voluptatem molestiae aspernatur deleniti, temporibus totam necessitatibus ipsa vero saepe? Optio, alias. Qui at accusantium inventore adipisci itaque dignissimos.</p>
       </section>
       <section class="outline">
-        <h3>.outline</h3>
+        <h4>.outline</h4>
         <p class="outline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam illo, voluptatem molestiae aspernatur deleniti, temporibus totam necessitatibus ipsa vero saepe? Optio, alias. Qui at accusantium inventore adipisci itaque dignissimos.</p>
       </section>
       <section class="text-shadow">
-        <h3>.text-shadow</h3>
+        <h4>.text-shadow</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus vel atque animi recusandae? Ipsum vero enim cumque eaque maiores minus exercitationem, rerum nulla quaerat esse. Quis nesciunt dicta aliquid.</p>
       </section>
-      <h3>.box-shadow--inset</h3>
+      <h4>.box-shadow--inset</h4>
   <?php endif?>
   
 

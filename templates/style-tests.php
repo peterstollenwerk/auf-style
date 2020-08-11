@@ -26,21 +26,28 @@
     }
   </style>
 </head>
-<body>
+<body class="page page--day-theme">
 
 <h1><?= $page->title() ?></h1>
 <nav>
   <h2>On this page</h2>
-  <ul>
-    <li>↓ ↓ ↓ <a href="#color-themes">Color-Themes</a>  ↓ ↓ ↓</li>
-    <li>↓ ↓ ↓ <a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
-  </ul>
+  <ol>
+    <li><a href="#border-themes">Border-Themes</a>  ↓ ↓ ↓</li>
+    <li><a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
+    <li><a href="#color-themes">Color-Themes</a>  ↓ ↓ ↓</li>
+  </ol>
 </nav>
+<hr>
+<section>
+  <h2 id="border-themes">Border-Themes</h2>
+  <?= snippet('auf-style/border-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
+</section>
 <hr>
 <section>
   <h2 id="background-themes">Background-Themes</h2>
   <?= snippet('auf-style/background-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
+<hr>
 <section>
   <h2 id="color-themes">Color-Themes</h2>
   <?= snippet('auf-style/color-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>

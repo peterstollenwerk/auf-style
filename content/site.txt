@@ -330,10 +330,26 @@ Border-themes:
 
 - 
   uid: "1"
-  label: 'Default (border: 2px solid; border-Radius: 5px)'
+  label: Small
+  border_width: 3rem
+  border_style: solid
+  border_radius: 1rem
+  border_headline: null
+  border_image: null
+- 
+  uid: "2"
+  label: Medium
   border_width: 2px
   border_style: solid
-  border_radius: 5px
+  border_radius: 0.5rem
+  border_headline: null
+  border_image: null
+- 
+  uid: "3"
+  label: Large
+  border_width: 2px
+  border_style: solid
+  border_radius: 1rem
   border_headline: null
   border_image: null
 

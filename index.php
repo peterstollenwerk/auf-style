@@ -20,6 +20,7 @@ Kirby::plugin('auf/style', [
         ]
     ],
     'snippets' => [
+        'auf-style/border-themes' => __DIR__ . '/snippets/border-themes.php',
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
         'auf-style/background-themes' => __DIR__ . '/snippets/background-themes.php',
         'auf-style/style' => __DIR__ . '/snippets/style.php',
