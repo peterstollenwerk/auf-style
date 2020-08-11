@@ -4,9 +4,9 @@
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
   
   --border-width: 2px;
-  --border-radius: 0.25rem;
   --border-style: solid;
   --border-color: black;
+  --border-radius: 0.25rem;
 
   --outline-width: 0.25rem;
   --outline-style: dashed;
@@ -325,8 +325,20 @@ button {
   border-style:  var(--border-style);
   border-color:  var(--border-color);
   border-radius: var(--border-radius); 
-  
-  background-color: var(--background-color); 
+
+  background: var(--background);
+  background-color: var(--background-color);
+
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+button:focus,
+button:hover {
+  /* transform: translate(0, -2px); */
+  transform: scale(1.05);
+}
+button + button {
+  margin-left: 1rem;
 }
 .button--secondary {
   --color: var(--color);
@@ -336,10 +348,6 @@ button {
   --color: var(--color);
   --border-color: transparent;
   --background-color: transparent;
-}
-
-button + button {
-  margin-left: 1rem;
 }
 
 /* hrs ---------------------------------- */
