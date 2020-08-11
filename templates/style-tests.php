@@ -37,6 +37,7 @@
     <li><a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#border-themes">Border-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#outline-themes">Outline-Themes</a>  ↓ ↓ ↓</li>
+    <li><a href="#box-shadow-themes">Box-Shadow-Themes</a>  ↓ ↓ ↓</li>
   </ol>
 </nav>
 <hr>
@@ -61,6 +62,12 @@
 <section>
   <h2 id="outline-themes">Outline-Themes</h2>
   <?= snippet('auf-style/outline-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
+</section>
+<hr>
+
+<section>
+  <h2 id="box-shadow-themes">Box-Shadow-Themes</h2>
+  <?= snippet('auf-style/box-shadow-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
 <hr>
 

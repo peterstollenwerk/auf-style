@@ -1,8 +1,10 @@
 /* ROOT/FALLBACK VARIABLES ---------------------------------- */
 :root {
   --color: black;
+  
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
   --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);  
+  
   --border-width: 2px;
   --border-style: solid;
   --border-color: black;
@@ -12,6 +14,7 @@
   --outline-offset: 0.25rem;
 
   --padding: 1.62rem;
+  
   --margin: 1.62rem;
 }
 * {
@@ -22,6 +25,7 @@
   --page-color:  hsl(25, 10%, 10%);
   --page-background-color: hsl(25, 10%, 90%);
   --page-background: linear-gradient(hsl(25, 10%, 90%), hsl(25, 10%, 80%));
+
   --color: black;
   --background-color: white;
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
@@ -31,6 +35,7 @@
   --page-color: hsl(225, 10%, 95%);
   --page-background-color:hsl(225, 10%, 10%);
   --page-background: linear-gradient(hsl(225, 10%, 20%), hsl(225, 10%, 10%));
+
   --color: white;
   --background-color: black;
   --box-shadow-color: hsla(25, 10%, 0%, 0.5);
@@ -167,45 +172,45 @@
 
 /* Direct Light Settings */
 
-.box-shadow--level-1 {
+.box-shadow-theme--level-1 {
   /* default */
 }
-.box-shadow--level-2 {
+.box-shadow-theme--level-2 {
   --box-shadow-offset-y: 4px;
   --box-shadow-blur-radius: 11px;
 }
-.box-shadow--level-3 {
+.box-shadow-theme--level-3 {
   --box-shadow-offset-y: 7px;
   --box-shadow-blur-radius: 19px;
 }
-.box-shadow--level-4 {
+.box-shadow-theme--level-4 {
   --box-shadow-offset-y: 11px;
   --box-shadow-blur-radius: 27px;
 }
-.box-shadow--level-5 {
+.box-shadow-theme--level-5 {
   --box-shadow-offset-y: 15px;
   --box-shadow-blur-radius: 35px;
 }
 
 /* Ambient Settings */
 
-.box-shadow--level-1 {
+.box-shadow-theme--level-1 {
   --box-shadow-ambient-offset-y: 1px;
   --box-shadow-ambient-blur-radius: 2px;
 }
-.box-shadow--level-2 {
+.box-shadow-theme--level-2 {
   --box-shadow-ambient-offset-y: 2px;
   --box-shadow-ambient-blur-radius: 4px;
 }
-.box-shadow--level-3 {
+.box-shadow-theme--level-3 {
   --box-shadow-ambient-offset-y: 3px;
   --box-shadow-ambient-blur-radius: 7px;
 }
-.box-shadow--level-4 {
+.box-shadow-theme--level-4 {
   --box-shadow-ambient-offset-y: 4px;
   --box-shadow-ambient-blur-radius: 9px;
 }
-.box-shadow--level-5 {
+.box-shadow-theme--level-5 {
   --box-shadow-ambient-offset-y: 4px;
   --box-shadow-ambient-blur-radius: 11px;
 }

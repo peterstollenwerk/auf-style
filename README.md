@@ -8,9 +8,11 @@ Color Convert Methods:
 
 ## TODO
 
-* [ ] Testpage Preview - Box-Shadow-Themes
+* [X] ~~*Testpage Preview - Box-Shadow-Themes*~~ [2020-08-11]
 
 * [ ] Day/Night-Mode Toggle
+
+* [ ] Boxes Preview
 
 * [ ] Element-Styles
 
