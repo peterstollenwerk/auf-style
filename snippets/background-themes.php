@@ -24,7 +24,7 @@
     <?php /* START CLASS --------------------- */ ?>
 
     <?php if($wrapTag): ?>
-      <<?= $wrapTag ?>>
+      <<?= $wrapTag ?> class="box  box-shadow--inset" style="--background-color: transparent"> 
     <?php endif?>
     
     .<?= $css_theme_variable ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
