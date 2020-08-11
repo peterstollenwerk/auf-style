@@ -26,11 +26,13 @@
     }
   </style>
 </head>
-<body class="page page--day-theme">
+<body class="page page-theme--dark" data-active-theme="page-theme--dark">
 
 <h1><?= $page->title() ?></h1>
 
-<nav>
+<?= snippet('auf-style/page-theme-toggle-button'); ?>
+
+<nav class="box" style="--padding: 1rem 2rem;">
   <h2>On this page</h2>
   <ol>
     <li><a href="#color-themes">Color-Themes</a>  ↓ ↓ ↓</li>

@@ -20,6 +20,7 @@ Kirby::plugin('auf/style', [
         ]
     ],
     'snippets' => [
+        'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         'auf-style/outline-themes' => __DIR__ . '/snippets/outline-themes.php',
         'auf-style/border-themes' => __DIR__ . '/snippets/border-themes.php',
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',

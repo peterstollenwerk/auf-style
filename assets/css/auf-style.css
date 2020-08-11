@@ -5,6 +5,7 @@
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
   
   --border-width: 2px;
+  --border-radius: 0.25rem;
   --border-style: solid;
   --border-color: black;
 
@@ -21,22 +22,25 @@
   color: var(--color);
 }
 /* PAGE THEMES ---------------------------------- */
-.page--day-theme {
+.page,
+.page-theme--light {
   --page-color:  hsl(25, 10%, 10%);
   --page-background-color: hsl(25, 10%, 90%);
   --page-background: linear-gradient(hsl(25, 10%, 90%), hsl(25, 10%, 80%));
 
   --color: black;
+  --border-color: var(--color);
   --background-color: white;
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
   --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);
 }
-.page--night-theme {
+.page-theme--dark {
   --page-color: hsl(225, 10%, 95%);
   --page-background-color:hsl(225, 10%, 10%);
   --page-background: linear-gradient(hsl(225, 10%, 20%), hsl(225, 10%, 10%));
-
+  
   --color: white;
+  --border-color: var(--color);
   --background-color: black;
   --box-shadow-color: hsla(25, 10%, 0%, 0.5);
   --box-shadow-ambient-color: hsla(25, 10%, 0%, 0.5);
@@ -58,8 +62,6 @@
   background: var(--background);
   background-color: var(--background-color);
   
-  margin-left: var(--margin-left);
-  margin-right: var(--margin-right);
 }
 .box--inverted,
 .boxes--inverted > * {
@@ -70,8 +72,6 @@
 /* BORDER ---------------------------------- */
 .border,
 .borders > * {
-  --border-width: 1px;
-  --border-style: solid;
   border-width: var(--border-width);
   border-style: var(--border-style);
   border-color: var(--border-color);
@@ -310,11 +310,17 @@ h4 {
 
 button {
   --padding: 1rem;
-  padding: var(--padding);
-  border: var(--border);
-  border-radius: var(--border-radius);
+  border: 0;
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--background-color);
+  border-radius: var(--border-radius); 
   background-color: var(--background-color);
+  background-color: red;
 }
+
+
+
 hr {
   border: 0;
   border-top-width: var(--border-width);

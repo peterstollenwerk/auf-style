@@ -16,7 +16,7 @@
   <?php if($preview): ?>
     <article 
       class="box <?= $boxShadowThemeClass ?>" 
-      style="min-height: 33vh; --background-color: pink;"
+      style="min-height: 33vh; --color: black; --background-color: pink;"
       >
       <h3>.<?= $boxShadowThemeClass ?> <small>.box .outline</small></h3>
   <?php endif?>

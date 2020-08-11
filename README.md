@@ -1,5 +1,13 @@
 # auf-style
 
+## Setup
+
+```<body 
+  class="page page-theme--dark" 
+  data-active-theme="page-theme--dark">
+```
+
+
 ## Included Dependencies
 
 Color Convert Methods:
