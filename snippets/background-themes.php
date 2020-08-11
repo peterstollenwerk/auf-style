@@ -17,7 +17,7 @@
     ?>
 
     <?php if($preview): ?>
-      <h2>.<?= $css_theme_variable ?></h2>
+      <h3>.<?= $css_theme_variable ?></h3>
       <div class="box <?= $css_theme_variable ?>" style="height: 33vh"></div>
     <?php endif?>
 

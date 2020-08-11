@@ -58,6 +58,15 @@ Color-themes:
   outline: '#000000'
   text_shadow: null
   box_shadow_ambient: null
+- 
+  uid: crazy-shit
+  label: Crazy Shit
+  color: '#00ff7b'
+  background: '#2600ad'
+  border: '#007bff'
+  outline: '#ff0000'
+  text_shadow: '#ff00dd'
+  box_shadow_ambient: '#ffdd00'
 
 ----
 
@@ -358,11 +367,60 @@ Border-themes:
 Outline-themes:
 
 - 
-  uid: "1"
-  label: '2px solid; offset: 5px'
-  outline_width: 2px
+  uid: solid
+  label: Solid
+  outline_width: ""
   outline_style: solid
-  outline_offset: 5px
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: dotted
+  label: Dotted
+  outline_width: ""
+  outline_style: dotted
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: dashed
+  label: Dashed
+  outline_width: ""
+  outline_style: dashed
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: double
+  label: Double
+  outline_width: ""
+  outline_style: double
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: groove
+  label: Groove
+  outline_width: ""
+  outline_style: groove
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: ridge
+  label: Ridge
+  outline_width: ""
+  outline_style: ridge
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: inset
+  label: Inset
+  outline_width: ""
+  outline_style: inset
+  outline_offset: ""
+  outline_headline: null
+- 
+  uid: outset
+  label: outset
+  outline_width: ""
+  outline_style: outset
+  outline_offset: ""
   outline_headline: null
 
 ----
@@ -370,28 +428,28 @@ Outline-themes:
 Box-shadow-themes:
 
 - 
-  uid: "1"
-  label: Level 1
+  uid: level-1
+  label: 'Level 1: Button'
   box_shadow_ambient: null
   box_shadow: null
 - 
-  uid: "2"
+  uid: level-2
   label: Level 2
   box_shadow_ambient: null
   box_shadow: null
 - 
-  uid: "3"
-  label: Level 3
+  uid: level-3
+  label: 'Level 3: Drop-Down'
   box_shadow_ambient: null
   box_shadow: null
 - 
-  uid: "4"
+  uid: level-4
   label: Level 4
   box_shadow_ambient: null
   box_shadow: null
 - 
-  uid: "5"
-  label: Level 5
+  uid: level-5
+  label: 'Level 5: Modal'
   box_shadow_ambient: null
   box_shadow: null
 

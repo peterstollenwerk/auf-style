@@ -8,8 +8,14 @@ Color Convert Methods:
 
 ## TODO
 
-- [ ] Create Preview Field For Gradients
+* [ ] Testpage Preview - Box-Shadow-Themes
 
-Example Plugin: <https://github.com/sylvainjule/kirby-previews>
+* [ ] Day/Night-Mode Toggle
 
-Kirby Info: <https://getkirby.com/docs/reference/panel/fields/structure#preview-of-fields-in-the-table>
+* [ ] Element-Styles
+
+* [ ] Set Site Defaults from Panel
+
+* [ ] Create Preview Field For Gradients
+      - Example Plugin: <https://github.com/sylvainjule/kirby-previews>
+      - Kirby Info: <https://getkirby.com/docs/reference/panel/fields/structure#preview-of-fields-in-the-table>

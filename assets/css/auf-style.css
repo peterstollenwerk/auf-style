@@ -6,6 +6,11 @@
   --border-width: 2px;
   --border-style: solid;
   --border-color: black;
+
+  --outline-color:grey;
+  --outline-width: 0.25rem;
+  --outline-offset: 0.25rem;
+
   --padding: 1.62rem;
   --margin: 1.62rem;
 }
@@ -76,8 +81,8 @@
 .outline,
 .outlines > * {
   outline-width: var(--outline-width);
-  outline-color: var(--outline-color);
   outline-style: var(--outline-style);
+  outline-color: var(--outline-color);
   outline-offset: var(--outline-offset);
 }
 /* ========================================= */
