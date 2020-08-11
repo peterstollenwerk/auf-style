@@ -17,7 +17,7 @@
       margin-top: var(--margin);
     }
     body > * {
-      max-width: 80ch;
+      max-width: 666px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -29,12 +29,20 @@
 <body>
 
 <h1><?= $page->title() ?></h1>
+<nav>
+  <h2>On this page</h2>
+  <ul>
+    <li>↓ ↓ ↓ <a href="#color-themes">Color-Themes</a>  ↓ ↓ ↓</li>
+    <li>↓ ↓ ↓ <a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
+  </ul>
+</nav>
+<hr>
 <section>
-  <h2>Background Themes</h2>
+  <h2 id="background-themes">Background-Themes</h2>
   <?= snippet('auf-style/background-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
 <section>
-  <h2>Color Themes</h2>
+  <h2 id="color-themes">Color-Themes</h2>
   <?= snippet('auf-style/color-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
   

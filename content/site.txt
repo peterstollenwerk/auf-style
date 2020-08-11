@@ -200,7 +200,7 @@ Background-themes:
       clip_headline: null
   info: null
 - 
-  uid: direction-type-tests
+  uid: "3"
   label: Direction Type tests
   background:
     - 
@@ -268,6 +268,50 @@ Background-themes:
       position_y: ""
       position_y_custom: ""
       repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+  info: null
+- 
+  uid: "4"
+  label: Blue Red Transition
+  background:
+    - 
+      type: gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_color_stops:
+            - 
+              color: '#ff0000'
+              start: ""
+              end: ""
+            - 
+              color: '#3700ff'
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: top
+          linear_gradient_direction_to_y: right
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: custom
+      size_x: 50px
+      size_y: 100px
+      position_x: center
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: repeat
       attachment: ""
       origin: ""
       clip: ""
