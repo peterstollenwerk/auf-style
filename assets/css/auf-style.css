@@ -1,7 +1,8 @@
 :root {
   --padding: 1.62rem;
   --margin: 1.62rem;
-  
+  --box-shadow-color: hsla(25, 10%, 10%, 0.5);
+  --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);  
 }
 * {
   color: var(--color);
@@ -44,114 +45,69 @@
   background: var(--background);
   background-color: var(--background-color);
 }
-.box--inverted {
+.box--inverted,
+.boxes--inverted > * {
   --color: var(--inverted-color);
   --background-color: var(--inverted-background-color);
 }
 
-.safe-text {
+/* BORDER ---------------------------------- */
+
+.border,
+.borders > * {
+  --border-width: 1px;
+  --border-style: solid;
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
+}
+/* OUTLINE ---------------------------------- */
+
+.outline,
+.outlines > * {
+  outline: 1px dashed var(--outline-color);
+}
+
+
+
+/* ========================================= */
+/* text-shadow  */
+
+.safe-text,
+.text-shadow.safe-text {
   --text-shadow-color: var(--background-color);
   text-shadow:
     0px 1px 2px var(--text-shadow-color),
     0 0   1rem var(--text-shadow-color),
     0 0 0.2rem var(--text-shadow-color);
 }
-
-.extra-safe-text,
-.extra-safe-texts > * {
+.safe-text--extra,
+.safe-texts--extra > * {
   /* TODO  IMPLEMENT BACKGROUND VARIABLE  in --background-theme!!!!! */
   padding: var(--padding);
   background: initial;
   background-color: var(--background-color);
 }
 
-
-.safe-texts > .flex {
-  padding: initial;
-  --background-color: initial;
+/* ========================================= */
+/* text-shadow  */
+.text-shadow {
+  text-shadow:
+    0px 1px 2px var(--text-shadow-color);
+}
+.text-shadow--glow {
+    text-shadow:
+      0px 1px 2px var(--text-shadow-color),
+      0 0   1rem var(--text-shadow-color),
+      0 0 0.2rem var(--text-shadow-color);
 }
 
-/* OUTLINE ---------------------------------- */
-
-.outline,
-.outlines > * {
-  outline: 1px dashed var(--color);
-}
-
-/* FLEX ---------------------------------- */
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-.flex-direction--column {
-  flex-direction: column;
-}
-.flex-direction--row {
-  list-style: none;
-  flex-direction: row;
-}
-.flex-direction--row *:not(:first-child) {
-  margin-top: initial;
-  margin-left: var(--margin);
-}
-/* justify-content ---------------------------------- */
-
-.justify-content--center {
-  justify-content: center;
-}
-.justify-content--start {
-  justify-content: start;
-}
-.justify-content--end {
-  justify-content: end;
-}
-.justify-content--flex-start {
-  justify-content: flex-start;
-}
-.justify-content--flex-end {
-  justify-content: flex-end;
-}
-.justify-content--left {
-  justify-content: left;
-}
-.justify-content--right {
-  justify-content: right;
-}
-.justify-content--normal {
-  justify-content: normal;
-}
-.justify-content--space-between {
-  justify-content: space-between;
-}
-.justify-content--space-evenly {
-  justify-content: space-evenly;
-}
-.justify-content--space-around {
-  justify-content: space-around;
-}
-.justify-content--stretch {
-  justify-content: stretch;
-}
-
-/* align-items ---------------------------------- */
-
-.align-items--center {
-  align-items: center;
-}
-.align-items--flex-start {
-  align-items: flex-start;
-}
-.align-items--flex-end {
-  align-items: flex-end;
-}
-.align-items--stretch {
-  align-items: stretch;
-}
 
 /* ========================================= */
 /* box-shadows  */
 
-.box-shadow {
+[class*="box-shadow"] {
 
   /* 
     
@@ -241,6 +197,78 @@
 }
 
 
+
+/* =============================================== */
+/* FLEX */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex-direction--column {
+  flex-direction: column;
+}
+.flex-direction--row {
+  list-style: none;
+  flex-direction: row;
+}
+.flex-direction--row *:not(:first-child) {
+  margin-top: initial;
+  margin-left: var(--margin);
+}
+/* justify-content ---------------------------------- */
+
+.justify-content--center {
+  justify-content: center;
+}
+.justify-content--start {
+  justify-content: start;
+}
+.justify-content--end {
+  justify-content: end;
+}
+.justify-content--flex-start {
+  justify-content: flex-start;
+}
+.justify-content--flex-end {
+  justify-content: flex-end;
+}
+.justify-content--left {
+  justify-content: left;
+}
+.justify-content--right {
+  justify-content: right;
+}
+.justify-content--normal {
+  justify-content: normal;
+}
+.justify-content--space-between {
+  justify-content: space-between;
+}
+.justify-content--space-evenly {
+  justify-content: space-evenly;
+}
+.justify-content--space-around {
+  justify-content: space-around;
+}
+.justify-content--stretch {
+  justify-content: stretch;
+}
+
+/* align-items ---------------------------------- */
+
+.align-items--center {
+  align-items: center;
+}
+.align-items--flex-start {
+  align-items: flex-start;
+}
+.align-items--flex-end {
+  align-items: flex-end;
+}
+.align-items--stretch {
+  align-items: stretch;
+}
 
 
 

@@ -6,40 +6,40 @@ Color-themes:
 
 - 
   uid: page-day
-  label: Page (Day Mode)
+  label: Page (Light)
   color: 'hsla(225, 10%, 15%)'
   background: 'hsla(25, 10%, 95%)'
   border: 'hsla(225, 10%, 15%)'
   outline: 'hsla(25, 10%, 15%)'
-  text_shadow: ""
-  box_shadow: ""
+  text_shadow: '#00000040'
+  box_shadow_ambient: '#00000040'
 - 
-  uid: box-day-mode
-  label: Box (Day Mode)
-  color: '#000000'
-  background: '#ffffff'
-  border: '#000000'
-  outline: '#000000'
-  text_shadow: null
-  box_shadow: null
-- 
-  uid: page-night-mode
-  label: Page (Night Mode)
+  uid: page-night
+  label: Page (Night)
   color: 'hsla(25, 10%, 95%)'
   background: 'hsla(225, 10%, 15%)'
   border: 'hsla(25, 10%, 95%)'
   outline: 'hsla(25, 10%, 95%)'
-  text_shadow: ""
-  box_shadow: ""
+  text_shadow: 'hsla(25, 15%, 95%, 0.5)'
+  box_shadow_ambient: 'hsla(25, 15%, 95%, 0.5)'
 - 
-  uid: box-night-mode
-  label: Box (Night Mode)
-  color: '#ffffff'
-  background: '#000000'
+  uid: box-day
+  label: Box (Day)
+  color: '#000000'
+  background: '#ffffff'
   border: '#000000'
   outline: '#000000'
-  text_shadow: null
-  box_shadow: null
+  text_shadow: '#00000040'
+  box_shadow_ambient: '#ffffff40'
+- 
+  uid: box-night
+  label: Box (Night)
+  color: '#ffffff'
+  background: '#000000'
+  border: '#ffffff'
+  outline: '#ffffff'
+  text_shadow: '#ffffff40'
+  box_shadow_ambient: '#00000040'
 - 
   uid: "1"
   label: Orange on Black
@@ -47,8 +47,8 @@ Color-themes:
   background: '#000000'
   border: '#FF6C00'
   outline: '#FF6C00'
-  text_shadow: ""
-  box_shadow: ""
+  text_shadow: '#ff6c0080'
+  box_shadow_ambient: '#ff6c00'
 - 
   uid: "2"
   label: Black on Orange
@@ -57,7 +57,7 @@ Color-themes:
   border: '#000000'
   outline: '#000000'
   text_shadow: null
-  box_shadow: null
+  box_shadow_ambient: null
 
 ----
 
@@ -312,22 +312,27 @@ Box-shadow-themes:
 - 
   uid: "1"
   label: Level 1
+  box_shadow_ambient: null
   box_shadow: null
 - 
   uid: "2"
   label: Level 2
+  box_shadow_ambient: null
   box_shadow: null
 - 
   uid: "3"
   label: Level 3
+  box_shadow_ambient: null
   box_shadow: null
 - 
   uid: "4"
   label: Level 4
+  box_shadow_ambient: null
   box_shadow: null
 - 
   uid: "5"
   label: Level 5
+  box_shadow_ambient: null
   box_shadow: null
 
 ----

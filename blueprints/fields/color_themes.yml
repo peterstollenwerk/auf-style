@@ -12,7 +12,7 @@ columns:
   border:
   outline:
   text_shadow:
-  box_shadow:
+  box_shadow_ambient:
 fields:
   uid:
     label: UID
@@ -45,8 +45,8 @@ fields:
     type: colors
     alpha: true
     width: 1/2
-  box_shadow:
-    label: Box-Shadow
+  box_shadow_ambient:
+    label: Box-Shadow-Ambient
     type: colors
     alpha: true
     width: 1/2

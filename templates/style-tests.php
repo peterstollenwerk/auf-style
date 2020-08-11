@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AUF | Styles Test Page</title>
   <?= snippet('auf-style/style'); ?>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+    }
+    * + * {
+      margin-top: var(--margin);
+    }
+    body > * {
+      max-width: 80ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    pre { 
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
 

@@ -30,7 +30,7 @@
   
   <p>
     <a href="<?= url('style-tests') ?>">
-      <button class="box box--inverted box-shadow box-shadow--level-1">Go to Style Tests Page</button>
+      <button class="box box--inverted text-shadow box-shadow box-shadow--level-1">Go to Style Tests Page</button>
     </a>
   </p>
   
@@ -57,10 +57,10 @@
 
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quasi? Aspernatur eaque dolorem ut consequuntur. Laudantium similique voluptatibus illum velit totam libero, fuga quam minima ut fugiat dolores, error nam.</p>
   
-  <section class="box box--safe-text background-theme--2 color-theme--1">
+  <section class="box safe-text background-theme--2 color-theme--1">
     <h2>Headline</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, quidem. Optio itaque sit ab debitis repellat quaerat, temporibus facilis nemo ad perferendis fuga molestias, vero necessitatibus aliquam voluptate perspiciatis earum?</p>
-    <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, nulla excepturi officia dolorum non voluptatum pariatur odit beatae itaque laboriosam similique. Enim laboriosam soluta cumque aspernatur obcaecati sequi mollitia ducimus.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, nulla excepturi officia dolorum non voluptatum pariatur odit beatae itaque laboriosam similique. Enim laboriosam soluta cumque aspernatur obcaecati sequi mollitia ducimus.</p>
   </section>
   
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia mollitia sint quis eveniet quos! Voluptatibus natus accusamus iste, veniam aut similique. Hic natus explicabo dolorum. Molestiae numquam quo a sed?</p>
