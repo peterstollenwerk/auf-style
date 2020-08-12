@@ -1,11 +1,14 @@
 # auf-style
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 ## Setup
 
 ```<body 
   class="page page-theme--dark" 
   data-active-theme="page-theme--dark">
 ```
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ## We need to create proper box-themes.
 
@@ -40,8 +43,6 @@ b. Or just generate the proper box with all variables without creating the root 
 }
 ```
 
-
-
 We should use box--button-primary on buttons to design them.
 
 ## Included Dependencies
@@ -49,6 +50,7 @@ We should use box--button-primary on buttons to design them.
 Color Convert Methods:
 <https://github.com/hananils/kirby-colors>
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ## TODO
 
