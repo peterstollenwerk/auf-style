@@ -1,5 +1,5 @@
 <div class="toggle-button">
-  <button class="theme-toggle box box-shadow">Toggle Theme</button>
+  <button class="theme-toggle">Toggle Theme</button>
 
   <script>
     const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
