@@ -53,7 +53,9 @@
 }
 /* BOX ---------------------------------- */
 .box,
-.boxes > * {
+.boxes > *,
+button
+{
   list-style: none;
   
   padding: var(--padding);
@@ -312,10 +314,8 @@ h4 {
 /* buttons ---------------------------------- */
 
 button {
+  
   --padding: 1rem;
-  --color: var(--inverted-color);
-  --background-color: var(--inverted-background-color);
-  --border-color: var(--inverted-background-color);
 
   cursor: pointer;
 
@@ -326,28 +326,33 @@ button {
   border-color:  var(--border-color);
   border-radius: var(--border-radius); 
 
-  background: var(--background);
-  background-color: var(--background-color);
+  color: var(--inverted-color);
+  background: initial;
+  background-color: var(--inverted-background-color);
+  border-color: var(--inverted-background-color);
 
   transition-property: transform;
   transition-duration: 0.5s;
 }
-button:focus,
+.button--secondary {
+  color: var(--color);
+  background-color: var(--background-color);
+  border-color: var(--inverted-background-color);
+  border-color: transparent;
+}
+.button--tertiary {
+  color: var(--color);
+  background-color: var(--background-color);
+  background-color: transparent;
+  border-color: transparent;
+}
+
 button:hover {
   /* transform: translate(0, -2px); */
   transform: scale(1.05);
 }
 button + button {
   margin-left: 1rem;
-}
-.button--secondary {
-  --color: var(--color);
-  --background-color: transparent;
-}
-.button--tertiary {
-  --color: var(--color);
-  --border-color: transparent;
-  --background-color: transparent;
 }
 
 /* hrs ---------------------------------- */

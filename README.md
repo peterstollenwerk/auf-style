@@ -7,6 +7,40 @@
   data-active-theme="page-theme--dark">
 ```
 
+## We need to create proper box-themes.
+
+Instead of hacking button-styles together on the button element, why not use:
+
+```<button class="box--primary-button">Primary</button>```
+
+In oder to do this we can:
+
+a. put all needed variables in the css-root and reference them in the class like:
+
+```css
+:root {
+  --background-1: ...
+  --background-theme-1-color: ...
+  --background-theme-1-background-color: ...
+}
+.box--primary-button {
+  --background: var(--background-1);
+  --color: (--background-theme-1-color);
+  --background-color: (--background-theme-1-background-color);
+}
+```
+
+b. Or just generate the proper box with all variables without creating the root elements:
+
+```
+.box--primary-button {
+  --background: url('...');
+  --color: #FF0000;
+  --background-color: black;
+}
+```
+
+We should use box--button-primary on buttons to design them.
 
 ## Included Dependencies
 

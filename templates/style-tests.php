@@ -35,6 +35,7 @@
 <nav class="box" style="--padding: 1rem 2rem;">
   <h2>On this page</h2>
   <ol>
+    <li><a href="#button-themes">Button-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#color-themes">Color-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#border-themes">Border-Themes</a>  ↓ ↓ ↓</li>
@@ -47,25 +48,32 @@
 <br>
 
 <section>
-  <h2>Button Themes</h2>
+  <h2 id="button-themes">Button Themes</h2>
   <section class="box">
     <h2>default</h2>
-    <button class="theme-toggle">default.box-shadow</button>
-    <button class="theme-toggle button--secondary">.button--secondary</button>
+    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
+    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
     <button class="theme-toggle button--tertiary">.button-tertiary</button>
   </section>
 
   <section class="box color-theme--2">
     <h2>.color-theme--2</h2>
-    <button class="theme-toggle">default.box-shadow</button>
-    <button class="theme-toggle button--secondary">.button--secondary</button>
+    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
+    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
     <button class="theme-toggle button--tertiary">.button-tertiary</button>
   </section>
 
-  <section class="box color-theme--1">
-    <h2>.color-theme--1</h2>
-    <button class="theme-toggle">default.box-shadow</button>
-    <button class="theme-toggle button--secondary">.button--secondary</button>
+  <section class="box color-theme--1 background-theme--2">
+    <h2>.color-theme--1 .background-theme--2</h2>
+    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
+    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
+    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+  </section>
+  
+  <section class="box color-theme--2 background-theme--1">
+    <h2>.color-theme--1 .background-theme--2</h2>
+    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
+    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
     <button class="theme-toggle button--tertiary">.button-tertiary</button>
   </section>
 
