@@ -40,10 +40,7 @@ b. Or just generate the proper box with all variables without creating the root 
 }
 ```
 
-* [ ] Implement: Responsive Type: https://css-tricks.com/fun-viewport-units/
-      1. <https://www.smashingmagazine.com/2016/05/fluid-typography/>
-      2. <https://codepen.io/MadeByMike/pen/VvwqvW>
-      3. <https://css-tricks.com/a-complete-guide-to-calc-in-css/>
+
 
 We should use box--button-primary on buttons to design them.
 
@@ -57,7 +54,13 @@ Color Convert Methods:
 
 * [X] ~~*Testpage Preview - Box-Shadow-Themes*~~ [2020-08-11]
 
-* [ ] Day/Night-Mode Toggle
+* [X] ~~*Day/Night-Mode Toggle*~~ [2020-08-13]
+
+* [X] ~~*Create Responsive Type Prototype:*~~ [2020-08-13] 
+      1. <https://www.smashingmagazine.com/2016/05/fluid-typography/>
+      2. <https://css-tricks.com/fun-viewport-units/>
+      3. <https://codepen.io/MadeByMike/pen/VvwqvW>
+      4. <https://css-tricks.com/a-complete-guide-to-calc-in-css/>
 
 * [ ] Boxes Preview
 
