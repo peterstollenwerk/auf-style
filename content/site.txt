@@ -67,6 +67,15 @@ Color-themes:
   outline: '#ff0000'
   text_shadow: '#ff00dd'
   box_shadow_ambient: '#ffdd00'
+- 
+  uid: .button--primary
+  label: Button (Primary)
+  color: '#ffffff'
+  background: '#ff6a00'
+  border: '#ffffff40'
+  outline: null
+  text_shadow: '#00000040'
+  box_shadow_ambient: '#ff6a0040'
 
 ----
 
@@ -332,6 +341,11 @@ Background-themes:
       origin_headline: null
       clip_headline: null
   info: null
+- 
+  uid: button
+  label: Transparent
+  background: [ ]
+  info: null
 
 ----
 
@@ -359,6 +373,14 @@ Border-themes:
   border_width: 2px
   border_style: solid
   border_radius: 1rem
+  border_headline: null
+  border_image: null
+- 
+  uid: button
+  label: Button Primary
+  border_width: 1px
+  border_style: solid
+  border_radius: 4px
   border_headline: null
   border_image: null
 
@@ -461,9 +483,9 @@ Box-themes:
   uid: button-primary
   label: Button (Primary)
   color_theme: "1"
-  border_theme: "1"
-  background_theme: "1"
-  box_shadow_theme: "1"
+  border_theme: button.border--primary
+  background_theme: button
+  box_shadow_theme: level-1
   custom_theme: ""
   is_custom: 'false'
   custom: ""

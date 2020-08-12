@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid Typography</title>
+  <style>
+    :root {
+      --size-7: 4.75; 
+      --size-6: 3.75; 
+      --size-5: 3; 
+      --size-4: 2.5; 
+      --size-3: 2; 
+      --size-2: 1.5; 
+      --size-1: 1.25; 
+      --size-0: 1; /* Default */
+      --size--1: 0.8125; 
+      --size--2: 0.625; 
+      --size--3: 0.5; 
+      --size--4: 0.375; 
+      
+      
+      
+    }
+    html {
+      font-family: arial;
+      line-height: 1.3;
+    }
+    * {
+      --min-fontsize: 16;
+      --min-screensize: 300;
+      --max-screensize: 800;
+      --fontsize-factor: var(--size-1);
+      /* font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400)); */
+      font-size: calc((var(--min-fontsize) * 1px) + (var(--min-fontsize) * var(--fontsize-factor) - var(--min-fontsize)) * (100vw - (var(--min-screensize) * 1px)) / (var(--max-screensize) - var(--min-screensize)));
+      margin: 0;
+    }
+    * + * {
+      margin-top: 1.618em;
+    }
+    body > * {
+      max-width: calc( var(--max-screensize) * 1px );
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 { --fontsize-factor: var(--size-5); }
+    h2 { --fontsize-factor: var(--size-4); }
+    h3 { --fontsize-factor: var(--size-3); }
+    h4 { --fontsize-factor: var(--size-2); }
+    h5 { --fontsize-factor: var(--size-1); }
+  </style>
+</head>
+<body>
+  <h1>Fluid Typography</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+  <h2>Is Fantastic</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquam, eum dignissimos doloribus et sint nemo quam saepe? Delectus unde laboriosam blanditiis esse architecto tempora dolorum et eveniet nobis consequuntur?</p>
+  <h3>When it works</h3>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus debitis dignissimos iste magnam, numquam id accusantium molestias. Velit consequatur, expedita officiis, beatae fugit laudantium, ducimus quisquam veritatis exercitationem quo quas.</p>
+  <h4>As aspected</h4>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid veniam temporibus similique, labore nisi unde blanditiis dolore nemo recusandae, esse, architecto dignissimos natus? Odit fugit commodi blanditiis. Maxime, dolor autem!</p>
+  <h5>Otherwise its...</h5>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, corrupti laudantium, suscipit illo voluptatibus aut distinctio ea ducimus praesentium laboriosam natus dolor quod aliquid voluptas eum placeat illum vitae enim!</p>
+  <h6>...quite annoying</h6>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores totam quam sint alias fuga est quos aliquam sequi magni dolores earum animi, saepe provident voluptate eos debitis sed exercitationem porro?</p>
+</body>
+</html>

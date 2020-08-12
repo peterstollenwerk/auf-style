@@ -40,6 +40,11 @@ b. Or just generate the proper box with all variables without creating the root 
 }
 ```
 
+* [ ] Implement: Responsive Type: https://css-tricks.com/fun-viewport-units/
+      1. <https://www.smashingmagazine.com/2016/05/fluid-typography/>
+      2. <https://codepen.io/MadeByMike/pen/VvwqvW>
+      3. <https://css-tricks.com/a-complete-guide-to-calc-in-css/>
+
 We should use box--button-primary on buttons to design them.
 
 ## Included Dependencies

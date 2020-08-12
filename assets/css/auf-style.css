@@ -82,6 +82,8 @@ button
 .borders--outset > * {
   --margin-left: calc(var(--border-width) * -1);
   --margin-right: calc(var(--border-width) * -1);
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
 }
 /* OUTLINE ---------------------------------- */
 .outline,
@@ -298,46 +300,100 @@ button
 
 /* headlines ---------------------------------- */
 
+:root {
+  --root-font-size: 1rem;
+}
+:root {
+  --size-7: 4.75; 
+  --size-6: 3.75; 
+  --size-5: 3; 
+  --size-4: 2.5; 
+  --size-3: 2; 
+  --size-2: 1.5; 
+  --size-1: 1.25; 
+  --size-0: 1; /* Default */
+  --size--1: 0.8125; 
+  --size--2: 0.625; 
+  --size--3: 0.5; 
+  --size--4: 0.375; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  --font-size-factor: var(--size-0);
+  --font-size: calc( var(--root-font-size) * var(--font-size-factor));
+  font-size: var(--font-size);
+}
+
 h1 {
-  font-size: 2.62rem;
+  --font-size-factor: var(--size-5);
 }
 h2 {
-  font-size: 1.62rem;
+  --font-size-factor: var(--size-4);
 }
 h3 {
-  font-size: 1.38rem;
+  --font-size-factor: var(--size-3);
 }
 h4 {
-  font-size: 1.14rem;
+  --font-size-factor: var(--size-2);
+}
+h5 {
+  --font-size-factor: var(--size-1);
+}
+h6 {
+  --font-size-factor: var(--size-0);
 }
 
 /* buttons ---------------------------------- */
 
 button {
-  
   --padding: 1rem;
-
+  --background: transparent;
+  --border-color: transparent;
+  
   cursor: pointer;
+  
+  background: var(--background);
+  background-color: var(--background-color);
+  
+  border-width: var(--border-width);
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  border-radius: var(--border-radius);
 
-  padding: var(--padding);
+  --box-shadow-offset-x: 0;
+  --box-shadow-offset-y: 1px;
+  --box-shadow-blur-radius: 3px;
+  --box-shadow-spread-radius: 0;
 
-  border-width:  var(--border-width);
-  border-style:  var(--border-style);
-  border-color:  var(--border-color);
-  border-radius: var(--border-radius); 
+  --box-shadow-ambient-offset-x: 0;
+  --box-shadow-ambient-offset-y: 1px;
+  --box-shadow-ambient-blur-radius: 3px;
+  --box-shadow-ambient-spread-radius: 0;
+  --box-shadow-ambient-color: var(--background-color);
 
-  color: var(--inverted-color);
-  background: initial;
-  background-color: var(--inverted-background-color);
-  border-color: var(--inverted-background-color);
+  box-shadow: 
+    /* direct-shadow */ var(--box-shadow-offset-x)
+      var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
+      var(--box-shadow-spread-radius) var(--box-shadow-color),
 
+    /* ambient shadow */ var(--box-shadow-ambient-offset-x)
+      var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
+      var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+    
   transition-property: transform;
   transition-duration: 0.5s;
+}
+
+
+.button--primary {
+  color: var(--inverted-color);
+  background-color: var(--inverted-background-color);
+  border-color: var(--inverted-background-color);
 }
 .button--secondary {
   color: var(--color);
   background-color: var(--background-color);
-  border-color: var(--inverted-background-color);
+  border-color: var(--background-color);
   border-color: transparent;
 }
 .button--tertiary {
@@ -345,8 +401,8 @@ button {
   background-color: var(--background-color);
   background-color: transparent;
   border-color: transparent;
+  box-shadow: initial;
 }
-
 button:hover {
   /* transform: translate(0, -2px); */
   transform: scale(1.05);

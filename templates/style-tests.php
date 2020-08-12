@@ -45,35 +45,49 @@
 </nav>
 <hr>
 
-<br>
+<section>
+  <h1>Headline Level 1</h1>
+  <h2>Headline Level 2</h2>
+  <h3>Headline Level 3</h3>
+  <h4>Headline Level 4</h4>
+  <h5>Headline Level 5</h5>
+  <h6>Headline Level 6</h6>
+</section>
+
 
 <section>
+
   <h2 id="button-themes">Button Themes</h2>
+  <input type="text">
+  <button>button</button>
+  <button class="button--primary">button.button--crazy</button>
+  <button class="button--primary">button.button--crazy</button>
+
   <section class="box">
     <h2>default</h2>
-    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
-    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
-    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+    <button class="button--primary">default.box-shadow</button>
+    <button class="button--secondary">.button--secondary</button>
+    <button class="button--tertiary">.button-tertiary</button>
   </section>
 
   <section class="box color-theme--2">
     <h2>.color-theme--2</h2>
-    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
-    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
-    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+    <button class="button--primary">default.box-shadow</button>
+    <button class="button--secondary">.button--secondary</button>
+    <button class="button--tertiary">.button-tertiary</button>
   </section>
 
   <section class="box color-theme--1 background-theme--2">
     <h2>.color-theme--1 .background-theme--2</h2>
-    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
-    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
-    <button class="theme-toggle button--tertiary">.button-tertiary</button>
+    <button class="button--primary">default.box-shadow</button>
+    <button class="button--secondary">.button--secondary</button>
+    <button class="button--tertiary">.button-tertiary</button>
   </section>
   
   <section class="box color-theme--2 background-theme--1">
     <h2>.color-theme--1 .background-theme--2</h2>
-    <button class="theme-toggle box-shadow-theme--level-1">default.box-shadow</button>
-    <button class="theme-toggle button--secondary box-shadow-theme--level-1">.button--secondary</button>
+    <button class="theme-toggle button--primary">default.box-shadow</button>
+    <button class="theme-toggle button--secondary">.button--secondary</button>
     <button class="theme-toggle button--tertiary">.button-tertiary</button>
   </section>
 
