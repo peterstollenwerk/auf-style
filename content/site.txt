@@ -542,28 +542,83 @@ Box-shadow-themes:
 - 
   uid: level-1
   label: 'Level 1: Button'
+  box_shadows:
+    - 
+      offset_x: ""
+      offset_y: 1px
+      blur_radius: 3px
+      spread_radius: ""
+      ambient_offset_x: ""
+      ambient_offset_y: 1px
+      ambient_blur_radius: 2px
+      ambient_spread_radius: ""
+  box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow: null
+  box_shadow_info: null
 - 
   uid: level-2
   label: Level 2
+  box_shadows:
+    - 
+      offset_x: ""
+      offset_y: 4px
+      blur_radius: 11px
+      spread_radius: ""
+      ambient_offset_x: ""
+      ambient_offset_y: 2px
+      ambient_blur_radius: 4px
+      ambient_spread_radius: ""
+  box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow: null
+  box_shadow_info: null
 - 
   uid: level-3
   label: 'Level 3: Drop-Down'
+  box_shadows:
+    - 
+      offset_x: ""
+      offset_y: 7px
+      blur_radius: 19px
+      spread_radius: ""
+      ambient_offset_x: ""
+      ambient_offset_y: 3px
+      ambient_blur_radius: 7px
+      ambient_spread_radius: ""
+  box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow: null
+  box_shadow_info: null
 - 
   uid: level-4
   label: Level 4
+  box_shadows:
+    - 
+      offset_x: ""
+      offset_y: 11px
+      blur_radius: 27px
+      spread_radius: ""
+      ambient_offset_x: ""
+      ambient_offset_y: 4px
+      ambient_blur_radius: 9px
+      ambient_spread_radius: ""
+  box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow: null
+  box_shadow_info: null
 - 
   uid: level-5
   label: 'Level 5: Modal'
+  box_shadows:
+    - 
+      offset_x: ""
+      offset_y: 15px
+      blur_radius: 35px
+      spread_radius: ""
+      ambient_offset_x: ""
+      ambient_offset_y: 4px
+      ambient_blur_radius: 11px
+      ambient_spread_radius: ""
+  box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow: null
+  box_shadow_info: null
 
 ----
 

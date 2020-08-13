@@ -15,11 +15,53 @@ fields:
     converter: slug
     help: >
       never change the UID when background is already in use!
+    width: 1/2
   label:
     label: Label
     type: text
-  # BACKGROUND
-  box_shadow:
-    label: Box Shadow
+    width: 1/2
+  box_shadows:
+    label: Box Shadows
+    type: structure
+    fields:
+      offset_x:
+        label: Offset X
+        type: text
+        width: 1/4
+      offset_y:
+        label: Offset Y
+        type: text
+        default: 1px
+        width: 1/4
+      blur_radius:
+        label: Blur Radius
+        type: text
+        default: 3px
+        width: 1/4
+      spread_radius:
+        label: Spread Radius
+        type: text
+        width: 1/4
+      ambient_offset_x:
+        label: Ambient Offset Y
+        type: text
+        width: 1/4
+      ambient_offset_y:
+        label: Ambient Offset Y
+        type: text
+        default: 1px
+        width: 1/4
+      ambient_blur_radius:
+        label: Ambient Blur Radius
+        type: text
+        default: 2px
+        width: 1/4
+      ambient_spread_radius:
+        label: Ambient Spread Radius
+        type: text
+        width: 1/4
+  box_shadow_info:
+    label: Box Shadow Info
     type: info
-    text: customisation comming soon...
+    text: > 
+      only the first box-shadow will be used for now!

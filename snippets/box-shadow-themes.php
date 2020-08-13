@@ -1,6 +1,8 @@
 <?php
   $wrapTag = isset($wrapTag) ? $wrapTag : false;
   $preview = isset($preview) ? $preview : false;
+  $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
+  
   $boxShadowThemes = $site->box_shadow_themes();
 ?>
 
@@ -8,41 +10,13 @@
 
   <?php foreach($boxShadowThemes->toStructure() as $boxShadowTheme): ?>
 
-  <?php 
-      $uid = $boxShadowTheme->uid();
-      $boxShadowThemeClass = 'box-shadow-theme--'. $uid;
-  ?>
-
-  <?php if($preview): ?>
-    <article 
-      class="box <?= $boxShadowThemeClass ?>" 
-      style="min-height: 33vh; --color: black; --background-color: pink;"
-      >
-      <h3>.<?= $boxShadowThemeClass ?> <small>.box .outline</small></h3>
-  <?php endif?>
-  
-
-  <?php if($wrapTag): ?>
-    <<?= $wrapTag ?>>
-  <?php endif?>
-
-  .<?= $boxShadowThemeClass ?> {
-    
-    /* harcoded for now */
-
-  }
-  <?php if($wrapTag): ?>
-    </<?= $wrapTag ?>>
-  <?php endif?>
-
-  <?php if($preview): ?>
-    </article>
-  <?php endif?>
-
-
+    <?php snippet('auf-style/box-shadow-theme', [
+        'boxShadowTheme' => $boxShadowTheme, 
+        'renderCssClass' => $renderCssClass,
+        'wrapTag' => $wrapTag,
+        'preview' => $preview
+    ]); ?>
 
   <?php endforeach?>
-  
-  
 
 <?php endif?>

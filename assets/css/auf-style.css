@@ -159,7 +159,7 @@ html, body {
   --box-shadow-ambient-offset-y: 1px;
   --box-shadow-ambient-blur-radius: 3px;
   --box-shadow-ambient-spread-radius: 0;
-  --box-shadow-ambient-color: var(--background-color);
+  /* --box-shadow-ambient-color: var(--background-color); */
 
   /* this is the background-color with new alpha value! */
 
@@ -185,8 +185,9 @@ html, body {
 
 /* Direct Light Settings */
 
-.box-shadow-theme--level-1 {
-  /* default */
+/* .box-shadow-theme--level-1 {
+  --box-shadow-offset-y: 1px;
+  --box-shadow-blur-radius: 3px;
 }
 .box-shadow-theme--level-2 {
   --box-shadow-offset-y: 4px;
@@ -203,11 +204,11 @@ html, body {
 .box-shadow-theme--level-5 {
   --box-shadow-offset-y: 15px;
   --box-shadow-blur-radius: 35px;
-}
+} */
 
 /* Ambient Settings */
 
-.box-shadow-theme--level-1 {
+/* .box-shadow-theme--level-1 {
   --box-shadow-ambient-offset-y: 1px;
   --box-shadow-ambient-blur-radius: 2px;
 }
@@ -226,7 +227,7 @@ html, body {
 .box-shadow-theme--level-5 {
   --box-shadow-ambient-offset-y: 4px;
   --box-shadow-ambient-blur-radius: 11px;
-}
+} */
 
 
 
@@ -395,6 +396,9 @@ button {
   transition-property: transform;
   transition-duration: 0.5s;
 }
+button:hover {
+  transform: scale(1.05);
+}
 a:focus,
 button:focus {
   outline-width: var(--outline-width);
@@ -414,7 +418,6 @@ button + .button {
   color: var(--inverted-color);
   background-color: var(--inverted-background-color);
   border-color: var(--inverted-background-color);
-  /* --box-shadow-ambient-color: var(--inverted-background-color); */
 }
 .button--secondary {
   color: var(--color);
@@ -428,10 +431,7 @@ button + .button {
   border-color: transparent;
   box-shadow: initial;
 }
-button:hover {
-  /* transform: translate(0, -2px); */
-  transform: scale(1.05);
-}
+
 
 /* hrs ---------------------------------- */
 
