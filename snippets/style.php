@@ -4,4 +4,5 @@
   <?= snippet('auf-style/background-themes'); ?>
   <?= snippet('auf-style/outline-themes'); ?>
   <?= snippet('auf-style/border-themes'); ?>
+  <?= snippet('auf-style/box-themes'); ?>
 </style>

@@ -32,21 +32,21 @@
 .<?= $css_class ?> {
   <?php endif?>
       
-<?php /* COLOR THEME --------------------------*/ ?>
+  <?php /* START: COLOR THEME --------------------------*/ ?>
     <?php if($colorThemeUid->isNotEmpty()): ?>
-<?php 
-  $colorTheme = $site->color_themes()->toStructure()->findBy('uid', $colorThemeUid->toString()); 
-  if(!$colorTheme) {
-    echo '/* ERROR: color-theme »' . $colorThemeUid . '« NOT FOUND */';
-  } else {
-    echo '/* color-theme: ' . $colorThemeUid . ' */';
-    snippet('auf-style/color-theme', [
-      'colorTheme' => $colorTheme, 
-      'renderCssClass' => false
-    ]);
-  }
-?>
+    
+    <?php 
+    $colorTheme = $site->color_themes()->toStructure()->findBy('uid', $colorThemeUid->toString()); 
+    if(!$colorTheme) {
+      echo '/* ERROR: color-theme »' . $colorThemeUid . '« NOT FOUND */';
+    } else {
+      echo '/* color-theme: ' . $colorThemeUid . ' */';
+      snippet('auf-style/color-theme', [
+        'colorTheme' => $colorTheme, 
+        'renderCssClass' => false
+      ]); }?>
     <?php endif?>
+  <?php /* END: COLOR THEME --------------------------*/ ?>
 
 
 
