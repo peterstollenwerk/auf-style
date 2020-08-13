@@ -13,6 +13,7 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
   $borderThemeUid = $boxTheme->border_theme();
   $outlineThemeUid = $boxTheme->outline_theme();
   $boxShadowThemeUid = $boxTheme->box_shadow_theme();
+  $customTheme = $boxTheme->custom_theme();
 ?>
 
 <?php if($preview): ?>
@@ -20,9 +21,9 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
     <h3 class="safe-text">.<?= $css_class ?> <span>.box .border--outset</span></h3>
     <button class="button--primary">.primary</button>
     <button class="button--secondary">.secondary</button>
-    <button class="button--tertiary" href="https://gmx.de" role="link">.tertiary</button>
+    <button class="button--tertiary">.tertiary</button>
     <button>Default</button>
-    <a class="button" href="#">a.button</a>
+    <a class="button" href="https://aufdesign.de" target="_blank">a.button</a>
     <h4>.safe-text</h4>
     <p class="safe-text"> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
     <h4>.safe-text--extra <small>.box-shadow--inset .border-radius</small></h4>
@@ -99,18 +100,25 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php /* START: BOX-SHADOW-THEME --------------------------*/ ?>
 <?php if($boxShadowThemeUid->isNotEmpty()): ?>
 <?php 
-  $boxShadowTheme = $site->outline_themes()->toStructure()->findBy('uid', $boxShadowThemeUid->toString()); 
+  $boxShadowTheme = $site->box_shadow_themes()->toStructure()->findBy('uid', $boxShadowThemeUid->toString()); 
   if(!$boxShadowTheme) {
     echo '/* ERROR: box-shadow-theme »' . $boxShadowThemeUid . '« NOT FOUND */';
   } else {
     echo '/* box-shadow-theme: ' . $boxShadowThemeUid . ' */';
     snippet('auf-style/box-shadow-theme', [
-      'outlineTheme' => $boxShadowTheme, 
+      'boxShadowTheme' => $boxShadowTheme, 
       'renderCssClass' => false
     ]); }?>
 <?php endif?>
 
 <?php /* END: BOX-SHADOW-THEME --------------------------*/ ?>
+
+<?php /* START: CUSTOM-THEME --------------------------*/ ?>
+<?php if($customTheme->isNotEmpty()): ?>
+  <?= $customTheme ?>
+<?php endif?>
+
+<?php /* END: CUSTOM-THEME --------------------------*/ ?>
 
 <?php if($renderCssClass): ?>
 }

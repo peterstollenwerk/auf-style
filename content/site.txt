@@ -5,14 +5,14 @@ Title: Auf-Style-Plugin
 Box-themes:
 
 - 
-  uid: .default
+  uid: default
   label: Default
   color_theme: ""
   background_theme: ""
   border_theme: ""
   outline_theme: ""
   text_shadow_theme: ""
-  box_shadow_theme: ""
+  box_shadow_theme: level-3
   custom_theme: ""
   theme_divider: null
 - 
@@ -39,7 +39,7 @@ Box-themes:
   outline_theme: double
   text_shadow_theme: ""
   box_shadow_theme: ""
-  custom_theme: '--padding: calc(1rem -2px);'
+  custom_theme: ""
   is_custom: 'false'
   custom: ""
   theme_divider: null
@@ -51,7 +51,7 @@ Box-themes:
   border_theme: "1"
   outline_theme: dashed
   text_shadow_theme: ""
-  box_shadow_theme: level-3
+  box_shadow_theme: level-2
   custom_theme: ""
   theme_divider: null
 - 
@@ -59,11 +59,25 @@ Box-themes:
   label: Blue-Red Transition
   color_theme: crazy-shit
   background_theme: "4"
-  border_theme: ""
+  border_theme: button
   outline_theme: ""
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+  theme_divider: null
+- 
+  uid: external-image
+  label: External Image
+  color_theme: ""
+  background_theme: ""
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: |
+    --background-url: ;
+    background: url(https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2F1rQ9r8nm2UizKgMgsZ9Vog%2Flarger.jpg&width=1200&quality=80);
+    background-color: red;
   theme_divider: null
 
 ----
@@ -550,7 +564,7 @@ Box-shadow-themes:
       spread_radius: ""
       ambient_offset_x: ""
       ambient_offset_y: 1px
-      ambient_blur_radius: 2px
+      ambient_blur_radius: 3px
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
@@ -561,12 +575,12 @@ Box-shadow-themes:
   box_shadows:
     - 
       offset_x: ""
-      offset_y: 4px
+      offset_y: 3px
       blur_radius: 11px
       spread_radius: ""
       ambient_offset_x: ""
       ambient_offset_y: 2px
-      ambient_blur_radius: 4px
+      ambient_blur_radius: 5px
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
@@ -613,7 +627,7 @@ Box-shadow-themes:
       blur_radius: 35px
       spread_radius: ""
       ambient_offset_x: ""
-      ambient_offset_y: 4px
+      ambient_offset_y: 5px
       ambient_blur_radius: 11px
       ambient_spread_radius: ""
   box_shadow: [ ]

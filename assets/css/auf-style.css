@@ -10,7 +10,9 @@ html, body {
   --border-width: 2px;
   --border-style: none;
   --border-color: black;
-  --border-radius: 0.25rem;
+  
+  --button-border-radius: 0.25rem;
+  --button-padding: 1rem;
 
   --outline-width: 0.25rem;
   --outline-style: dashed;
@@ -18,7 +20,6 @@ html, body {
   --outline-offset: 0.25rem;
 
   --padding: 1.62rem;
-  --padding--button: 1rem;
   
   --margin: 1.62rem;
 }
@@ -68,6 +69,27 @@ html, body {
   border-color: var(--border-color);
   border-style: var(--border-style);
   border-radius: var(--border-radius);
+
+  --box-shadow-offset-x: 0;
+  --box-shadow-offset-y: 1px;
+  --box-shadow-blur-radius: 3px;
+  --box-shadow-spread-radius: 0;
+
+  --box-shadow-ambient-offset-x: 0;
+  --box-shadow-ambient-offset-y: 1px;
+  --box-shadow-ambient-blur-radius: 3px;
+  --box-shadow-ambient-spread-radius: 0;
+  --box-shadow-ambient-color: var(--background-color);
+
+  box-shadow: 
+    /* direct-shadow */ var(--box-shadow-offset-x)
+      var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
+      var(--box-shadow-spread-radius) var(--box-shadow-color),
+
+    /* ambient shadow */ var(--box-shadow-ambient-offset-x)
+      var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
+      var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+
 }
 .box--inverted,
 .boxes--inverted > * {
@@ -357,13 +379,13 @@ h6 {
 
 .button,
 button {
-  --padding: 1rem;
+  --padding: var(--button-padding);
   --background: transparent;
   --border-color: transparent;
 
   cursor: pointer;
 
-  padding: var(--padding--button);
+  padding: var(--padding);
   
   background: var(--background);
   background-color: var(--background-color);
@@ -396,11 +418,13 @@ button {
   transition-property: transform;
   transition-duration: 0.5s;
 }
-button:hover {
+button:hover,
+.button:hover {
   transform: scale(1.05);
 }
 a:focus,
-button:focus {
+button:focus,
+.button:focus {
   outline-width: var(--outline-width);
   outline-style: var(--outline-style);
   outline-color: var(--outline-color);
