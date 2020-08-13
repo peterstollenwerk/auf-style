@@ -31,7 +31,7 @@
 <h1>Boxes</h1>
 
 <?= snippet('auf-style/box-themes', [
-  'wrapTag' => 'p',
+  'wrapTag' => 'article',
   'preview' => true
 ]); ?>
 

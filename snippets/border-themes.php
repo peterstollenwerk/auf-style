@@ -1,21 +1,21 @@
 <?php
   $wrapTag = isset($wrapTag) ? $wrapTag : false;
   $preview = isset($preview) ? $preview : false;
+  $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
+
   $borderThemes = $site->border_themes();
 ?>
 
 <?php if($borderThemes->isNotEmpty()): ?>
 
-  
-
   <?php foreach($borderThemes->toStructure() as $borderTheme): ?>
 
   <?php 
-      $uid = $borderTheme->uid();
-      $border_theme_class = 'border-theme--'. $uid;
-      $width = $borderTheme->border_width();
-      $style = $borderTheme->border_style();
-      $radius = $borderTheme->border_radius();
+    $uid = $borderTheme->uid();
+    $border_theme_class = 'border-theme--'. $uid;
+    $width = $borderTheme->border_width();
+    $style = $borderTheme->border_style();
+    $radius = $borderTheme->border_radius();
   ?>
 
   <?php if($preview): ?>
@@ -27,15 +27,21 @@
   <?php if($wrapTag): ?>
     <<?= $wrapTag ?>>
   <?php endif?>
+  
+  <?php if($renderCssClass): ?>
+    .<?= $border_theme_class ?> {
+  <?php endif?>
 
-  .<?= $border_theme_class ?> {
     <?php if($width->isNotEmpty()): ?>--border-width: <?= $width ?>;<?php endif?>
 
     <?php if($style->isNotEmpty()): ?>--border-style: <?= $style?>;<?php endif?>
 
     <?php if($radius->isNotEmpty()): ?>--border-radius: <?= $radius ?>;<?php endif?>
-
+  
+  <?php if($renderCssClass): ?>
   }
+  <?php endif?>
+
   <?php if($wrapTag): ?>
     </<?= $wrapTag ?>>
   <?php endif?>
@@ -44,10 +50,6 @@
     </article>
   <?php endif?>
 
-
-
   <?php endforeach?>
   
-  
-
 <?php endif?>

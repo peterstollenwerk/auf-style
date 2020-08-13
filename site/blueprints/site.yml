@@ -18,6 +18,13 @@ tabs:
   #STYLES-TAB
   styles:
     fields:
+      box_themes:
+        extends: auf_style/blueprints/fields/box_themes
+
+      box_color_divider:
+        type: headline
+        label: Style Themes
+
       color_themes:
         extends: auf_style/blueprints/fields/color_themes
       background_themes:
@@ -29,8 +36,7 @@ tabs:
       box_shadow_themes:
         extends: auf_style/blueprints/fields/box_shadow_themes
       
-      box_themes:
-        extends: auf_style/blueprints/fields/box_themes
+      
 
   #FILES-TAB
   files:

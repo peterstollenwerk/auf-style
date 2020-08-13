@@ -1,15 +1,25 @@
 type: structure
 label: Box Themes
 help: >
-  creates css-variables: <br>
-  <code>--box-UID: { --color: var(--color-UID); --background: var(--background-UID); }</code>
+  creates css-classes: <br>
+  <code>.box-theme--UID: { 
+    /\* color-theme: \*/
+    --color: var(--color-UID); 
+    ...
+    /\* background-theme: \*/
+    --background: var(--background-UID);
+    ...  
+    }
+  </code>
 columns:
   uid:
     width: 1/10
   label:
   color_theme:
-  border_theme:
   background_theme:
+  border_theme:
+  outline_theme:
+  text_shadow_theme:
   box_shadow_theme:
   custom_theme:
 fields:
@@ -35,6 +45,15 @@ fields:
       fetch: site.color_themes.toStructure
       text: "{{ structureItem.label }}"
       value: "{{ structureItem.uid }}"
+  background_theme:
+    type: select
+    label: Background Theme
+    width: 1/2
+    options: query
+    query: 
+      fetch: site.background_themes.toStructure
+      text: "{{ structureItem.label }}"
+      value: "{{ structureItem.uid }}"
   border_theme:
     type: select
     label: Border Theme
@@ -44,13 +63,22 @@ fields:
       fetch: site.border_themes.toStructure
       text: "{{ structureItem.label }}"
       value: "{{ structureItem.uid }}"
-  background_theme:
+  outline_theme:
     type: select
-    label: Background Theme
+    label: Outline Theme
     width: 1/2
     options: query
     query: 
-      fetch: site.background_themes.toStructure
+      fetch: site.outline_themes.toStructure
+      text: "{{ structureItem.label }}"
+      value: "{{ structureItem.uid }}"
+  text_shadow_theme:
+    type: select
+    label: Text Shadow Theme
+    width: 1/2
+    options: query
+    query: 
+      fetch: site.text_shadow_themes.toStructure
       text: "{{ structureItem.label }}"
       value: "{{ structureItem.uid }}"
   box_shadow_theme:

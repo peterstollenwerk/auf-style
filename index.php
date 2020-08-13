@@ -23,10 +23,13 @@ Kirby::plugin('auf/style', [
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
         'auf-style/color-theme' => __DIR__ . '/snippets/color-theme.php',
         'auf-style/background-themes' => __DIR__ . '/snippets/background-themes.php',
+        'auf-style/background-theme' => __DIR__ . '/snippets/background-theme.php',
         'auf-style/border-themes' => __DIR__ . '/snippets/border-themes.php',
+        'auf-style/border-theme' => __DIR__ . '/snippets/border-theme.php',
         'auf-style/outline-themes' => __DIR__ . '/snippets/outline-themes.php',
         'auf-style/box-shadow-themes' => __DIR__ . '/snippets/box-shadow-themes.php',
         'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
+        'auf-style/box-theme' => __DIR__ . '/snippets/box-theme.php',
         
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         'auf-style/style' => __DIR__ . '/snippets/style.php',
