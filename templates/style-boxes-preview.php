@@ -30,6 +30,8 @@
 
 <h1>Boxes</h1>
 
+<?= snippet('auf-style/page-theme-toggle-button'); ?>
+
 <?= snippet('auf-style/box-themes', [
   'wrapTag' => 'article',
   'preview' => true

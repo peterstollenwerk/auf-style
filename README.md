@@ -68,6 +68,12 @@ Color Convert Methods:
 
 * [ ] Separate Border-Radius-Theme!
 
+* [ ] add --box-shadow-color to the color_themes
+
+* [ ] add button-colors to the color theme?
+
+* [ ] Create dedicated night and day styles
+
 * [ ] Style / Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
 * [ ] Style / Forms

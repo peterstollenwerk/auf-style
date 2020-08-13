@@ -18,8 +18,9 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
     <h3 class="safe-text">.<?= $css_class ?> <span>.box .border--outset</span></h3>
     <button class="button--primary">.primary</button>
     <button class="button--secondary">.secondary</button>
-    <button class="button--tertiary">.tertiary</button>
+    <button class="button--tertiary" href="https://gmx.de" role="link">.tertiary</button>
     <button>Default</button>
+    <a class="button" href="#">a.button</a>
     <h4>.safe-text</h4>
     <p class="safe-text"> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
     <h4>.safe-text--extra <small>.box-shadow--inset .border-radius</small></h4>

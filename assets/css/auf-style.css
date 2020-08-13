@@ -45,7 +45,7 @@ html, body {
   
   --color: white;
   --border-color: var(--color);
-  --background-color: black;
+  --background-color: hsl(25, 5%, 12%);
   --box-shadow-color: hsla(25, 10%, 0%, 0.5);
   --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);
 }
@@ -354,6 +354,7 @@ h6 {
 
 /* buttons ---------------------------------- */
 
+.button,
 button {
   --padding: 1rem;
   --background: transparent;
@@ -402,17 +403,24 @@ button:focus {
   outline-offset: var(--outline-offset);
 }
 
+button + button,
+.button + .button,
+.button + button,
+button + .button {
+  margin-left: 1rem;
+}
 
 .button--primary {
   color: var(--inverted-color);
   background-color: var(--inverted-background-color);
   border-color: var(--inverted-background-color);
+  --box-shadow-ambient-color: var(--inverted-background-color);
+  
 }
 .button--secondary {
   color: var(--color);
   background-color: var(--background-color);
   border-color: var(--background-color);
-  border-color: transparent;
 }
 .button--tertiary {
   color: var(--color);
@@ -424,9 +432,6 @@ button:focus {
 button:hover {
   /* transform: translate(0, -2px); */
   transform: scale(1.05);
-}
-button + button {
-  margin-left: 1rem;
 }
 
 /* hrs ---------------------------------- */

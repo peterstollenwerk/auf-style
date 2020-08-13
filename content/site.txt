@@ -5,6 +5,17 @@ Title: Auf-Style-Plugin
 Box-themes:
 
 - 
+  uid: .default
+  label: Default
+  color_theme: ""
+  background_theme: ""
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
+  theme_divider: null
+- 
   uid: crazy-yellow-blue-stripes
   label: Crazy-Yellow-Blue-Stripes
   color_theme: Crazy-Yellow-Blue-Stripes
@@ -41,6 +52,17 @@ Box-themes:
   outline_theme: dashed
   text_shadow_theme: ""
   box_shadow_theme: level-3
+  custom_theme: ""
+  theme_divider: null
+- 
+  uid: "4"
+  label: Blue-Red Transition
+  color_theme: crazy-shit
+  background_theme: "4"
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
   custom_theme: ""
   theme_divider: null
 
@@ -83,7 +105,7 @@ Color-themes:
   border: '#ffffff'
   outline: '#ffffff'
   text_shadow: '#ffffff40'
-  box_shadow_ambient: '#00000040'
+  box_shadow_ambient: '#ffffff'
 - 
   uid: "1"
   label: Orange on Black
@@ -108,7 +130,7 @@ Color-themes:
   color: '#00ff7b'
   background: '#0023d1'
   border: '#007bff'
-  outline: '#002aff'
+  outline: '#00ff7b'
   text_shadow: '#ff00dd'
   box_shadow_ambient: '#ffdd00'
 - 
