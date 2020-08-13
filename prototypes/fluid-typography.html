@@ -5,105 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fluid Typography</title>
   <style>
-    :root {
-      --size-7: 4.75; 
-      --size-6: 3.75; 
-      --size-5: 3; 
-      --size-4: 2.5; 
-      --size-3: 2; 
-      --size-2: 1.5; 
-      --size-1: 1.25; /* Default */
-      --size-0: 1; 
-      --size--1: 0.8125; 
-      --size--2: 0.625; 
-      --size--3: 0.5; 
-      --size--4: 0.375; 
+:root {
+  --size-7: 4.75;
+  --size-6: 3.75;
+  --size-5: 3;
+  --size-4: 2.5;
+  --size-3: 2;
+  --size-2: 1.5;
+  --size-1: 1.25; /* Default */
+  --size-0: 1;
+  --size--1: 0.8125;
+  --size--2: 0.625;
+  --size--3: 0.5;
+  --size--4: 0.375;
+  --padding: 1.618rem;
+  --margin: 1.618rem;
+}
+html {
+  font-size: 1rem;
+  font-family: arial;
+  line-height: 1.5;
+}
+* {
+  --min-fontsize: 18;
+  --min-screensize: 100;
+  --max-screensize: 1200;
+  --container-width: 100vw;
+  --fontsize-factor: var(--size-0);
+  --max-fontsize: calc(var(--min-fontsize) * var(--fontsize-factor));
+  /* font-size: calc(16px + (24 - 16) * (100vw - 300px) / (800 - 300)); */
+  font-size: calc(
+    (var(--min-fontsize) * 1px) + (var(--max-fontsize) - var(--min-fontsize)) *
+      (var(--container-width) - (var(--min-screensize) * 1px)) /
+      (var(--max-screensize) - var(--min-screensize))
+  );
+}
+* {
+  margin: 0;
+}
+* + * {
+  margin-top: var(--margin);
+}
+body {
+  padding: var(--padding);
+}
+body {
+  max-width: calc(var(--max-screensize) * 1px);
+  margin-left: auto;
+  margin-right: auto;
+}
+h1, .h1 {
+  --fontsize-factor: var(--size-6);
+}
+h2, .h2 {
+  --fontsize-factor: var(--size-5);
+}
+h3, .h3 {
+  --fontsize-factor: var(--size-4);
+}
+h4, .h4 {
+  --fontsize-factor: var(--size-3);
+}
+h5, .h5 {
+  --fontsize-factor: var(--size-2);
+}
+h6, .h6 {
+  --fontsize-factor: var(--size-1);
+}
+p {
+  --fontsize-factor: var(--size-0);
+}
 
-      --margin: 1.618rem;
-    }
-    html {
-      font-family: arial;
-      line-height: 1.5;
-    }
-    * {
-      --min-fontsize: 16;
-      --fontsize-factor: var(--size-0);
-      --max-fontsize: calc( var(--min-fontsize) * var(--fontsize-factor) );
-      --min-screensize: 300;
-      --max-screensize: 1200;
-      --container-width: 100vw;
-      /* font-size: calc(16px + (24 - 16) * (100vw - 300px) / (800 - 300)); */
-      font-size: calc((var(--min-fontsize) * 1px) + (var(--max-fontsize) - var(--min-fontsize)) * (var(--container-width) - (var(--min-screensize) * 1px)) / (var(--max-screensize) - var(--min-screensize)));
-      margin: 0;
-    }
-    * + * {
-      margin-top: var(--margin);
-    }
-    body {
-      padding: 1rem;
-    }
-    body {
-      max-width: calc( var(--max-screensize) * 1px );
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h1 { --fontsize-factor: var(--size-5); }
-    h2 { --fontsize-factor: var(--size-4); }
-    h3 { --fontsize-factor: var(--size-3); }
-    h4 { --fontsize-factor: var(--size-2); }
-    h5 { --fontsize-factor: var(--size-1); }
-    h6 { --fontsize-factor: var(--size-0); }
-
-    .fs-fluid-7, .fs-fluid-7 * { --fontsize-factor: var(--size-7); }
-    .fs-fluid-6, .fs-fluid-6 * { --fontsize-factor: var(--size-6); }
-    .fs-fluid-5, .fs-fluid-5 * { --fontsize-factor: var(--size-5); }
-    .fs-fluid-4, .fs-fluid-4 * { --fontsize-factor: var(--size-4); }
-    .fs-fluid-3, .fs-fluid-3 * { --fontsize-factor: var(--size-3); }
-    .fs-fluid-2, .fs-fluid-2 * { --fontsize-factor: var(--size-2); }
-    .fs-fluid-1, .fs-fluid-1 * { --fontsize-factor: var(--size-1); }
-    .fs-fluid-0, .fs-fluid-0 * { --fontsize-factor: var(--size-0); }
-
-    /* Static Sizes for Stuff you can not read */
-    .fs-static-7, .fs-static-7 * { font-size: calc( var(--size-7) * 1rem); }
-    .fs-static-6, .fs-static-6 * { font-size: calc( var(--size-6) * 1rem); }
-    .fs-static-5, .fs-static-5 * { font-size: calc( var(--size-5) * 1rem); }
-    .fs-static-4, .fs-static-4 * { font-size: calc( var(--size-4) * 1rem); }
-    .fs-static-3, .fs-static-3 * { font-size: calc( var(--size-3) * 1rem); }
-    .fs-static-2, .fs-static-2 * { font-size: calc( var(--size-2) * 1rem); }
-    .fs-static-1, .fs-static-1 * { font-size: calc( var(--size-1) * 1rem); }
-    .fs-static--1, .fs-static--1 * { font-size: calc( var(--size--1) * 1rem); }
-    .fs-static--2, .fs-static--2 * { font-size: calc( var(--size--2) * 1rem); }
-    .fs-static--3, .fs-static--3 * { font-size: calc( var(--size--3) * 1rem); }
-    .fs-static--4, .fs-static--4 * { font-size: calc( var(--size--4) * 1rem); }
-    
-    
-
-
-    p {
-      /* max-width: 66ch; */
-    }
+/* jumbo */
+.font-size--7,
+.font-size--7 * {
+  --fontsize-factor: var(--size-7);
+}
+/* h1, xxxxx-large */
+.font-size--6,
+.font-size--6 * {
+  --fontsize-factor: var(--size-6);
+}
+/* h2, xxxx-large */
+.font-size--5,
+.font-size--5 * {
+  --fontsize-factor: var(--size-5);
+}
+/* h3, xxx-large */
+.font-size--4,
+.font-size--4 * {
+  --fontsize-factor: var(--size-4);
+}
+/* h4, xx-large */
+.font-size--3,
+.font-size--3 * {
+  --fontsize-factor: var(--size-3);
+}
+/* h5, x-large */
+.font-size--2,
+.font-size--2 * {
+  --fontsize-factor: var(--size-2);
+}
+/* h6, large */
+.font-size--1,
+.font-size--1 * {
+  --fontsize-factor: var(--size-1);
+}
+/* text, medium (default) */
+.font-size--0,
+.font-size--0 * {
+  --fontsize-factor: var(--size-0);
+}
+/* small (static) */
+.font-size---1,
+.font-size---1 * {
+  font-size: calc(var(--size--1) * 1rem);
+}
+/* x-small (static) */
+.font-size---2,
+.font-size---2 * {
+  font-size: calc(var(--size--2) * 1rem);
+}
+/* xx-small (static) */
+.font-size---3,
+.font-size---3 * {
+  font-size: calc(var(--size--3) * 1rem);
+}
+/* xxx-small (static) */
+.font-size---4,
+.font-size---4 * {
+  font-size: calc(var(--size--4) * 1rem);
+}
 
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-gap: var(--margin);
-      grid-row-gap: var(--margin);
-    }
-    .grid > * {
-      grid-column: 1 / -1;
-    }
-    .grid > * + * {
-      margin-top: 0; /* Grid-Row has taken over. */
-    }
-    .span-4 {
-      grid-column: auto / span 4;
-    }
 
+/* Static Sizes for Stuff you can not read */
+.font-size--7.font-size--static,
+.font-size--7.font-size--static * {
+  font-size: calc(var(--size-7) * 1rem);
+}
+.font-size--6.font-size--static,
+.font-size--6.font-size--static * {
+  font-size: calc(var(--size-6) * 1rem);
+}
+.font-size--5.font-size--static,
+.font-size--5.font-size--static * {
+  font-size: calc(var(--size-5) * 1rem);
+}
+.font-size--4.font-size--static,
+.font-size--4.font-size--static * {
+  font-size: calc(var(--size-4) * 1rem);
+}
+.font-size--3.font-size--static,
+.font-size--3.font-size--static * {
+  font-size: calc(var(--size-3) * 1rem);
+}
+.font-size--2.font-size--static,
+.font-size--2.font-size--static * {
+  font-size: calc(var(--size-2) * 1rem);
+}
+.font-size--1.font-size--static,
+.font-size--1.font-size--static * {
+  font-size: calc(var(--size-1) * 1rem);
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: var(--margin);
+  grid-row-gap: var(--margin);
+}
+.grid > * {
+  grid-column: 1 / -1;
+}
+.grid > * + * {
+  margin-top: 0; /* Grid-Row has taken over. */
+}
+.span-4 {
+  grid-column: auto / span 4;
+}
   </style>
 </head>
 <body class="grid">
   <h1>Fluid Typography</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
   <h2>Is Fantastic</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquam, eum dignissimos doloribus et sint nemo quam saepe? Delectus unde laboriosam blanditiis esse architecto tempora dolorum et eveniet nobis consequuntur?</p>
   <h3>When it works</h3>
@@ -114,8 +200,26 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, corrupti laudantium, suscipit illo voluptatibus aut distinctio ea ducimus praesentium laboriosam natus dolor quod aliquid voluptas eum placeat illum vitae enim!</p>
   <h6>...quite annoying</h6>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores totam quam sint alias fuga est quos aliquam sequi magni dolores earum animi, saepe provident voluptate eos debitis sed exercitationem porro?</p>
-  <section class="grid fs-static--3">
-    <h2>Static Typography</h2>
+  <section class="grid font-size---1 font-size--static">
+    <h2>Font-Size: -1 (static)</h2>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+  </section>
+  <section class="grid font-size---2 font-size--static">
+    <h2>Font-Size: -2 (static)</h2>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+  </section>
+  <section class="grid font-size---3 font-size--static">
+    <h2>Font-Size: -3 (static)</h2>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+    <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+  </section>
+  <section class="grid font-size---4 font-size--static">
+    <h2>Font-Size: -4 (static)</h2>
     <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
     <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
     <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
