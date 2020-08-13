@@ -23,6 +23,7 @@ fields:
     type: structure
     columns:
       type:
+      label:
       image:
       gradient:
       custom:
@@ -43,6 +44,11 @@ fields:
           image: Image
           gradient: Gradient
           custom: Custom...
+        width: 1/2
+      label:
+        label: Label
+        type: text
+        width: 1/2
       # CUSTOM START
       custom:
         label: Custom
@@ -86,6 +92,11 @@ fields:
             options:
               linear_gradient: Linear Gradient
               repeating_linear_gradient: Repeating Linear Gradient
+            width: 1/2
+          gradient_label:
+            label: Gradient Label
+            type: text
+            width: 1/2
           gradient_color_stops:
             type: structure
             label: Gradient Color Stops
@@ -95,10 +106,12 @@ fields:
                 alpha: true
                 label: Color
                 width: 2/6
+                help: you can use transparencey!
               start:
                 type: text
                 label: Start
                 width: 2/6
+                help: please add a unit, also to zeros '0px'!!!!
               end:
                 type: text
                 label: End

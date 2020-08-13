@@ -18,7 +18,7 @@ html, body {
   --outline-offset: 0.25rem;
 
   --padding: 1.62rem;
-  --padding--buton: 1rem;
+  --padding--button: 1rem;
   
   --margin: 1.62rem;
 }
@@ -81,6 +81,10 @@ html, body {
   border-width: var(--border-width);
   border-style: var(--border-style);
   border-color: var(--border-color);
+  border-radius: var(--border-radius);
+}
+.border-radius,
+.borders-radius > * {
   border-radius: var(--border-radius);
 }
 .border--outset,
@@ -357,12 +361,12 @@ button {
   
   cursor: pointer;
 
-  padding: var(--padding--buton);
+  padding: var(--padding--button);
   
   background: var(--background);
   background-color: var(--background-color);
   
-  border-width: var(--border-width);
+  border-width: var(--button-border-width);
   border-color: var(--border-color);
   border-style: var(--border-style);
   border-radius: var(--border-radius);
@@ -389,6 +393,13 @@ button {
     
   transition-property: transform;
   transition-duration: 0.5s;
+}
+a:focus,
+button:focus {
+  outline-width: var(--outline-width);
+  outline-style: var(--outline-style);
+  outline-color: var(--outline-color);
+  outline-offset: var(--outline-offset);
 }
 
 

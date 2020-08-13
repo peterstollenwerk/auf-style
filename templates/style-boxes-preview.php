@@ -16,7 +16,7 @@
     * + * {
       margin-top: var(--margin);
     }
-    body > * {
+    body {
       max-width: 666px;
       margin-left: auto;
       margin-right: auto;
