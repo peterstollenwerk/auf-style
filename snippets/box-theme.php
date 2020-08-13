@@ -11,6 +11,8 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
   $colorThemeUid = $boxTheme->color_theme();
   $backgroundThemeUid = $boxTheme->background_theme();
   $borderThemeUid = $boxTheme->border_theme();
+  $outlineThemeUid = $boxTheme->outline_theme();
+  $boxShadowThemeUid = $boxTheme->box_shadow_theme();
 ?>
 
 <?php if($preview): ?>
@@ -78,6 +80,37 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
     ]); }?>
 <?php endif?>
 <?php /* END: BORDER-THEME --------------------------*/ ?>
+
+<?php /* START: OUTLINE-THEME --------------------------*/ ?>
+<?php if($outlineThemeUid->isNotEmpty()): ?>
+<?php 
+  $outlineTheme = $site->outline_themes()->toStructure()->findBy('uid', $outlineThemeUid->toString()); 
+  if(!$outlineTheme) {
+    echo '/* ERROR: outline-theme »' . $outlineThemeUid . '« NOT FOUND */';
+  } else {
+    echo '/* outline-theme: ' . $outlineThemeUid . ' */';
+    snippet('auf-style/outline-theme', [
+      'outlineTheme' => $outlineTheme, 
+      'renderCssClass' => false
+    ]); }?>
+<?php endif?>
+<?php /* END: OUTLINE-THEME --------------------------*/ ?>
+
+<?php /* START: BOX-SHADOW-THEME --------------------------*/ ?>
+<?php if($boxShadowThemeUid->isNotEmpty()): ?>
+<?php 
+  $boxShadowTheme = $site->outline_themes()->toStructure()->findBy('uid', $boxShadowThemeUid->toString()); 
+  if(!$boxShadowTheme) {
+    echo '/* ERROR: box-shadow-theme »' . $boxShadowThemeUid . '« NOT FOUND */';
+  } else {
+    echo '/* box-shadow-theme: ' . $boxShadowThemeUid . ' */';
+    snippet('auf-style/box-shadow-theme', [
+      'outlineTheme' => $boxShadowTheme, 
+      'renderCssClass' => false
+    ]); }?>
+<?php endif?>
+
+<?php /* END: BOX-SHADOW-THEME --------------------------*/ ?>
 
 <?php if($renderCssClass): ?>
 }

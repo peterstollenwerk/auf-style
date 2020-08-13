@@ -40,14 +40,14 @@ html, body {
 }
 .page-theme--dark {
   --page-color: hsl(225, 10%, 95%);
-  --page-background-color:hsl(225, 10%, 10%);
-  --page-background: linear-gradient(hsl(225, 10%, 20%), hsl(225, 10%, 10%));
+  --page-background-color:hsl(225, 5%, 10%);
+  --page-background: linear-gradient(hsl(225, 5%, 20%), hsl(225, 5%, 10%));
   
   --color: white;
   --border-color: var(--color);
-  --background-color: hsl(25, 5%, 12%);
-  --box-shadow-color: hsla(25, 10%, 0%, 0.5);
-  --box-shadow-ambient-color: hsla(25, 10%, 10%, 0.5);
+  --background-color: hsl(225, 5%, 12%);
+  --box-shadow-color: hsla(225, 10%, 0%, 0.5);
+  --box-shadow-ambient-color: hsla(225, 10%, 10%, 0.5);
 }
 .page {
   --color: var(--page-color);
@@ -359,7 +359,7 @@ button {
   --padding: 1rem;
   --background: transparent;
   --border-color: transparent;
-  
+
   cursor: pointer;
 
   padding: var(--padding--button);
@@ -414,8 +414,7 @@ button + .button {
   color: var(--inverted-color);
   background-color: var(--inverted-background-color);
   border-color: var(--inverted-background-color);
-  --box-shadow-ambient-color: var(--inverted-background-color);
-  
+  /* --box-shadow-ambient-color: var(--inverted-background-color); */
 }
 .button--secondary {
   color: var(--color);

@@ -27,7 +27,9 @@ Kirby::plugin('auf/style', [
         'auf-style/border-themes' => __DIR__ . '/snippets/border-themes.php',
         'auf-style/border-theme' => __DIR__ . '/snippets/border-theme.php',
         'auf-style/outline-themes' => __DIR__ . '/snippets/outline-themes.php',
+        'auf-style/outline-theme' => __DIR__ . '/snippets/outline-theme.php',
         'auf-style/box-shadow-themes' => __DIR__ . '/snippets/box-shadow-themes.php',
+        'auf-style/box-shadow-theme' => __DIR__ . '/snippets/box-shadow-theme.php',
         'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
         'auf-style/box-theme' => __DIR__ . '/snippets/box-theme.php',
         

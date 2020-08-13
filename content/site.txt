@@ -36,7 +36,7 @@ Box-themes:
   color_theme: crazy-shit
   background_theme: "1"
   border_theme: ""
-  outline_theme: ""
+  outline_theme: double
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: '--padding: calc(1rem -2px);'
