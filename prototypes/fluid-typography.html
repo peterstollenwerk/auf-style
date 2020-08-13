@@ -18,16 +18,17 @@
   --size--2: 0.625;
   --size--3: 0.5;
   --size--4: 0.375;
+  
   --padding: 1.618rem;
   --margin: 1.618rem;
 }
 html {
   font-size: 1rem;
   font-family: arial;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 * {
-  --min-fontsize: 18;
+  --min-fontsize: 14;
   --min-screensize: 100;
   --max-screensize: 1200;
   --container-width: 100vw;
@@ -55,83 +56,82 @@ body {
   margin-right: auto;
 }
 h1, .h1 {
-  --fontsize-factor: var(--size-6);
+  --fontsize-factor: var(--size-7);
 }
 h2, .h2 {
-  --fontsize-factor: var(--size-5);
+  --fontsize-factor: var(--size-6);
 }
 h3, .h3 {
-  --fontsize-factor: var(--size-4);
+  --fontsize-factor: var(--size-5);
 }
 h4, .h4 {
-  --fontsize-factor: var(--size-3);
+  --fontsize-factor: var(--size-4);
 }
 h5, .h5 {
-  --fontsize-factor: var(--size-2);
+  --fontsize-factor: var(--size-3);
 }
 h6, .h6 {
-  --fontsize-factor: var(--size-1);
+  --fontsize-factor: var(--size-2);
 }
 p {
-  --fontsize-factor: var(--size-0);
+  --fontsize-factor: var(--size-1);
 }
 
-/* jumbo */
+/* h1, jumbo */
 .font-size--7,
 .font-size--7 * {
   --fontsize-factor: var(--size-7);
 }
-/* h1, xxxxx-large */
+/* h2, xxx-large */
 .font-size--6,
 .font-size--6 * {
   --fontsize-factor: var(--size-6);
 }
-/* h2, xxxx-large */
+/* h3, xx-large */
 .font-size--5,
 .font-size--5 * {
   --fontsize-factor: var(--size-5);
 }
-/* h3, xxx-large */
+/* h4, x-large */
 .font-size--4,
 .font-size--4 * {
   --fontsize-factor: var(--size-4);
 }
-/* h4, xx-large */
+/* h5, large */
 .font-size--3,
 .font-size--3 * {
   --fontsize-factor: var(--size-3);
 }
-/* h5, x-large */
+/* h6, medium */
 .font-size--2,
 .font-size--2 * {
   --fontsize-factor: var(--size-2);
 }
-/* h6, large */
+/* text, regular (default) */
 .font-size--1,
 .font-size--1 * {
   --fontsize-factor: var(--size-1);
 }
-/* text, medium (default) */
+/* text, small */
 .font-size--0,
 .font-size--0 * {
   --fontsize-factor: var(--size-0);
 }
-/* small (static) */
+/* x-small (static) */
 .font-size---1,
 .font-size---1 * {
   font-size: calc(var(--size--1) * 1rem);
 }
-/* x-small (static) */
+/* xx-small (static) */
 .font-size---2,
 .font-size---2 * {
   font-size: calc(var(--size--2) * 1rem);
 }
-/* xx-small (static) */
+/* xxx-small (static) */
 .font-size---3,
 .font-size---3 * {
   font-size: calc(var(--size--3) * 1rem);
 }
-/* xxx-small (static) */
 .font-size---4,
 .font-size---4 * {
   font-size: calc(var(--size--4) * 1rem);
@@ -190,6 +190,7 @@ p {
 <body class="grid">
   <h1>Fluid Typography</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
+  <p class="font-size--0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>
   <h2>Is Fantastic</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquam, eum dignissimos doloribus et sint nemo quam saepe? Delectus unde laboriosam blanditiis esse architecto tempora dolorum et eveniet nobis consequuntur?</p>
   <h3>When it works</h3>

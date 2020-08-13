@@ -64,6 +64,10 @@ Color Convert Methods:
       3. <https://codepen.io/MadeByMike/pen/VvwqvW>
       4. <https://css-tricks.com/a-complete-guide-to-calc-in-css/>
 
+* [ ] Style / Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+
+* [ ] Style: Text-Styles -> check Blocks-Plugin
+
 * [ ] Boxes Preview
 
 * [ ] Default HTML-Elements styles!?
@@ -72,6 +76,12 @@ Color Convert Methods:
 
 * [ ] Set Site Defaults from Panel
 
+## Nive to have
+
 * [ ] Create Preview Field For Gradients
       - Example Plugin: <https://github.com/sylvainjule/kirby-previews>
       - Kirby Info: <https://getkirby.com/docs/reference/panel/fields/structure#preview-of-fields-in-the-table>
+
+* [ ] Create Typescale from Backend: <https://type-scale.com/>
+
+* [ ] Vertical Rhythm
