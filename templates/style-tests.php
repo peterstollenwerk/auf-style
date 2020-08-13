@@ -120,7 +120,6 @@
   <h2 id="box-shadow-themes">Box-Shadow-Themes</h2>
   <?= snippet('auf-style/box-shadow-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
-<hr>
 
 </body>
 </html>

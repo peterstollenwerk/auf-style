@@ -20,12 +20,15 @@ Kirby::plugin('auf/style', [
         ]
     ],
     'snippets' => [
-        'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
-        'auf-style/outline-themes' => __DIR__ . '/snippets/outline-themes.php',
-        'auf-style/border-themes' => __DIR__ . '/snippets/border-themes.php',
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
-        'auf-style/box-shadow-themes' => __DIR__ . '/snippets/box-shadow-themes.php',
+        'auf-style/color-theme' => __DIR__ . '/snippets/color-theme.php',
         'auf-style/background-themes' => __DIR__ . '/snippets/background-themes.php',
+        'auf-style/border-themes' => __DIR__ . '/snippets/border-themes.php',
+        'auf-style/outline-themes' => __DIR__ . '/snippets/outline-themes.php',
+        'auf-style/box-shadow-themes' => __DIR__ . '/snippets/box-shadow-themes.php',
+        'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
+        
+        'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         'auf-style/style' => __DIR__ . '/snippets/style.php',
     ],
     'blueprints' => [
@@ -38,6 +41,7 @@ Kirby::plugin('auf/style', [
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',
+        'style-boxes-preview' => __DIR__ . '/templates/style-boxes-preview.php',
     ],
     'routes' => [
         [
@@ -52,6 +56,19 @@ Kirby::plugin('auf/style', [
                     ]
                 ]);
           }
-        ]
+        ],
+        [
+          'pattern' => 'style-boxes-preview',
+          'action'  => function () {
+                return Page::factory([
+                    'slug' => 'style-boxes-preview',
+                    'template' => 'style-boxes-preview',
+                    'model' => 'style-boxes-preview',
+                    'content' => [
+                        'title' => 'Style Boxes Preview',
+                    ]
+                ]);
+          }
+        ],
     ]
 ]);

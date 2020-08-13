@@ -482,8 +482,8 @@ Box-themes:
 - 
   uid: button-primary
   label: Button (Primary)
-  color_theme: "1"
-  border_theme: button.border--primary
+  color_theme: crazy-shit
+  border_theme: ""
   background_theme: button
   box_shadow_theme: level-1
   custom_theme: ""

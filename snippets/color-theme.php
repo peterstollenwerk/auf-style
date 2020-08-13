@@ -1,15 +1,14 @@
 <?php
+
+  if( !isset($colorTheme) ) {
+    return;
+  } 
+
   $wrapTag = isset($wrapTag) ? $wrapTag : false;
   $preview = isset($preview) ? $preview : false;
-  $renderAsCssClass = isset($renderAsCssClass) ? $renderAsCssClass : true;
-  $colorThemes = $site->color_themes();
+  $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
+
 ?>
-
-<?php if($colorThemes->isNotEmpty()): ?>
-
-  
-
-  <?php foreach($colorThemes->toStructure() as $colorTheme): ?>
 
   <?php 
       $uid = $colorTheme->uid();
@@ -47,7 +46,7 @@
     <<?= $wrapTag ?> class="box-shadow--inset border" style="--border-radius: 1rem;">
   <?php endif?>
 
-  <?php if($renderAsCssClass): ?>
+  <?php if($renderCssClass): ?>
 .<?= $css_class ?> {
   <?php endif?>
       
@@ -68,7 +67,7 @@
     <?php if($boxShadowAmbientColor->isNotEmpty()): ?>--box-shadow-ambient-color: <?= $boxShadowAmbientColor ?>;<?php endif?>
 
 
-  <?php if($renderAsCssClass): ?>
+  <?php if($renderCssClass): ?>
 }
   <?php endif?>
 
@@ -80,11 +79,3 @@
   <?php if($preview): ?>
     </article>
   <?php endif?>
-
-
-
-  <?php endforeach?>
-  
-  
-
-<?php endif?>
