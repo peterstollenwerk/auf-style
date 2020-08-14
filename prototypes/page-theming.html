@@ -54,17 +54,17 @@ input {
 
 /* COLOR THEMING  - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
-:root {
+.page {
 
   --theme-hue: 25;
-  --theme-tint: 0%;
+  --theme-tint: 2%;
 
-  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 10%);
+  --text-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
   --page-background-color: hsl(var(--theme-hue), var(--theme-tint), 20%);
   --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 35%);
-  --text-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
 
-  --button-text-color: var(--text-color);
+  --button-text-color: var(--text-background-color);
   --button-border-color: var(--button-background-color);
   --border-color: var(--button-background-color);
   
@@ -84,17 +84,37 @@ input {
   --inverted-box-background-color: var(--text-color);
   --inverted-box-border-color: var(--text-color);
 
-  --inverted-button-background-color: var(--button-background-color);
   --inverted-button-text-color: var(--text-color);
+  --inverted-button-background-color: var(--button-background-color);
   --inverted-button-border-color: var(--button-background-color);
 
 }
+
+.page--light {
+  --theme-hue: 225;
+  --theme-tint: 5%;
+  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 20%);
+  --text-color: hsl(var(--theme-hue), var(--theme-tint), 30%);
+  --page-background-color: hsl(var(--theme-hue), var(--theme-tint), 80%);
+  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 95%);
+  
+  --inverted-box-text-color: var(--box-background-color);
+  --inverted-button-text-color: var(--box-background-color);
+  --button-text-color: var(--box-background-color);
+  --page-background: linear-gradient(
+    var(--page-gradient-2),
+    var(--page-gradient-1)
+  );
+
+}
+
+
 * {
   color: var(--text-color);
 }
 
 body {
-  background: var(--page-background);
+  /* background: var(--page-background); */
   background-color: var(--page-background-color);
 }
 
@@ -145,8 +165,40 @@ input {
 }
   </style>
   </head>
-  <body>
+  <body class="page page--dark" style="--theme-tint: 5%; --theme-hue: 25;" data-active-theme="page--dark">
     <h1>Theme it Baby!</h1>
+
+    <div class="toggle-button">
+      <button class="theme-toggle">Toggle Theme</button>
+    
+      <script>
+        const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
+        const bodyEl = document.getElementsByTagName('body')[0];
+        const setActiveTheme = function(value) {
+          bodyEl.dataset.activeTheme = value;
+        }
+        const getActiveTheme = function() {
+          return bodyEl.dataset.activeTheme;
+        }
+        themeToggleEl.addEventListener('click', function() {
+          const oldTheme = getActiveTheme();
+          let newTheme = '';
+          if(oldTheme === 'page--light') {
+            newTheme = 'page--dark';
+            bodyEl.classList.remove(oldTheme);
+            setActiveTheme(newTheme);
+            bodyEl.classList.add(newTheme);
+          } else {
+            newTheme = 'page--light';
+            bodyEl.classList.remove(oldTheme);
+            setActiveTheme(newTheme);
+            bodyEl.classList.add(newTheme);
+          }
+        });
+      </script>
+      
+    </div>
+
 
     <form class="">
       <label for="email">Email</label>
