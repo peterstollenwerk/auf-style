@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Theming</title>
+  <style>
+:root {
+  --padding: 1.618rem;
+  --padding-box: 1.618rem;
+  --padding-button: 1em;
+}
+* {
+  margin: 0;
+  font-family: arial;
+  box-sizing: border-box;
+}
+* + * {
+  margin-top: 1rem;
+}
+html,
+body {
+  min-height: 100%;
+}
+body {
+  max-width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--padding);
+}
+body > * {
+  padding: var(--padding);
+}
+:root {
+  --primary-color-h: 25;
+  --primary-color-s: 100%;
+  --primary-color-l: 50%;
+  --primary-color-h-s-l: var(--primary-color-h) var(--primary-color-s)
+    var(--primary-color-l);
+  --primary-color-hsl: hsl(var(--primary-color-h-s-l));
+}
+:root {
+  --page-background-color: hsl(var(--primary-color-h), 0%, 20%);
+ 
+  --button-background-color: hsl(var(--primary-color-h), 0%, 15%);
+  --button-border-color: var(--button-background-color);
+ 
+  --box-background-color: hsl(var(--primary-color-h), 0%, 35%);
+ 
+  --text-color: hsl(var(--primary-color-h), 0%, 90%);
+  
+  --button-text-color: var(--text-color);
+ 
+  --border-color: var(--button-background-color);
+  --input-text-color: var(--button-background-color);
+  --page-gradient-1: var(--page-background-color);
+  --page-gradient-2: var(--box-background-color);
+  --page-background: linear-gradient(
+    var(--page-gradient-1),
+    var(--page-gradient-2)
+  );
+
+  --inverted-text-color: var(--button-background-color);
+  --inverted-box-background-color: var(--text-color);
+  --inverted-button-background-color: var(--button-background-color);
+  --inverted-button-border-color: var(--button-background-color);
+  --inverted-button-text-color: var(--text-color);
+
+}
+* {
+  color: var(--text-color);
+}
+
+body {
+  background: var(--page-background);
+  background-color: var(--page-background-color);
+}
+button {
+  background-color: var(--button-background-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: 2px;
+}
+.box {
+  padding: var(--padding-box);
+  background-color: var(--box-background-color);
+}
+.box--inverted {
+  --text-color: var(--inverted-text-color);
+  background-color: var(--inverted-box-background-color);
+}
+.box--inverted button {
+  --text-color: var(--inverted-box-background-color);
+}
+
+input,
+button {
+  border: 0;
+  padding: var(--padding-button);
+}
+label {
+  display: block;
+}
+input {
+  border-radius: 3px;
+  width: 100%;
+  display: block;
+  color: var(--input-text-color);
+}
+::placeholder {
+  color: var(--input-text-color);
+}
+  </style>
+  </head>
+  <body>
+    <h1>Theme it Baby!</h1>
+
+    <form class="">
+      <label for="email">Email</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+    </form>
+    
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati maxime officia assumenda eum voluptas nihil molestias iure aliquam libero quis consequatur blanditiis, placeat repudiandae tempore, commodi delectus asperiores, rerum vel.</p>
+    
+    <form class="box box--inverted">
+      <label for="email">.box .box--inverted</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita obcaecati ab amet doloribus molestiae. Perspiciatis placeat ab obcaecati iusto perferendis minima nam, debitis pariatur. Natus, eos! Sit eum quaerat nesciunt?</p>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim laboriosam consequuntur molestiae voluptatibus, esse rem accusamus modi veritatis ullam numquam velit atque dolorum temporibus delectus nobis eveniet similique in!</p>
+    
+    <form class="box">
+      <label for="email">.box</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga et voluptatum doloribus sequi atque, impedit quia facilis deleniti suscipit? Autem, repellat. Distinctio sit a rerum harum cumque voluptatum tempora doloremque.</p>
+
+  </body>
+</html>

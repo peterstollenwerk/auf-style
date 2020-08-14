@@ -66,7 +66,6 @@ Color Convert Methods:
 
 * [X] ~~*Boxes Preview*~~ [2020-08-14]
 
-
 ### P1
 
 * [ ] [target: 0.5h; performance: ] Create separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
