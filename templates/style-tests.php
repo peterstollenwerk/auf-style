@@ -32,7 +32,7 @@
 
 <?= snippet('auf-style/page-theme-toggle-button'); ?>
 
-<nav class="box" style="--padding: 1rem 2rem;">
+<nav>
   <h2>On this page</h2>
   <ol>
     <li><a href="#button-themes">Button-Themes</a>  ↓ ↓ ↓</li>
@@ -56,12 +56,21 @@
 
 
 <section>
-
   <h2 id="button-themes">Button Themes</h2>
-  <input type="text">
+  <h3>Buttons</h3>
   <button>button</button>
   <button class="button--primary">button.button--crazy</button>
-  <button class="button--primary">button.button--crazy</button>
+  <button class="button--secondary">button.button--crazy</button>
+  <button class="button--tertiary">button.button--crazy</button>
+  <h3>Links</h3>
+  <a href="#">Some Hyperlink</a>
+  <a href="#" class="button">a.button</a>
+  <a href="#" class="button button--primary">a.button.button--primary</a>
+  <a href="#" class="button button--secondary">a.button.button--secondary</a>
+  <a href="#" class="button button--tertiary">a.button.button--tertiary</a>
+</section>
+
+<section>
 
   <section class="box">
     <h2>default</h2>

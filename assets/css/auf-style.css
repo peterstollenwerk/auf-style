@@ -26,6 +26,13 @@ html, body {
 * {
   color: var(--color);
 }
+
+*:focus {
+  outline-width: var(--outline-width);
+  outline-style: var(--outline-style);
+  outline-color: var(--outline-color);
+  outline-offset: var(--outline-offset);
+}
 /* PAGE THEMES ---------------------------------- */
 .page,
 .page-theme--light {
@@ -377,8 +384,8 @@ h6 {
 
 /* buttons ---------------------------------- */
 
-.button,
-button {
+ button,
+.button {
   --padding: var(--button-padding);
   --background: transparent;
   --border-color: transparent;
@@ -418,25 +425,16 @@ button {
   transition-property: transform;
   transition-duration: 0.5s;
 }
-button:hover,
+ button:hover,
 .button:hover {
   transform: scale(1.05);
 }
-a:focus,
-button:focus,
-.button:focus {
-  outline-width: var(--outline-width);
-  outline-style: var(--outline-style);
-  outline-color: var(--outline-color);
-  outline-offset: var(--outline-offset);
+a.button {
+  display: inline-block;
+  text-decoration: none;
 }
 
-button + button,
-.button + .button,
-.button + button,
-button + .button {
-  margin-left: 1rem;
-}
+
 
 .button--primary {
   color: var(--inverted-color);

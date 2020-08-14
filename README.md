@@ -64,34 +64,43 @@ Color Convert Methods:
       3. <https://codepen.io/MadeByMike/pen/VvwqvW>
       4. <https://css-tricks.com/a-complete-guide-to-calc-in-css/>
 
-* [ ] Boxes Preview
+* [X] ~~*Boxes Preview*~~ [2020-08-14]
 
-* [ ] Separate Border-Radius-Theme!
 
-* [ ] add --box-shadow-color to the color_themes
+### P1
 
-* [ ] add button-colors to the color theme?
+* [ ] [target: 0.5h; performance: ] Create separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 
-* [ ] Create dedicated night and day styles
+* [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
 
-* [ ] Style / Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+* [ ] [target: 2h] Explore if it´s necessary to add dedicated button-colors to the color theme?
+  * [ ] Use a form-dummy to evaluate the day & night-themes
 
-* [ ] Style / Forms
+* [ ] [target: 2h; performace: ] Set night and day styles from backend
 
-* [ ] Style: Text-Styles -> check Blocks-Plugin
+### P2
 
-* [ ] Default HTML-Elements styles!?
+* [ ] [target: 10m] add --box-shadow-color to the color_themes
 
-* [ ] Element-Styles
+* [ ] [target: 2h] Implement Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
-* [ ] Set Site Defaults from Panel
+### P3
 
-## Nive to have
+* [ ] [target: 4h-8h] Create Test Page with Default HTML-Elements!?
 
-* [ ] Create Preview Field For Gradients
+* [ ] [target: 5d] Implement nice style-generator for each theme: https://html-css-js.com/css/generator/text-shadow/
+
+* [ ] [target: 1d] Create custom Styles-View
+As an editor i want a fast backend to concentrate on the content and be productive. The style tab inside the site generates a 1000 lines, 1/3 of them are null or ""-values. Backend loads slower. Wouldn´t it be better to create a dedicated styles-view and generate the styles as a imprtable css file?
+
+* [ ] Implement Text-Styles [bold, uppercase, underline, strike] -> check Blocks-Plugin
+
+* [ ] [target: 6h] Create Preview Field For Gradients
       - Example Plugin: <https://github.com/sylvainjule/kirby-previews>
       - Kirby Info: <https://getkirby.com/docs/reference/panel/fields/structure#preview-of-fields-in-the-table>
 
-* [ ] Create Typescale from Backend: <https://type-scale.com/>
+* [ ] [target: 3d] Create Typescale from Backend: <https://type-scale.com/>
 
-* [ ] Vertical Rhythm
+* [ ] [target: 2d] Vertical Rhythm
+
+* [ ] [target: 1d] Google Fonts
