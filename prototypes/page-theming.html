@@ -56,16 +56,13 @@ input {
 
 :root {
 
-  --theme-hue: 225;
-  --theme-tint: 20%;
+  --theme-hue: 25;
+  --theme-tint: 0%;
 
-  --page-background-color: hsl(var(--theme-hue), var(--theme-tint), 20%);
- 
-  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 35%);
-  
-  --text-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
-  
   --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  --page-background-color: hsl(var(--theme-hue), var(--theme-tint), 20%);
+  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 35%);
+  --text-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
 
   --button-text-color: var(--text-color);
   --button-border-color: var(--button-background-color);
@@ -161,8 +158,8 @@ input {
     
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati maxime officia assumenda eum voluptas nihil molestias iure aliquam libero quis consequatur blanditiis, placeat repudiandae tempore, commodi delectus asperiores, rerum vel.</p>
     
-    <form class="box box--inverted">
-      <label for="email">.box .box--inverted</label>
+    <form class="box">
+      <label for="email">.box</label>
       <input id="email" type="text" placeholder="your email here..."></input>
       <button>subscribe</button>
       <button class="secondary">unsubscribe</button>
@@ -172,8 +169,8 @@ input {
     
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim laboriosam consequuntur molestiae voluptatibus, esse rem accusamus modi veritatis ullam numquam velit atque dolorum temporibus delectus nobis eveniet similique in!</p>
     
-    <form class="box">
-      <label for="email">.box</label>
+    <form class="box box--inverted">
+      <label for="email">.box .box--inverted</label>
       <input id="email" type="text" placeholder="your email here..."></input>
       <button>subscribe</button>
       <button class="secondary">unsubscribe</button>
