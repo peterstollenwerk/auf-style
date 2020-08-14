@@ -56,7 +56,7 @@ input {
 
 .page {
 
-  --theme-hue: 25;
+  --theme-hue: 225;
   --theme-tint: 2%;
 
   --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 10%);
@@ -92,11 +92,12 @@ input {
 
 .page--light {
   --theme-hue: 225;
-  --theme-tint: 5%;
-  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 20%);
-  --text-color: hsl(var(--theme-hue), var(--theme-tint), 30%);
+  --theme-tint: 2%;
+  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  --text-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
   --page-background-color: hsl(var(--theme-hue), var(--theme-tint), 80%);
-  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 95%);
+  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
+  --inverted-box-background-color: hsl(var(--theme-hue), var(--theme-tint), 30%);
   
   --inverted-box-text-color: var(--box-background-color);
   --inverted-button-text-color: var(--box-background-color);
@@ -165,8 +166,8 @@ input {
 }
   </style>
   </head>
-  <body class="page page--dark" style="--theme-tint: 5%; --theme-hue: 25;" data-active-theme="page--dark">
-    <h1>Theme it Baby!</h1>
+  <body class="page page--dark" data-active-theme="page--dark">
+    
 
     <div class="toggle-button">
       <button class="theme-toggle">Toggle Theme</button>
@@ -199,6 +200,7 @@ input {
       
     </div>
 
+    <h1>Theme it Baby!</h1>
 
     <form class="">
       <label for="email">Email</label>
