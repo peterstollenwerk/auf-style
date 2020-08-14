@@ -55,21 +55,17 @@ input {
 /* COLOR THEMING  - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 :root {
-  --primary-color-h: 25;
-  --primary-color-s: 100%;
-  --primary-color-l: 50%;
-  --primary-color-h-s-l: var(--primary-color-h) var(--primary-color-s)
-    var(--primary-color-l);
-  --primary-color-hsl: hsl(var(--primary-color-h-s-l));
-}
-:root {
-  --page-background-color: hsl(var(--primary-color-h), 0%, 20%);
+
+  --theme-hue: 225;
+  --theme-tint: 20%;
+
+  --page-background-color: hsl(var(--theme-hue), var(--theme-tint), 20%);
  
-  --box-background-color: hsl(var(--primary-color-h), 0%, 35%);
+  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 35%);
   
-  --text-color: hsl(var(--primary-color-h), 0%, 90%);
+  --text-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
   
-  --button-background-color: hsl(var(--primary-color-h), 0%, 15%);
+  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
 
   --button-text-color: var(--text-color);
   --button-border-color: var(--button-background-color);
