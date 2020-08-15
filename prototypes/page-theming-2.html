@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="page page-theme--dark" data-active-theme="page-theme--dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Theming</title>
+  <style>
+:root {
+  --padding: 1.618rem;
+  --padding-box: 1.618rem;
+  --padding-button: 1em;
+}
+* {
+  margin: 0;
+  font-family: arial;
+  box-sizing: border-box;
+}
+* + * {
+  margin-top: 1rem;
+}
+html,
+body {
+  min-height: 100%;
+}
+body {
+  max-width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--padding);
+}
+body > * {
+  padding: var(--padding);
+}
+input,
+button {
+  border: 0;
+  padding: var(--padding-button);
+}
+button {
+  border-style: solid;
+  border-width: 2px;
+}
+label {
+  display: block;
+}
+input {
+  border-radius: 3px;
+  width: 100%;
+  display: block;
+}
+.box {
+  padding: var(--padding-box);
+}
+
+/* COLOR THEMING  - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+.page {
+  --theme-hue: 225;
+  --theme-tint: 2%;
+}
+
+.page-theme--dark {
+  --color: hsl(var(--theme-hue), var(--theme-tint), 90%);
+  --background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  --border-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
+}
+
+html.page-theme--dark {
+  --background-gradient-1: hsl(var(--theme-hue), var(--theme-tint), 18%);
+  --background-gradient-2: hsl(var(--theme-hue), var(--theme-tint), 29%);
+  background: linear-gradient(
+    var(--background-gradient-1),
+    var(--background-gradient-2)
+  );
+  background-color: var(--background-gradient-1);
+}
+.page-theme--dark .box {
+  --background-color: hsl(var(--theme-hue), var(--theme-tint), 35%);
+}
+.page-theme--dark button {
+  --background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  --border-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+}
+.page-theme--dark input {
+  --color: black;
+  --background-color: white;
+}
+.page-theme--dark .box--inverted {
+  --color: hsl(var(--theme-hue), var(--theme-tint), 20%);
+  --background-color: hsl(var(--theme-hue), var(--theme-tint), 90%);
+  --border-color: var(--color);
+}
+.page-theme--dark .box--inverted button:not(.secondary):not(.tert) {
+  --color: hsl(var(--theme-hue), var(--theme-tint), 90%);
+}
+
+
+
+
+* {
+  color: var(--color);
+}
+
+.page,
+.box,
+.button,
+button,
+input,
+textarea {
+  color: var(--color);
+  background: var(--background);
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
+button.secondary {
+  --color: var(--color);
+  --background-color: var(--background-color);
+}
+button.tertiary {
+  --color: var(--color);
+  --background-color: var(--background-color);
+  --border-color: transparent;
+}
+input {
+  --color: var(--input-text-color);
+  --background-color: var(--input-background-color);
+}
+
+  </style>
+  </head>
+  <body>
+    
+
+    <div class="toggle-button">
+      <button class="theme-toggle">Toggle Theme</button>
+    
+      <script>
+        const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
+        const bodyEl = document.getElementsByTagName('html')[0];
+        const setActiveTheme = function(value) {
+          bodyEl.dataset.activeTheme = value;
+        }
+        const getActiveTheme = function() {
+          return bodyEl.dataset.activeTheme;
+        }
+        themeToggleEl.addEventListener('click', function() {
+          const oldTheme = getActiveTheme();
+          let newTheme = '';
+          if(oldTheme === 'page--light') {
+            newTheme = 'page-theme--dark';
+            bodyEl.classList.remove(oldTheme);
+            setActiveTheme(newTheme);
+            bodyEl.classList.add(newTheme);
+          } else {
+            newTheme = 'page--light';
+            bodyEl.classList.remove(oldTheme);
+            setActiveTheme(newTheme);
+            bodyEl.classList.add(newTheme);
+          }
+        });
+      </script>
+      
+    </div>
+
+    <h1>Theme it Baby!</h1>
+
+    <form class="">
+      <label for="email">Email</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+    </form>
+    
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati maxime officia assumenda eum voluptas nihil molestias iure aliquam libero quis consequatur blanditiis, placeat repudiandae tempore, commodi delectus asperiores, rerum vel.</p>
+    
+    <form class="box">
+      <label for="email">.box</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita obcaecati ab amet doloribus molestiae. Perspiciatis placeat ab obcaecati iusto perferendis minima nam, debitis pariatur. Natus, eos! Sit eum quaerat nesciunt?</p>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim laboriosam consequuntur molestiae voluptatibus, esse rem accusamus modi veritatis ullam numquam velit atque dolorum temporibus delectus nobis eveniet similique in!</p>
+    
+    <form class="box box--inverted">
+      <label for="email">.box .box--inverted</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga et voluptatum doloribus sequi atque, impedit quia facilis deleniti suscipit? Autem, repellat. Distinctio sit a rerum harum cumque voluptatum tempora doloremque.</p>
+
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="site site-theme--dark" data-active-theme="site-theme--dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Theming</title>
+  <style>
+* {
+  margin: 0;
+  font-family: arial;
+  box-sizing: border-box;
+}
+* + * {
+  margin-top: 1rem;
+}
+html {
+  min-height: 100%;
+}
+body {
+  max-width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body > * {
+  padding-left: 1.618rem;
+  padding-right: 1.618rem;
+}
+.box {
+  padding: 1.618rem;
+}
+button,
+input {
+  border-width: 2px;
+  border-style: solid;
+  padding: 1rem;
+}
+
+/* COLOR THEMING  - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+.site {
+  --theme-hue: 225;
+  --theme-tint: 2%;
+  /* --site-background: linear-gradient(
+    hsl(var(--theme-hue), var(--theme-tint), 18%),
+    hsl(var(--theme-hue), var(--theme-tint), 29%)
+  ); */
+}
+
+.site {
+  /* 1. Set the site background-color to black */
+  --site-background-color: hsl(var(--theme-hue), var(--theme-tint), 19%);
+  
+  /* 2. Set the button background-color so that you can barley see it */
+  --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  --button-border-color: var(--button-background-color);
+
+  /* 3. Set the site background-color to white and set the text color and input-background color */
+  --color: hsl(var(--theme-hue), var(--theme-tint), 88%);
+  --box-inverted-background-color: hsl(var(--theme-hue), var(--theme-tint), 88%);
+  --input-background-color: white;
+
+  /* 4. Set the site background-color to button-background-color and brighten it */
+  /* 5. Set site-gradient-color-1 to actual -background-color*/
+  --site-gradient-color-1: hsl(var(--theme-hue), var(--theme-tint), 19%);
+
+  /* 6. Find gradient-color-2 in brightening the background-color */
+  --site-gradient-color-2: hsl(var(--theme-hue), var(--theme-tint), 35%);
+
+  /* 7. Create Site- Background Gradient */
+  --site-background: linear-gradient(var(--site-gradient-color-1), var(--site-gradient-color-2));
+
+  /* 8. Set the box background-color, site-gradient-2 will be a good choice */
+  --box-background-color: hsl(var(--theme-hue), var(--theme-tint), 35%);
+  /* 9 Set the inverted box color */
+  
+  --box-inverted-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
+  /* 10 Set the box inverted button color */
+  --box-inverted-button-color: hsl(var(--theme-hue), var(--theme-tint), 88%);
+}
+
+/* 
+  MAY BE IT would be a good idea to not pass the variables 
+  down to their childs. I.e. html background!?
+  But the it would not be possible to apply custom box styles!!!!
+  
+  !!!!!! NEXT what happens when i pass down a background-pattern!!!!!
+*/
+/* BOXES */
+* {
+  --border-style: none;
+  --border-color: transparent;
+  --background: none;
+  --background-color: transparent;
+
+  color: var(--color);
+  
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  
+  background: var(--background);
+  background-color: var(--background-color);
+}
+html {
+  --background: var(--site-background);
+  --background-color: var(--site-background-color);
+}
+html > * {
+  --background: initial;
+}
+input {
+  --background-color: var(--input-background-color);
+}
+button {
+  --background-color: var(--button-background-color);
+  --border-color: var(--button-border-color);
+}
+button.secondary {
+  --background-color: var(--background-color);
+}
+button.tertiary {
+  --background-color: var(--background-color);
+  --border-color: transparent;
+}
+.box {
+  --background-color: var(--box-background-color);
+}
+.box--inverted {
+  --color: var(--box-inverted-color);
+  --background-color: var(--box-inverted-background-color);
+}
+.box--inverted button:not(.secondary):not(.tertiary) {
+  --color: var(--box-inverted-button-color);
+}
+
+
+
+
+  </style>
+  </head>
+  <body>
+
+    <div class="toggle-button">
+      <button class="theme-toggle">Toggle Theme</button>
+    
+      <script>
+        const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
+        const bodyEl = document.getElementsByTagName('html')[0];
+        const setActiveTheme = function(value) {
+          bodyEl.dataset.activeTheme = value;
+        }
+        const getActiveTheme = function() {
+          return bodyEl.dataset.activeTheme;
+        }
+        themeToggleEl.addEventListener('click', function() {
+          const oldTheme = getActiveTheme();
+          let newTheme = '';
+          if(oldTheme === 'site-theme--light') {
+            newTheme = 'site-theme--dark';
+            bodyEl.classList.remove(oldTheme);
+            setActiveTheme(newTheme);
+            bodyEl.classList.add(newTheme);
+          } else {
+            newTheme = 'site-theme--light';
+            bodyEl.classList.remove(oldTheme);
+            setActiveTheme(newTheme);
+            bodyEl.classList.add(newTheme);
+          }
+        });
+      </script>
+      
+    </div>
+
+    <h1>Theme it Baby!</h1>
+
+    <form class="">
+      <label for="email">Email</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+    </form>
+    
+    <p>Lorem ipsum dolor, <a href="#">sit amet consectetur adipisicing</a> elit. Obcaecati maxime officia assumenda eum voluptas nihil molestias iure aliquam libero quis consequatur blanditiis, placeat repudiandae tempore, commodi delectus asperiores, rerum vel.</p>
+    
+    <form class="box">
+      <label for="email">.box</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <p>Lorem ipsum dolor, sit amet <a href="#">consectetur</a> adipisicing elit. Expedita obcaecati ab amet doloribus molestiae. Perspiciatis placeat ab obcaecati iusto perferendis minima nam, debitis pariatur. Natus, eos! Sit eum quaerat nesciunt?</p>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim laboriosam consequuntur molestiae voluptatibus, esse rem accusamus modi veritatis ullam numquam velit atque dolorum temporibus delectus nobis eveniet similique in!</p>
+    
+    <form class="box box--inverted">
+      <label for="email">.box .box--inverted</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button>subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+    </form>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga et voluptatum doloribus sequi atque, impedit quia facilis deleniti suscipit? Autem, repellat. Distinctio sit a rerum harum cumque voluptatum tempora doloremque.</p>
+
+  </body>
+</html>
