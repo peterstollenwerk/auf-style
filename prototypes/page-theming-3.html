@@ -79,16 +79,18 @@ body {
 
   --box-inverted-background-color: var(--color);
 
+  /* 
   --input-color: black;
   --input-background-color: white;
   --input-box-shadow-color: hsla(var(--theme-hue), var(--theme-tint), 0%, 0.25);
   --input-box-shadow: inset 0 2px 2px 0px var(--input-box-shadow-color);
   --input-border-width: 0px;
   --input-border-color: var(--background-color);
-  --input-border-style: solid;
+  --input-border-style: solid; 
 
   --button-border-width: 2px;
   --button-border-style: solid;
+  */
 
 
 }
@@ -96,76 +98,82 @@ body {
 /* !!!!!! NEXT what happens when i pass down a background-pattern!!!!! */
 /* BOXES */
 * {
-  --border-width: 2px;
-  --border-style: none;
-  --border-color: transparent;
-  --background: none;
-  --background-color: transparent;
-  --box-shadow: initial;
-
-  color: var(--color);
-  border-color: var(--border-color);
-  border-style: var(--border-style);
-  border-width: var(--border-width);
+  color: var(--color, black);
+  
+  border-color: var(--border-color, black);
+  border-style: var(--border-style, solid);
+  border-width: var(--border-width, 0);
   border-radius: var(--border-radius);
-  background: var(--background);
-  background-color: var(--background-color);
+  background: var(--background, transparent);
+  background-color: var(--background-color, transparent);
   box-shadow: var(--box-shadow);
 }
 html {
-  --background: var(--site-background);
-  --background-color: var(--site-background-color);
+  background: var(--site-background);
+  background-color: var(--site-background-color, white);
 }
-html > * {
-  --background: initial;
-}
-
 .box {
   --padding: var(--box-padding);
+  --background: var(--box-background);
   --background-color: var(--box-background-color);
-  padding: var(--padding);
+  
+  padding: var(--padding, 1rem);
 }
+
+/* NEXT REWORK INVERTED BOX DEFAULTS */
 .box--inverted {
   --color: var(--box-inverted-color);
   --background-color: var(--box-inverted-background-color);
 }
 .box--inverted button:not(.secondary):not(.tertiary) {
-  --color: var(--box-inverted-button-color);
+  --button-color: var(--box-inverted-button-color);
 }
 
 label {
   display: block;
 }
-input:not([type="color"]) {
-  --color: var(--input-color);
-  --padding: calc( var(--button-padding) + var(--button-border-width));
-  --background-color: var(--input-background-color);
-  --border-color: var(--input-border-color);
-  --border-width: var(--input-border-width);
-  --border-style: var(--input-border-style);
-  --box-shadow: var(--input-box-shadow);
-  --border-radius: 2px;
+input:not([type="color"]),
+textarea,
+select 
+{
+  --color: var(--input-color, black);
+  --padding: calc( var(--button-padding, 1rem) + var(--button-border-width, 2px));
+  --background-color: var(--input-background-color, white);
+  --border-color: var(--input-border-color, black);
+  --border-width: var(--input-border-width, 0px);
+  --border-style: var(--input-border-style, solid);
+  --border-radius: var(--input-border-radius, 4px);
+  --box-shadow: var(--input-box-shadow, inset 0 2px 2px 0px rgba(0,0,0,0.25));
 
+  padding: var(--padding, 1rem);
+}
+
+option {
   padding: var(--padding);
 }
+option:checked {
+  --background-color: orange !important;
+}
+
 button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  --color: var(--color);
-  --padding: var(--button-padding);
-  --background-color: var(--button-background-color);
-  --border-color: var(--button-border-color);
-  --border-width: var(--button-border-width);
-  --border-style: var(--button-border-style);
+  --color: var(--button-color, white);
+  --padding: var(--button-padding, 1rem);
+  --background-color: var(--button-background-color, black);
+  --border-color: var(--button-border-color, black);
+  --border-width: var(--button-border-width, 2px);
+  --border-style: var(--button-border-style, solid);
+  
   padding: var(--padding);
 }
 button.secondary {
-  --background-color: var(--background-color);
+  --background-color: var(--background-color, white);
 }
 button.tertiary {
-  --background-color: var(--background-color);
-  --border-color: transparent;
+  --background-color: var(--background-color, white);
+  --border-color: var(--background-color, transparent);
 }
 
   </style>
