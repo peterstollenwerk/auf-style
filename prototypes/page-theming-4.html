@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="site site-theme--dark" data-active-theme="site-theme--dark">
+<html lang="en" class="site bg-theme--orange-stripes site-theme--dark" data-active-theme="site-theme--dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,17 +84,17 @@ label {
   --button-color: hsl(var(--theme-hue), var(--theme-tint), 95%);
   --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 25%);
   --button-border-color: hsl(var(--theme-hue), var(--theme-tint), 25%);
-
 }
+
+
 
 .site-theme--dark {
   --theme-hue: 25;
   --theme-tint: 2%;
-  /* TEXT */
+  
   --color: hsl(var(--theme-hue), var(--theme-tint), 90%);
-  --inverted-color: hsl(var(--theme-hue), var(--theme-tint), 10%);
   --border-color: var(--color);
-  /* SITE */
+
   --html-background-color: hsl(var(--theme-hue), 100%, 50%);
   --html-background-color-1: hsl(var(--theme-hue), var(--theme-tint), 30%);
   --html-background-color-2: hsl(var(--theme-hue), var(--theme-tint), 40%);
@@ -110,9 +110,9 @@ label {
   /* BUTTONS */
   --button-color: hsl(var(--theme-hue), var(--theme-tint), 95%);
   --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
-  --button-border-color: hsl(var(--theme-hue), var(--theme-tint), 25%);
-  --button-border-color: transparent;
+  --button-border-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
 }
+
 
 * {
   color: var(--color);
@@ -132,7 +132,6 @@ html {
   background-color: var(--html-background-color, hsl(25, 0%, 95%));
 }
 table {
-  --border-color: var(--inverted-color, black);
   border-collapse: collapse;
   border-width: var(--border-width, 2px);
   border-style: solid;
@@ -215,9 +214,23 @@ button.tertiary {
   --button-border-color: transparent;
 }
 
+/* .bg-theme--orange-stripes {
+  background: repeating-linear-gradient(-45deg,
+      orange,
+      orange 2px,
+      black 2px,
+      black 18px);
+}
+.bg-theme--orange {
+  --color: black;
+  --background-color: orange;
+  --box-color: white;
+  --box-background-color: black;
+} */
+
   </style>
   </head>
-  <body>
+  <body class="bg-theme--orange">
 
     <div class="toggle-button">
       <button class="theme-toggle">Toggle Theme</button>
