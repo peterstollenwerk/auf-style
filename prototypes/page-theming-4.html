@@ -92,9 +92,10 @@ label {
   --theme-tint: 2%;
   /* TEXT */
   --color: hsl(var(--theme-hue), var(--theme-tint), 90%);
+  --inverted-color: hsl(var(--theme-hue), var(--theme-tint), 10%);
   --border-color: var(--color);
   /* SITE */
-  --html-background-color: hsl(var(--theme-hue), var(--theme-tint), 40%);
+  --html-background-color: hsl(var(--theme-hue), 100%, 50%);
   --html-background-color-1: hsl(var(--theme-hue), var(--theme-tint), 30%);
   --html-background-color-2: hsl(var(--theme-hue), var(--theme-tint), 40%);
   --html-background: linear-gradient(var(--html-background-color-1), var(--html-background-color-2));
@@ -111,10 +112,7 @@ label {
   --button-background-color: hsl(var(--theme-hue), var(--theme-tint), 15%);
   --button-border-color: hsl(var(--theme-hue), var(--theme-tint), 25%);
   --button-border-color: transparent;
-
 }
-
-
 
 * {
   color: var(--color);
@@ -134,6 +132,7 @@ html {
   background-color: var(--html-background-color, hsl(25, 0%, 95%));
 }
 table {
+  --border-color: var(--inverted-color, black);
   border-collapse: collapse;
   border-width: var(--border-width, 2px);
   border-style: solid;
@@ -188,8 +187,6 @@ option {
   padding: var(--padding);
 }
 option:checked {
-  background-color: red;
-  background: orange;
 }
 
 button,
