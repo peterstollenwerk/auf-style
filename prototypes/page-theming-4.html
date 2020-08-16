@@ -129,10 +129,6 @@ label {
   /* WHY NOT TAKE THE DARK THEME FOR INVERTED BOX????? */
   /* WHY DO WE NEED AN INVERTED BOX? */
 
-  /* --button-inverted-color: var(--button-background-color);
-  --button-inverted-border-color: var(--button-border-color);
-  --button-inverted-background-color: var(--button-color); */
-
 
   /* BOX */
   --box-color: var(--color);
@@ -168,10 +164,15 @@ html {
   --color: var(--box-color, black);
   --background-color: var(--box-background-color, white);
 }
-/* NEXT REWORK INVERTED BOX DEFAULTS */
+
 .box--inverted {
   --color: var(--box-inverted-color, white);
   --background-color: var(--box-inverted-background-color, black);
+  
+  /* NEXT REWORK INVERTED BOX DEFAULTS */  
+  --button-color: var(--background-color);
+  --button-background-color: var(--color);
+  --button-border-color: var(--color);
 }
 
 input:not([
@@ -226,12 +227,12 @@ input[type="reset"] {
   padding: var(--padding);
 }
 button.secondary {
-  --color: var(--button-inverted-color, black);
+  --color: var(--button-background-color, black);
   --background-color: transparent;
-  --border-color: var(--button-inverted-border-color, black);
+  --border-color: var(--button-background-color, black);
 }
 button.tertiary {
-  --color: var(--button-inverted-color, black);
+  --color: var(--button-background-color, black);
   --background-color: transparent;
   --border-color: transparent;
 }
