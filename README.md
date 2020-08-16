@@ -68,6 +68,9 @@ Color Convert Methods:
 
 ### P1
 
+/* WHY NOT TAKE THE DARK THEME FOR INVERTED BOX????? */
+  /* WHY DO WE NEED AN INVERTED BOX? */
+
 * [ ] [target: 0.5h; performance: ] Create separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 
 * [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
