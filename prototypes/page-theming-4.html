@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="site bg-theme--orange-stripes site-theme--dark" data-active-theme="site-theme--dark">
+<html lang="en" 
+  class="site site-theme--dark site--background-nadelstreifen" 
+  data-active-theme="site-theme--dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -214,23 +216,35 @@ button.tertiary {
   --button-border-color: transparent;
 }
 
-/* .bg-theme--orange-stripes {
+/* THEMES */
+
+
+.site--background-nadelstreifen {
+  --html-background-2: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 1px,
+    var(--html-background-color-2) 1px,
+      var(--html-background-color-2) 18px);
+  background: var(--html-background-2), var(--html-background);
+  background-color: var(--html-background-color);
+}
+.box--theme-1 {
   background: repeating-linear-gradient(-45deg,
       orange,
       orange 2px,
       black 2px,
       black 18px);
 }
-.bg-theme--orange {
+.box--theme-2 {
   --color: black;
   --background-color: orange;
   --box-color: white;
   --box-background-color: black;
-} */
+}
 
   </style>
   </head>
-  <body class="bg-theme--orange">
+  <body class="">
 
     <div class="toggle-button">
       <button class="theme-toggle">Toggle Theme</button>
@@ -264,6 +278,17 @@ button.tertiary {
     </div>
 
     <h1>Theme it Baby!</h1>
+
+    <section class="box--theme-1">
+      <h2>Love Box</h2>
+      <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem autem explicabo iste qui tempora aspernatur ducimus ipsum! Magni facilis nihil at nam! Modi, deserunt libero. Similique fugit nihil assumenda!</p>
+        <p class="box box--theme-1">Hallo</p>
+      </div>
+      <p class="box box--inverted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem autem explicabo iste qui tempora aspernatur ducimus ipsum! Magni facilis nihil at nam! Modi, deserunt libero. Similique fugit nihil assumenda!</p>
+      
+      <a href="#" class="button">Link</a>
+    </section>
 
     <form class="">
       <label for="email">Email</label>
