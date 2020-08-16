@@ -229,17 +229,34 @@ button.tertiary {
   background-color: var(--html-background-color);
 }
 .box--theme-1 {
-  background: repeating-linear-gradient(-45deg,
-      orange,
-      orange 2px,
+  background: repeating-linear-gradient(180deg,
+    hsl(25, 100%, 50%),
+    hsl(25, 100%, 50%) 2px,
       black 2px,
       black 18px);
+  --color: hsl(25, 100%, 50%);
+  --background-color: black; 
 }
 .box--theme-2 {
   --color: black;
   --background-color: orange;
   --box-color: white;
   --box-background-color: black;
+}
+.button--theme-orange {
+  color: black;
+  background-color: hsl(25, 100%, 50%);
+  border-color: hsl(25, 100%, 50%);
+}
+.button--theme-orange.secondary {
+  color: hsl(25, 100%, 50%);
+  background-color: hsl(25, 100%, 0%);
+  border-color: hsl(25, 100%, 50%);
+}
+.button--theme-orange.tertiary {
+  color: hsl(25, 100%, 50%);
+  background-color: hsl(25, 100%, 0%);
+  border-color: hsl(25, 100%, 0%);
 }
 
   </style>
@@ -279,16 +296,7 @@ button.tertiary {
 
     <h1>Theme it Baby!</h1>
 
-    <section class="box--theme-1">
-      <h2>Love Box</h2>
-      <div class="box">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem autem explicabo iste qui tempora aspernatur ducimus ipsum! Magni facilis nihil at nam! Modi, deserunt libero. Similique fugit nihil assumenda!</p>
-        <p class="box box--theme-1">Hallo</p>
-      </div>
-      <p class="box box--inverted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem autem explicabo iste qui tempora aspernatur ducimus ipsum! Magni facilis nihil at nam! Modi, deserunt libero. Similique fugit nihil assumenda!</p>
-      
-      <a href="#" class="button">Link</a>
-    </section>
+
 
     <form class="">
       <label for="email">Email</label>
@@ -323,6 +331,19 @@ button.tertiary {
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga et voluptatum doloribus sequi atque, impedit quia facilis deleniti suscipit? Autem, repellat. Distinctio sit a rerum harum cumque voluptatum tempora doloremque.</p>
 
 
+
+    <section class="box box--theme-1">
+      <h2>.box--theme-1</h2>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem autem explicabo iste qui tempora aspernatur ducimus ipsum! Magni facilis nihil at nam! Modi, deserunt libero. Similique fugit nihil assumenda!</p>
+        <p>Hallo</p>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem autem explicabo iste qui tempora aspernatur ducimus ipsum! Magni facilis nihil at nam! Modi, deserunt libero. Similique fugit nihil assumenda!</p>
+      
+      <button class="button--theme-orange">YO</button>
+      <button class="secondary button--theme-orange">YO</button>
+      <button class="button--theme-orange tertiary ">YO</button>
+    </section>
 
     <!-- KITCHEN SINK START -->
     
