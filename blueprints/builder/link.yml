@@ -3,19 +3,17 @@ label: 'Link: {{url}}'
 preview:
   snippet: blocks/link
   css: /assets/css/builder/link.css
-defaultView: edit
+defaultView: content
 tabs:
   content:
     label: Content
-    icon: edit
+    # icon: edit
     fields:
-      snippet_path:
+      type:
         label: Type
         type: select
-        default: auf_styles/snippets/builder/link
         options:
-          auf_styles/snippets/builder/link: Link (default)
-          auf_styles/snippets/builder/link/button: Button
+          button: Button
       url:
         label: Url
         type: url
@@ -24,14 +22,7 @@ tabs:
         type: text
   style:
     label: Style    
-    icon: Style
+    # icon: Style
     fields:
-      box_theme:
-        type: select
-        label: Box-Theme
-        options: query
-        query:
-          fetch: site.box_themes.toStructure
-          text: "{{ structureItem.label }}"
-          value: "{{ structureItem.uid }}"
-
+      box_theme: 
+        extends: auf_style/builder/tabs/style/box_theme

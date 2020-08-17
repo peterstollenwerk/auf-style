@@ -21,7 +21,12 @@
 
   <?php foreach($page->builder()->toBuilderBlocks() as $block): ?>
 
-    <?= snippet($block->snippet_path(), array('data' => $block)); ?>
+    <?php
+       $snippetPathPrefix = 'auf-style/snippets/builder/';
+       $snippetPath = $snippetPathPrefix . $block->_key();
+    ?>
+
+    <?= snippet($snippetPath, array('data' => $block)); ?>
 
   <?php endforeach?>
 

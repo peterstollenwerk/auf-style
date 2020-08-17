@@ -5,4 +5,6 @@ fields:
     type: builder
     label: Builder
     fieldsets:
+      text: auf_style/blueprints/builder/text
       link: auf_style/blueprints/builder/link
+      container: auf_style/blueprints/builder/container

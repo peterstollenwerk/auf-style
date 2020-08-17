@@ -73,6 +73,8 @@ Color Convert Methods:
 
 * [X] ~~*[target: 2h; performance: 2h] Create Auf-Elements/Link/Button*~~ [2020-08-17]
 
+* [x] Created Builder Snippets to test Box Classes in the field
+
 ### P1
 
 * [ ] [target: 0.5h; ] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.

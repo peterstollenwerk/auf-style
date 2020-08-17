@@ -1,0 +1,8 @@
+type: select
+label: Box-Theme
+options: query
+query:
+  fetch: site.box_themes.toStructure
+  text: "{{ structureItem.label }}"
+  value: "{{ structureItem.uid }}"
+

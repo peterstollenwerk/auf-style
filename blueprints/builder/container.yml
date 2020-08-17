@@ -1,0 +1,33 @@
+name: Container
+label: 'Container: {{type}} (Theme: {{box_theme}})'
+preview:
+  snippet: blocks/container
+  css: /assets/css/builder/link.css
+defaultView: content
+tabs:
+  content:
+    label: Content
+    # icon: edit
+    fields:
+      type:
+        label: Type
+        type: select
+        default: section
+        options:
+          section: Section
+          div: Div
+          header: Header
+          footer: Footer
+      builder:
+        type: builder
+        label: Builder
+        fieldsets:
+          text: auf_style/blueprints/builder/text
+          link: auf_style/blueprints/builder/link
+          container: auf_style/blueprints/builder/container
+  style:
+    label: Style    
+    # icon: Style
+    fields:
+      box_theme: 
+        extends: auf_style/builder/tabs/style/box_theme

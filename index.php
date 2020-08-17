@@ -35,19 +35,26 @@ Kirby::plugin('auf/style', [
         
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         'auf-style/style' => __DIR__ . '/snippets/style.php',
-        
         // BUILDER SNIPPETS
-        'auf_styles/snippets/builder/link'        => __DIR__ . '/snippets/builder/link/link.php',
-        'auf_styles/snippets/builder/link/button' => __DIR__ . '/snippets/builder/link/button.php',
+        'auf-style/snippets/builder/container'        => __DIR__ . '/snippets/builder/container.php',
+        'auf-style/snippets/builder/text'        => __DIR__ . '/snippets/builder/text.php',
+        'auf-style/snippets/builder/link'        => __DIR__ . '/snippets/builder/link.php',
+        'auf-style/snippets/builder/link-button' => __DIR__ . '/snippets/builder/link-button.php',
     ],
     'blueprints' => [
+        # SITE
         'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
         'auf_style/blueprints/fields/background_themes' => __DIR__ . '/blueprints/fields/background_themes.yml',
         'auf_style/blueprints/fields/border_themes' => __DIR__ . '/blueprints/fields/border_themes.yml',
         'auf_style/blueprints/fields/outline_themes' => __DIR__ . '/blueprints/fields/outline_themes.yml',
         'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
+        # BUILDER
+        'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
+        'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
         'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
+        # BUILDER TABS FIELDS
+        'auf_style/builder/tabs/style/box_theme' => __DIR__ . '/blueprints/builder/tabs/style/box_theme.yml',
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',

@@ -386,7 +386,7 @@ h6 {
 
  button,
 .button {
-  --padding: var(--button-padding);
+  --padding: var(--button-padding, 1rem);
   --background: transparent;
   --border-color: transparent;
 
@@ -397,9 +397,9 @@ h6 {
   background: var(--background);
   background-color: var(--background-color);
   
-  border-width: var(--button-border-width);
-  border-color: var(--border-color);
-  border-style: var(--border-style);
+  border-width:  var(--border-width);
+  border-color:  var(--border-color);
+  border-style:  var(--border-style);
   border-radius: var(--border-radius);
 
   --box-shadow-offset-x: 0;

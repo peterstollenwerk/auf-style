@@ -91,6 +91,22 @@ Box-themes:
   box_shadow_theme: level-1
   custom_theme: ""
   theme_divider: null
+- 
+  uid: "5"
+  label: Custom Background
+  color_theme: ""
+  background_theme: ""
+  border_theme: "2"
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: |
+    background: rgb(34,193,195);
+    --background-1: linear-gradient(270deg, rgba(34,193,195,1) 0%, rgba(253,45,45,0) 100%);
+    --background-2: linear-gradient(270deg, rgba(34,193,195,0) 0%, rgba(253,45,45,1) 100%);
+    --background-3: linear-gradient(180deg, rgba(121,33,199,1) 0%, rgba(255,79,0,0) 100%);
+    background: var(--background-1), var(--background-2), var(--background-3);
+  theme_divider: null
 
 ----
 
@@ -183,7 +199,7 @@ Color-themes:
   color: '#000000'
   background: '#7a0060'
   border: '#ffffff'
-  outline: null
+  outline: '#ff00c8'
   text_shadow: null
   box_shadow_ambient: '#ff00c8'
 
