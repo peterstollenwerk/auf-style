@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a64f3c301ad53c708bdfac814172f8a1",
+    "content-hash": "ac7f12f6b615c61d89db4de856ed35bb",
     "packages": [
         {
             "name": "getkirby/composer-installer",
@@ -113,6 +113,52 @@
             ],
             "description": "Add some missing structure previews",
             "time": "2020-04-10T14:18:57+00:00"
+        },
+        {
+            "name": "timoetting/kirby-builder",
+            "version": "2.0.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TimOetting/kirby-builder.git",
+                "reference": "0705fc86c078e2b36f53a8bc8eeb109398c7e570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TimOetting/kirby-builder/zipball/0705fc86c078e2b36f53a8bc8eeb109398c7e570",
+                "reference": "0705fc86c078e2b36f53a8bc8eeb109398c7e570",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "php": ">=7.1.0"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Ötting",
+                    "email": "email@tim-oetting.de"
+                }
+            ],
+            "description": "This versatile plugin for Kirby CMS (v3) lets you predefine content blocks with different field sets that can then be added, edited and arranged inside Kirby's panel.",
+            "keywords": [
+                "builder",
+                "kirby-builder",
+                "kirby3",
+                "kirby3-cms",
+                "kirby3-plugin",
+                "page-builder"
+            ],
+            "funding": [
+                {
+                    "url": "https://paypal.me/TimOetting/10",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-07-04T01:24:29+00:00"
         }
     ],
     "packages-dev": [
@@ -1565,6 +1611,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
