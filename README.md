@@ -77,11 +77,14 @@ Color Convert Methods:
 
 ### P1
 
+* [ ] [target: 1h; performance: ] Fine Tune CSS Styles
+
+* [ ] [target: 3h;] Implement UID from Structure UID Field
+
 * [ ] [target: 0.5h; ] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 
 * [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
-* [ ] [target: 3h;] Implement UID from Structure UID Field
 
 ### P2
 
@@ -102,6 +105,8 @@ Color Convert Methods:
 * [ ] [target: 1d] Create custom Styles-View
 As an editor i want a fast backend to concentrate on the content and be productive. The style tab inside the site generates a 1000 lines, 1/3 of them are null or ""-values. Backend loads slower. Wouldn´t it be better to create a dedicated styles-view and generate the styles as a imprtable css file?
 
+* [ ] Select Themes via: https://github.com/sylvainjule/kirby-imageradio
+
 * [ ] Implement Text-Styles [bold, uppercase, underline, strike] -> check Blocks-Plugin
 
 * [ ] [target: 6h] Create Preview Field For Gradients
@@ -117,3 +122,5 @@ As an editor i want a fast backend to concentrate on the content and be producti
 * [ ] WHY NOT TAKE THE DARK THEME FOR INVERTED BOX?????
 
 * [ ] WHY DO WE NEED AN INVERTED BOX?
+
+* [ ] Link Field: https://getkirby.com/plugins/oblikstudio/link-field

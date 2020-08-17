@@ -5,6 +5,7 @@ Title: Auf-Style-Plugin
 Box-themes:
 
 - 
+  autoid: null
   uid: default
   label: Default
   color_theme: ""
@@ -16,6 +17,7 @@ Box-themes:
   custom_theme: ""
   theme_divider: null
 - 
+  autoid: null
   uid: crazy-yellow-blue-stripes
   label: Crazy-Yellow-Blue-Stripes
   color_theme: Crazy-Yellow-Blue-Stripes
@@ -29,6 +31,7 @@ Box-themes:
   custom: ""
   theme_divider: null
 - 
+  autoid: null
   uid: "2"
   label: >
     Black on orange with Hearts-Pattern
@@ -44,6 +47,7 @@ Box-themes:
   custom: ""
   theme_divider: null
 - 
+  autoid: null
   uid: "3"
   label: Muhammad
   color_theme: page-night
@@ -55,6 +59,7 @@ Box-themes:
   custom_theme: ""
   theme_divider: null
 - 
+  autoid: null
   uid: "4"
   label: Blue-Red Transition
   color_theme: crazy-shit
@@ -66,6 +71,7 @@ Box-themes:
   custom_theme: ""
   theme_divider: null
 - 
+  autoid: null
   uid: external-image
   label: External Image
   color_theme: ""
@@ -81,6 +87,7 @@ Box-themes:
     background-color: red;
   theme_divider: null
 - 
+  autoid: null
   uid: pink-button
   label: Pink Button
   color_theme: button-pink
@@ -92,6 +99,7 @@ Box-themes:
   custom_theme: ""
   theme_divider: null
 - 
+  autoid: null
   uid: "5"
   label: Custom Background
   color_theme: ""
