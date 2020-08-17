@@ -71,9 +71,9 @@ Color Convert Methods:
 
 * [X] ~~*[target: 4h-8h performance: 8h] Create Test Page with Default HTML-Elements!?*~~ [2020-08-17]
 
-### P1
+* [X] ~~*[target: 2h; performance: 2h] Create Auf-Elements/Link/Button*~~ [2020-08-17]
 
-* [ ] [target: 2h; performance:] Create Auf-Elements/Link/Button
+### P1
 
 * [ ] [target: 0.5h; ] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 

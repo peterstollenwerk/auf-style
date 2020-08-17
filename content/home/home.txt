@@ -2,6 +2,25 @@ Title: AUF Style Plugin
 
 ----
 
+Builder:
+
+- 
+  snippet_path: auf_styles/snippets/builder/link/button
+  url: https://facebook.com
+  text: Facebook
+  box_theme: pink-button
+  _key: link
+  _uid: link_1597663626105_122
+- 
+  snippet_path: auf_styles/snippets/builder/link/button
+  url: https://twitter.com
+  text: Twitter
+  box_theme: "2"
+  _key: link
+  _uid: link_1597664093325_122
+
+----
+
 Text: 
 
 ----

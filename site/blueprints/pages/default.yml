@@ -1,6 +1,8 @@
 title: Default Page
 preset: page
 fields:
-  text:
-    type: textarea
-    label: Text
+  builder:
+    type: builder
+    label: Builder
+    fieldsets:
+      link: auf_style/blueprints/builder/link

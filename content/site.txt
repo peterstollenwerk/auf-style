@@ -77,7 +77,19 @@ Box-themes:
   custom_theme: |
     --background-url: ;
     background: url(https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2F1rQ9r8nm2UizKgMgsZ9Vog%2Flarger.jpg&width=1200&quality=80);
+    --backround-width: 100px;
     background-color: red;
+  theme_divider: null
+- 
+  uid: pink-button
+  label: Pink Button
+  color_theme: button-pink
+  background_theme: pink-button
+  border_theme: pink-button
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: level-1
+  custom_theme: ""
   theme_divider: null
 
 ----
@@ -165,6 +177,15 @@ Color-themes:
   outline: '#000000'
   text_shadow: '#ffea00'
   box_shadow_ambient: '#ffea00'
+- 
+  uid: button-pink
+  label: Button Pink
+  color: '#000000'
+  background: '#7a0060'
+  border: '#ffffff'
+  outline: null
+  text_shadow: null
+  box_shadow_ambient: '#ff00c8'
 
 ----
 
@@ -450,6 +471,52 @@ Background-themes:
   label: Transparent
   background: [ ]
   info: null
+- 
+  uid: pink-button
+  label: Pink Button Gradient
+  background:
+    - 
+      type: gradient
+      label: Pink Gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: Pink Gradient
+          gradient_color_stops:
+            - 
+              color: '#ffc2f5'
+              start: ""
+              end: ""
+            - 
+              color: '#fb00ff00'
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: bottom
+          linear_gradient_direction_to_y: right
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+      custom_line: null
+      size_headline: null
+      position_headline: null
+      repeat_headline: null
+      attachment_headline: null
+      origin_headline: null
+      clip_headline: null
+  info: null
 
 ----
 
@@ -485,6 +552,14 @@ Border-themes:
   border_width: 2px
   border_style: solid
   border_radius: 1rem
+  border_headline: null
+  border_image: null
+- 
+  uid: pink-button
+  label: Pink Button
+  border_width: 1px
+  border_style: dotted
+  border_radius: 5px
   border_headline: null
   border_image: null
 

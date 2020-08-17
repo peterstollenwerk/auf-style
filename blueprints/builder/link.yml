@@ -1,0 +1,37 @@
+name: Link # The name option is used as a label for the buttons to add new fieldsets. It is also used as a label in the header of the fieldset, if the label option is not set explicitly (see next line).
+label: 'Link: {{url}}'
+preview:
+  snippet: blocks/link
+  css: /assets/css/builder/link.css
+defaultView: edit
+tabs:
+  content:
+    label: Content
+    icon: edit
+    fields:
+      snippet_path:
+        label: Type
+        type: select
+        default: auf_styles/snippets/builder/link
+        options:
+          auf_styles/snippets/builder/link: Link (default)
+          auf_styles/snippets/builder/link/button: Button
+      url:
+        label: Url
+        type: url
+      text:
+        label: Text
+        type: text
+  style:
+    label: Style    
+    icon: Style
+    fields:
+      box_theme:
+        type: select
+        label: Box-Theme
+        options: query
+        query:
+          fetch: site.box_themes.toStructure
+          text: "{{ structureItem.label }}"
+          value: "{{ structureItem.uid }}"
+

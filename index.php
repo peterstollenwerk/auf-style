@@ -35,6 +35,10 @@ Kirby::plugin('auf/style', [
         
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         'auf-style/style' => __DIR__ . '/snippets/style.php',
+        
+        // BUILDER SNIPPETS
+        'auf_styles/snippets/builder/link'        => __DIR__ . '/snippets/builder/link/link.php',
+        'auf_styles/snippets/builder/link/button' => __DIR__ . '/snippets/builder/link/button.php',
     ],
     'blueprints' => [
         'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
@@ -43,6 +47,7 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/outline_themes' => __DIR__ . '/blueprints/fields/outline_themes.yml',
         'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
+        'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',
