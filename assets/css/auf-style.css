@@ -260,127 +260,6 @@ html, body {
 
 
 
-/* =============================================== */
-/* FLEX */
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-.flex-direction--column {
-  flex-direction: column;
-}
-.flex-direction--row {
-  list-style: none;
-  flex-direction: row;
-}
-.flex-direction--row *:not(:first-child) {
-  margin-top: initial;
-  margin-left: var(--margin);
-}
-/* justify-content ---------------------------------- */
-
-.justify-content--center {
-  justify-content: center;
-}
-.justify-content--start {
-  justify-content: start;
-}
-.justify-content--end {
-  justify-content: end;
-}
-.justify-content--flex-start {
-  justify-content: flex-start;
-}
-.justify-content--flex-end {
-  justify-content: flex-end;
-}
-.justify-content--left {
-  justify-content: left;
-}
-.justify-content--right {
-  justify-content: right;
-}
-.justify-content--normal {
-  justify-content: normal;
-}
-.justify-content--space-between {
-  justify-content: space-between;
-}
-.justify-content--space-evenly {
-  justify-content: space-evenly;
-}
-.justify-content--space-around {
-  justify-content: space-around;
-}
-.justify-content--stretch {
-  justify-content: stretch;
-}
-
-/* align-items ---------------------------------- */
-
-.align-items--center {
-  align-items: center;
-}
-.align-items--flex-start {
-  align-items: flex-start;
-}
-.align-items--flex-end {
-  align-items: flex-end;
-}
-.align-items--stretch {
-  align-items: stretch;
-}
-
-
-
-/* =============================================== */
-/* DEFAULT STYLES */
-
-/* headlines ---------------------------------- */
-
-:root {
-  --root-font-size: 1rem;
-}
-:root {
-  --size-7: 4.75; 
-  --size-6: 3.75; 
-  --size-5: 3; 
-  --size-4: 2.5; 
-  --size-3: 2; 
-  --size-2: 1.5; 
-  --size-1: 1.25; 
-  --size-0: 1; /* Default */
-  --size--1: 0.8125; 
-  --size--2: 0.625; 
-  --size--3: 0.5; 
-  --size--4: 0.375; 
-}
-
-h1, h2, h3, h4, h5, h6 {
-  --font-size-factor: var(--size-0);
-  --font-size: calc( var(--root-font-size) * var(--font-size-factor));
-  font-size: var(--font-size);
-}
-
-h1 {
-  --font-size-factor: var(--size-5);
-}
-h2 {
-  --font-size-factor: var(--size-4);
-}
-h3 {
-  --font-size-factor: var(--size-3);
-}
-h4 {
-  --font-size-factor: var(--size-2);
-}
-h5 {
-  --font-size-factor: var(--size-1);
-}
-h6 {
-  --font-size-factor: var(--size-0);
-}
 
 /* buttons ---------------------------------- */
 
@@ -433,9 +312,6 @@ a.button {
   display: inline-block;
   text-decoration: none;
 }
-
-
-
 .button--primary {
   color: var(--inverted-color);
   background-color: var(--inverted-background-color);

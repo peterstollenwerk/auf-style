@@ -1,6 +1,15 @@
 title: Default Page
 preset: page
 fields:
+  mystructure:
+    type: structure
+    translate: false      # <-------     
+    fields:
+      text:
+        type: textarea
+      autoid:             # <-------
+        type: autoid
+        translate: false 
   builder:
     type: builder
     label: Builder

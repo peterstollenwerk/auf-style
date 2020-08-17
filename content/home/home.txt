@@ -2,6 +2,10 @@ Title: AUF Style Plugin
 
 ----
 
+Mystructure: 
+
+----
+
 Builder:
 
 - 

@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $page->title() ?></title>
   <?= snippet('auf-style/style'); ?>
+
+  <style>
+    html > * {
+      max-width: 666px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
 </head>
 
-<body class="page page--day-theme">
+<body>
   
   <h1><?= $page->title() ?></h1>
   

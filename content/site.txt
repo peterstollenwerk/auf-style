@@ -5,7 +5,7 @@ Title: Auf-Style-Plugin
 Box-themes:
 
 - 
-  autoid: null
+  autoid: izfitu62
   uid: default
   label: Default
   color_theme: ""
@@ -15,9 +15,8 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: level-3
   custom_theme: ""
-  theme_divider: null
 - 
-  autoid: null
+  autoid: 90aox1v6
   uid: crazy-yellow-blue-stripes
   label: Crazy-Yellow-Blue-Stripes
   color_theme: Crazy-Yellow-Blue-Stripes
@@ -29,9 +28,8 @@ Box-themes:
   custom_theme: ""
   is_custom: 'false'
   custom: ""
-  theme_divider: null
 - 
-  autoid: null
+  autoid: cvsv9xuz
   uid: "2"
   label: >
     Black on orange with Hearts-Pattern
@@ -45,9 +43,8 @@ Box-themes:
   custom_theme: ""
   is_custom: 'false'
   custom: ""
-  theme_divider: null
 - 
-  autoid: null
+  autoid: dmxnx0w8
   uid: "3"
   label: Muhammad
   color_theme: page-night
@@ -57,9 +54,8 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: level-2
   custom_theme: ""
-  theme_divider: null
 - 
-  autoid: null
+  autoid: q3npc9ee
   uid: "4"
   label: Blue-Red Transition
   color_theme: crazy-shit
@@ -69,9 +65,8 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
-  theme_divider: null
 - 
-  autoid: null
+  autoid: lt1slowa
   uid: external-image
   label: External Image
   color_theme: ""
@@ -85,9 +80,8 @@ Box-themes:
     background: url(https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2F1rQ9r8nm2UizKgMgsZ9Vog%2Flarger.jpg&width=1200&quality=80);
     --backround-width: 100px;
     background-color: red;
-  theme_divider: null
 - 
-  autoid: null
+  autoid: a7k3igic
   uid: pink-button
   label: Pink Button
   color_theme: button-pink
@@ -97,9 +91,8 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: level-1
   custom_theme: ""
-  theme_divider: null
 - 
-  autoid: null
+  autoid: 9xgzfccu
   uid: "5"
   label: Custom Background
   color_theme: ""
@@ -114,7 +107,17 @@ Box-themes:
     --background-2: linear-gradient(270deg, rgba(34,193,195,0) 0%, rgba(253,45,45,1) 100%);
     --background-3: linear-gradient(180deg, rgba(121,33,199,1) 0%, rgba(255,79,0,0) 100%);
     background: var(--background-1), var(--background-2), var(--background-3);
-  theme_divider: null
+- 
+  autoid: ilehp2u3
+  uid: button.primary
+  label: 'Button - Primary'
+  color_theme: "1"
+  background_theme: "3"
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
 
 ----
 
@@ -253,13 +256,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
     - 
       type: image
       label: ""
@@ -278,13 +274,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
     - 
       type: gradient
       label: ""
@@ -319,14 +308,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-  info: null
 - 
   uid: "2"
   label: Muhammad Superjumbo Cover
@@ -349,14 +330,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-  info: null
 - 
   uid: "3"
   label: Blue Diagonal Stripes on Orange Gradient
@@ -395,13 +368,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
     - 
       type: gradient
       label: Yellow-Orange Gradient
@@ -436,14 +402,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-  info: null
 - 
   uid: "4"
   label: Blue Red Transition
@@ -482,19 +440,10 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-  info: null
 - 
   uid: button
   label: Transparent
   background: [ ]
-  info: null
 - 
   uid: pink-button
   label: Pink Button Gradient
@@ -533,14 +482,6 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
-      custom_line: null
-      size_headline: null
-      position_headline: null
-      repeat_headline: null
-      attachment_headline: null
-      origin_headline: null
-      clip_headline: null
-  info: null
 
 ----
 
@@ -549,43 +490,33 @@ Border-themes:
 - 
   uid: "1"
   label: Small
-  border_width: 3rem
+  border_width: 3rem^
   border_style: solid
   border_radius: 1rem
-  border_headline: null
-  border_image: null
 - 
   uid: "2"
   label: Medium
   border_width: 2px
   border_style: solid
   border_radius: 0.5rem
-  border_headline: null
-  border_image: null
 - 
   uid: "3"
   label: Large
   border_width: 2px
   border_style: solid
   border_radius: 1rem
-  border_headline: null
-  border_image: null
 - 
   uid: button
   label: Button
   border_width: 2px
   border_style: solid
   border_radius: 1rem
-  border_headline: null
-  border_image: null
 - 
   uid: pink-button
   label: Pink Button
   border_width: 1px
   border_style: dotted
   border_radius: 5px
-  border_headline: null
-  border_image: null
 
 ----
 
@@ -597,56 +528,48 @@ Outline-themes:
   outline_width: ""
   outline_style: solid
   outline_offset: ""
-  outline_headline: null
 - 
   uid: dotted
   label: Dotted
   outline_width: ""
   outline_style: dotted
   outline_offset: ""
-  outline_headline: null
 - 
   uid: dashed
   label: Dashed
   outline_width: ""
   outline_style: dashed
   outline_offset: ""
-  outline_headline: null
 - 
   uid: double
   label: Double
   outline_width: ""
   outline_style: double
   outline_offset: ""
-  outline_headline: null
 - 
   uid: groove
   label: Groove
   outline_width: ""
   outline_style: groove
   outline_offset: ""
-  outline_headline: null
 - 
   uid: ridge
   label: Ridge
   outline_width: ""
   outline_style: ridge
   outline_offset: ""
-  outline_headline: null
 - 
   uid: inset
   label: Inset
   outline_width: ""
   outline_style: inset
   outline_offset: ""
-  outline_headline: null
 - 
   uid: outset
   label: outset
   outline_width: ""
   outline_style: outset
   outline_offset: ""
-  outline_headline: null
 
 ----
 
@@ -667,7 +590,6 @@ Box-shadow-themes:
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow_info: null
 - 
   uid: level-2
   label: Level 2
@@ -683,7 +605,6 @@ Box-shadow-themes:
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow_info: null
 - 
   uid: level-3
   label: 'Level 3: Drop-Down'
@@ -699,7 +620,6 @@ Box-shadow-themes:
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow_info: null
 - 
   uid: level-4
   label: Level 4
@@ -715,7 +635,6 @@ Box-shadow-themes:
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow_info: null
 - 
   uid: level-5
   label: 'Level 5: Modal'
@@ -731,7 +650,6 @@ Box-shadow-themes:
       ambient_spread_radius: ""
   box_shadow: [ ]
   box_shadow_ambient: null
-  box_shadow_info: null
 
 ----
 

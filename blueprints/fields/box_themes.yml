@@ -1,5 +1,6 @@
 type: structure
 label: Box Themes
+translate: false
 help: >
   creates css-classes: <br>
   <code>.box-theme--UID: { 
@@ -12,6 +13,7 @@ help: >
     }
   </code>
 columns:
+  autoid:
   uid:
     width: 1/10
   label:
@@ -23,6 +25,9 @@ columns:
   box_shadow_theme:
   custom_theme:
 fields:
+  autoid:
+    type: autoid
+    translate: false 
   uid:
     type: text
     label: UID

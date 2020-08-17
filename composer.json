@@ -21,10 +21,11 @@
         "getkirby/composer-installer": "^1.1",
         "hananils/kirby-colors": "^1.1",
         "sylvainjule/previews": "^1.0",
-        "timoetting/kirby-builder": "v2.0.15"
+        "timoetting/kirby-builder": "v2.0.15",
+        "bnomei/kirby3-autoid": "^2.7"
     },
     "require-dev": {
-        "getkirby/cms": "^3.3",
+        "getkirby/cms": "^3.4.2",
         "phpunit/phpunit": "^7.5",
         "spatie/phpunit-watcher": "^1.10"
     },

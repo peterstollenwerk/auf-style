@@ -1,4 +1,5 @@
 <?= css('assets/css/auf-style.css') ?>
+
 <style>
   <?= snippet('auf-style/color-themes'); ?>
   <?= snippet('auf-style/background-themes'); ?>
