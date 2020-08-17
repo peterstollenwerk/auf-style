@@ -6,8 +6,10 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 ?>
 
 <?php 
-  $uid = $boxTheme->uid();
-  $css_class = 'box-theme--'. $uid;
+  $autoid = $boxTheme->autoid();
+  $css_class = 'box-theme--'. $autoid;
+  $css_selector = $boxTheme->css_selector();
+  $label = $boxTheme->label();
   $colorThemeUid = $boxTheme->color_theme();
   $backgroundThemeUid = $boxTheme->background_theme();
   $borderThemeUid = $boxTheme->border_theme();
@@ -19,6 +21,7 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php if($preview): ?>
   <article class="box <?= $css_class ?> border--outset">
     <h3 class="safe-text">.<?= $css_class ?> <span>.box .border--outset</span></h3>
+    <h2><?= $label ?></h2>
     <button class="button--primary">.primary</button>
     <button class="button--secondary">.secondary</button>
     <button class="button--tertiary">.tertiary</button>
@@ -34,7 +37,7 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-.<?= $css_class ?> {
+  .<?= $css_class ?><?php if($css_selector->isNotEmpty()): ?>, <?= $css_selector ?><?php endif?> {
 <?php endif?>
     
 <?php /* START: COLOR THEME --------------------------*/ ?>

@@ -2,17 +2,13 @@ Title: AUF Style Plugin
 
 ----
 
-Mystructure: 
-
-----
-
 Builder:
 
 - 
   type: button
   url: https://facebook.com
   text: Facebook
-  box_theme: "4"
+  box_theme: ""
   snippet_path: ""
   _key: link
   _uid: link_1597663626105_122
@@ -20,7 +16,7 @@ Builder:
   type: button
   url: https://twitter.com
   text: Twitter
-  box_theme: "2"
+  box_theme: ""
   snippet_path: ""
   _key: link
   _uid: link_1597664093325_122
@@ -28,7 +24,7 @@ Builder:
   text: |
     **YOYOYOYO**
     YES *YSE*
-  box_theme: crazy-yellow-blue-stripes
+  box_theme: 90aox1v6
   _key: text
   _uid: text_1597673993135_122
 - 
@@ -54,7 +50,7 @@ Builder:
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          box_theme: crazy-yellow-blue-stripes
+          box_theme: ""
           _key: text
           _uid: text_1597675265398_624
         - 
@@ -68,10 +64,10 @@ Builder:
           type: button
           url: https://tickets.de
           text: Tickets
-          box_theme: pink-button
+          box_theme: ""
           _key: link
           _uid: link_1597675538684_547
-      box_theme: "2"
+      box_theme: ""
       _key: container
       _uid: container_1597675261436_366
     - 
@@ -85,12 +81,20 @@ Builder:
         haben. Dass es dabei keineswegs um
         Katzenvideos und Wohlfühlgeschichten
         geht, zeigen diese Beispiele.
-      box_theme: "5"
+      box_theme: ""
       _key: text
       _uid: text_1597676437013_3355
-  box_theme: "3"
+  box_theme: ""
   _key: container
   _uid: container_1597674807537_122
+
+----
+
+Mystructure:
+
+- 
+  text: YESYA
+  autoid: 03u2hhsp
 
 ----
 

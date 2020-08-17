@@ -7,17 +7,8 @@ html, body {
   --color: black;
   --box-shadow-color: hsla(25, 10%, 10%, 0.5);
   
-  --border-width: 2px;
-  --border-style: none;
-  --border-color: black;
-  
   --button-border-radius: 0.25rem;
   --button-padding: 1rem;
-
-  --outline-width: 0.25rem;
-  --outline-style: dashed;
-  --outline-color:grey;
-  --outline-offset: 0.25rem;
 
   --padding: 1.62rem;
   
@@ -27,12 +18,7 @@ html, body {
   color: var(--color);
 }
 
-*:focus {
-  outline-width: var(--outline-width);
-  outline-style: var(--outline-style);
-  outline-color: var(--outline-color);
-  outline-offset: var(--outline-offset);
-}
+
 /* PAGE THEMES ---------------------------------- */
 .page,
 .page-theme--light {
@@ -107,9 +93,9 @@ html, body {
 /* BORDER ---------------------------------- */
 .border,
 .borders > * {
-  border-width: var(--border-width);
-  border-style: var(--border-style);
-  border-color: var(--border-color);
+  border-width: var(--border-width, 2px);
+  border-style: var(--border-style, solid);
+  border-color: var(--border-color, black);
   border-radius: var(--border-radius);
 }
 .border-radius,
@@ -125,11 +111,12 @@ html, body {
 }
 /* OUTLINE ---------------------------------- */
 .outline,
-.outlines > * {
-  outline-width: var(--outline-width);
-  outline-style: var(--outline-style);
-  outline-color: var(--outline-color);
-  outline-offset: var(--outline-offset);
+.outlines > *,
+*:focus {
+  outline-width:  var(--outline-width, 2px);
+  outline-style:  var(--outline-style, dashed);
+  outline-color:  var(--outline-color, black);
+  outline-offset: var(--outline-offset, 2px);
 }
 /* ========================================= */
 /* text-shadow  */

@@ -59,9 +59,9 @@
   <h2 id="button-themes">Button Themes</h2>
   <h3>Buttons</h3>
   <button>button</button>
-  <button class="button--primary">button.button--crazy</button>
-  <button class="button--secondary">button.button--crazy</button>
-  <button class="button--tertiary">button.button--crazy</button>
+  <button class="primary">button.primary</button>
+  <button class="secondary">button.secondary</button>
+  <button class="tertiary">button.tertirary</button>
   <h3>Links</h3>
   <a href="#">Some Hyperlink</a>
   <a href="#" class="button">a.button</a>

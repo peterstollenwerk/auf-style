@@ -6,19 +6,19 @@ Box-themes:
 
 - 
   autoid: izfitu62
-  uid: default
   label: Default
+  css_selector: button
   color_theme: ""
   background_theme: ""
   border_theme: ""
   outline_theme: ""
   text_shadow_theme: ""
-  box_shadow_theme: level-3
+  box_shadow_theme: level-2
   custom_theme: ""
 - 
   autoid: 90aox1v6
-  uid: crazy-yellow-blue-stripes
   label: Crazy-Yellow-Blue-Stripes
+  css_selector: .crazy-yellow-blue-stripes
   color_theme: Crazy-Yellow-Blue-Stripes
   background_theme: "3"
   border_theme: button
@@ -30,10 +30,10 @@ Box-themes:
   custom: ""
 - 
   autoid: cvsv9xuz
-  uid: "2"
   label: >
     Black on orange with Hearts-Pattern
     small
+  css_selector: ""
   color_theme: crazy-shit
   background_theme: "1"
   border_theme: ""
@@ -45,8 +45,8 @@ Box-themes:
   custom: ""
 - 
   autoid: dmxnx0w8
-  uid: "3"
   label: Muhammad
+  css_selector: ""
   color_theme: page-night
   background_theme: "2"
   border_theme: "1"
@@ -56,8 +56,8 @@ Box-themes:
   custom_theme: ""
 - 
   autoid: q3npc9ee
-  uid: "4"
   label: Blue-Red Transition
+  css_selector: .blue-red-transition
   color_theme: crazy-shit
   background_theme: "4"
   border_theme: button
@@ -67,8 +67,8 @@ Box-themes:
   custom_theme: ""
 - 
   autoid: lt1slowa
-  uid: external-image
   label: External Image
+  css_selector: .external-image
   color_theme: ""
   background_theme: ""
   border_theme: ""
@@ -82,8 +82,8 @@ Box-themes:
     background-color: red;
 - 
   autoid: a7k3igic
-  uid: pink-button
   label: Pink Button
+  css_selector: button.pink
   color_theme: button-pink
   background_theme: pink-button
   border_theme: pink-button
@@ -93,8 +93,8 @@ Box-themes:
   custom_theme: ""
 - 
   autoid: 9xgzfccu
-  uid: "5"
-  label: Custom Background
+  label: Nice Gradient
+  css_selector: .nice-gradient
   color_theme: ""
   background_theme: ""
   border_theme: "2"
@@ -109,8 +109,8 @@ Box-themes:
     background: var(--background-1), var(--background-2), var(--background-3);
 - 
   autoid: ilehp2u3
-  uid: button.primary
   label: 'Button - Primary'
+  css_selector: button.primary, .button--primary
   color_theme: "1"
   background_theme: "3"
   border_theme: ""
@@ -175,14 +175,14 @@ Color-themes:
   background: 'hsla(25, 100%, 50%)'
   border: '#000000'
   outline: '#000000'
-  text_shadow: null
-  box_shadow_ambient: null
+  text_shadow: '#ff0000'
+  box_shadow_ambient: '#ffa200'
 - 
   uid: crazy-shit
   label: Crazy Shit
   color: '#00ff7b'
   background: '#0023d1'
-  border: '#007bff'
+  border: '#00ff7b'
   outline: '#00ff7b'
   text_shadow: '#ff00dd'
   box_shadow_ambient: '#ffdd00'
@@ -208,10 +208,10 @@ Color-themes:
   uid: button-pink
   label: Button Pink
   color: '#000000'
-  background: '#7a0060'
-  border: '#ffffff'
+  background: '#ffa3eb'
+  border: '#ff00c8'
   outline: '#ff00c8'
-  text_shadow: null
+  text_shadow: '#11ff00'
   box_shadow_ambient: '#ff00c8'
 
 ----

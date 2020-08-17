@@ -23,7 +23,7 @@
 ?>
 
 <?php if($preview): ?>
-  <article class="box box-shadow--level-5 <?= $css_class ?>" style="min-height: 33vh;">
+  <article class="box <?= $css_class ?>" style="min-height: 33vh;">
     <h3>.<?= $css_class ?></h3>
     <p>Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Dicta quod ea culpa, accusantium vel cumque quam earum corporis. Nobis quos veniam, architecto molestiae odio aspernatur amet enim optio soluta ipsum?</p>
     <section class="border">
