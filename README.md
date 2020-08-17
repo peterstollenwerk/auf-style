@@ -52,7 +52,7 @@ Color Convert Methods:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-## TODO
+## DONE
 
 * [X] ~~*Testpage Preview - Box-Shadow-Themes*~~ [2020-08-11]
 
@@ -66,29 +66,34 @@ Color Convert Methods:
 
 * [X] ~~*Boxes Preview*~~ [2020-08-14]
 
+* [X] ~~*[target: 2h; performance: 8h] Explore if it´s necessary to add dedicated button-colors to the color theme?*~~ [2020-08-17]
+  * [X] ~~*Use a form-dummy to evaluate the day & night-themes*~~ [2020-08-17]
+
+* [X] ~~*[target: 4h-8h performance: 8h] Create Test Page with Default HTML-Elements!?*~~ [2020-08-17]
+
 ### P1
 
-/* WHY NOT TAKE THE DARK THEME FOR INVERTED BOX????? */
-  /* WHY DO WE NEED AN INVERTED BOX? */
+* [ ] [target: 2h; performance:] Create Auf-Elements/Link/Button
 
-* [ ] [target: 0.5h; performance: ] Create separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
+* [ ] [target: 0.5h; ] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 
-* [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
+* [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
-* [ ] [target: 2h] Explore if it´s necessary to add dedicated button-colors to the color theme?
-  * [ ] Use a form-dummy to evaluate the day & night-themes
-
-* [ ] [target: 2h; performace: ] Set night and day styles from backend
+* [ ] [target: 3h;] Implement UID from Structure UID Field
 
 ### P2
 
-* [ ] [target: 10m] add --box-shadow-color to the color_themes
+* [ ] [target: 10m;] add --box-shadow-color to the color_themes
 
-* [ ] [target: 2h] Implement Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+* [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
+
+* [ ] [target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
 ### P3
 
-* [ ] [target: 4h-8h] Create Test Page with Default HTML-Elements!?
+* [ ] [target: 5h] Select Starting Theme individually per Page
+
+* [ ] [target: 2h; performace: ] Set night and day styles from backend
 
 * [ ] [target: 5d] Implement nice style-generator for each theme: https://html-css-js.com/css/generator/text-shadow/
 
@@ -106,3 +111,7 @@ As an editor i want a fast backend to concentrate on the content and be producti
 * [ ] [target: 2d] Vertical Rhythm
 
 * [ ] [target: 1d] Google Fonts
+
+* [ ] WHY NOT TAKE THE DARK THEME FOR INVERTED BOX?????
+
+* [ ] WHY DO WE NEED AN INVERTED BOX?

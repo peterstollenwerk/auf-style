@@ -18,6 +18,15 @@ tabs:
   #STYLES-TAB
   styles:
     fields:
+
+      preview_urls:
+        label: Preview Urls
+        type: info
+        text: >
+          http://auf-style:8888/style-tests
+          <br>
+          http://auf-style:8888/style-boxes-preview
+
       box_themes:
         extends: auf_style/blueprints/fields/box_themes
 
