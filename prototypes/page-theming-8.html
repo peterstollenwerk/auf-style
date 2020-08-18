@@ -23,56 +23,67 @@
     button { 
       padding: 0.5em;
       border-radius: 3px;
-      border-width: 1px;
+      border-width: 2px;
       border-style: solid;
     }
     
     * { 
-      color: var(--color, black); 
+      color: inherit; 
     }
 
     .site {
-      background: var(--background);
+      color: var(--color);
+      background: var(--site-background);
       background-color: var(--background-color, white);
     }
     .site > * {
       background-color: initial;
     }
-
-    .site .logo {
+    .logo {
       color: var(--logo-color);
       fill: var(--logo-color);
     }
 
-    .site button {
-      color: var(--button-color, white);
-      background-color: var(--button-background-color, black);
-      border-color: var(--button-border-color, black);
-    }
-    .site button.secondary {
-      color: var(--color, white);
-      background-color: var(--background-color, black);
-      border-color: var(--button-border-color, black);
-    }
-    .site button.tertiary {
-      color: var(--color, white);
-      background-color: var(--background-color, black);
-      border-color: var(--background-color, black);
-    }
-    .site .box {
+    .box {
       --color: var(--box-color);
       --background-color: var(--box-background-color);
       --border-color: var(--box-border-color);
+      --background: var(--box-background);
       color: var(--color);
+      
+      background: var(--background);
       background-color: var(--background-color);
       border-color: var(--border-color);
       border-width: 1px;
       border-style: solid;
     }
-    .site .box--inverted {
+    .box--inverted {
       --color: var(--inverted-box-color);
       --background-color: var(--inverted-box-background-color);
       --border-color: var(--inverted-box-border-color);
+    }
+    .box > * {
+      --background: initial;
+    }
+    .box button{
+      --button-color: var(--background-color);
+      --button-background-color: var(--color);
+      --button-border-color: var(--color);
+    }
+    button {
+      color: var(--button-color, white);
+      background-color: var(--button-background-color, black);
+      border-color: var(--button-border-color, black);
+    }
+    button.secondary {
+      color: var(--color, white);
+      background-color: var(--background-color, black);
+      border-color: var(--button-border-color, black);
+    }
+    button.tertiary {
+      color: var(--color, white);
+      background-color: var(--background-color, black);
+      border-color: var(--background-color, black);
     }
     .site-theme--dark {
       --theme-h: 25;
@@ -80,7 +91,8 @@
       
       --color: hsl(var(--theme-h), var(--theme-s), 90%);
       --background-color: hsl(var(--theme-h), var(--theme-s), 10%);
-      --background: repeating-linear-gradient(to top left, orange 0, orange 1px, transparent 1px, transparent 20px);
+      
+      --site-background: repeating-linear-gradient(to top left, hsla(25,100%,50%,1) 0px, hsla(25,100%,50%,1) 1px, transparent 1px, transparent 20px);
       
       --logo-color: hsl(var(--theme-h), 100%, 50%);
 
@@ -96,6 +108,21 @@
       --button-background-color: hsl(var(--theme-h), 100%, 50%);
       --button-border-color: hsl(var(--theme-h), 100%, 50%);
     }
+
+    .my-box {
+      --color: rgb(255, 0, 179);
+      --background: repeating-linear-gradient(-45deg, var(--color),var(--color) 5px, hsla(225,100%,50%,0) 2px, hsla(225,100%,50%,0) 15px);
+      --background-color: hsla(225,100%,50%,1);
+    }
+    
+    .my-box-2 {
+      --color: rgb(255, 208, 0);
+      --background-color: rgb(107, 7, 165);
+      --gradient-color: rgba(255, 208, 0, 0.25);
+      --background: repeating-linear-gradient(-45deg, var(--gradient-color),var(--gradient-color) 2px, hsla(225,100%,50%,0) 2px, hsla(225,100%,50%,0) 15px);
+    }
+
+
 
 
   </style>
@@ -116,20 +143,37 @@
       Theme it Baby!
     </h1>
 
-    <section class="box my-box">
+    <section class="box">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
       <button class="primary">subscribe</button>
       <button class="secondary">unsubscribe</button>
       <button class="tertiary">clear</button>
       <button>Default</button>
       <p class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit error id suscipit mollitia laudantium placeat odit enim laborum numquam iure, rerum accusamus corporis, officia architecto dignissimos! Nam provident aperiam similique?</p>
-      <section class="box">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+      <section class="box my-box">
+        <p>.my-box Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
         <button class="primary">subscribe</button>
         <button class="secondary">unsubscribe</button>
         <button class="tertiary">clear</button>
         <button>Default</button>
-        <p class="box box--inverted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit error id suscipit mollitia laudantium placeat odit enim laborum numquam iure, rerum accusamus corporis, officia architecto dignissimos! Nam provident aperiam similique?</p>
+        <section class="box box--inverted">
+          <button class="primary">subscribe</button>
+          <button class="secondary">unsubscribe</button>
+          <button class="tertiary">clear</button>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit error id suscipit mollitia laudantium placeat odit enim laborum numquam iure, rerum accusamus corporis, officia architecto dignissimos! Nam provident aperiam similique?</p>
+          <section  class="box">
+            <p>.box Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et sed earum laboriosam quam, nisi rem labore nulla corporis ullam voluptatibus. Itaque iusto dignissimos impedit aut explicabo eaque velit magni.</p>
+            <button class="primary">subscribe</button>
+            <button class="secondary">unsubscribe</button>
+            <button class="tertiary">clear</button>
+            <section  class="box my-box-2">
+              <p>.box Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et sed earum laboriosam quam, nisi rem labore nulla corporis ullam voluptatibus. Itaque iusto dignissimos impedit aut explicabo eaque velit magni.</p>
+              <button class="primary">subscribe</button>
+              <button class="secondary">unsubscribe</button>
+              <button class="tertiary">clear</button>
+            </section>
+          </section>
+        </section>
       </section>
     </section>
 
