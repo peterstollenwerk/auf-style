@@ -55,6 +55,7 @@
       box-shadow: var(--box-shadow);
     }
     .safe-text {
+      /* This has to be defined after the box! */
       --text-shadow-color: var(--background-color);
       text-shadow: 
         -1px -1px 2px var(--text-shadow-color),
@@ -70,6 +71,7 @@
     .box > * {
       --text-shadow: initial;
       --background: initial; /* Don´t pass the background patterns down! */
+      --box-shadow: initial;
     }
     .box button{
       --button-color: var(--background-color);
@@ -80,11 +82,12 @@
       --button-box-shadow-ambient: 0px 1px 1px var(--button-background-color);
       --button-box-shadow: var(--button-box-shadow-direct), var(--button-box-shadow-ambient);
       
-      color: var(--button-color, white);
       background-color: var(--button-background-color, black);
-      border-color: var(--button-border-color, black);
-      padding: var(--button-padding);
+      color: var(--button-color, white);
 
+      padding: var(--button-padding);
+      
+      border-color: var(--button-border-color, black);
       border-width: var(--button-border-width, 2px);
       border-style: var(--button-border-style, solid);
       border-radius: var(--button-border-radius);
@@ -94,20 +97,20 @@
     }
     button.secondary {
       --button-box-shadow: initial;
-      color: var(--color, white);
       background-color: var(--background-color, black);
+      color: var(--color, white);
       border-color: var(--button-border-color, black);
     }
     button.tertiary {
       --button-box-shadow: initial;
-      color: var(--color);
       background-color: var(--background-color, black);
+      color: var(--color);
       border-color: var(--background-color, black);
     }
     input {
-      color: var(--input-color, black);
       background: var(--input-background);
       background-color: var(--input-background-color, white);
+      color: var(--input-color, black);
       
       padding: calc(var(--button-border-width) + var(--button-padding));
       
