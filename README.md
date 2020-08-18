@@ -79,6 +79,8 @@ Color Convert Methods:
 
 ### P1
 
+* [ ] Create Prototype for Site / Page / Box / Table / Button-Styles
+
 * [ ] [target: 3h;] Implement UID from Structure UID Field
 
 * [ ] [target: 0.5h;] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
