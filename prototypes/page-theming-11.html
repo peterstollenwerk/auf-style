@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" 
+  class="site site-theme--dark" 
+  data-active-theme="site-theme--light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Theming</title>
+  <style>
+    * + * {
+      margin-top: 1.618rem;
+    }
+    /* COLOR THEMING STARTS HERE */
+    * {
+      color: var(--color);
+      fill: var(--color);
+    }
+    body {
+      max-width: 666px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      --padding: 1rem;
+    }
+    input {
+      --padding: 1rem;
+      --color: black;
+      --background-color: white;
+      --border-style: none;
+    }
+
+    .site-theme--dark {
+      --color: white;
+      --background: linear-gradient(hsl(25, 0%, 10%), hsl(25, 0%, 20%));
+      --background-color: black;
+    }
+    .site-theme--dark button {
+      --color: hsl(25, 50%, 95%);
+      --background-color: hsl(25, 0%, 15%);
+      --border-color: hsl(25, 0%, 15%);
+    }
+    .site-theme--dark .box {
+      --color: hsl(25, 50%, 95%);
+      --background-color: hsl(25, 0%, 25%);
+      --padding: 1.618rem;
+      --border-color: hsl(25, 0%, 15%);
+      --border-style: solid;
+      --border-width: 2px;
+      --border-radius: 2px;
+    }
+    .site-theme--dark .box--inverted {
+      --color: hsl(25, 0%, 25%);
+      --background-color: hsl(25, 0%, 75%);
+      --padding: 1.618rem;
+      --border-color: hsl(25, 0%, 15%);
+    }
+
+    .site,
+    .box,
+     button,
+     input
+    {
+      color: var(--color, initial);
+      background: var(--background, initial);
+      background-color: var(--background-color, initial);
+      padding:  var(--padding, initial);
+      box-shadow: var(--box-shadow, none);
+      text-shadow: var(--text-shadow, none);
+
+      border-color: var(--border-color, initial);
+      border-style: var(--border-style, initial);
+      border-width: var(--border-width, initial);
+
+      border-radius: var(--border-radius, initial);
+      
+    }
+    .site > *,
+    .box > * {
+      --background: initial;
+      --box-shadow: initial;
+      --text-shadow: initial;
+    }
+
+    .site.safe-text,
+    .site .box.safe-text,
+    .site button.safe-text
+    {
+      --text-shadow: 
+         1px  1px 1px var(--background-color),
+         1px -1px 1px var(--background-color),
+        -1px  1px 1px var(--background-color),
+        -1px -1px 1px var(--background-color);
+    }
+
+    .site .my-box {
+      --color: rgb(255, 0, 179);
+      --background: repeating-linear-gradient(-45deg, var(--color),var(--color) 5px, hsla(225,100%,50%,0) 2px, hsla(225,100%,50%,0) 15px);
+      --background-color: hsla(225,100%,50%,1);
+      --border-color: var(--color);
+      --box-shadow: 2px 2px 5px black;
+      --text-shadow: 2px 2px 1px rgb(37, 38, 100);
+    }
+
+    .site .my-box-2 {
+      --color: rgb(255, 208, 0);
+      --background-color: rgb(107, 7, 165);
+      --border-color: var(--color);
+      --gradient-color: rgba(255, 208, 0, 0.25);
+      --background: repeating-linear-gradient(-45deg, var(--gradient-color),var(--gradient-color) 2px, hsla(225,100%,50%,0) 2px, hsla(225,100%,50%,0) 15px);
+      --text-shadow: 2px 2px 1px rgb(212, 0, 255);
+      --box-shadow: 4px 4px 0px rgb(107, 7, 165), 8px 8px 0px rgb(255, 208, 0);
+    }
+
+  </style>
+</head>
+  <body>
+
+    <div class="toggle-button">
+      <button class="theme-toggle">  
+        Toggle Theme
+      </button>
+    </div>
+
+    
+    <h1 class="safe-text"> 
+      <svg class="logo" style="max-width: 100px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="m50.012 2.4922c-18.242 0-33.105 14.824-33.141 33.055-10.055 5.7031-16.871 16.484-16.871 28.832 0 18.262 14.887 33.129 33.148 33.129 6.1602 0 11.91-1.7266 16.859-4.668 4.9492 2.9414 10.711 4.668 16.871 4.668 18.262 0 33.125-14.867 33.125-33.129 0-12.355-6.8164-23.145-16.871-28.844-0.042968-18.227-14.883-33.043-33.117-33.043zm0 6.25c13.91 0 25.285 10.473 26.715 23.992-3.1133-0.97266-6.4219-1.5-9.8516-1.5-6.1602 0-11.918 1.7227-16.871 4.668-0.36328-0.21484-0.70703-0.45703-1.082-0.66016-4.6914-2.5547-10.07-4.0117-15.777-4.0117-3.4375 0-6.7539 0.53125-9.875 1.5078 1.4297-13.523 12.828-24 26.738-24zm-16.863 28.742c4.0625 0 7.8984 0.92188 11.348 2.5273-4.9883 4.5859-8.5938 10.652-10.047 17.516-5.9023-4.1836-10.012-10.684-11.047-18.199 3.0234-1.1719 6.3047-1.8438 9.7461-1.8438zm33.727 0c3.4375 0 6.707 0.66797 9.7227 1.8359-1.0312 7.5234-5.1367 14.035-11.043 18.219-1.4492-6.8672-5.0469-12.941-10.035-17.527 3.4492-1.6055 7.2891-2.5273 11.352-2.5273zm15.547 4.9609c6.8555 4.8672 11.328 12.859 11.328 21.938 0 14.887-11.988 26.875-26.875 26.875-4.0625 0-7.8984-0.91797-11.348-2.5195 0.34375-0.31641 0.70312-0.61328 1.0312-0.94141 5.9844-5.9844 9.6953-14.246 9.7109-23.352 8.1445-4.6133 14.164-12.566 16.148-21.996zm-64.844 0.011719c1.9883 9.418 8.0039 17.359 16.145 21.973 0.015625 9.6133 4.1836 18.254 10.766 24.305-3.4453 1.6016-7.2773 2.5195-11.34 2.5195-14.887 0-26.898-11.988-26.898-26.875 0-0.92969 0.046875-1.8477 0.14062-2.7539 0.80078-7.9258 5.0391-14.801 11.188-19.172zm32.43 0.96875c5.1992 4.1875 8.7695 10.281 9.7305 17.23-3.0156 1.168-6.2852 1.832-9.7227 1.832-3.4453 0-6.7305-0.66406-9.7539-1.8359 0.96094-6.9492 4.5469-13.035 9.7461-17.223zm-9.8828 23.809c3.125 0.97656 6.4492 1.5 9.8867 1.5 3.4297 0 6.7383-0.52344 9.8516-1.4961-0.76562 7.3125-4.4414 13.719-9.8555 18.078-5.4219-4.3594-9.1133-10.77-9.8828-18.086z"/>
+      </svg>
+      Theme it Baby! v10
+    </h1>
+
+    <section class="box">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+      <button class="primary">subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <button>Default</button>
+      <p class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit error id suscipit mollitia laudantium placeat odit enim laborum numquam iure, rerum accusamus corporis, officia architecto dignissimos! Nam provident aperiam similique?</p>
+      <section class="box my-box safe-text">
+        <h2>box .my-box .safe-text</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+        <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, dolor explicabo. Rerum repudiandae dolor molestiae repellat illum dolore iusto placeat fuga, nulla ducimus facere quos maxime ad quam velit nemo?</p>
+        <section class="box my-box-2">
+          <h2>box .my-box .safe-text</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+          <button class="primary">subscribe</button>
+          <button class="secondary">unsubscribe</button>
+          <button class="tertiary">clear</button>
+          <button>Default</button>
+        </section>
+      </section>
+      <section class="box my-box">
+        <p>.my-box Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+        <button class="primary">subscribe</button>
+        <button class="secondary">unsubscribe</button>
+        <button class="tertiary">clear</button>
+        <button>Default</button>
+        <section class="box box--inverted">
+          <button class="primary">subscribe</button>
+          <button class="secondary">unsubscribe</button>
+          <button class="tertiary">clear</button>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit error id suscipit mollitia laudantium placeat odit enim laborum numquam iure, rerum accusamus corporis, officia architecto dignissimos! Nam provident aperiam similique?</p>
+          <section  class="box">
+            <p>.box Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et sed earum laboriosam quam, nisi rem labore nulla corporis ullam voluptatibus. Itaque iusto dignissimos impedit aut explicabo eaque velit magni.</p>
+            <button class="primary">subscribe</button>
+            <button class="secondary">unsubscribe</button>
+            <button class="tertiary">clear</button>
+            <section  class="box my-box-2">
+              <p>.box Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate et sed earum laboriosam quam, nisi rem labore nulla corporis ullam voluptatibus. Itaque iusto dignissimos impedit aut explicabo eaque velit magni.</p>
+              <button class="primary">subscribe</button>
+              <button class="secondary">unsubscribe</button>
+              <button class="tertiary">clear</button>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <form class="">
+      <label for="email">form</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button class="primary">subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <button>Default</button>
+      <button class="my-button">.my-button</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+      
+    </form>
+    
+    <form class="box">
+      <label for="email">.box</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button class="primary">subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <button>Default</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+    </form>
+
+    <form class="box box--inverted">
+      <label for="email">.box .box--inverted</label>
+      <input id="email" type="text" placeholder="your email here..."></input>
+      <button class="primary">subscribe</button>
+      <button class="secondary">unsubscribe</button>
+      <button class="tertiary">clear</button>
+      <button>Default</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolor, laboriosam iure incidunt unde mollitia illo nulla, eaque ea, porro impedit est voluptas accusantium odio tempore hic ab neque.</p>
+    </form>
+
+  
+
+   
+    <script>
+      const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
+      const bodyEl = document.getElementsByTagName('html')[0];
+      const setActiveTheme = function(value) {
+        bodyEl.dataset.activeTheme = value;
+      }
+      const getActiveTheme = function() {
+        return bodyEl.dataset.activeTheme;
+      }
+      themeToggleEl.addEventListener('click', function() {
+        const oldTheme = getActiveTheme();
+        let newTheme = '';
+        if(oldTheme === 'site-theme--light') {
+          newTheme = 'site-theme--dark';
+          bodyEl.classList.remove(oldTheme);
+          setActiveTheme(newTheme);
+          bodyEl.classList.add(newTheme);
+        } else {
+          newTheme = 'site-theme--light';
+          bodyEl.classList.remove(oldTheme);
+          setActiveTheme(newTheme);
+          bodyEl.classList.add(newTheme);
+        }
+      });
+    </script>
+
+  </body>
+</html>
