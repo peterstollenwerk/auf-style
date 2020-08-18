@@ -16,56 +16,53 @@
 
     .box { padding: 1.618rem; }
 
+    input {
+      background-color: white;
+    }
+
     button { 
       padding: 0.5em;
-      border-radius: 2px;
+      border-radius: 3px;
       border-width: 1px;
-      border-style: solid; 
-    }
-    
-    * { color: inherit; }
-
-    .site-theme--dark {
-      --color: hsl(197, 100%, 85%);
-      --background-color: hsl(313, 42%, 40%);
-      --border-color: hsl(197, 100%, 85%);
-      
-      color: var(--color);
-      background-color: var(--background-color);
-    }
-    .site-theme--dark .logo {
-      color: hsl(162, 83%, 45%);
-    }
-
-    .site-theme--dark .box {
-      --color: orange;
-      --background-color: purple;
-      --border-color: orange;
-      
-      color: var(--color);
-      background-color: var(--background-color);
-      border-color: var(--border-color);
-      border-width: 2px;
       border-style: solid;
     }
+    
+    * { 
+      color: inherit; 
+      background-color: inherit;
+      border-color: inherit;
+    }
+
+    .site-theme--dark {
+      color: hsl(197, 100%, 85%);
+      background-color: hsl(313, 42%, 40%);
+      border-color: hsl(197, 100%, 85%);      
+    }
+    .site-theme--dark .box {
+      color: hsl(197, 100%, 85%);
+      background-color: hsl(313, 30%, 35%);
+      border-color: hsl(250, 42%, 40%);
+    }
     .site-theme--dark .box--inverted {
-      --color: purple;
-      --background-color: orange;
+      background-color: hsl(197, 100%, 85%);
+      color: hsl(313, 30%, 35%);
+      border-color: hsl(250, 42%, 40%);
     }
 
     .site-theme--dark button {
-      color: var(--background-color);
-      background-color: var(--color);
-      border-color: var(--color);
+      color: hsl(313, 30%, 35%);
+      background-color: hsl(197, 100%, 85%);
+      border-color: hsl(197, 100%, 85%);
     }
     .site-theme--dark button.secondary {
-      color: var(--color);
-      background-color: var(--background-color);
+      color: hsl(197, 100%, 85%);
+      background-color: hsl(313, 30%, 35%);
+      border-color: hsl(197, 100%, 85%);
     }
     .site-theme--dark button.tertiary {
-      color: var(--color);
-      background-color: var(--background-color);
-      border-color: var(--background-color);
+      color: hsl(197, 100%, 85%);
+      background-color: hsl(313, 30%, 35%);
+      border-color: hsl(313, 30%, 35%);
     }
 
 

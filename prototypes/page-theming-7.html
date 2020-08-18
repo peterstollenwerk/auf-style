@@ -16,56 +16,85 @@
 
     .box { padding: 1.618rem; }
 
+    input {
+      background-color: white;
+    }
+
     button { 
       padding: 0.5em;
-      border-radius: 2px;
+      border-radius: 3px;
       border-width: 1px;
-      border-style: solid; 
+      border-style: solid;
     }
     
-    * { color: inherit; }
+    * { 
+      color: var(--color, black); 
+    }
 
-    .site-theme--dark {
-      --color: hsl(197, 100%, 85%);
-      --background-color: hsl(313, 42%, 40%);
-      --border-color: hsl(197, 100%, 85%);
-      
+    .site {
+      background-color: var(--background-color, white);
+    }
+    .site > * {
+      background-color: initial;
+    }
+
+    .site button {
+      color: var(--button-color, white);
+      background-color: var(--button-background-color, black);
+      border-color: var(--button-border-color, black);
+    }
+    .site button.secondary {
+      color: var(--button-color, white);
+      background-color: var(--background-color, black);
+      border-color: var(--button-border-color, black);
+    }
+    .site button.tertiary {
+      color: var(--button-color, white);
+      background-color: var(--background-color, black);
+      border-color: var(--background-color, black);
+    }
+    .site .box {
       color: var(--color);
       background-color: var(--background-color);
     }
-    .site-theme--dark .logo {
-      color: hsl(162, 83%, 45%);
+
+    .site-theme--dark {
+      --theme-hue: 25;
+      --theme-saturation: 100%;
+      --theme-hs: var(--theme-hue), var(--theme-saturation);
+
+      --color: hsl(var(--theme-hs), 50%);
+      --background-color: hsl(var(--theme-hs), 15%);
+      
+      --button-color: hsl(var(--theme-hs), 15%);
+      --button-background-color: hsl(var(--theme-hs), 50%);
+      --button-border-color: hsl(var(--theme-hs), 50%);
     }
 
     .site-theme--dark .box {
-      --color: orange;
-      --background-color: purple;
-      --border-color: orange;
-      
-      color: var(--color);
-      background-color: var(--background-color);
-      border-color: var(--border-color);
-      border-width: 2px;
-      border-style: solid;
-    }
-    .site-theme--dark .box--inverted {
-      --color: purple;
-      --background-color: orange;
-    }
+      --theme-hue: 25;
+      --theme-saturation: 100%;
+      --theme-hs: var(--theme-hue), var(--theme-saturation);
 
-    .site-theme--dark button {
-      color: var(--background-color);
-      background-color: var(--color);
-      border-color: var(--color);
+      --color: hsl(var(--theme-hs), 70%);
+      --background-color: hsl(var(--theme-hs), 25%);
+      
+      --button-color: hsl(var(--theme-hs), 85%);
+      --button-background-color: hsl(var(--theme-hs), 5%);
+      --button-border-color: hsl(var(--theme-hs), 50%);
     }
-    .site-theme--dark button.secondary {
-      color: var(--color);
-      background-color: var(--background-color);
-    }
-    .site-theme--dark button.tertiary {
-      color: var(--color);
-      background-color: var(--background-color);
-      border-color: var(--background-color);
+    
+    .site-theme--dark .box--inverted {
+      --theme-hue: 225;
+      --theme-saturation: 100%;
+      --theme-hs: var(--theme-hue), var(--theme-saturation);
+
+      --color: hsl(var(--theme-hs), 70%);
+      --background-color: hsl(var(--theme-hs), 25%);
+      
+      --button-color: hsl(var(--theme-hs), 85%);
+      --button-background-color: hsl(var(--theme-hs), 5%);
+      --button-border-color: hsl(var(--theme-hs), 50%);
     }
 
 

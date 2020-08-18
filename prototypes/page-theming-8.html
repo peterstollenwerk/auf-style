@@ -16,56 +16,85 @@
 
     .box { padding: 1.618rem; }
 
+    input {
+      background-color: white;
+    }
+
     button { 
       padding: 0.5em;
-      border-radius: 2px;
+      border-radius: 3px;
       border-width: 1px;
-      border-style: solid; 
+      border-style: solid;
     }
     
-    * { color: inherit; }
-
-    .site-theme--dark {
-      --color: hsl(197, 100%, 85%);
-      --background-color: hsl(313, 42%, 40%);
-      --border-color: hsl(197, 100%, 85%);
-      
-      color: var(--color);
-      background-color: var(--background-color);
-    }
-    .site-theme--dark .logo {
-      color: hsl(162, 83%, 45%);
+    * { 
+      color: var(--color, black); 
     }
 
-    .site-theme--dark .box {
-      --color: orange;
-      --background-color: purple;
-      --border-color: orange;
-      
+    .site {
+      background: var(--background);
+      background-color: var(--background-color, white);
+    }
+    .site > * {
+      background-color: initial;
+    }
+
+    .site .logo {
+      color: var(--logo-color);
+      fill: var(--logo-color);
+    }
+
+    .site button {
+      color: var(--button-color, white);
+      background-color: var(--button-background-color, black);
+      border-color: var(--button-border-color, black);
+    }
+    .site button.secondary {
+      color: var(--color, white);
+      background-color: var(--background-color, black);
+      border-color: var(--button-border-color, black);
+    }
+    .site button.tertiary {
+      color: var(--color, white);
+      background-color: var(--background-color, black);
+      border-color: var(--background-color, black);
+    }
+    .site .box {
+      --color: var(--box-color);
+      --background-color: var(--box-background-color);
+      --border-color: var(--box-border-color);
       color: var(--color);
       background-color: var(--background-color);
       border-color: var(--border-color);
-      border-width: 2px;
+      border-width: 1px;
       border-style: solid;
     }
-    .site-theme--dark .box--inverted {
-      --color: purple;
-      --background-color: orange;
+    .site .box--inverted {
+      --color: var(--inverted-box-color);
+      --background-color: var(--inverted-box-background-color);
+      --border-color: var(--inverted-box-border-color);
     }
+    .site-theme--dark {
+      --theme-h: 25;
+      --theme-s: 5%;
+      
+      --color: hsl(var(--theme-h), var(--theme-s), 90%);
+      --background-color: hsl(var(--theme-h), var(--theme-s), 10%);
+      --background: repeating-linear-gradient(to top left, orange 0, orange 1px, transparent 1px, transparent 20px);
+      
+      --logo-color: hsl(var(--theme-h), 100%, 50%);
 
-    .site-theme--dark button {
-      color: var(--background-color);
-      background-color: var(--color);
-      border-color: var(--color);
-    }
-    .site-theme--dark button.secondary {
-      color: var(--color);
-      background-color: var(--background-color);
-    }
-    .site-theme--dark button.tertiary {
-      color: var(--color);
-      background-color: var(--background-color);
-      border-color: var(--background-color);
+      --box-color: hsl(var(--theme-h), var(--theme-s), 90%);
+      --box-background-color: hsl(var(--theme-h), var(--theme-s), 10%);
+      --box-border-color: hsl(var(--theme-h), var(--theme-s), 30%); /* Background-color */
+      
+      --inverted-box-color: var(--box-background-color);
+      --inverted-box-background-color: var(--box-color);
+      --inverted-box-border-color: var(--inverted-box-background-color);
+
+      --button-color: hsl(var(--theme-h), 50%, 10%);
+      --button-background-color: hsl(var(--theme-h), 100%, 50%);
+      --button-border-color: hsl(var(--theme-h), 100%, 50%);
     }
 
 
