@@ -7,8 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Theming</title>
   <style>
+
     * {
-      color: inherit; 
+      transition: all 0.5s;
+    }
+
+
+    * {
+      color: var(--color); 
     }
 
     * + * {
@@ -18,8 +24,7 @@
     /* COLOR THEMING STARTS HERE */
 
     .logo {
-      color: var(--logo-color);
-      fill: var(--logo-color);
+      fill: currentColor;
     }
     .site {
       --color: var(--site-color);
