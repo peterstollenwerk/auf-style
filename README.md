@@ -75,16 +75,23 @@ Color Convert Methods:
 
 * [x] Created Builder Snippets to test Box Classes in the field
 
-### P1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-* [ ] [target: 1h; performance: ] Fine Tune CSS Styles
+### P1
 
 * [ ] [target: 3h;] Implement UID from Structure UID Field
 
-* [ ] [target: 0.5h; ] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
+* [ ] [target: 0.5h;] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
+
+* [ ] [target: 2h; performance: ] Fine Tune CSS Styles // Import Prototype V4 and work with test boxes Vererbung!
+
+* [ ] Implement Special Classes: .safe-text and .safe-text--extra
 
 * [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
+* [ ] [target: 1h;] Implement Link Field: https://getkirby.com/plugins/oblikstudio/link-field
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P2
 
@@ -93,6 +100,8 @@ Color Convert Methods:
 * [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
 
 * [ ] [target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P3
 
@@ -119,8 +128,3 @@ As an editor i want a fast backend to concentrate on the content and be producti
 
 * [ ] [target: 1d] Google Fonts
 
-* [ ] WHY NOT TAKE THE DARK THEME FOR INVERTED BOX?????
-
-* [ ] WHY DO WE NEED AN INVERTED BOX?
-
-* [ ] Link Field: https://getkirby.com/plugins/oblikstudio/link-field

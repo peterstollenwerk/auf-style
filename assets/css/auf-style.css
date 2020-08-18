@@ -95,7 +95,7 @@ html, body {
 .borders > * {
   border-width: var(--border-width, 2px);
   border-style: var(--border-style, solid);
-  border-color: var(--border-color, black);
+  border-color: var(--border-color, var(--color, black));
   border-radius: var(--border-radius);
 }
 .border-radius,
