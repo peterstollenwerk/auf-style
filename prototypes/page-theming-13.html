@@ -108,21 +108,18 @@ button {
     <p></p>
     <button class="theme-toggle">Toggle Theme</button>
 
-    <input type="range" min="0" max="360" value="25" id="hue">
+    <input id="hue" type="range" min="0" max="360" value="25">
+    <input id="saturation" type="range" min="0" max="100" value="25">
 
     <script>
       const siteEl2 = document.getElementsByClassName('site')[0];
-      const setHue = function(value) {
-        siteEl2.setAttribute("style", "--h: " + value + ";");
-      }
-    
-
       const hueEl = document.getElementById('hue');
-      console.log(hueEl);
+      const saturationEl = document.getElementById('saturation');
       hueEl.addEventListener('input', function(e){
-        console.log(e);
-        console.log(hueEl.value);
-        setHue(hueEl.value);
+        siteEl2.style.setProperty('--h', hueEl.value);
+      });
+      saturationEl.addEventListener('input', function(e){
+        siteEl2.style.setProperty('--s', saturationEl.value + '%');
       });
     </script>
 
