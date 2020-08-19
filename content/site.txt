@@ -11,7 +11,7 @@ Box-themes:
   color_theme: 48j502iy
   background_theme: i506ropu
   border_theme: 8vtoylcm
-  outline_theme: ""
+  outline_theme: 1n90iti1
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
@@ -373,53 +373,12 @@ Border-themes:
 Outline-themes:
 
 - 
-  uid: solid
-  label: Solid
-  outline_width: ""
-  outline_style: solid
-  outline_offset: ""
-- 
-  uid: dotted
+  autoid: 1n90iti1
   label: Dotted
-  outline_width: ""
-  outline_style: dotted
-  outline_offset: ""
-- 
-  uid: dashed
-  label: Dashed
-  outline_width: ""
+  css_selector: '*'
+  outline_width: 2px
   outline_style: dashed
-  outline_offset: ""
-- 
-  uid: double
-  label: Double
-  outline_width: ""
-  outline_style: double
-  outline_offset: ""
-- 
-  uid: groove
-  label: Groove
-  outline_width: ""
-  outline_style: groove
-  outline_offset: ""
-- 
-  uid: ridge
-  label: Ridge
-  outline_width: ""
-  outline_style: ridge
-  outline_offset: ""
-- 
-  uid: inset
-  label: Inset
-  outline_width: ""
-  outline_style: inset
-  outline_offset: ""
-- 
-  uid: outset
-  label: outset
-  outline_width: ""
-  outline_style: outset
-  outline_offset: ""
+  outline_offset: 2px
 
 ----
 

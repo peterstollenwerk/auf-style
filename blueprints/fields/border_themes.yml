@@ -8,10 +8,11 @@ columns:
   autoid:
     width: 1/13
   label:
-  css_selector:
   border_width:
   border_style:
   border_radius:
+  css_selector:
+    width: 1/10
 fields:
   autoid:
     type: autoid
