@@ -31,7 +31,9 @@ Kirby::plugin('auf/style', [
         'auf-style/box-shadow-themes' => __DIR__ . '/snippets/box-shadow-themes.php',
         'auf-style/box-shadow-theme' => __DIR__ . '/snippets/box-shadow-theme.php',
         'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
+        'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
         'auf-style/box-theme' => __DIR__ . '/snippets/box-theme.php',
+        'auf-style/button-themes' => __DIR__ . '/snippets/button-themes.php',
         
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         'auf-style/style' => __DIR__ . '/snippets/style.php',
