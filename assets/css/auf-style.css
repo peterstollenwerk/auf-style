@@ -17,6 +17,10 @@ html, body {
 * {
   color: var(--color, inital);
   background: var(--background, initial); 
+  
+  border-color: var(--border-color, initial); 
+  border-width: var(--border-width, initial); 
+  border-style: var(--border-style, initial); 
   /* TODO: Check if this is a good idea! */
 }
 
@@ -90,6 +94,11 @@ html, body {
 .boxes--inverted > * {
   --color: var(--inverted-color);
   --background-color: var(--inverted-background-color);
+}
+
+.box > *,
+.boxes > * {
+  --border-style: initial;
 }
 
 /* BORDER ---------------------------------- */

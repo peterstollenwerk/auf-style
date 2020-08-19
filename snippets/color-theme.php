@@ -11,7 +11,8 @@
 ?>
 
 <?php 
-    $cssClasses = ['autoidSelector' => 'color-theme--' . $colorTheme->autoid()];
+    $autoidClass ='color-theme--' . $colorTheme->autoid();
+    $cssClasses = ['autoidClass' => $autoidClass];
     $cssSelector = $colorTheme->css_selector();
     if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
     $cssClass = implode(', ', $cssClasses);
@@ -25,7 +26,7 @@
 ?>
 
 <?php if($preview): ?>
-  <article class="box <?= $cssClass ?>" style="min-height: 33vh;">
+  <article class="box <?= $autoidClass ?>" style="min-height: 33vh;">
     <h3>.<?= $cssClass ?></h3>
     <p>Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Dicta quod ea culpa, accusantium vel cumque quam earum corporis. Nobis quos veniam, architecto molestiae odio aspernatur amet enim optio soluta ipsum?</p>
     <section class="border">

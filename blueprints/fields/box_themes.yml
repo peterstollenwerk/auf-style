@@ -69,7 +69,7 @@ fields:
     query: 
       fetch: site.border_themes.toStructure
       text: "{{ structureItem.label }}"
-      value: "{{ structureItem.uid }}"
+      value: "{{ structureItem.autoid }}"
   outline_theme:
     type: select
     label: Outline Theme

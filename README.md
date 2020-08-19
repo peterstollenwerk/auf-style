@@ -81,11 +81,22 @@ Color Convert Methods:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+### RULES 
+
+1. Pass down the Color-Theme, but nothing else!
+
+
 ### P1
 
 * [ ] TO USE THE selectors with background-theme we need a global setting of background, maybe  * { background: var(--background, initial)} ?
 
 * [ ] [target: 3h;] Implement UID from Structure UID Field
+    * [X] ~~*Color-Themes*~~ [2020-08-19]
+    * [X] ~~*Background-Themes*~~ [2020-08-19]
+    * [X] ~~*Border-Themes*~~ [2020-08-19]
+    * [ ] Outline-Themes
+    * [ ] Box-Shadow-Themes
+    * [ ] Text-Shadow-Themes
 
 * [ ] Implement new css theming defaults: page-themeing-10.html
 

@@ -7,7 +7,8 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 ?>
 
 <?php 
-  $cssClasses = ['autoidSelector' => 'background-theme--' . $backgroundTheme->autoid()];
+  $autoidClass ='background-theme--' . $backgroundTheme->autoid();
+  $cssClasses = ['autoidClass' => $autoidClass];
   $cssSelector = $backgroundTheme->css_selector();
   if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
   $cssClass = implode(', ', $cssClasses);
@@ -17,8 +18,9 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 ?>
 
 <?php if($preview): ?>
-  <h3>.<?= $cssClass ?></h3>
-  <div class="box <?= $cssClass ?>" style="height: 33vh"></div>
+  <h3><?= $label ?></h3>
+  <h4>.<?= $cssClass ?></h4>
+  <div class="box <?= $autoidClass ?>" style="height: 33vh"></div>
 <?php endif?>
 
 <?php /* START CLASS --------------------- */ ?>

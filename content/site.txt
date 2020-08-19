@@ -7,10 +7,10 @@ Box-themes:
 - 
   autoid: izfitu62
   label: Button (default)
-  css_selector: :root
+  css_selector: ""
   color_theme: 48j502iy
   background_theme: i506ropu
-  border_theme: ""
+  border_theme: 8vtoylcm
   outline_theme: ""
   text_shadow_theme: ""
   box_shadow_theme: ""
@@ -361,35 +361,12 @@ Background-themes:
 Border-themes:
 
 - 
-  uid: "1"
-  label: Small
-  border_width: 3rem
-  border_style: solid
-  border_radius: 1rem
-- 
-  uid: "2"
-  label: Medium
-  border_width: 2px
-  border_style: solid
-  border_radius: 0.5rem
-- 
-  uid: "3"
-  label: Large
-  border_width: 2px
-  border_style: solid
-  border_radius: 1rem
-- 
-  uid: button
-  label: Button
-  border_width: 2px
-  border_style: solid
-  border_radius: 1rem
-- 
-  uid: pink-button
-  label: Pink Button
+  autoid: 8vtoylcm
+  label: 'Button '
+  css_selector: button
   border_width: 1px
-  border_style: dotted
-  border_radius: 5px
+  border_style: solid
+  border_radius: 4px
 
 ----
 
