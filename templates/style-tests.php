@@ -45,7 +45,7 @@
 </nav>
 <hr>
 
-<?php if(false): ?>
+<?php if(true): ?>
 <section>
   <h2 id="button-themes">Button-Themes</h2>
   <?= snippet('auf-style/button-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>

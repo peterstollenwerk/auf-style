@@ -8,14 +8,14 @@ columns:
   autoid:
     width: 1/13
   label:
-  color:
   background:
+  color:
   border:
   outline:
   text_shadow:
   box_shadow_ambient:
   css_selector:
-    width: 1/10
+    width: 1/5
 fields:
   autoid:
     type: autoid

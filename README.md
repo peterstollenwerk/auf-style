@@ -79,6 +79,15 @@ Color Convert Methods:
 
 * [X] ~~*[target: 2h; performance: 11.5h] Fine Tune CSS Styles // Import Prototype V4 and work with test boxes Vererbung!*~~ [2020-08-19]
 
+* [X] ~~*[target: 3h; performance: 3h] Implement UID from Structure UID Field*~~ [2020-08-19]
+    * [X] ~~*Color-Themes*~~ [2020-08-19]
+    * [X] ~~*Background-Themes*~~ [2020-08-19]
+    * [X] ~~*Border-Themes*~~ [2020-08-19]
+    * [X] ~~*Outline-Themes*~~ [2020-08-19]
+    * [X] ~~*Box-Shadow-Themes*~~ [2020-08-19]
+    * [ ] Text-Shadow-Themes
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### RULES 
@@ -88,28 +97,31 @@ Color Convert Methods:
 
 ### P1
 
+* implement box helper classes: 
+  .border-outset
+
 * [ ] TO USE THE selectors with background-theme we need a global setting of background, maybe  * { background: var(--background, initial)} ?
 
 We can create a system like this:
 
+.outline {
+  outline-color: var(--outline-color);
+  outline-width: var(--outline-width);
+  outline-style: var(--outline-style);
+  outline-offset: var(--outline-offset);
+}
+*, my-outlins-selector {
+  --outline-width: 2px;
+  --outline-style: dashed;
+  --outline-offset: 2px;
+}
+
 .background {
   background: var(--background);
-}
-* {
-  --background: url('default-image.jpg');
 }
 .background--theme {
   --background: linear-gradient(red, blue);
 }
-
-
-* [ ] [target: 3h;] Implement UID from Structure UID Field
-    * [X] ~~*Color-Themes*~~ [2020-08-19]
-    * [X] ~~*Background-Themes*~~ [2020-08-19]
-    * [X] ~~*Border-Themes*~~ [2020-08-19]
-    * [X] ~~*Outline-Themes*~~ [2020-08-19]
-    * [ ] Box-Shadow-Themes
-    * [ ] Text-Shadow-Themes
 
 * [ ] Implement new css theming defaults: page-themeing-10.html
 

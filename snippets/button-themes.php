@@ -1,5 +1,4 @@
 <section>
-  <h2 id="button-themes">Button Themes</h2>
   <h3>Buttons</h3>
   <button>button</button>
   <button class="primary">button.primary</button>

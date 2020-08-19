@@ -17,6 +17,7 @@ html, body {
 * {
   color: var(--color, inital);
   background: var(--background, initial); 
+  background-color: var(--background-color, initial); 
   
   border-color: var(--border-color, initial); 
   border-width: var(--border-width, initial); 
@@ -24,9 +25,17 @@ html, body {
   /* TODO: Check if this is a good idea! */
 }
 
+.page > *,
+.box > *,
+.boxes > * {
+  --background: initial;
+  --border-style: initial;
+  --background-color: initial;
+}
+
 
 /* PAGE THEMES ---------------------------------- */
-.page,
+/* .page,
 .page-theme--light {
   --page-color:  hsl(25, 10%, 10%);
   --page-background-color: hsl(25, 10%, 90%);
@@ -55,7 +64,7 @@ html, body {
   --inverted-background-color: var(--color);
   background: var(--page-background);
   background-color: var(--page-background-color);
-}
+} */
 /* BOX ---------------------------------- */
 .box,
 .boxes > * {
@@ -96,10 +105,7 @@ html, body {
   --background-color: var(--inverted-background-color);
 }
 
-.box > *,
-.boxes > * {
-  --border-style: initial;
-}
+
 
 /* BORDER ---------------------------------- */
 .border,

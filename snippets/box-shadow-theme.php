@@ -6,8 +6,12 @@
 ?>
 
 <?php 
-  $uid = $boxShadowTheme->uid();
-  $boxShadowThemeClass = 'box-shadow-theme--'. $uid;
+
+  $autoidClass ='box-shadow-theme--' . $boxShadowTheme->autoid();
+  $cssClasses = ['autoidClass' => $autoidClass];
+  $cssSelector = $boxShadowTheme->css_selector();
+  if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
+  $cssClass = implode(', ', $cssClasses);
 
   $boxShadows = $boxShadowTheme->box_shadows();
 
@@ -28,10 +32,10 @@
 
 <?php if($preview): ?>
   <article 
-    class="box <?= $boxShadowThemeClass ?>" 
-    style="min-height: 33vh; --color: black; --background-color: pink;"
+    class="box <?= $autoidClass ?>" 
+    style="min-height: 33vh; --color: black; --background-color: orange;"
     >
-    <h3>.<?= $boxShadowThemeClass ?> <small>.box .outline</small></h3>
+    <h3>.<?= $cssClass ?> <small>.box .outline</small></h3>
 <?php endif?>
 
 
@@ -40,7 +44,7 @@
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-.<?= $boxShadowThemeClass ?> {
+.<?= $cssClass ?> {
 <?php endif?>
   
   <?php if($offsetY->isNotEmpty()): ?>--box-shadow-offset-y: <?= $offsetY ?>;<?php endif?>
