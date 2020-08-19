@@ -16,7 +16,8 @@ html, body {
 }
 * {
   color: var(--color, inital);
-  background: var(--background, initial);
+  background: var(--background, initial); 
+  /* TODO: Check if this is a good idea! */
 }
 
 
