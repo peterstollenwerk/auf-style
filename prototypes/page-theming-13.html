@@ -15,6 +15,9 @@ body,
 * + * {
   margin-top: 1rem;
 }
+.site {
+  padding: 1rem;
+}
 .site > * {
   padding-left: 1.618rem;
   padding-right: 1.618rem;
@@ -23,36 +26,56 @@ body,
   margin-right: auto;
 }
 /* ------------------------- */
+:root {
+  --box-border-width: 2px;
+  --box-border-style: solid;
+  --box-padding: calc(1.618rem + var(--box-border-width));
+
+  --button-padding: 0.618rem;
+  --button-border-width: 2px;
+
+  --input-padding: calc(var(--button-padding) + var(--button-border-width));
+}
 * {
   color: inherit;
 }
 .box {
-  padding: 1.618rem;
-  border: 2px solid;
+  padding: var(--padding, var(--box-padding));
+  border-width: var(--border-width, var(--box-border-width));
+  border-style: var(--border-style, var(--box-border-style));
 }
 button {
-  padding: 0.5em;
   color: inherit;
   background-color: inherit;
+  padding: var(--padding, var(--button-padding));
   border-color: inherit;
-  border-width: 2px;
+  border-width: var(--border-width, var(--button-border-width));
   border-style: solid;
 }
+input[type="text"] {
+  border-width: 0;
+  padding: var(--padding, var(--input-padding));
+  color: black;
+  background: white;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.61);
+}
+
 .site {
-  --h: 25;
-  --s: 10%;
+  --h: 115;
+  --s: 0%;
 }
 /* THEME LIGHT */
 .site--light {
   color: hsl(var(--h), var(--s), 20%);
   --g1: hsl(var(--h), var(--s), 85%);
   --g2: hsl(var(--h), var(--s), 75%);
-  /*background: linear-gradient( var(--g1), var(--g2) );*/
-  background-color: hsl(var(--h), var(--s), 85%);
+  background: linear-gradient( var(--g1), var(--g2) );
+  background-color: hsl(var(--h), var(--s), 75%);
 }
 .site--light .box {
   color: hsl(var(--h), var(--s), 15%);
-  background-color: hsl(var(--h), var(--s), 93%);
+  background-color: hsl(var(--h), var(--s), 95%);
   border-color: hsl(var(--h), var(--s), 92%);
 }
 .site--light .box--inverted {
@@ -60,24 +83,33 @@ button {
   background-color: hsl(var(--h), var(--s), 20%);
   border-color: hsl(var(--h), var(--s), 10%);
 }
+
+
 /* SITE DARK */
 .site--dark {
-  color: hsl(var(--h), var(--s), 95%);
-  background-color: hsl(var(--h), var(--s), 0%);
+  color: hsl(var(--h), var(--s), 85%);
+  --g1: hsl(var(--h), var(--s), 25%);
+  --g2: hsl(var(--h), var(--s), 15%);
+  background: linear-gradient(var(--g1), var(--g2));
+  background-color: hsl(var(--h), var(--s), 15%);
 }
 .site--dark .box {
-  color: hsl(var(--h), var(--s), 95%);
+  color: hsl(var(--h), var(--s), 85%);
   background-color: hsl(var(--h), var(--s), 15%);
-  border-color: hsl(var(--h), var(--s), 10%);
-}
+  border-color: hsl(var(--h), var(--s), 13%);
+} 
 .site--dark .box--inverted {
-  color: hsl(var(--h), var(--s), 15%);
-  background-color: hsl(var(--h), var(--s), 95%);
-  border-color: hsl(var(--h), var(--s), 90%);
-}
+  color: hsl(var(--h), var(--s), 10%);
+  background-color: hsl(var(--h), var(--s), 85%);
+  border-color: hsl(var(--h), var(--s), 75%);
+} 
+
+
+
+
 /* BUTTON THEMES */
 .primary {
-  color: black;
+  color: hsl(var(--h), 100%, 0%);
   background-color: hsl(var(--h), 100%, 50%);
   border-color: transparent;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
@@ -91,9 +123,11 @@ button {
   background-color: inherit;
 }
 
+
+
 /* BOX THEMES */
 .box.theme--primary-gradient {
-  color: hsl(var(--h), var(--s), 95%);
+  color: hsl(var(--h), var(--s), 20%);
   --c1: hsl(var(--h), 100%, 50%);
   --c2: hsl(var(--h), 100%, 20%);
   background: linear-gradient(var(--c1), var(--c2));
@@ -105,12 +139,15 @@ button {
 <body class="site site--dark" data-active-theme="site--dark">
 
   <div>
-    <p></p>
-    <button class="theme-toggle">Toggle Theme</button>
-
+    <button class="theme-toggle primary">Toggle Theme</button>
+    <p>
+    <label for="hue">Hue:</label>
     <input id="hue" type="range" min="0" max="360" value="25">
+  </p>
+  <p>
+    <label for="saturation">Saturation:</label>
     <input id="saturation" type="range" min="0" max="100" value="25">
-
+  </p>
     <script>
       const siteEl2 = document.getElementsByClassName('site')[0];
       const hueEl = document.getElementById('hue');
@@ -122,12 +159,12 @@ button {
         siteEl2.style.setProperty('--s', saturationEl.value + '%');
       });
     </script>
-
   </div>
 
   <h2>.site</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto aliquam ea ut omnis repellat, dolor tempora aperiam reprehenderit numquam voluptate beatae recusandae magnam ullam facilis obcaecati voluptatum porro ad?</p>
   <div>
+    <input type="text" placeholder="your email...">
     <button class="primary">Button.primary</button>
     <button class="secondary">Button.secondary</button>
     <button class="tertiary">Button.tertiary</button>
@@ -137,6 +174,7 @@ button {
     <h3>.box</h3>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
     <div>
+      <input type="text" placeholder="your email...">
       <button class="primary">Button.primary</button>
       <button class="secondary">Button.secondary</button>
       <button class="tertiary">Button.tertiary</button>
@@ -147,20 +185,22 @@ button {
     <h3>.box.box--inverted</h3>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
     <div>
-      <button>Button</button>
+      <input type="text" placeholder="your email...">
       <button class="primary">Button.primary</button>
       <button class="secondary">Button.secondary</button>
       <button class="tertiary">Button.tertiary</button>
+      <button>Button</button>
     </div>
   </section>
   <section class="box theme--primary-gradient">
     <h3>.box.box--blue-red-stripes</h3>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
     <div>
-      <button>Button</button>
+      <input type="text" placeholder="your email...">
       <button class="primary">Button.primary</button>
       <button class="secondary">Button.secondary</button>
       <button class="tertiary">Button.tertiary</button>
+      <button>Button</button>
     </div>
     <section class="box">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint magni eos? Velit dolore voluptate maiores eius quis, aut suscipit consequuntur voluptatibus! Explicabo, ea. Iusto facere rem quaerat maxime aliquid.</p>
