@@ -11,8 +11,10 @@
 ?>
 
 <?php 
-    $uid = $colorTheme->uid();
-    $css_class = 'color-theme--'. $uid;
+    $cssClasses = ['autoidSelector' => 'color-theme--' . $colorTheme->autoid()];
+    $cssSelector = $colorTheme->css_selector();
+    if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
+    $cssClass = implode(', ', $cssClasses);
     # colors
     $color = $colorTheme->color();
     $backgroundColor = $colorTheme->background();
@@ -23,8 +25,8 @@
 ?>
 
 <?php if($preview): ?>
-  <article class="box <?= $css_class ?>" style="min-height: 33vh;">
-    <h3>.<?= $css_class ?></h3>
+  <article class="box <?= $cssClass ?>" style="min-height: 33vh;">
+    <h3>.<?= $cssClass ?></h3>
     <p>Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Dicta quod ea culpa, accusantium vel cumque quam earum corporis. Nobis quos veniam, architecto molestiae odio aspernatur amet enim optio soluta ipsum?</p>
     <section class="border">
       <h4>.border</h4>
@@ -47,16 +49,12 @@
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-.<?= $css_class ?> {
+.<?= $cssClass ?> {
 <?php endif?>
     
-  <?php if($color->isNotEmpty()): ?>--color: <?= $color ?>;<?php endif?>
-    
-  <?php if($backgroundColor->isNotEmpty()): ?>--inverted-color: <?= $backgroundColor ?>;<?php endif?>
-    
   <?php if($backgroundColor->isNotEmpty()): ?>--background-color: <?= $backgroundColor ?>;<?php endif?>
-    
-  <?php if($color->isNotEmpty()): ?>--inverted-background-color: <?= $color ?>;<?php endif?>
+
+  <?php if($color->isNotEmpty()): ?>--color: <?= $color ?>;<?php endif?>
     
   <?php if($borderColor->isNotEmpty()): ?>--border-color: <?= $borderColor ?>;<?php endif?>
     
@@ -65,6 +63,10 @@
   <?php if($textShadowColor->isNotEmpty()): ?>--text-shadow-color: <?= $textShadowColor ?>;<?php endif?>
     
   <?php if($boxShadowAmbientColor->isNotEmpty()): ?>--box-shadow-ambient-color: <?= $boxShadowAmbientColor ?>;<?php endif?>
+  
+  <?php if($backgroundColor->isNotEmpty()): ?>--inverted-color: <?= $backgroundColor ?>;<?php endif?>
+
+  <?php if($color->isNotEmpty()): ?>--inverted-background-color: <?= $color ?>;<?php endif?>
     
 
 <?php if($renderCssClass): ?>

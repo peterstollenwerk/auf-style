@@ -6,10 +6,10 @@ Box-themes:
 
 - 
   autoid: izfitu62
-  label: Default
+  label: Button (default)
   css_selector: :root
-  color_theme: ""
-  background_theme: ""
+  color_theme: 48j502iy
+  background_theme: i506ropu
   border_theme: ""
   outline_theme: ""
   text_shadow_theme: ""
@@ -21,8 +21,9 @@ Box-themes:
 Color-themes:
 
 - 
-  uid: page-day
+  autoid: tb439f71
   label: Page (Light)
+  css_selector: .page
   color: 'hsla(225, 10%, 15%)'
   background: 'hsla(25, 10%, 95%)'
   border: 'hsla(225, 10%, 15%)'
@@ -30,8 +31,9 @@ Color-themes:
   text_shadow: '#00000040'
   box_shadow_ambient: '#00000040'
 - 
-  uid: page-night
+  autoid: phjxkdp5
   label: Page (Night)
+  css_selector: ""
   color: 'hsla(25, 10%, 95%)'
   background: 'hsla(225, 10%, 15%)'
   border: 'hsla(25, 10%, 95%)'
@@ -39,8 +41,9 @@ Color-themes:
   text_shadow: 'hsla(25, 15%, 95%, 0.5)'
   box_shadow_ambient: 'hsla(25, 15%, 95%, 0.5)'
 - 
-  uid: box-day
+  autoid: anj7d547
   label: Box (Day)
+  css_selector: ""
   color: '#000000'
   background: '#ffffff'
   border: '#000000'
@@ -48,8 +51,9 @@ Color-themes:
   text_shadow: '#00000040'
   box_shadow_ambient: '#ffffff40'
 - 
-  uid: box-night
+  autoid: 0grpa606
   label: Box (Night)
+  css_selector: ""
   color: '#ffffff'
   background: '#000000'
   border: '#ffffff'
@@ -57,22 +61,34 @@ Color-themes:
   text_shadow: '#ffffff40'
   box_shadow_ambient: '#ffffff'
 - 
-  uid: crazy-shit
+  autoid: 0lzqg2t1
   label: Crazy Shit
+  css_selector: ""
   color: '#00ff7b'
   background: '#0023d1'
   border: '#00ff7b'
   outline: '#00ff7b'
   text_shadow: '#ff00dd'
   box_shadow_ambient: '#0023d1'
+- 
+  autoid: 48j502iy
+  label: Button (default)
+  css_selector: button
+  color: '#2e2e2e'
+  background: '#f59b00'
+  border: '#2e2e2e'
+  outline: '#2e2e2e'
+  text_shadow: '#ffd080'
+  box_shadow_ambient: '#f59b00'
 
 ----
 
 Background-themes:
 
 - 
-  uid: "1"
+  autoid: t2cwte21
   label: Black Hearts – Pattern (small)
+  css_selector: h1, h2
   background:
     - 
       type: gradient
@@ -161,8 +177,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: "2"
+  autoid: c3rjh6po
   label: Muhammad Superjumbo Cover
+  css_selector: ""
   background:
     - 
       type: image
@@ -183,8 +200,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: "3"
+  autoid: 3nq51t77
   label: Blue Diagonal Stripes on Orange Gradient
+  css_selector: ""
   background:
     - 
       type: gradient
@@ -255,8 +273,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: "4"
+  autoid: i506ropu
   label: Blue Red Transition
+  css_selector: ""
   background:
     - 
       type: gradient
@@ -293,12 +312,14 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: button
+  autoid: z2gown5o
   label: Transparent
+  css_selector: ""
   background: [ ]
 - 
-  uid: pink-button
+  autoid: c9uohbys
   label: Pink Button Gradient
+  css_selector: h1
   background:
     - 
       type: gradient
@@ -342,7 +363,7 @@ Border-themes:
 - 
   uid: "1"
   label: Small
-  border_width: 3rem^
+  border_width: 3rem
   border_style: solid
   border_radius: 1rem
 - 

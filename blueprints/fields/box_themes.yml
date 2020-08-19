@@ -14,6 +14,7 @@ help: >
   </code>
 columns:
   autoid:
+    width: 1/13
   label:
   css_selector:
   color_theme:
@@ -50,7 +51,7 @@ fields:
     query: 
       fetch: site.color_themes.toStructure
       text: "{{ structureItem.label }}"
-      value: "{{ structureItem.uid }}"
+      value: "{{ structureItem.autoid }}"
   background_theme:
     type: select
     label: Background Theme
@@ -59,7 +60,7 @@ fields:
     query: 
       fetch: site.background_themes.toStructure
       text: "{{ structureItem.label }}"
-      value: "{{ structureItem.uid }}"
+      value: "{{ structureItem.autoid }}"
   border_theme:
     type: select
     label: Border Theme

@@ -1,12 +1,14 @@
 type: structure
 label: Color Themes
+translate: false
 help: >
   creates css-classes: <br>
   <code>.color-theme--UID: { --color: red; --background-color: black; ... }</code>
 columns:
-  uid:
-    width: 1/10
+  autoid:
+    width: 1/13
   label:
+  css_selector:
   color:
   background:
   border:
@@ -14,14 +16,20 @@ columns:
   text_shadow:
   box_shadow_ambient:
 fields:
-  uid:
-    label: UID
-    type: text
+  autoid:
+    type: autoid
+    translate: false 
+    width: 1/3
   label:
     label: Label
     type: text
+    width: 1/3
+  css_selector:
+    label: CSS Selector
+    type: text
+    width: 1/3
   color:
-    label: Color
+    label: Color (Text)
     type: colors
     alpha: true
     width: 1/2
@@ -36,7 +44,7 @@ fields:
     alpha: true
     width: 1/2
   outline:
-    label: Outline
+    label: Outline (Tab Navigation)
     type: colors
     alpha: true
     width: 1/2

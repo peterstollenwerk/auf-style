@@ -15,7 +15,8 @@ html, body {
   --margin: 1.62rem;
 }
 * {
-  color: var(--color);
+  color: var(--color, inital);
+  background: var(--background, initial);
 }
 
 

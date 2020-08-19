@@ -83,9 +83,11 @@ Color Convert Methods:
 
 ### P1
 
-* [ ] Implement new css theming defaults: page-themeing-10.html
+* [ ] TO USE THE selectors with background-theme we need a global setting of background, maybe  * { background: var(--background, initial)} ?
 
 * [ ] [target: 3h;] Implement UID from Structure UID Field
+
+* [ ] Implement new css theming defaults: page-themeing-10.html
 
 * [ ] Create Prototype for Site / Page / Box / Table / Button-Styles
 
