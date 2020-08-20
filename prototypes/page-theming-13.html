@@ -6,7 +6,7 @@
 <title>Document</title>
 <style>
   html,
-body,
+  body,
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +25,7 @@ body,
   margin-left: auto;
   margin-right: auto;
 }
+/* SIZE THEMES */
 /* ------------------------- */
 :root {
   --box-border-width: 2px;
@@ -36,6 +37,10 @@ body,
 
   --input-padding: calc(var(--button-padding) + var(--button-border-width));
 }
+
+
+/* COLOR THEMES */
+
 * {
   color: inherit;
 }
@@ -45,19 +50,24 @@ body,
   border-style: var(--border-style, var(--box-border-style));
 }
 button {
+  padding: var(--padding, var(--button-padding));
+
   color: inherit;
   background-color: inherit;
-  padding: var(--padding, var(--button-padding));
+ 
   border-color: inherit;
   border-width: var(--border-width, var(--button-border-width));
   border-style: solid;
 }
 input[type="text"] {
-  border-width: 0;
   padding: var(--padding, var(--input-padding));
+
   color: black;
   background: white;
+  
+  border-width: 0;
   border-radius: 3px;
+  
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.61);
 }
 
@@ -123,8 +133,6 @@ input[type="text"] {
   background-color: inherit;
 }
 
-
-
 /* BOX THEMES */
 .box.theme--primary-gradient {
   color: hsl(var(--h), var(--s), 20%);
@@ -137,7 +145,6 @@ input[type="text"] {
 </style>
 </head>
 <body class="site site--dark" data-active-theme="site--dark">
-
   <div>
     <button class="theme-toggle primary">Toggle Theme</button>
     <p>
