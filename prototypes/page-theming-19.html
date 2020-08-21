@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="site site--light" data-active-theme="site--light">
+<html lang="en" class="site site--dark" data-active-theme="site--dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Theming 17</title>
+  <title>Page Theme v19</title>
   <style>
 
-/* TODOS
-
-  1. Implement Outline-Themes
-  2. Implement Border-Radius Themes
-  3. Move all hardcoded value to root variable
-  4. Implement Primary Color Theme with Variable Hue & Saturation
-
- */
+/* CSS - Reset */
 
 * {
   box-sizing: border-box;
@@ -27,20 +20,33 @@ html {
   --margin: 1rem;
   margin-top: var(--margin);
 }
+
+/* TODOS
+
+  1. Implement Outline-Themes
+  2. Implement Border-Radius Themes
+  3. Move all hardcoded value to root variable
+  4. Implement Primary Color Theme with Variable Hue & Saturation
+
+ */
+
 :root {
-  
   --site-padding: 1.618rem;
   --site-border-width: 0px;
+  --site-border-style: none;
   
-  --box-padding: 3.618rem;
-  --box-border-width: 0px;
+  --box-padding: 2.618rem;
+  --box-border-width: 2px;
+  --box-border-style: solid;
   
   --button-padding: 0.618rem;
   --button-border-width: 2px;
   --button-border-style: solid;
 
   --box-shadow-direct-color: rgba(0, 0, 0, 0.5);
-
+}
+* {
+  color: inherit;
 }
 
 .site *,
@@ -49,6 +55,7 @@ button *, .button *,
 input[type="text"] { 
   /* Reset Backgrounds Text-Shadows and Box-Shadows */
   --background: initial;
+  --border-color: initial;
   --text-shadow: initial;
   --text-shadow-color: initial;
   --box-shadow: initial;
@@ -73,19 +80,21 @@ input[type="text"]
 
   box-shadow: var(--box-shadow);
   --box-shadow-ambient-color: var(--background-color);
-  
 }
 
 .site {
   --padding: var(--site-padding);
+  --border-width: var(--site-border-width);
+  --border-style: var(--site-border-style);
 }
 .box {
   --padding: var(--box-padding);
+  --border-width: var(--box-border-width);
+  --border-style: var(--box-border-style);
 }
 .button, button {
   --padding: var(--button-padding);
   --border-width: var(--button-border-width);
-  --border-color: var(--button-border-color);
   --border-style: var(--button-border-style);
 }
 input[type="text"] {
@@ -104,7 +113,7 @@ input[type="text"] {
 .box--inverted {
   color: var(--background-color);
   background-color: var(--color);
-  border-color: var(--border-color, inherit);
+  border-color: var(--border-color);
   --box-shadow-ambient-color: var(--color);
 }
 
@@ -120,8 +129,6 @@ input[type="text"] {
   color: var(--background-color);
   background-color: var(--color);
   border-color: var(--color);
-  box-shadow:
-   0px 1px 2px 0 var(--box-shadow-direct-color);
 }
 .box--inverted  button.primary,
 .box--inverted .button.primary {
@@ -140,70 +147,86 @@ input[type="text"] {
 
 /* Default Theming which can be overridden by the backend */
 
+/*
+  Find the dark theme (@ night for best results ; )
 
-/* Overrides comes here... */
+  1. 
+  
+  Set text color and background color to black. 
+  Icrease text color untill you can see the text and buttons appear.
 
+  2. 
+  Set the background color to the text color and brighten it, until you
+  can clearly se text and buttons again.
+  You´ve found your background-color. 
+  Store the value here, we´ll need it later again.
+  background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+
+  3. 
+  Set the background to white and lower the text color until you can cleary see text and buttons.
+  You´ve found your text color.
+  
+  4.
+  Reset the background to the stored value.
+  Set the box-background to the site background value and brighten it, 
+  till it clearly separates from the background and the text is still readable.
+  When in doubt, opt for readability!
+
+  5.
+  If you want you can create a background gradient with values lower then the 
+  original background-color, and you are save.
+
+ */
+
+:root {
+  --primary: hsl(25, 100%, 50%);
+
+  --theme-color-h: 25;
+  --theme-color-s: 0%;
+  --theme-color-l: 50%;
+  --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
+  --theme-color: hsl(var(--theme-color-h-s-l))
+}
 .site {
-  --text-shadow: 
-    0   1px 5px red,
-    0  -1px 5px blue;
-  --background: repeating-linear-gradient(-45deg, 
-      transparent 0 20px, 
-      black 20px 40px);
-}
-.site--light {
-  --color: red;
-  --background-color: yellow;
-}
-.site--dark {
-  --color: yellow;
-  --background-color: grey;
 }
 .box {
-  --color: orange;
-  --background-color: purple;
-  --border-style: none;
-  --box-shadow: 
-    0 2px 12px 0 var(--box-shadow-ambient-color),
-    0 2px  6px 0 var(--box-shadow-direct-color);
+  border-left: 2px solid var(--primary);
 }
 .box--inverted {
-  --text-shadow-color: orange;
+}
+.site--light {
+}
+.site--dark {
+  --color: hsl(var(--theme-color-h), var(--theme-color-s), 85%);
+  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+  --g1: hsl(var(--theme-color-h), var(--theme-color-s), 20%);
+  --g2: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+  --background: linear-gradient(var(--g1), var(--g2));
 }
 .site--dark .box {
-  --color: purple;
-  --background-color: red;
-}
-.site--dark .box {
-  --text-shadow-color: red;
-  --text-shadow: 
-    0 1px 0px orange, 0 2px 0px var(--text-shadow-color),
-    0 3px 0px orange, 0 4px 0px var(--text-shadow-color), 
-    0 5px 0px orange, 0 6px 0px var(--text-shadow-color);
-}
-.site--dark .box--inverted {
-  --text-shadow-color: purple;
-}
-.theme-toggle {
-  --color: blue;
-  --background: linear-gradient(blue, red);
-  --text-shadow-color: red;
-  --text-shadow: 
-    1px 1px 0px var(--text-shadow-color);
-  --box-shadow: 
-    3px 3px 12px green;
+  --border-color: var(--background-color);
+  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 30%);
 }
 
+
+
+input[type="text"] {
+  box-shadow: none;
+}
+
+/* Overrides comes here... */
 
   </style>
 </head>
 <body>
 
     <button class="theme-toggle">Toggle Theme</button>
+
+    <h1>Theme v19</h1>
   
     <section class="box">
       <h2>Box</h2>
-      <p>The border-color is the text color by default!</p>
+      <p>The <a href="https://aufdesign.de">aufdesign.de</a> border-color is the text color by default!</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
       <form action="">
         <input type="text">
