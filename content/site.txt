@@ -403,6 +403,13 @@ Border-themes:
   border_width: ""
   border_style: ""
   border_radius: ""
+- 
+  autoid: lg0ni6g5
+  label: 'border-style: none'
+  css_selector: ""
+  border_width: ""
+  border_style: none
+  border_radius: ""
 
 ----
 

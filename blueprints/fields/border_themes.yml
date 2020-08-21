@@ -47,6 +47,10 @@ fields:
       ridge
       inset
       outset
+      none
+      inherit
+      initial
+      unset
   border_radius:
     label: Radius
     width: 1/4

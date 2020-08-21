@@ -35,17 +35,35 @@
   --theme-hue: 25;
   --theme-saturation: 0%;
 
+  --margin: 1.618rem;
+
+  --box-padding: 1.618rem;
+
   --button-border-width: 2px;
   --button-padding: 0.5rem;
-  --box-padding: 1.618rem;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* + * {
+  margin-top: var(--margin);
+}
+.site > * {
+  padding-left: var(--box-padding);
+  padding-right: var(--box-padding);
+  max-width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 * {
   color: inherit;
 }
-
-button 
-{
+button {
   color: inherit;
   background-color: inherit;
   border-color: inherit;
@@ -53,9 +71,7 @@ button
   border-width: var(--button-border-width);
   padding: var(--button-padding);
 }
-
-input[type="text"] 
-{
+input[type="text"] {
   padding: calc(var(--button-padding) + var(--button-border-width));
   background: white;
   color: black;
@@ -72,7 +88,13 @@ button.primary,
   color: hsl(var(--theme-hue), 100%, 0%);
   background-color: hsl(var(--theme-hue), 100%, 50%);
   border-color: transparent;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+  --box-shadow-direct-color: hsla(var(--theme-hue), 100%, 0%, 0.5);
+  --box-shadow-ambient-color: hsla(var(--theme-hue), 100%, 50%, 1);
+  box-shadow: 
+    0px 1px 2px var(--box-shadow-direct-color),
+    0px 1px 2px var(--box-shadow-ambient-color);
+
 }
 button.secondary,
 .button.secondary
@@ -86,7 +108,6 @@ button.tertiary,
   border-color: transparent;
   background-color: inherit;
 }
-
 .box 
 {
   padding: var(--box-padding);
@@ -95,6 +116,16 @@ button.tertiary,
 {
   text-shadow: initial; /* Don´t pass the text-shadow down! */
 }
+
+/* Theme Helper ------------------------- */
+
+.safe-text {
+  background-color: inherit;
+}
+.safe-texts > * {
+  background-color: inherit;
+}
+
 
 /* THEME LIGHT */
 
@@ -169,7 +200,7 @@ button.tertiary,
 
 
 
-/* BOX THEMES */
+/* BOX THEMES ------------------------------------- */
 
 .site .theme--primary-gradient 
 {
@@ -183,48 +214,41 @@ button.tertiary,
 .site .theme--blue-stripes 
 {
   color: hsl(var(--theme-hue), 100%, 100%);
+
   --c1:  hsl(var(--theme-hue), 100%, 60%);
   --c2:  hsl(var(--theme-hue), 100%, 20%);
   background: repeating-linear-gradient(-45deg, var(--c1), var(--c1)1px, var(--c2) 3px,  var(--c2) 8px);
+  
   background-color: hsl(var(--theme-hue), 100%, 20%);
   border-style: none;
-  
+
   --text-shadow-color: hsl(var(--theme-hue), 50%, 50%);
-
   text-shadow: 
-     0px  2px 2px var(--text-shadow-color),
-     0px -2px 2px var(--text-shadow-color),
-     2px -2px 2px var(--text-shadow-color),
-    -2px -2px 2px var(--text-shadow-color);
+     0px  2px 2px var(--text-shadow-color);
   
-  --box-shadow-direct-color: hsl(var(--theme-hue), 100%, 0%);
-  --box-shadow-ambient-color: hsl(var(--theme-hue), 100%, 50%);
-
+  --box-shadow-direct-color: hsla(var(--theme-hue), 100%, 0%, 0.5);
+  --box-shadow-ambient-color: hsl(var(--theme-hue), 100%, 20%);
   box-shadow: 
     0px 0px 6px var(--box-shadow-ambient-color),
-    0px 3px 12px var(--box-shadow-direct-color);
+    0px 0px 6px var(--box-shadow-direct-color);
 }
 
-.safe-text {
-  background-color: inherit;
-}
-.safe-texts > * {
-  background-color: inherit;
-}
+
+
+/* What happens it we use variables for boxes and set the button styles via inherit? */
+
 
 </style>
 </head>
 <body class="site site--light" data-active-theme="site--light">
   <div>
     <button class="theme-toggle primary">Toggle Theme</button>
-    <p>
-      <label for="hue">Hue:</label>
-      <input id="hue" type="range" min="0" max="360" value="25">
-    </p>
-    <p>
-      <label for="saturation">Saturation:</label>
-      <input id="saturation" type="range" min="0" max="100" value="25">
-    </p>
+    <form action="">
+        <label for="hue">Hue:</label>
+        <input id="hue" type="range" min="0" max="360" value="25">
+        <label for="saturation">Saturation:</label>
+        <input id="saturation" type="range" min="0" max="100" value="25">
+    </form>
     <script>
       const siteEl2 = document.getElementsByClassName('site')[0];
       const hueEl = document.getElementById('hue');
