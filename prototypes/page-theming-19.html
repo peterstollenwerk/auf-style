@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Theme v19</title>
+  <title>Page Theming 17</title>
   <style>
 
 /* CSS - Reset */
@@ -55,7 +55,6 @@ button *, .button *,
 input[type="text"] { 
   /* Reset Backgrounds Text-Shadows and Box-Shadows */
   --background: initial;
-  --border-color: initial;
   --text-shadow: initial;
   --text-shadow-color: initial;
   --box-shadow: initial;
@@ -123,6 +122,7 @@ input[type="text"] {
 .box--inverted .button {
   color: var(--background-color);
   background-color: var(--color);
+  
 }
  button.primary, 
 .button.primary {
@@ -130,18 +130,20 @@ input[type="text"] {
   background-color: var(--color);
   border-color: var(--color);
 }
+
+ button.tertiary,
+.button.tertiary {
+  border-color: var(--background-color);
+}
 .box--inverted  button.primary,
 .box--inverted .button.primary {
   color: var(--color);
   background-color: var(--background-color);
   border-color: var(--background-color);
 }
- button.tertiary,
-.button.tertiary {
-  border-color: var(--background-color);
-}
-.box--inverted  button.tertiary
+.box--inverted  button.tertiary,
 .box--inverted .button.tertiary {
+  background-color: var(--color);
   border-color: var(--color);
 }
 
@@ -179,18 +181,18 @@ input[type="text"] {
  */
 
 :root {
-  --primary: hsl(25, 100%, 50%);
-
   --theme-color-h: 25;
   --theme-color-s: 0%;
   --theme-color-l: 50%;
   --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
   --theme-color: hsl(var(--theme-color-h-s-l))
 }
+
+
 .site {
 }
 .box {
-  border-left: 2px solid var(--primary);
+  border-left: 1px solid red;
 }
 .box--inverted {
 }
@@ -204,11 +206,9 @@ input[type="text"] {
   --background: linear-gradient(var(--g1), var(--g2));
 }
 .site--dark .box {
-  --border-color: var(--background-color);
+  --border-width: 0;
   --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 30%);
 }
-
-
 
 input[type="text"] {
   box-shadow: none;
