@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Theming 17</title>
   <style>
-    * + * {
+
+* + * {
   margin-top: 1rem;
 }
 .site {
@@ -18,9 +19,11 @@
 
 .site *,
 .box *,
-button *, .button * {
-  /* make shure to not pass anything down you don´t want! */
+button *, .button * { 
+  /* don´t pass anything down */
   --padding: initial;
+  /* color get´s passed */
+  /* background-color get´s passed */
   --background: initial;
   --border-color: initial;
   --border-width: initial;
@@ -29,11 +32,10 @@ button *, .button * {
   --text-shadow-color: initial;
   --box-shadow: initial;
 }
-
 .box {
   padding: var(--padding, 1.618rem);
   
-  color: var(--color);
+  color: var(--color, inherit);
   background: var(--background);  
   background-color: var(--background-color);
   
@@ -41,7 +43,7 @@ button *, .button * {
   border-width: var(--border-width);
   border-style: var(--border-style);
   
-  text-shadow: var(--text-shadow, none);
+  text-shadow: var(--text-shadow, initial);
   --text-shadow-color: rgba(0, 0, 0, 0.5);
   
   box-shadow: var(--box-shadow);
@@ -123,16 +125,6 @@ button.tertiary {
 }
 .box {
   --padding: 3rem;
-  /*
-  --text-shadow-color: purple;
-  --text-shadow: 
-    0 1px 0px red, 
-    0 2px 0px var(--text-shadow-color),
-    0 3px 0px red, 
-    0 4px 0px var(--text-shadow-color), 
-    0 5px 0px red,
-    0 6px 0px var(--text-shadow-color);
-  */
 }
 .box {
   box-shadow: 
