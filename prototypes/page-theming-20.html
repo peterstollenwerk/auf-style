@@ -190,40 +190,47 @@ input[type="text"] {
 }
 
 .box {
-  border: 0;
   border-left: 2px solid hsl(var(--theme-color-h), 100%, 50%);
-}
-.theme-toggle {
-  --color: hsl(var(--theme-color-h), 100%, 10%);
-  --background-color: hsl(var(--theme-color-h), 100%, 50%);
-  --border-color: hsl(var(--theme-color-h), 100%, 50%);
 }
 
 .site--light {
   --color: hsl(var(--theme-color-h), var(--theme-color-s), 15%);
   --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 80%);
   --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 95%);
+  --box-border-color: hsl(var(--theme-color-h), var(--theme-color-s), 85%);
   --background: linear-gradient(var(--box-background-color), var(--background-color));
 }
 .site--light .box {
   --border-color: transparent;
   --background-color: var(--box-background-color);
 }
-
+.site--light .box .box {
+  --border-color: var(--box-border-color);
+}
 .site--dark {
   --color: hsl(var(--theme-color-h), var(--theme-color-s), 85%);
   --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 10%);
-  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
   --background: linear-gradient(var(--box-background-color), var(--background-color));
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+  --box-border-color: hsl(var(--theme-color-h), var(--theme-color-s), 35%);
 }
 .site--dark .box {
   --border-color: transparent;
   --background-color: var(--box-background-color);
 }
+.site--dark .box .box {
+  --border-color: var(--box-border-color);
+}
 
 /* Overrides comes here... */
 
 
+
+.theme-toggle {
+  --color: hsl(var(--theme-color-h), 100%, 10%);
+  --background-color: hsl(var(--theme-color-h), 100%, 50%);
+  --border-color: hsl(var(--theme-color-h), 100%, 50%);
+}
 
 
 
@@ -257,6 +264,7 @@ input[type="text"] {
     <section class="box">
       <h2>Box</h2>
       <p>The <a href="https://aufdesign.de">aufdesign.de</a> border-color is the text color by default!</p>
+      <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
       <form action="">
         <input type="text">
@@ -283,6 +291,7 @@ input[type="text"] {
     </section>
     <section class="box box--inverted">
       <h2>Box. Box--Inverted</h2>
+      <p class="box box--inverted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, veritatis. At ut delectus veritatis perferendis facere! Id maxime, ullam ducimus atque quidem itaque quae vel! Consequuntur alias recusandae magnam provident.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
       <form action="">
         <input type="text">
