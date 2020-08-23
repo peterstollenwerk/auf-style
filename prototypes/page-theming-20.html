@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="site site--dark" data-active-theme="site--dark">
+<html lang="en" class="site site--light" data-active-theme="site--light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +55,7 @@ button *, .button *,
 input[type="text"] { 
   /* Reset Backgrounds Text-Shadows and Box-Shadows */
   --background: initial;
+  --border-color: initial;
   --text-shadow: initial;
   --text-shadow-color: initial;
   --box-shadow: initial;
@@ -147,6 +148,7 @@ input[type="text"] {
   border-color: var(--color);
 }
 
+
 /* Default Theming which can be overridden by the backend */
 
 /*
@@ -186,50 +188,69 @@ input[type="text"] {
   --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
   --theme-color: hsl(var(--theme-color-h-s-l))
 }
-.site {}
+
 .box {
-  /* border-left: 1px solid hsl(var(--theme-color-h), 100%, 50%); */
+  border: 0;
+  border-left: 2px solid hsl(var(--theme-color-h), 100%, 50%);
 }
- button, .button {}
-.box--inverted {}
+.theme-toggle {
+  --color: hsl(var(--theme-color-h), 100%, 10%);
+  --background-color: hsl(var(--theme-color-h), 100%, 50%);
+  --border-color: hsl(var(--theme-color-h), 100%, 50%);
+}
 
-
-/* * * * * * * * * * * * * * Light * * * * * * * * * * * * * * *  */
 .site--light {
   --color: hsl(var(--theme-color-h), var(--theme-color-s), 15%);
   --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 80%);
-  /* --background-color-2: hsl(var(--theme-color-h), var(--theme-color-s), 75%); */
-  /* --background: linear-gradient(var(--background-color), var(--background-color-2)); */
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 95%);
+  --background: linear-gradient(var(--box-background-color), var(--background-color));
 }
 .site--light .box {
-  --border-width: 0;
-  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 95%);
+  --border-color: transparent;
+  --background-color: var(--box-background-color);
 }
-/* o o o o o o o o o o o o o Dark o o o o o o o o o o o o o o o  */
+
 .site--dark {
   --color: hsl(var(--theme-color-h), var(--theme-color-s), 85%);
-  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
-  --background-color-2: hsl(var(--theme-color-h), var(--theme-color-s), 20%);
-  /* --background: linear-gradient(var(--background-color), var(--background-color-2)); */
+  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 10%);
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+  --background: linear-gradient(var(--box-background-color), var(--background-color));
 }
 .site--dark .box {
-  --border-width: 0;
-  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 15%);
-}
-
-
-input[type="text"] {
-  box-shadow: none;
-  background-color: black;
+  --border-color: transparent;
+  --background-color: var(--box-background-color);
 }
 
 /* Overrides comes here... */
 
+
+
+
+
+
   </style>
 </head>
 <body>
+  
+  <div>
+      <button class="theme-toggle">Toggle Theme</button>
+      <label for="hue">Hue:</label>
+      <input id="hue" type="range" min="0" max="360" value="25">
+      <label for="saturation">Saturation:</label>
+      <input id="saturation" type="range" min="0" max="100" value="25">
+      <script>
+        const siteEl2 = document.getElementsByClassName('site')[0];
+        const hueEl = document.getElementById('hue');
+        const saturationEl = document.getElementById('saturation');
+        hueEl.addEventListener('input', function(e){
+          siteEl2.style.setProperty('--theme-color-h', hueEl.value);
+        });
+        saturationEl.addEventListener('input', function(e){
+          siteEl2.style.setProperty('--theme-color-s', saturationEl.value + '%');
+        });
+      </script>
+    </div>
 
-    <button class="theme-toggle">Toggle Theme</button>
 
     <h1>Theme v19</h1>
   
@@ -246,6 +267,12 @@ input[type="text"] {
     </section>
     <section>
       <h2>No Box</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ullam quo quia culpa ipsa dignissimos animi iste ad possimus eligendi eos repudiandae, ducimus accusamus ex officiis cumque deleniti eveniet architecto.</p>
+      <!--
+        <form><button class="black">Black</button><button class="white">White</button></form>
+        <form class="box "><button class="black">Black</button><button class="white">White</button></form>
+        <form class="box box--inverted"><button class="black">Black</button><button class="white">White</button></form>
+      -->
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
       <form action="">
         <input type="text">
