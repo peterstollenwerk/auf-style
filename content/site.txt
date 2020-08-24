@@ -6,9 +6,9 @@ Box-themes:
 
 - 
   autoid: 37vkqkdr
-  label: .Box Overwrite
-  css_selector: .box
-  color_theme: ozwzlnrx
+  label: Box
+  css_selector: ""
+  color_theme: ""
   background_theme: ""
   border_theme: ""
   outline_theme: ""
@@ -74,11 +74,21 @@ Color-themes:
 - 
   autoid: 9n5rbn98
   label: WTF
-  css_selector: ""
+  css_selector: .site--dark
   color: '#ffffff'
   background: '#008ee6'
   border: null
   outline: null
+  text_shadow: null
+  box_shadow_ambient: '#008ee6'
+- 
+  autoid: 2ng0e1fh
+  label: Focus Color
+  css_selector: '*:focus'
+  color: null
+  background: null
+  border: null
+  outline: '#ff00ee'
   text_shadow: null
   box_shadow_ambient: null
 
@@ -391,7 +401,7 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  autoid: q516j15s
+  autoid: c2clwkab
   label: Site Dark
   css_selector: .site--dark
   background:
@@ -440,7 +450,7 @@ Border-themes:
   css_selector: button, .button
   border_width: 2px
   border_style: solid
-  border_radius: 12rem
+  border_radius: ""
 - 
   autoid: lg0ni6g5
   label: 'border-style: none'
@@ -462,8 +472,8 @@ Outline-themes:
 
 - 
   autoid: 1n90iti1
-  label: Dotted
-  css_selector: ""
+  label: Focus
+  css_selector: '*:focus'
   outline_width: 2px
   outline_style: dashed
   outline_offset: 2px

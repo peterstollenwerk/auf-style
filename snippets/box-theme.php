@@ -24,20 +24,20 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 
 <?php if($preview): ?>
   <article class="box <?= $autoidClass ?> border--outset">
-    <h3 class="safe-text">.<?= $cssClass ?></h3>
+    <h3>.<?= $cssClass ?></h3>
     <h2><?= $label ?></h2>
     <button class="button--primary">.primary</button>
     <button class="button--secondary">.secondary</button>
     <button class="button--tertiary">.tertiary</button>
     <button>Default</button>
     <a class="button" href="https://aufdesign.de" target="_blank">a.button</a>
-    <h4>.safe-text</h4>
-    <p class="safe-text"> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
-    <h4>.safe-text--extra <small>.box-shadow--inset .border-radius</small></h4>
+    <h4 class="safe-text">Headline</h4>
+    <p> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
+    <h4>.safe-text <small>.box-shadow--inset .border-radius</small></h4>
 <?php endif?>
 
 <?php if($wrapTag): ?>
-  <<?= $wrapTag ?> class="safe-text--extra box-shadow--inset border-radius">
+  <<?= $wrapTag ?> class="box safe-text box-shadow--inset border-radius" style="border-radius: 0.618rem; --border-style: none;">
 <?php endif?>
 
 <?php if($renderCssClass): ?>

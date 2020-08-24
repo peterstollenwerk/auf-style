@@ -24,7 +24,7 @@ Builder:
   text: |
     **YOYOYOYO**
     YES *YSE*
-  box_theme: 90aox1v6
+  box_theme: 47tvau07
   _key: text
   _uid: text_1597673993135_122
 - 
