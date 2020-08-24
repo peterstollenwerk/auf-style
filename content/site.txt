@@ -6,7 +6,38 @@ Box-themes:
 
 ----
 
-Color-themes: 
+Color-themes:
+
+- 
+  autoid: zcindkmv
+  label: Red Blue
+  css_selector: ""
+  color: '#ff0000'
+  background: '#001adb'
+  border: '#ff0000'
+  outline: '#ffea00'
+  text_shadow: '#332832'
+  box_shadow_ambient: '#fbff00'
+- 
+  autoid: hot4b5dj
+  label: ""
+  css_selector: ""
+  color: '#4a4a4a'
+  background: '#c1aeae'
+  border: '#b2b422'
+  outline: '#e9ed1d'
+  text_shadow: '#ff0000'
+  box_shadow_ambient: '#c1aeae'
+- 
+  autoid: 3rqpsauc
+  label: ""
+  css_selector: ""
+  color: '#000000'
+  background: '#ff9500'
+  border: '#ffaa33'
+  outline: '#bd6e00'
+  text_shadow: '#8a5000'
+  box_shadow_ambient: '#ff9500'
 
 ----
 

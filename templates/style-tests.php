@@ -15,7 +15,7 @@
 </nav>
 <hr>
 
-<?php if(true): ?>
+<?php if(false): ?>
 <section>
   <h2 id="button-themes">Button-Themes</h2>
   <?= snippet('auf-style/button-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
@@ -27,6 +27,7 @@
   <?= snippet('auf-style/color-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
 
+<?php if(false): ?>
 <section>
   <h2 id="background-themes">Background-Themes</h2>
   <?= snippet('auf-style/background-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
@@ -49,6 +50,6 @@
   <h2 id="box-shadow-themes">Box-Shadow-Themes</h2>
   <?= snippet('auf-style/box-shadow-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
-
+<?php endif?>
 
 <?php snippet('auf-style/site-footer'); ?>
