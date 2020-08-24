@@ -22,11 +22,14 @@ html {
 }
 
 /* TODOS
-
-  1. Implement Outline-Themes
-  2. Implement Border-Radius Themes
-  3. Move all hardcoded value to root variable
-  4. Implement Primary Color Theme with Variable Hue & Saturation
+  
+  DONE 2. Implement Border-Radius Themes
+  DONE 3. Move all hardcoded value to root variable
+  DONE 1. Implement Outline-Themes
+  DONE 4. Implement Primary Color Theme with Variable Hue & Saturation
+  DONE 7. Implement helper: .border--outset
+  DONE 5. Implement .safe-text Class
+  6. Implement .boxes Class
 
  */
 
@@ -34,21 +37,37 @@ html {
   --site-padding: 1.618rem;
   --site-border-width: 0px;
   --site-border-style: none;
+  --site-border-radius: 0;
   
   --box-padding: 2.618rem;
-  --box-border-width: 2px;
+  --box-border-width: 0px;
   --box-border-style: solid;
+  --box-border-radius: 0;
   
   --button-padding: 0.618rem;
   --button-border-width: 2px;
   --button-border-style: solid;
+  --button-border-radius: 0;
+  
+  --input-padding: calc(var(--button-padding) + var(--button-border-width));
+  --input-color: black;
+  --input-background-color: white;
+  --input-border-width: 0;
+  --input-border-radius: 0;
 
+  --text-shadow-color: rgba(0, 0, 0, 0.5);
   --box-shadow-direct-color: rgba(0, 0, 0, 0.5);
 }
+
 * {
   color: inherit;
 }
-
+*:focus {
+  outline-width: var(--outline-width, 2px);
+  outline-style: var(--outline-style, dashed);
+  outline-offset: var(--outline-offset, 2px);
+  outline-color: var(--outline-color, currentColor);
+}
 .site *,
 .box *,
 button *, .button *,
@@ -74,9 +93,9 @@ input[type="text"]
   border-color: var(--border-color, inherit);
   border-width: var(--border-width);
   border-style: var(--border-style);
+  border-radius: var(--border-radius, initial);
 
-  text-shadow: var(--text-shadow, initial); /* Initial is needed to not show the text-shadow by default */
-  --text-shadow-color: rgba(0, 0, 0, 0.5);
+  text-shadow: var(--text-shadow, initial);
 
   box-shadow: var(--box-shadow);
   --box-shadow-ambient-color: var(--background-color);
@@ -86,22 +105,26 @@ input[type="text"]
   --padding: var(--site-padding);
   --border-width: var(--site-border-width);
   --border-style: var(--site-border-style);
+  --border-radius: var(--site-border-radius);
 }
 .box {
   --padding: var(--box-padding);
   --border-width: var(--box-border-width);
   --border-style: var(--box-border-style);
+  --border-radius: var(--box-border-radius);
 }
 .button, button {
   --padding: var(--button-padding);
   --border-width: var(--button-border-width);
   --border-style: var(--button-border-style);
+  --border-radius: var(--button-border-radius);
 }
 input[type="text"] {
-  --padding: calc(var(--button-padding) + var(--button-border-width));
-  --color: black;
-  --background-color: white;
-  --border-width: 0;
+  --padding: var(--input-padding);
+  --color: var(--input-color);
+  --background-color: var(--input-background-color);
+  --border-width: var(--input-border-width);
+  --border-radius: var(--input-border-radius);
   --box-shadow-ambient-color: transparent;
   --box-shadow:
     inset 0 1px 4px 0 var(--box-shadow-ambient-color),
@@ -123,30 +146,49 @@ input[type="text"] {
 .box--inverted .button {
   color: var(--background-color);
   background-color: var(--color);
-  
 }
  button.primary, 
 .button.primary {
   color: var(--background-color);
   background-color: var(--color);
   border-color: var(--color);
+  outline-color: var(--color);
 }
-
  button.tertiary,
 .button.tertiary {
   border-color: var(--background-color);
+  text-decoration: underline;
 }
 .box--inverted  button.primary,
 .box--inverted .button.primary {
   color: var(--color);
   background-color: var(--background-color);
   border-color: var(--background-color);
+  outline-color: var(--background-color);
 }
 .box--inverted  button.tertiary,
 .box--inverted .button.tertiary {
   background-color: var(--color);
   border-color: var(--color);
 }
+.box--inverted input[type="text"] {
+  outline-color: var(--background-color);
+}
+
+/* Helper Classes */
+
+.border--outset {
+  margin-left: calc( var(--border-width) * -1);
+  margin-right: calc( var(--border-width) * -1);
+}
+
+.safe-text {
+  background-color: var(--background-color);
+}
+.safe-texts > * {
+  background-color: var(--background-color);
+}
+
 
 
 /* Default Theming which can be overridden by the backend */
@@ -188,8 +230,6 @@ input[type="text"] {
   --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
   --theme-color: hsl(var(--theme-color-h-s-l))
 }
-
-
 .site--light {
   --color: hsl(var(--theme-color-h), var(--theme-color-s), 15%);
   --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 80%);
@@ -234,7 +274,7 @@ input[type="text"] {
 </head>
 <body>
   
-  <div>
+    <div>
       <button class="theme-toggle">Toggle Theme</button>
       <label for="hue">Hue:</label>
       <input id="hue" type="range" min="0" max="360" value="25">
@@ -258,9 +298,9 @@ input[type="text"] {
 
     <section>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius ipsam pariatur corporis minima, nam nemo ducimus nostrum asperiores officia similique rerum, explicabo, accusantium aliquam dolore excepturi! Voluptatem quod dolor soluta!</p>
-      <section class="box box--muhammad">
+      <section class="box box--muhammad border--outset">
         <h2>.box.box--muhammad</h2>
-        <p>Ratione, amet doloremque ad animi dignissimos temporibus modi, maxime repellat doloribus repellendus, perspiciatis harum optio cumque enim iste dolorem ipsum quas? Nam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente provident, explicabo aspernatur assumenda dolorem doloremque minima et perspiciatis. Modi, libero. Nostrum inventore incidunt vitae ipsa, eveniet error tenetur praesentium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis vitae est totam nobis laborum iusto libero consequuntur cumque dolor, sit ea repellat recusandae id dolorum repellendus beatae voluptate sed.</p>
+        <p class="safe-text"><em>.safe-text:</em> Ratione, amet doloremque ad animi dignissimos temporibus modi, maxime repellat doloribus repellendus, perspiciatis harum optio cumque enim iste dolorem ipsum quas? Nam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente provident, explicabo aspernatur assumenda dolorem doloremque minima et perspiciatis. Modi, libero. Nostrum inventore incidunt vitae ipsa, eveniet error tenetur praesentium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam facilis vitae est totam nobis laborum iusto libero consequuntur cumque dolor, sit ea repellat recusandae id dolorum repellendus beatae voluptate sed.</p>
       </section>
       <p>Consectetur adipisicing elit. Illo aspernatur voluptates voluptate cupiditate corrupti labore alias aliquam temporibus delectus ullam assumenda, rerum nihil ipsa quia ex officia enim. Ipsa, maiores!</p>
     </section>

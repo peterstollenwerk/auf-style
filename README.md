@@ -92,16 +92,17 @@ Color Convert Methods:
 
 ### P1
 
-* [ ] [target: 2h] Implement missing box-variables in page-theming-21.html: 
+* [ ] [target: 1h] Implement missing box-variables in page-theming-21.html: 
   * [ ] outlines, etc...
 
-* [ ] Implement page-theming-21.html into backend
+* [ ] [target: 1h] Implement page-theming-21.html into backend
 
-* [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
+* [ ] [target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now
 
-* [ ] Implement fluid-typography.html --> css
+* [ ] [target: 0.5] Implement hardcoded fluid-typography.html --> css
 
 * [ ] Implement Font-Size-Theme »...custom«
+  
   * [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
   * [ ] Font-weight
   * [ ] Font-style
