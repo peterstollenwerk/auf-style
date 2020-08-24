@@ -97,12 +97,8 @@ Color Convert Methods:
 
 ### P1
 
-* implement box helper classes: 
-  .border-outset
-
-* [ ] TO USE THE selectors with background-theme we need a global setting of background, maybe  * { background: var(--background, initial)} ?
-
-We can create a system like this:
+* [ ] implement box helper classes:
+  * [ ] .border-outset
 
 .outline {
   outline-color: var(--outline-color);
@@ -116,20 +112,19 @@ We can create a system like this:
   --outline-offset: 2px;
 }
 
-.background {
-  background: var(--background);
-}
-.background--theme {
-  --background: linear-gradient(red, blue);
-}
+* [ ] [target: 2h] Implement missing box-variables in page-theming-21.html: 
+  * [ ] outlines, etc...
 
-* [ ] Implement new css theming defaults: page-themeing-10.html
-
-* [ ] Create Prototype for Site / Page / Box / Table / Button-Styles
+* [ ] Implement page-theming-21.html into backend
 
 * [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
 
-* [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+* [ ] Implement fluid-typography.html --> css
+
+* [ ] Implement Font-Size-Theme »...custom«
+  * [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+  * [ ] Font-weight
+  * [ ] Font-style
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -147,6 +142,8 @@ We can create a system like this:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P3
+
+* [ ] Create Testpage for Site / Page / Box / Table / Button-Styles
 
 * [ ] [target: 5h] Select Starting Theme individually per Page
 
