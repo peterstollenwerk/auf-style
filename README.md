@@ -87,13 +87,12 @@ Color Convert Methods:
     * [X] ~~*Box-Shadow-Themes*~~ [2020-08-19]
     * [ ] Text-Shadow-Themes
 
+* [X] ~~*[target: 1h] Implement missing box-variables in page-theming-21.html:*~~ [2020-08-24] 
+  * [X] ~~*outlines, etc...*~~ [2020-08-24]
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
-
-* [ ] [target: 1h] Implement missing box-variables in page-theming-21.html: 
-  * [ ] outlines, etc...
 
 * [ ] [target: 1h] Implement page-theming-21.html into backend
 
