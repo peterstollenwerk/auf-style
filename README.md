@@ -4,10 +4,7 @@
 
 ## Setup
 
-```<body 
-  class="page page-theme--dark" 
-  data-active-theme="page-theme--dark">
-```
+```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ## We need to create proper box-themes.

@@ -20,6 +20,10 @@ Kirby::plugin('auf/style', [
         ]
     ],
     'snippets' => [
+        'auf-style/site-header' => __DIR__ . '/snippets/site-header.php',
+        'auf-style/site-footer' => __DIR__ . '/snippets/site-footer.php',
+        'auf-style/theme-toggle-component' => __DIR__ . '/snippets/theme-toggle-component.php',
+        
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
         'auf-style/color-theme' => __DIR__ . '/snippets/color-theme.php',
         'auf-style/background-themes' => __DIR__ . '/snippets/background-themes.php',
@@ -61,6 +65,7 @@ Kirby::plugin('auf/style', [
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',
         'style-boxes-preview' => __DIR__ . '/templates/style-boxes-preview.php',
+        'style-page-theme' => __DIR__ . '/templates/style-page-theme.php',
     ],
     'routes' => [
         [
@@ -85,6 +90,19 @@ Kirby::plugin('auf/style', [
                     'model' => 'style-boxes-preview',
                     'content' => [
                         'title' => 'Style Boxes Preview',
+                    ]
+                ]);
+          }
+        ],
+        [
+          'pattern' => 'style-page-theme',
+          'action'  => function () {
+                return Page::factory([
+                    'slug' => 'style-page-theme',
+                    'template' => 'style-page-theme',
+                    'model' => 'style-page-theme',
+                    'content' => [
+                        'title' => 'Style Page Theme',
                     ]
                 ]);
           }

@@ -1,43 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= $page->title() ?></title>
-  <?= snippet('auf-style/style'); ?>
+<?php snippet('auf-style/site-header'); ?>
 
-  <style>
-    html > * {
-      max-width: 666px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
+<h1><?= $page->title() ?></h1>
 
-</head>
+<p><a class="button" href="<?= url('style-tests') ?>">Go to Style Tests Page</a></p>
 
-<body>
-  
-  <h1><?= $page->title() ?></h1>
-  
-  <p>
-    <a href="<?= url('style-tests') ?>">
-      <button>Go to Style Tests Page</button>
-    </a>
-  </p>
-  
-  <hr>
+<hr>
 
-  <?php foreach($page->builder()->toBuilderBlocks() as $block): ?>
+<?php foreach($page->builder()->toBuilderBlocks() as $block): ?>
 
-    <?php
-       $snippetPathPrefix = 'auf-style/snippets/builder/';
-       $snippetPath = $snippetPathPrefix . $block->_key();
-    ?>
+  <?php
+      $snippetPathPrefix = 'auf-style/snippets/builder/';
+      $snippetPath = $snippetPathPrefix . $block->_key();
+  ?>
 
-    <?= snippet($snippetPath, array('data' => $block)); ?>
+  <?= snippet($snippetPath, array('data' => $block)); ?>
 
-  <?php endforeach?>
+<?php endforeach?>
 
-</body>
-</html>
+<?php snippet('auf-style/site-footer'); ?>

@@ -23,9 +23,12 @@ tabs:
         label: Preview Urls
         type: info
         text: >
-          http://auf-style:8888/style-tests
+          
+          <a href="../style-page-theme" target="_blank">Style Page Theme</a>
           <br>
-          http://auf-style:8888/style-boxes-preview
+          <a href="../style-tests" target="_blank">Style Tests</a>
+          <br>
+          <a href="../style-boxes-preview" target="_blank">Style Boxes Preview</a>
 
       box_themes:
         extends: auf_style/blueprints/fields/box_themes

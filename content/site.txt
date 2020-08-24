@@ -2,79 +2,11 @@ Title: Auf-Style-Plugin
 
 ----
 
-Box-themes:
-
-- 
-  autoid: fx98hrzn
-  label: Box
-  css_selector: ""
-  color_theme: ""
-  background_theme: ""
-  border_theme: ""
-  outline_theme: ""
-  text_shadow_theme: ""
-  box_shadow_theme: ""
-  custom_theme: ""
-- 
-  autoid: jrqleiyh
-  label: Box Inverted
-  css_selector: .box--inverted
-  color_theme: ""
-  background_theme: ""
-  border_theme: ""
-  outline_theme: ""
-  text_shadow_theme: ""
-  box_shadow_theme: ""
-  custom_theme: ""
+Box-themes: 
 
 ----
 
-Color-themes:
-
-- 
-  autoid: tb439f71
-  label: Page (Light)
-  css_selector: .page-theme--light
-  color: 'hsla(225, 100%, 50%)'
-  background: 'hsla(25, 10%, 95%)'
-  border: 'hsla(225, 10%, 15%)'
-  outline: 'hsla(25, 10%, 15%)'
-  text_shadow: '#00000040'
-  box_shadow_ambient: '#00000040'
-- 
-  autoid: phjxkdp5
-  label: Page (Dark)
-  css_selector: .page-theme--dark
-  color: 'hsla(20, 10%, 95%)'
-  background: 'hsla(225, 50%, 20%)'
-  border: 'hsla(25, 10%, 95%)'
-  outline: 'hsla(25, 10%, 95%)'
-  text_shadow: 'hsla(25, 15%, 95%, 0.5)'
-  box_shadow_ambient: 'hsla(25, 15%, 95%, 0.5)'
-- 
-  autoid: anj7d547
-  label: Box (Light)
-  css_selector: >
-    .page-theme--light .box,
-    .page-theme--dark .box--inverted
-  color: '#000000'
-  background: '#ffffff'
-  border: '#000000'
-  outline: '#000000'
-  text_shadow: '#00000040'
-  box_shadow_ambient: '#ffffff40'
-- 
-  autoid: 0grpa606
-  label: Box (Dark)
-  css_selector: >
-    .page-theme--dark .box,
-    .page-theme--light .box--inverted
-  color: '#ffffff'
-  background: '#000000'
-  border: '#ffffff'
-  outline: '#ffffff'
-  text_shadow: '#ffffff40'
-  box_shadow_ambient: '#ffffff'
+Color-themes: 
 
 ----
 
