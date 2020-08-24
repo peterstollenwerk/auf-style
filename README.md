@@ -90,27 +90,7 @@ Color Convert Methods:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### RULES 
-
-1. Pass down the Color-Theme, but nothing else!
-
-
 ### P1
-
-* [ ] implement box helper classes:
-  * [ ] .border-outset
-
-.outline {
-  outline-color: var(--outline-color);
-  outline-width: var(--outline-width);
-  outline-style: var(--outline-style);
-  outline-offset: var(--outline-offset);
-}
-*, my-outlins-selector {
-  --outline-width: 2px;
-  --outline-style: dashed;
-  --outline-offset: 2px;
-}
 
 * [ ] [target: 2h] Implement missing box-variables in page-theming-21.html: 
   * [ ] outlines, etc...
@@ -168,3 +148,17 @@ As an editor i want a fast backend to concentrate on the content and be producti
 
 * [ ] [target: 1d] Google Fonts
 
+* [ ] implement box helper classes:
+  * [ ] .border-outset
+
+.outline {
+  outline-color: var(--outline-color);
+  outline-width: var(--outline-width);
+  outline-style: var(--outline-style);
+  outline-offset: var(--outline-offset);
+}
+*, my-outlins-selector {
+  --outline-width: 2px;
+  --outline-style: dashed;
+  --outline-offset: 2px;
+}
