@@ -299,6 +299,7 @@ input[type="text"] {
   --background: linear-gradient(var(--background-color-2), var(--background-color));
 }
 .box {
+  --border-style: none;
   --background-color: var(--box-background-color);
 }
 .box .box {
