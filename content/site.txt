@@ -29,7 +29,7 @@ Color-themes:
   text_shadow: '#ff0000'
   box_shadow_ambient: '#c1aeae'
 - 
-  autoid: 3rqpsauc
+  autoid: shofittz
   label: ""
   css_selector: ""
   color: '#000000'
@@ -356,16 +356,9 @@ Border-themes:
   autoid: 8vtoylcm
   label: 'Button '
   css_selector: button, .button
-  border_width: ""
-  border_style: ""
-  border_radius: 4px
-- 
-  autoid: tb74r4gd
-  label: Page Gradient (Light)
-  css_selector: .page-theme--light
-  border_width: ""
-  border_style: ""
-  border_radius: ""
+  border_width: 2px
+  border_style: solid
+  border_radius: 12rem
 - 
   autoid: lg0ni6g5
   label: 'border-style: none'
@@ -373,6 +366,13 @@ Border-themes:
   border_width: ""
   border_style: none
   border_radius: ""
+- 
+  autoid: rrtzbbpx
+  label: 2rem double r-4px
+  css_selector: ""
+  border_width: 2rem
+  border_style: double
+  border_radius: 4px
 
 ----
 

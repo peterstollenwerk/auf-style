@@ -45,9 +45,9 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
   <form action="">
     <input type="text">
-    <button class="primary">Submit</button>
-    <button class="secondary">Reset</button>
-    <button class="tertiary">Help</button>
+    <button class="button--primary">Submit</button>
+    <button class="button--secondary">Reset</button>
+    <button class="button--tertiary">Help</button>
   </form>
 </section>
 <section>
@@ -56,9 +56,9 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
   <form action="">
     <input type="text">
-    <button class="primary">Submit</button>
-    <button class="secondary">Reset</button>
-    <button class="tertiary">Help</button>
+    <button class="button--primary">Submit</button>
+    <button class="button--secondary">Reset</button>
+    <button class="button--tertiary">Help</button>
   </form>
 </section>
 
@@ -68,9 +68,9 @@
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
   <form action="">
     <input type="text">
-    <button class="primary">Submit</button>
-    <button class="secondary">Reset</button>
-    <button class="tertiary">Help</button>
+    <button class="button--primary">Submit</button>
+    <button class="button--secondary">Reset</button>
+    <button class="button--tertiary">Help</button>
   </form>
 </section>
 
