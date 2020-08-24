@@ -29,7 +29,7 @@ html {
   DONE 4. Implement Primary Color Theme with Variable Hue & Saturation
   DONE 7. Implement helper: .border--outset
   DONE 5. Implement .safe-text Class
-  6. Implement .boxes Class
+  DONE 6. Implement .boxes Class
 
  */
 
@@ -69,6 +69,7 @@ html {
   outline-color: var(--outline-color, currentColor);
 }
 .site *,
+.boxes > * *,
 .box *,
 button *, .button *,
 input[type="text"] { 
@@ -80,6 +81,7 @@ input[type="text"] {
   --box-shadow: initial;
 }
 .site,
+.boxes > *,
 .box,
 button, .button,
 input[type="text"] 
@@ -107,6 +109,7 @@ input[type="text"]
   --border-style: var(--site-border-style);
   --border-radius: var(--site-border-radius);
 }
+.boxes > *,
 .box {
   --padding: var(--box-padding);
   --border-width: var(--box-border-width);
@@ -132,7 +135,7 @@ input[type="text"] {
 }
 
 /* Box - Exceptions  */
-
+.boxes--inverted > *,
 .box--inverted {
   color: var(--background-color);
   background-color: var(--color);
@@ -142,8 +145,10 @@ input[type="text"] {
 
 /* Button - Exceptions */
 
-.box--inverted  button, 
-.box--inverted .button {
+.boxes--inverted  button, 
+.boxes--inverted .button,
+.box--inverted    button, 
+.box--inverted   .button {
   color: var(--background-color);
   background-color: var(--color);
 }
@@ -159,33 +164,36 @@ input[type="text"] {
   border-color: var(--background-color);
   text-decoration: underline;
 }
-.box--inverted  button.primary,
-.box--inverted .button.primary {
+.boxes--inverted  button.primary,
+.boxes--inverted .button.primary,
+.box--inverted    button.primary,
+.box--inverted   .button.primary {
   color: var(--color);
   background-color: var(--background-color);
   border-color: var(--background-color);
   outline-color: var(--background-color);
 }
-.box--inverted  button.tertiary,
-.box--inverted .button.tertiary {
+.boxes--inverted  button.tertiary,
+.boxes--inverted .button.tertiary,
+.box--inverted    button.tertiary,
+.box--inverted   .button.tertiary {
   background-color: var(--color);
   border-color: var(--color);
 }
-.box--inverted input[type="text"] {
+.boxes--inverted input[type="text"],
+.box--inverted   input[type="text"] {
   outline-color: var(--background-color);
 }
 
 /* Helper Classes */
 
-.border--outset {
+.boxes.border--outset > *,
+.box.border--outset {
   margin-left: calc( var(--border-width) * -1);
   margin-right: calc( var(--border-width) * -1);
 }
-
-.safe-text {
-  background-color: var(--background-color);
-}
-.safe-texts > * {
+.boxes.safe-text > *,
+.box.safe-text {
   background-color: var(--background-color);
 }
 
@@ -223,6 +231,17 @@ input[type="text"] {
 
  */
 
+.boxes > *,
+.box {
+  --border-width: 0;
+  --background-color: var(--box-background-color);
+}
+.boxes > * .box,
+.box .box {
+  --border-width: 2px;
+  --border-color: var(--box-border-color);
+}
+
 :root {
   --theme-color-h: 25;
   --theme-color-s: 0%;
@@ -242,14 +261,7 @@ input[type="text"] {
   --background: linear-gradient(var(--box-background-color), var(--background-color));
   --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
 }
-.box {
-  --border-width: 0;
-  --background-color: var(--box-background-color);
-}
-.box .box {
-  --border-width: 2px;
-  --border-color: var(--box-border-color);
-}
+
 
 /* Overrides comes here... */
 
@@ -305,7 +317,33 @@ input[type="text"] {
       <p>Consectetur adipisicing elit. Illo aspernatur voluptates voluptate cupiditate corrupti labore alias aliquam temporibus delectus ullam assumenda, rerum nihil ipsa quia ex officia enim. Ipsa, maiores!</p>
     </section>
 
-  
+    
+    <section>
+      <h2>What about Boxes?</h2>
+      <ul class="boxes boxes--inverted">
+        <li>
+          <article>
+            <h2>Box</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo libero cumque veniam, consectetur ad earum eum blanditiis numquam, fugiat fugit delectus, harum minima necessitatibus! Blanditiis est quos soluta optio.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2>Box</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo libero cumque veniam, consectetur ad earum eum blanditiis numquam, fugiat fugit delectus, harum minima necessitatibus! Blanditiis est quos soluta optio.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2>Box</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo libero cumque veniam, consectetur ad earum eum blanditiis numquam, fugiat fugit delectus, harum minima necessitatibus! Blanditiis est quos soluta optio.</p>
+          </article>
+        </li>
+      </ul>
+
+    </section>
+
+
     <section class="box">
       <h2>Box</h2>
       <p>The <a href="https://aufdesign.de">aufdesign.de</a> border-color is the text color by default!</p>
