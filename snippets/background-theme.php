@@ -26,7 +26,7 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php /* START CLASS --------------------- */ ?>
 
 <?php if($wrapTag): ?>
-  <<?= $wrapTag ?> class="box  box-shadow--inset" style="--background-color: transparent"> 
+  <<?= $wrapTag ?> class="box box-shadow--inset border-radius" style="background-color: transparent"> 
 <?php endif?>
 
 <?php if($renderCssClass): ?>

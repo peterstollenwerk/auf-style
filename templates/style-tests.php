@@ -20,20 +20,20 @@
   <h2 id="button-themes">Button-Themes</h2>
   <?= snippet('auf-style/button-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
-<?php endif?>
 
 <section>
   <h2 id="color-themes">Color-Themes</h2>
   <?= snippet('auf-style/color-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
+<?php endif?>
 
-<?php if(false): ?>
 <section>
   <h2 id="background-themes">Background-Themes</h2>
   <?= snippet('auf-style/background-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
 <hr>
-  
+
+<?php if(false): ?>
 <section>
   <h2 id="border-themes">Border-Themes</h2>
   <?= snippet('auf-style/border-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>

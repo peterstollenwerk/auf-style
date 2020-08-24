@@ -10,3 +10,6 @@ html {
   --margin: 1rem;
   margin-top: var(--margin);
 }
+pre {
+  overflow-x: scroll;
+}

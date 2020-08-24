@@ -4,6 +4,7 @@
     to use them wherever needed. See for example:
     --input-padding: calc(var(--button-padding) + var(--button-border-width));
    */
+
   --site-padding: 1.618rem;
   --site-border-width: 0px;
   --site-border-style: none;
@@ -67,7 +68,7 @@ input[type="text"]
   border-color: var(--border-color, inherit);
   border-width: var(--border-width);
   border-style: var(--border-style);
-  border-radius: var(--border-radius, initial);
+  border-radius: var(--border-radius);
 
   text-shadow: var(--text-shadow, initial);
 
@@ -179,7 +180,7 @@ input[type="text"] {
 }
 .border-radius,
 .borders-radius > * {
-  border-radius: var(--border-radius, 1rem);
+  border-radius: var(--default-border-radius, 4px);
 }
 .outline,
 .outlines > * {
@@ -215,7 +216,7 @@ input[type="text"] {
   --box-shadow-ambient-offset-y: 1px;
   --box-shadow-ambient-blur-radius: 3px;
   --box-shadow-ambient-spread-radius: 0;
-  /* --box-shadow-ambient-color: var(--background-color); */
+  --box-shadow-ambient-color: var(--background-color);
 
   /* this is the background-color with new alpha value! */
 
