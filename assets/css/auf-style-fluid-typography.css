@@ -1,0 +1,130 @@
+:root {
+  --size-7: 4.75;
+  --size-6: 3.75;
+  --size-5: 3;
+  --size-4: 2.5;
+  --size-3: 2;
+  --size-2: 1.5;
+  --size-1: 1.25; /* Default */
+  --size-0: 1;
+  --size--1: 0.8125;
+  --size--2: 0.625;
+  --size--3: 0.5;
+  --size--4: 0.375;
+
+  --root-font-size-unitless: 14;
+  --root-font-size: calc(var(--root-font-size-unitless) * 1px);
+}
+html {
+  font-size: var(--root-font-size); /* This is just a fallback! Use --min-font-size to adjust the font-size globally*/
+  font-family: arial;
+  line-height: 1.618;
+}
+* {
+  --min-fontsize: var(--root-font-size-unitless);
+  --min-screensize: 100;
+  --max-screensize: 1200;
+  --container-width: 100vw;
+  --fontsize-factor: var(--size-0);
+  --max-fontsize: calc(var(--min-fontsize) * var(--fontsize-factor));
+  /* font-size: calc(16px + (24 - 16) * (100vw - 300px) / (800 - 300)); */
+  font-size: calc(
+    (var(--min-fontsize) * 1px) + (var(--max-fontsize) - var(--min-fontsize)) *
+      (var(--container-width) - (var(--min-screensize) * 1px)) /
+      (var(--max-screensize) - var(--min-screensize))
+  );
+}
+h1, .h1 {
+  --fontsize-factor: var(--size-7);
+}
+h2, .h2 {
+  --fontsize-factor: var(--size-6);
+}
+h3, .h3 {
+  --fontsize-factor: var(--size-5);
+}
+h4, .h4 {
+  --fontsize-factor: var(--size-4);
+}
+h5, .h5 {
+  --fontsize-factor: var(--size-3);
+}
+h6, .h6 {
+  --fontsize-factor: var(--size-2);
+}
+p, .p {
+  --fontsize-factor: var(--size-1);
+}
+
+/* h1, jumbo */
+.font-size--7,
+.font-size--7 * {
+  --fontsize-factor: var(--size-7);
+}
+/* h2, xxx-large */
+.font-size--6,
+.font-size--6 * {
+  --fontsize-factor: var(--size-6);
+}
+/* h3, xx-large */
+.font-size--5,
+.font-size--5 * {
+  --fontsize-factor: var(--size-5);
+}
+/* h4, x-large */
+.font-size--4,
+.font-size--4 * {
+  --fontsize-factor: var(--size-4);
+}
+/* h5, large */
+.font-size--3,
+.font-size--3 * {
+  --fontsize-factor: var(--size-3);
+}
+/* h6, medium */
+.font-size--2,
+.font-size--2 * {
+  --fontsize-factor: var(--size-2);
+}
+/* text, regular (default) */
+.font-size--1,
+.font-size--1 * {
+  --fontsize-factor: var(--size-1);
+}
+/* text, small */
+.font-size--0,
+.font-size--0 * {
+  --fontsize-factor: var(--size-0);
+}
+/* x-small (static) */
+.font-size---1,
+.font-size---1 * {
+  --fontsize-factor: var(--size--1);
+  font-size: calc(var(--fontsize-factor) * 1rem);
+}
+/* xx-small (static) */
+.font-size---2,
+.font-size---2 * {
+  --fontsize-factor: var(--size--2);
+  font-size: calc(var(--fontsize-factor) * 1rem);
+}
+/* xxx-small (static) */
+.font-size---3,
+.font-size---3 * {
+  --fontsize-factor: var(--size--3);
+  font-size: calc(var(--fontsize-factor) * 1rem);
+}
+.font-size---4,
+.font-size---4 * {
+  --fontsize-factor: var(--size--4);
+  font-size: calc(var(--fontsize-factor) * 1rem);
+}
+
+/* Helper Classes */
+
+/* .font-size--static */
+
+.font-size--static,
+.font-size--static * {
+  font-size: calc(var(--fontsize-factor) * 1rem);
+}

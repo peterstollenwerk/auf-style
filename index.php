@@ -73,6 +73,7 @@ Kirby::plugin('auf/style', [
         'style-tests' => __DIR__ . '/templates/style-tests.php',
         'style-boxes-preview' => __DIR__ . '/templates/style-boxes-preview.php',
         'style-page-theme' => __DIR__ . '/templates/style-page-theme.php',
+        'style-fluid-typography' => __DIR__ . '/templates/style-fluid-typography.php',
     ],
     'routes' => [
         [
@@ -110,6 +111,19 @@ Kirby::plugin('auf/style', [
                     'model' => 'style-page-theme',
                     'content' => [
                         'title' => 'Style: Page Theme',
+                    ]
+                ]);
+          }
+        ],
+        [
+          'pattern' => 'style-fluid-typography',
+          'action'  => function () {
+                return Page::factory([
+                    'slug' => 'style-fluid-typography',
+                    'template' => 'style-fluid-typography',
+                    'model' => 'style-fluid-typography',
+                    'content' => [
+                        'title' => 'Style: Fluid Typograpy',
                     ]
                 ]);
           }

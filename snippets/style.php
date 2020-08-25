@@ -1,5 +1,6 @@
 <?= css('assets/css/auf-style-reset.css') ?>
 <?= css('assets/css/auf-style-theme.css') ?>
+<?= css('assets/css/auf-style-fluid-typography.css') ?>
 
 <style>
 <?php 

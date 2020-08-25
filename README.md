@@ -5,6 +5,17 @@
 ## Setup
 
 ```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
+
+Set Fluid Typography min and max screen sizes in:
+auf-style-fluid-typography.css
+```
+* {
+  --min-screensize: 100; /* UNITLESS, to make it work with calc()!!! */
+  --max-screensize: 1200;
+}
+```
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ## We need to create proper box-themes.

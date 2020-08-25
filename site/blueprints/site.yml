@@ -29,6 +29,8 @@ tabs:
           <a href="../style-tests" target="_blank">Style: Tests (Style Themes)</a>
           <br>
           <a href="../style-page-theme" target="_blank">Style: Page Theme</a>
+          <br>
+          <a href="../style-fluid-typography" target="_blank">Style: Fluid Typography</a>
 
       box_themes:
         extends: auf_style/blueprints/fields/box_themes

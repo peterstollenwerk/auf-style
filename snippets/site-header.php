@@ -9,7 +9,7 @@
 
   <style>
     html > * {
-      max-width: 666px;
+      max-width: calc(var(--max-screensize) * 1px);
       margin-left: auto;
       margin-right: auto;
     }
