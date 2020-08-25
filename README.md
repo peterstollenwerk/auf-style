@@ -90,7 +90,10 @@ Color Convert Methods:
 
 ### P1
 
-* [ ] Implement Box Helpers .safe-text, etc.
+* [ ] Implement Box Helpers 
+  * [ ] .safe-text, .safe-texts
+  * [ ] .border-outset, .borders-outset
+  * [ ] .padding-outset, .paddings-outset
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

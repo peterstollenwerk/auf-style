@@ -32,13 +32,23 @@ tabs:
           <br>
           <a href="../style-fluid-typography" target="_blank">Style: Fluid Typography</a>
 
+
+      type_themes_divider:
+        type: headline
+        label: Type Themes
+      
       type_themes:
         extends: auf_style/blueprints/fields/type_themes
+      
+      box_themes_divider:
+        type: headline
+        label: Box Themes
         
       box_themes:
         extends: auf_style/blueprints/fields/box_themes
 
-      box_color_divider:
+
+      style_themes_divider:
         type: headline
         label: Style Themes
 
