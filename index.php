@@ -39,6 +39,8 @@ Kirby::plugin('auf/style', [
         'auf-style/border-theme' => __DIR__ . '/snippets/border-theme.php',
         'auf-style/outline-themes' => __DIR__ . '/snippets/outline-themes.php',
         'auf-style/outline-theme' => __DIR__ . '/snippets/outline-theme.php',
+        'auf-style/text-shadow-themes' => __DIR__ . '/snippets/text-shadow-themes.php',
+        'auf-style/text-shadow-theme' => __DIR__ . '/snippets/text-shadow-theme.php',
         'auf-style/box-shadow-themes' => __DIR__ . '/snippets/box-shadow-themes.php',
         'auf-style/box-shadow-theme' => __DIR__ . '/snippets/box-shadow-theme.php',
         'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
@@ -61,6 +63,7 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/border_themes' => __DIR__ . '/blueprints/fields/border_themes.yml',
         'auf_style/blueprints/fields/outline_themes' => __DIR__ . '/blueprints/fields/outline_themes.yml',
         'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
+        'auf_style/blueprints/fields/text_shadow_themes' => __DIR__ . '/blueprints/fields/text_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
         # BUILDER
         'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',

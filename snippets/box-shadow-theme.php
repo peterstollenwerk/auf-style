@@ -47,6 +47,8 @@
 .<?= $cssClass ?> {
 <?php endif?>
   
+  <?php if($offsetX->isNotEmpty()): ?>--box-shadow-offset-x: <?= $offsetX ?>;<?php endif?>
+
   <?php if($offsetY->isNotEmpty()): ?>--box-shadow-offset-y: <?= $offsetY ?>;<?php endif?>
   
   <?php if($blurRadius->isNotEmpty()): ?>--box-shadow-blur-radius: <?= $blurRadius ?>;<?php endif?>

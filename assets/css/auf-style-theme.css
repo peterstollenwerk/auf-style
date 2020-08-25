@@ -80,7 +80,7 @@ hr
   border-style: var(--border-style);
   border-radius: var(--border-radius);
 
-  text-shadow: var(--text-shadow, initial);
+  text-shadow: var(--text-shadow);
 
   box-shadow: var(--box-shadow);
 }
