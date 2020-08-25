@@ -75,15 +75,18 @@ Color Convert Methods:
 * [X] ~~*[target: 0.5; performance: 1h] Implement hardcoded fluid-typography.html --> css*~~ [2020-08-25]
 
 * [X] ~~*[target: 2h; performance: 1.5h] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>*~~ [2020-08-25]
+
 * [X] ~~*Font-weight*~~ [2020-08-25]
+
 * [X] ~~*1h Font-style*~~ [2020-08-25]
+
+* [X] ~~*[target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now*~~ [2020-08-25]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
 * [ ] Implement Box Helpers .safe-text, etc.
-
-* [ ] [target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now
 
 * [ ] Implement Font-Size-Themes to overwrite default styles
 

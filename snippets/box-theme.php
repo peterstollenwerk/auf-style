@@ -19,13 +19,14 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
   $backgroundThemeAutoid = $boxTheme->background_theme();
   $borderThemeAutoid = $boxTheme->border_theme();
   $outlineThemeAutoid = $boxTheme->outline_theme();
+  $textShadowThemeAutoid = $boxTheme->text_shadow_theme();
   $boxShadowThemeAutoid = $boxTheme->box_shadow_theme();
   $customTheme = $boxTheme->custom_theme();
 ?>
 
 <?php if($preview): ?>
   <section>
-    <h3>Boxes Test</h3>
+    <h3 class="font-size--0">Boxes Test</h3>
     <style> 
     .boxes-preview-1 {
       display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 1rem;
@@ -41,11 +42,11 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
     </ol>
   </section>
   <section>
-    <h3>Box Test</h3>
+    <h3 class="font-size--0">Box Test</h3>
   
   <article class="box <?= $autoidClass ?> border--outset">
-    <h3>.<?= $cssClass ?></h3>
-    <h2><?= $label ?></h2>
+    <h4>.<?= $cssClass ?></h3>
+    <h5 class="font-size--0"><?= $label ?></h2>
     <button class="button--primary">.primary</button>
     <button class="button--secondary">.secondary</button>
     <button class="button--tertiary">.tertiary</button>
@@ -126,6 +127,21 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php endif?>
 <?php /* END: OUTLINE-THEME --------------------------*/ ?>
 
+<?php /* START: TEXT-SHADOW-THEME --------------------------*/ ?>
+<?php if($textShadowThemeAutoid->isNotEmpty()): ?>
+<?php 
+  $textShadowTheme = $site->text_shadow_themes()->toStructure()->findBy('autoid', $textShadowThemeAutoid->toString()); 
+  if(!$textShadowTheme) {
+    echo '/* ERROR: text-shadow-theme »' . $textShadowThemeAutoid . '« NOT FOUND */';
+  } else {
+    echo '/* text-shadow-theme: ' . $textShadowThemeAutoid . ' */';
+    snippet('auf-style/text-shadow-theme', [
+      'textShadowTheme' => $textShadowTheme, 
+      'renderCssClass' => false
+    ]); }?>
+<?php endif?>
+
+<?php /* END: BOX-SHADOW-THEME --------------------------*/ ?>
 <?php /* START: BOX-SHADOW-THEME --------------------------*/ ?>
 <?php if($boxShadowThemeAutoid->isNotEmpty()): ?>
 <?php 

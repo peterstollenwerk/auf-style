@@ -23,7 +23,7 @@ Box-themes:
   background_theme: i506ropu
   border_theme: ""
   outline_theme: 1n90iti1
-  text_shadow_theme: msyu73wi
+  text_shadow_theme: ciot9vfp
   box_shadow_theme: pr4o8za5
   custom_theme: ""
 
@@ -59,7 +59,7 @@ Color-themes:
   background: '#008ee6'
   border: null
   outline: null
-  text_shadow: '#008ee6'
+  text_shadow: '#2a2f3280'
   box_shadow_ambient: '#008ee6'
 - 
   autoid: 2ng0e1fh
@@ -463,7 +463,7 @@ Outline-themes:
 Text-shadow-themes:
 
 - 
-  autoid: msyu73wi
+  autoid: ciot9vfp
   label: WTF
   css_selector: ""
   text_shadows:
@@ -471,6 +471,10 @@ Text-shadow-themes:
       offset_x: ""
       offset_y: 1px
       blur_radius: ""
+    - 
+      offset_x: -12px
+      offset_y: -2px
+      blur_radius: 3px
 
 ----
 

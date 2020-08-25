@@ -10,15 +10,13 @@
     <li><a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#border-themes">Border-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#outline-themes">Outline-Themes</a>  ↓ ↓ ↓</li>
+    <li><a href="#text-shadow-themes">Text-Shadow-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#box-shadow-themes">Box-Shadow-Themes</a>  ↓ ↓ ↓</li>
   </ol>
 </nav>
 <hr>
 
-<section>
-  <h2 id="button-themes">Text-Shadow-Themes</h2>
-  <?= snippet('auf-style/text-shadow-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
-</section>
+
 
 <section>
   <h2 id="button-themes">Button-Themes</h2>
@@ -45,6 +43,12 @@
 <section>
   <h2 id="outline-themes">Outline-Themes</h2>
   <?= snippet('auf-style/outline-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
+</section>
+<hr>
+
+<section>
+  <h2 id="text-shadow-themes">Text-Shadow-Themes</h2>
+  <?= snippet('auf-style/text-shadow-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
 <hr>
 
