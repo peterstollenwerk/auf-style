@@ -61,7 +61,6 @@ export default {
           boxThemes.forEach(theme => {
             this.boxThemes.unshift({value: theme.autoid, text: theme.label});
           });
-          // this.boxThemes = options;
         });
     },
   }
@@ -71,6 +70,10 @@ export default {
 <style>
   .loading {
     display: none;
+    padding: 1.618rem;
+    margin-bottom: 1.618em;
+    color: black;
+    background-color: orangered;
   }
   *[data-loading="true"] .loading {
     display: block;

@@ -9135,7 +9135,7 @@ var _default = {
             value: theme.autoid,
             text: theme.label
           });
-        }); // this.boxThemes = options;
+        });
       });
     }
   }

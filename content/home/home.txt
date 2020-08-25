@@ -12,7 +12,7 @@ Builder:
     quisquam iure, veritatis sit
     exercitationem sed doloribus vel saepe
     esse rerum nemo, impedit enim corrupti?
-  style_settings: '{"box_theme":"37vkqkdr","box_theme_2":"37vkqkdr"}'
+  style_settings: '{"box_theme":"37vkqkdr","box_theme_2":"47tvau07"}'
   box_theme: 47tvau07
   font_size: font-size--3
   font_weight: font-weight--bold
