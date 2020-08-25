@@ -7,8 +7,8 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 
 <?php 
 
-  $autoidClass ='box-theme--' . $boxTheme->autoid();
-  $boxesClass ='boxes-theme--' . $boxTheme->autoid();
+  $autoidClass = option('auf.style.boxTheme.boxCssClassPrefix') . $boxTheme->autoid();
+  $boxesClass = option('auf.style.boxTheme.boxesCssClassPrefix') . $boxTheme->autoid();
   $cssClasses = ['autoidClass' => $autoidClass];
   $cssSelector = $boxTheme->css_selector();
   if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);

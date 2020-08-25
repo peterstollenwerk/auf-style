@@ -14,6 +14,13 @@ load([
 
 
 Kirby::plugin('auf/style', [
+    
+    'options' => [ // use the options in php like this: option('auf.style.boxTheme.boxCssClassPrefix')
+        'boxTheme' => [
+            'boxCssClassPrefix' => 'box-theme--',
+            'boxesCssClassPrefix' => 'boxes-theme--',
+        ],
+    ],
     'fields' => [
         'auf_style_background' => [
             // here we could define the backend logic for our field if needed

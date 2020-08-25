@@ -87,13 +87,13 @@ Color Convert Methods:
 * [X] ~~*[target: 1h] Implement missing box-variables in page-theming-21.html:*~~ [2020-08-24] 
   * [X] ~~*outlines, etc...*~~ [2020-08-24]
 
+* [X] ~~*[target: 1h; performance: 4h] Implement page-theming-21.html into backend*~~ [2020-08-25]
+
+* [X] ~~*Set the classnames "box-theme-" and "boxes-theme-"-prefix in the config, because we will need them for our auf elements implementation*~~ [2020-08-25]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
-
-* [ ] [target: 1h] Implement page-theming-21.html into backend
-
-* [ ] [target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now
 
 * [ ] [target: 0.5] Implement hardcoded fluid-typography.html --> css
 
@@ -102,6 +102,8 @@ Color Convert Methods:
   * [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
   * [ ] Font-weight
   * [ ] Font-style
+
+* [ ] [target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -112,7 +114,6 @@ Color Convert Methods:
 * [ ] [target: 0.5h;] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 
 * [ ] [target: 10m;] add --box-shadow-color to the color_themes
-
 
 * [ ] [target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
