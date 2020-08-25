@@ -6,15 +6,20 @@
 
 ```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
 
-Set Fluid Typography min and max screen sizes in:
-auf-style-fluid-typography.css
-```
-* {
-  --min-screensize: 100; /* UNITLESS, to make it work with calc()!!! */
-  --max-screensize: 1200;
-}
-```
+Open:
+``assets/css/auf-style-fluid-typography.css``
 
+Adjust Sizes to your likeing:
+```--size-7: 4.75;```
+
+Set the root font-size, this is going to be the min-font-size for fluid typo:
+```--root-font-size-unitless: 14;```
+
+Set Fluid Typography min and max screen range
+
+```--min-screensize: 100;```
+
+```--max-screensize: 1200;```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

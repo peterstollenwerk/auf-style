@@ -58,7 +58,7 @@
 </section>
 
 
-<section class="boxes boxes--inverted paddings--outset" style="--padding: 1em;">
+<section class="boxes boxes--inverted paddings--outset" >
   <section class="font-size--7 font-size--static">
     <h2>Font-Size: 7 (static)</h2>
     <p class="span-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ut e<span style="color: red;">*</span>veniet mollitia facilis enim, ducimus voluptatibus, delectus beatae quis neque iste nesciunt blanditiis cum aliquid omnis repudiandae. Assumenda, dolor corrupti.</p>

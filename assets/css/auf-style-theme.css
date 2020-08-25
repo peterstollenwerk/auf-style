@@ -11,7 +11,7 @@
   --site-border-style: none;
   --site-border-radius: 0;
   
-  --box-padding: 2.618rem;
+  --box-padding: 1.618em;
   --box-border-width: 2px;
   --box-border-style: none;
   --box-border-radius: 0;
@@ -41,9 +41,6 @@
 
   --box-shadow-direct-color: rgba(0, 0, 0, 0.5);
 }
-
-
-
 * {
   color: inherit;
 
@@ -125,7 +122,7 @@ input[type="text"] {
 hr {
   --padding: 0;
   border: 0;
-  --border-width: 2px;
+  --border-width: calc(var(--size-2) * 1em);
   --border-style: solid;
   --border-color: currentColor;
   border-top-width: var(--border-width);
