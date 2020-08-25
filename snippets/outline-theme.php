@@ -6,16 +6,21 @@
 ?>
 
 <?php 
-  $uid = $outlineTheme->uid();
-  $outline_theme_class = 'outline-theme--'. $uid;
+
+  $autoidClass ='outline-theme--' . $outlineTheme->autoid();
+  $cssClasses = ['autoidClass' => $autoidClass];
+  $cssSelector = $outlineTheme->css_selector();
+  if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
+  $cssClass = implode(', ', $cssClasses);
+
   $width = $outlineTheme->outline_width();
   $style = $outlineTheme->outline_style();
   $offset = $outlineTheme->outline_offset();
 ?>
 
 <?php if($preview): ?>
-  <article class="box outline <?= $outline_theme_class ?>" style="min-height: 33vh;">
-    <h3>.<?= $outline_theme_class ?> <small>.box .outline</small></h3>
+  <article class="box outline <?= $autoidClass ?>" style="min-height: 33vh;">
+    <h3>.<?= $cssClass ?> <small>.box .outline</small></h3>
 <?php endif?>
 
 
@@ -24,7 +29,7 @@
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-  .<?= $outline_theme_class ?> {
+  .<?= $cssClass ?> {
 <?php endif?>
     <?php if($width->isNotEmpty()): ?>--outline-width: <?= $width ?>;<?php endif?>
 

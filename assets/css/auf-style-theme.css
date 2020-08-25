@@ -1,0 +1,384 @@
+:root {
+  /* 
+    Put all variables in the root,
+    to use them wherever needed. 
+    See for example:
+    --input-padding: calc(var(--button-padding) + var(--button-border-width));
+   */
+
+  --site-padding: 1.618rem;
+  --site-border-width: 0px;
+  --site-border-style: none;
+  --site-border-radius: 0;
+  
+  --box-padding: 1.618em;
+  --box-border-width: 2px;
+  --box-border-style: none;
+  --box-border-radius: 0;
+  
+  --button-padding: 0.618rem;
+  --button-border-width: 2px;
+  --button-border-style: solid;
+  --button-border-radius: 0;
+  
+  --input-padding: calc(var(--button-padding) + var(--button-border-width));
+  --input-color: black;
+  --input-background-color: white;
+  --input-border-width: 0;
+  --input-border-radius: 0;
+
+  --text-shadow-color: rgba(0, 0, 0, 0.5);
+  
+  --box-shadow-offset-x: 0;
+  --box-shadow-offset-y: 1px;
+  --box-shadow-blur-radius: 3px;
+  --box-shadow-spread-radius: 0;
+
+  --box-shadow-ambient-offset-x: 0;
+  --box-shadow-ambient-offset-y: 1px;
+  --box-shadow-ambient-blur-radius: 3px;
+  --box-shadow-ambient-spread-radius: 0;
+
+  --box-shadow-direct-color: rgba(0, 0, 0, 0.5);
+}
+* {
+  color: inherit;
+
+}
+*:focus {
+  outline-width:  var(--outline-width, 2px);
+  outline-style:  var(--outline-style, dashed);
+  outline-offset: var(--outline-offset, 2px);
+  outline-color:  var(--outline-color, currentColor);
+}
+.site *,
+.boxes > * *,
+.box *,
+button *, .button *,
+input[type="text"] { 
+  /* Reset Backgrounds Text-Shadows and Box-Shadows */
+  --background: initial;
+  /* --border-color: initial; */
+  /* --text-shadow: initial; */
+  /* --box-shadow: initial; */
+}
+.site,
+.boxes > *,
+.box,
+button, .button,
+input[type="text"],
+hr
+{
+  padding: var(--padding);
+  
+  color: var(--color, inherit);
+  background: var(--background);
+  background-color: var(--background-color);
+
+  border-color: var(--border-color, inherit);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-radius: var(--border-radius);
+
+  text-shadow: var(--text-shadow);
+
+  box-shadow: var(--box-shadow);
+}
+
+.site {
+  --padding: var(--site-padding);
+  --border-width: var(--site-border-width);
+  --border-style: var(--site-border-style);
+  --border-radius: var(--site-border-radius);
+}
+.boxes > *,
+.box {
+  --padding: var(--box-padding);
+  --border-width: var(--box-border-width);
+  --border-style: var(--box-border-style);
+  --border-radius: var(--box-border-radius);
+}
+
+.button, button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  --padding: var(--button-padding);
+  --border-width: var(--button-border-width);
+  --border-style: var(--button-border-style);
+  --border-radius: var(--button-border-radius);
+}
+input[type="text"] {
+  --padding: var(--input-padding);
+  --color: var(--input-color);
+  --background-color: var(--input-background-color);
+  --border-width: var(--input-border-width);
+  --border-radius: var(--input-border-radius);
+  --box-shadow-ambient-color: transparent;
+  --box-shadow:
+    inset 0 1px 4px 0 var(--box-shadow-ambient-color),
+    inset 0px 1px 4px 0 var(--box-shadow-direct-color);
+}
+hr {
+  --padding: 0;
+  border: 0;
+  --border-width: calc(var(--size-1) * 1em);
+  --border-style: solid;
+  --border-color: currentColor;
+  border-top-width: var(--border-width);
+  border-top-style: var(--border-style);
+  border-top-color: var(--border-color);
+}
+
+/* Box - Exceptions  */
+.boxes--inverted > *,
+.box--inverted {
+  color: var(--background-color);
+  background-color: var(--color);
+  border-color: var(--border-color);
+  --box-shadow-ambient-color: var(--color);
+}
+
+/* Button - Exceptions */
+
+.boxes--inverted  button, 
+.boxes--inverted .button,
+.box--inverted    button, 
+.box--inverted   .button {
+  color: var(--background-color);
+  background-color: var(--color);
+}
+ button.button--primary, 
+.button.button--primary {
+  color: var(--background-color);
+  background-color: var(--color);
+  border-color: var(--color);
+  outline-color: var(--color);
+}
+ button.button--tertiary,
+.button.button--tertiary {
+  border-color: var(--background-color);
+  text-decoration: underline;
+}
+.boxes--inverted  button.button--primary,
+.boxes--inverted .button.button--primary,
+.box--inverted    button.button--primary,
+.box--inverted   .button.button--primary {
+  color: var(--color);
+  background-color: var(--background-color);
+  border-color: var(--background-color);
+  outline-color: var(--background-color);
+}
+.boxes--inverted  button.button--tertiary,
+.boxes--inverted .button.button--tertiary,
+.box--inverted    button.button--tertiary,
+.box--inverted   .button.button--tertiary {
+  background-color: var(--color);
+  border-color: var(--color);
+}
+.boxes--inverted input[type="text"],
+.box--inverted   input[type="text"] {
+  outline-color: var(--background-color);
+}
+
+.box,
+.boxes > li {
+  list-style-position: inside;
+}
+
+/* Helper Classes */
+
+.safe-text,
+.safe-texts > * {
+  background-color: var(--background-color);
+}
+.border,
+.borders > * {
+  border-width: var(--border-width, 2px);
+  border-style: solid;
+  border-color: var(--border-color, var(--color, currentColor));
+  border-radius: var(--border-radius);
+}
+.border-radius,
+.borders-radius > * {
+  border-radius: var(--default-border-radius, 4px);
+}
+.padding--outset,
+.paddings--outset > * {
+  margin-left: calc( var(--padding) * -1);
+  margin-right: calc( var(--padding) * -1);
+}
+.border--outset,
+.borders--outset > * {
+  margin-left: calc( var(--border-width) * -1);
+  margin-right: calc( var(--border-width) * -1);
+}
+.outline,
+.outlines > * {
+  outline-width:  var(--outline-width, 2px);
+  outline-style:  var(--outline-style, dashed);
+  outline-color:  var(--outline-color, currentColor);
+  outline-offset: var(--outline-offset, 2px);
+}
+.text-shadow,
+.text-shadows > * {
+  text-shadow:
+    0px 2px 3px var(--text-shadow-color, black);
+}
+
+[class*="box-shadow"] {
+
+  /* 
+    
+  to create realsitic shadows, we need two shadows:
+
+  1. Cast by direct light -> neutral grey
+  2. Cast by ambient light -> box background color
+  
+  */
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  --box-shadow-offset-x: 0;
+  --box-shadow-offset-y: 1px;
+  --box-shadow-blur-radius: 3px;
+  --box-shadow-spread-radius: 0;
+  /* 
+  --box-shadow-direct-color; 
+  */
+
+  --box-shadow-ambient-offset-x: 0;
+  --box-shadow-ambient-offset-y: 1px;
+  --box-shadow-ambient-blur-radius: 3px;
+  --box-shadow-ambient-spread-radius: 0;
+  --box-shadow-ambient-color: var(--background-color);
+
+  box-shadow: 
+    /* direct-shadow */ 
+    var(--box-shadow-offset-x)
+    var(--box-shadow-offset-y)
+    var(--box-shadow-blur-radius)
+    var(--box-shadow-spread-radius)
+    var(--box-shadow-direct-color, black),
+
+    /* ambient shadow */ 
+    var(--box-shadow-ambient-offset-x)
+    var(--box-shadow-ambient-offset-y)
+    var(--box-shadow-ambient-blur-radius)
+    var(--box-shadow-ambient-spread-radius)
+    var(--box-shadow-ambient-color);
+}
+.box-shadow--inset {
+  box-shadow: 
+    /* direct-shadow */ 
+    inset 
+    var(--box-shadow-offset-x)
+    var(--box-shadow-offset-y) 
+    var(--box-shadow-blur-radius)
+    var(--box-shadow-spread-radius) 
+    var(--box-shadow-direct-color, black),
+
+    /* ambient shadow */ 
+    inset 
+    var(--box-shadow-ambient-offset-x)
+    var(--box-shadow-ambient-offset-y) 
+    var(--box-shadow-ambient-blur-radius)
+    var(--box-shadow-ambient-spread-radius) 
+    var(--box-shadow-ambient-color);
+}
+
+
+/* 
+  ======================================================
+  Default Theming which can be overridden by the backend 
+  ======================================================
+*/
+
+/*
+  Find the dark theme (@ night for best results ; )
+
+  1. 
+  Set text color and background color to black. 
+  Icrease text color brightness untill you can see the text and buttons appear.
+
+  2. 
+  Set the background color to the text color and brighten it, until you
+  can clearly se text and buttons again.
+  You´ve found your background-color. 
+  Store the value here, we´ll need it later again.
+  background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+
+  3. 
+  Set the background to white and lower the text color until you can cleary see text and buttons.
+  You´ve found your text color.
+  
+  4.
+  Reset the background to the stored value.
+  Set the box-background to the site background value and brighten it, 
+  till it clearly separates from the background and the text is still readable.
+  When in doubt, opt for readability!
+
+  5.
+  If you want you can create a background gradient with values lower then the 
+  original background-color, and you are save.
+
+ */
+
+:root 
+{
+  --theme-color-h: 25;
+  --theme-color-s:  0%;
+  --theme-color-l: 50%;
+  --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
+  --theme-color: hsl(var(--theme-color-h-s-l))
+}
+.site--light 
+{
+  --color:                hsl(var(--theme-color-h), var(--theme-color-s), 15%);
+  --background-color:     hsl(var(--theme-color-h), var(--theme-color-s), 80%);
+  --background-color-2:   hsl(var(--theme-color-h), var(--theme-color-s), 90%);
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 95%);
+  --background: linear-gradient(
+    var(--background-color-2), 
+    var(--background-color)
+  );
+}
+.site--dark 
+{
+  --color:                hsl(var(--theme-color-h), var(--theme-color-s), 85%);
+  --background-color:     hsl(var(--theme-color-h), var(--theme-color-s), 10%);
+  --background-color-2:   hsl(var(--theme-color-h), var(--theme-color-s), 20%);
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
+  --background: linear-gradient(
+      var(--background-color-2), 
+      var(--background-color)
+  );
+}
+.boxes > *,
+.box {
+  --border-style: none;
+  --background-color: var(--box-background-color);
+}
+.boxes > * .box,
+.box .box 
+{
+  --border-style: solid;
+  --background-color: inherit;
+}
+
+
+.theme-toggle 
+{
+  --color:            hsl(var(--theme-color-h), 100%, 10%);
+  --background-color: hsl(var(--theme-color-h), 100%, 50%);
+  --border-color:     hsl(var(--theme-color-h), 100%, 50%);
+}
+
+.box--muhammad 
+{
+  --color: white;
+  --background-color: black;
+  --background: url('https://api.time.com/wp-content/uploads/2018/06/muhammad-ali-pardon.jpg') center center / cover repeat fixed;
+  --text-shadow: 0px 1px 3px black;
+  --border-width: 1rem;
+  --border-style: solid;
+}

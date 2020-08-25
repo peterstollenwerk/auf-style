@@ -23,14 +23,32 @@ tabs:
         label: Preview Urls
         type: info
         text: >
-          http://auf-style:8888/style-tests
+          
+          <a href="../style-boxes-preview" target="_blank">Style: Box/es Theme/s</a>
           <br>
-          http://auf-style:8888/style-boxes-preview
+          <a href="../style-tests" target="_blank">Style: Tests (Style Themes)</a>
+          <br>
+          <a href="../style-page-theme" target="_blank">Style: Page Theme</a>
+          <br>
+          <a href="../style-fluid-typography" target="_blank">Style: Fluid Typography</a>
 
+
+      type_themes_divider:
+        type: headline
+        label: Type Themes
+      
+      type_themes:
+        extends: auf_style/blueprints/fields/type_themes
+      
+      box_themes_divider:
+        type: headline
+        label: Box Themes
+        
       box_themes:
         extends: auf_style/blueprints/fields/box_themes
 
-      box_color_divider:
+
+      style_themes_divider:
         type: headline
         label: Style Themes
 
@@ -42,6 +60,8 @@ tabs:
         extends: auf_style/blueprints/fields/border_themes
       outline_themes:
         extends: auf_style/blueprints/fields/outline_themes
+      text_shadow_themes:
+        extends: auf_style/blueprints/fields/text_shadow_themes
       box_shadow_themes:
         extends: auf_style/blueprints/fields/box_shadow_themes
       

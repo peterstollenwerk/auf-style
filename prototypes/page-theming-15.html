@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  html,
+  body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* + * {
+  margin-top: 1rem;
+}
+.site {
+  padding: 1rem;
+}
+.site > * {
+  padding-left: 1.618rem;
+  padding-right: 1.618rem;
+  max-width: 444px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ------------------------- */
+
+/* THEMING */
+
+/* DEFAULTS */
+
+:root {
+  --theme-hue: 25;
+  --theme-saturation: 0%;
+
+  --margin: 1.618rem;
+
+  --box-padding: 1.618rem;
+
+  --button-border-width: 2px;
+  --button-padding: 0.5rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* + * {
+  margin-top: var(--margin);
+}
+.site > * {
+  padding-left: var(--box-padding);
+  padding-right: var(--box-padding);
+  max-width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+* {
+  color: inherit;
+}
+button {
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+  border-style: solid;
+  border-width: var(--button-border-width);
+  padding: var(--button-padding);
+}
+input[type="text"] {
+  padding: calc(var(--button-padding) + var(--button-border-width));
+  background: white;
+  color: black;
+  border-width: 0px;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.6);
+}
+
+/* BUTTON THEMES */
+
+button.primary,
+.button.primary
+{
+  color: hsl(var(--theme-hue), 100%, 0%);
+  background-color: hsl(var(--theme-hue), 100%, 50%);
+  border-color: transparent;
+
+  --box-shadow-direct-color: hsla(var(--theme-hue), 100%, 0%, 0.5);
+  --box-shadow-ambient-color: hsla(var(--theme-hue), 100%, 50%, 1);
+  box-shadow: 
+    0px 1px 2px var(--box-shadow-direct-color),
+    0px 1px 2px var(--box-shadow-ambient-color);
+
+}
+button.secondary,
+.button.secondary
+{
+  border-color: hsl(var(--theme-hue), 100%, 50%);
+  background-color: inherit;
+}
+button.tertiary,
+.button.tertiary
+{
+  border-color: transparent;
+  background-color: inherit;
+}
+.box 
+{
+  padding: var(--box-padding);
+}
+.box > .box 
+{
+  text-shadow: initial; /* Don´t pass the text-shadow down! */
+}
+
+/* Theme Helper ------------------------- */
+
+.safe-text {
+  background-color: inherit;
+}
+.safe-texts > * {
+  background-color: inherit;
+}
+
+
+/* THEME LIGHT */
+
+.site--light 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 20%);
+  --g1: hsl(var(--theme-hue), var(--theme-saturation), 85%);
+  --g2: hsl(var(--theme-hue), var(--theme-saturation), 75%);
+  --background-1: linear-gradient( var(--g1), var(--g2) );
+  --g3: hsl(var(--theme-hue), var(--theme-saturation), 95%);
+  --background-2: repeating-linear-gradient(45deg, var(--g3) 0, var(--g3), 12px, transparent 12px, transparent 24px);
+  --g4: hsla(var(--theme-hue), var(--theme-saturation), 85%, 0.9);
+  --g5: hsla(var(--theme-hue), var(--theme-saturation), 80%, 0.9);
+  --background-3: linear-gradient( var(--g4),var(--g5));
+  background: var(--background-3), var(--background-2), var(--background-1);
+  background-color: hsl(var(--theme-hue), var(--theme-saturation), 75%);
+  --text-shadow-color: var(--g2);
+}
+.site--light .box 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 15%);
+  background-color: hsl(var(--theme-hue), var(--theme-saturation), 95%);
+  border-color: hsl(var(--theme-hue), var(--theme-saturation), 92%);
+}
+.site--light .box--inverted 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 85%);
+  background-color: hsl(var(--theme-hue), var(--theme-saturation), 20%);
+  border-color: hsl(var(--theme-hue), var(--theme-saturation), 10%);
+}
+
+/* SITE DARK */
+
+.site--dark 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 85%);
+  --g1: hsl(var(--theme-hue), var(--theme-saturation), 25%);
+  --g2: hsl(var(--theme-hue), var(--theme-saturation), 15%);
+  --background-1: linear-gradient( var(--g1), var(--g2) );
+  --g3: hsl(var(--theme-hue), var(--theme-saturation), 5%);
+  --background-2: repeating-linear-gradient(45deg, var(--g3) 0, var(--g3), 12px, transparent 12px, transparent 24px);
+  --g4: hsla(var(--theme-hue), var(--theme-saturation), 25%, 0.9);
+  --g5: hsla(var(--theme-hue), var(--theme-saturation), 15%, 0.9);
+  --background-3: linear-gradient( var(--g4),var(--g5));
+  background: var(--background-3), var(--background-2), var(--background-1);
+  background-color: hsl(var(--theme-hue), var(--theme-saturation), 15%);
+}
+.site--dark .box 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 85%);
+  background-color: hsl(var(--theme-hue), var(--theme-saturation), 15%);
+  border-color: hsl(var(--theme-hue), var(--theme-saturation), 13%);
+} 
+.site--dark .box--inverted 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 10%);
+  background-color: hsl(var(--theme-hue), var(--theme-saturation), 85%);
+  border-color: hsl(var(--theme-hue), var(--theme-saturation), 75%);
+} 
+
+/* CUSTOMIZATION ------------------------------------- */
+
+
+:root {
+  --theme-hue: 25;
+  --theme-saturation: 0%;
+
+  --button-border-width: 2px;
+  --button-padding: 0.5rem;
+  --box-padding: 2.618rem;
+}
+
+
+
+/* BOX THEMES ------------------------------------- */
+
+.site .theme--primary-gradient 
+{
+  color: hsl(var(--theme-hue), var(--theme-saturation), 20%);
+  --c1: hsl(var(--theme-hue), 100%, 60%);
+  --c2: hsl(var(--theme-hue), 100%, 20%);
+  background: linear-gradient(var(--c1), var(--c2));
+  border-style: none;
+}
+
+.site .theme--blue-stripes 
+{
+  color: hsl(var(--theme-hue), 100%, 100%);
+
+  --c1:  hsl(var(--theme-hue), 100%, 60%);
+  --c2:  hsl(var(--theme-hue), 100%, 20%);
+  background: repeating-linear-gradient(-45deg, var(--c1), var(--c1)1px, var(--c2) 3px,  var(--c2) 8px);
+  
+  background-color: hsl(var(--theme-hue), 100%, 20%);
+  border-style: none;
+
+  --text-shadow-color: hsl(var(--theme-hue), 50%, 50%);
+  text-shadow: 
+     0px  2px 2px var(--text-shadow-color);
+  
+  --box-shadow-direct-color: hsla(var(--theme-hue), 100%, 0%, 0.5);
+  --box-shadow-ambient-color: hsl(var(--theme-hue), 100%, 20%);
+  box-shadow: 
+    0px 0px 6px var(--box-shadow-ambient-color),
+    0px 0px 6px var(--box-shadow-direct-color);
+}
+
+
+
+/* What happens it we use variables for boxes and set the button styles via inherit? */
+
+
+</style>
+</head>
+<body class="site site--light" data-active-theme="site--light">
+  <div>
+    <button class="theme-toggle primary">Toggle Theme</button>
+    <form action="">
+        <label for="hue">Hue:</label>
+        <input id="hue" type="range" min="0" max="360" value="25">
+        <label for="saturation">Saturation:</label>
+        <input id="saturation" type="range" min="0" max="100" value="25">
+    </form>
+    <script>
+      const siteEl2 = document.getElementsByClassName('site')[0];
+      const hueEl = document.getElementById('hue');
+      const saturationEl = document.getElementById('saturation');
+      hueEl.addEventListener('input', function(e){
+        siteEl2.style.setProperty('--theme-hue', hueEl.value);
+      });
+      saturationEl.addEventListener('input', function(e){
+        siteEl2.style.setProperty('--theme-saturation', saturationEl.value + '%');
+      });
+    </script>
+  </div>
+  
+  <h2>.site</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto aliquam ea ut omnis repellat, dolor tempora aperiam reprehenderit numquam voluptate beatae recusandae magnam ullam facilis obcaecati voluptatum porro ad?</p>
+  <div>
+    <input type="text" placeholder="your email...">
+    <button class="primary">Button.primary</button>
+    <button class="secondary">Button.secondary</button>
+    <button class="tertiary">Button.tertiary</button>
+    <button>Button</button>
+  </div>
+  <section class="box">
+    <h3>.box</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
+    <div>
+      <input type="text" placeholder="your email...">
+      <button class="primary">Button.primary</button>
+      <button class="secondary">Button.secondary</button>
+      <button class="tertiary">Button.tertiary</button>
+      <button>Button</button>
+    </div>
+  </section>
+  <section class="box box--inverted">
+    <h3>.box.box--inverted</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
+    <div>
+      <button class="secondary">Button.secondary</button>
+      <input type="text" placeholder="your email...">
+      <button>Button</button>
+  </section>
+  <section class="box theme--blue-stripes safe-texts">
+    <h3>.box.theme--blue-stripes.safe-text</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
+    <div>
+      <input type="text" placeholder="your email...">
+      <button class="primary">Button.primary</button>
+      <button class="secondary">Button.secondary</button>
+      <button class="tertiary">Button.tertiary</button>
+      <button>Button</button>
+    </div>
+    <section class="box safe-text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint magni eos? Velit dolore voluptate maiores eius quis, aut suscipit consequuntur voluptatibus! Explicabo, ea. Iusto facere rem quaerat maxime aliquid.</p>
+    </section>
+    <section class="box box--inverted">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, totam quia ea quod fugiat voluptatibus mollitia aliquid molestiae recusandae cum, commodi tempore velit reiciendis corporis omnis inventore quae animi earum.</p>
+    </section>
+  </section>
+  <section class="box theme--primary-gradient">
+    <h3>.box.theme--primary-gradient</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia modi maxime dicta, impedit reprehenderit molestiae asperiores facere labore rerum nesciunt possimus magnam quo eveniet ducimus ad porro quia nam deleniti!</p>
+    <div>
+      <input type="text" placeholder="your email...">
+      <button class="primary">Button.primary</button>
+      <button class="secondary">Button.secondary</button>
+      <button class="tertiary">Button.tertiary</button>
+      <button>Button</button>
+    </div>
+    <section class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint magni eos? Velit dolore voluptate maiores eius quis, aut suscipit consequuntur voluptatibus! Explicabo, ea. Iusto facere rem quaerat maxime aliquid.</p>
+    </section>
+    <section class="box box--inverted">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, totam quia ea quod fugiat voluptatibus mollitia aliquid molestiae recusandae cum, commodi tempore velit reiciendis corporis omnis inventore quae animi earum.</p>
+    </section>
+  </section>
+
+  <script>
+    const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
+    const siteEl = document.getElementsByClassName('site')[0];
+    const setActiveTheme = function(value) {
+      siteEl.dataset.activeTheme = value;
+    }
+    const getActiveTheme = function() {
+      return siteEl.dataset.activeTheme;
+    }
+    themeToggleEl.addEventListener('click', function() {
+      const oldTheme = getActiveTheme();
+      let newTheme = '';
+      if(oldTheme === 'site--light') {
+        newTheme = 'site--dark';
+        siteEl.classList.remove(oldTheme);
+        setActiveTheme(newTheme);
+        siteEl.classList.add(newTheme);
+      } else {
+        newTheme = 'site--light';
+        siteEl.classList.remove(oldTheme);
+        setActiveTheme(newTheme);
+        siteEl.classList.add(newTheme);
+      }
+    });
+  </script>
+</body>
+</html>

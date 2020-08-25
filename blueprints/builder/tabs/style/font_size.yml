@@ -1,0 +1,29 @@
+type: select
+label: Font-Size
+options:
+  font-size--7:   7 (h1)
+  font-size--6:   6 (h2)
+  font-size--5:   5 (h3)
+  font-size--4:   4 (h4)
+  font-size--3:   3 (h5)
+  font-size--2:   2 (h6)
+  font-size--1:   1 (text)
+  font-size--0:   0 (small)
+  font-size---1: -1 (x-small) ☝︎ use positive values above to ensure readability!
+  font-size---2: -2 (xx-small) ☝︎ ☝︎ 
+  font-size---3: -3 (xxx-small) ☝︎ ☝︎ ☝︎ 
+  font-size---4: -4 (too-small!) ☝︎ ☝︎ ☝︎ ☝︎ 
+
+
+# | h1, jumbo_____ 
+# | h2, xxx-large_ 
+# | h3, xx-large__ 
+# | h4, x-large___ 
+# | h5, large      
+# | h6, medium     
+# | p, regular    
+# | small
+# | x-small 
+# | xx-small
+# | xxx-small
+# | TOO small!

@@ -6,8 +6,12 @@
 ?>
 
 <?php 
-  $uid = $boxShadowTheme->uid();
-  $boxShadowThemeClass = 'box-shadow-theme--'. $uid;
+
+  $autoidClass ='box-shadow-theme--' . $boxShadowTheme->autoid();
+  $cssClasses = ['autoidClass' => $autoidClass];
+  $cssSelector = $boxShadowTheme->css_selector();
+  if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
+  $cssClass = implode(', ', $cssClasses);
 
   $boxShadows = $boxShadowTheme->box_shadows();
 
@@ -28,10 +32,10 @@
 
 <?php if($preview): ?>
   <article 
-    class="box <?= $boxShadowThemeClass ?>" 
-    style="min-height: 33vh; --color: black; --background-color: pink;"
+    class="box <?= $autoidClass ?>" 
+    style="min-height: 33vh; --color: black; --background-color: orange;"
     >
-    <h3>.<?= $boxShadowThemeClass ?> <small>.box .outline</small></h3>
+    <h3>.<?= $cssClass ?> <small>.box .outline</small></h3>
 <?php endif?>
 
 
@@ -40,9 +44,11 @@
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-.<?= $boxShadowThemeClass ?> {
+.<?= $cssClass ?> {
 <?php endif?>
   
+  <?php if($offsetX->isNotEmpty()): ?>--box-shadow-offset-x: <?= $offsetX ?>;<?php endif?>
+
   <?php if($offsetY->isNotEmpty()): ?>--box-shadow-offset-y: <?= $offsetY ?>;<?php endif?>
   
   <?php if($blurRadius->isNotEmpty()): ?>--box-shadow-blur-radius: <?= $blurRadius ?>;<?php endif?>
@@ -56,6 +62,24 @@
   <?php if($ambientBlurRadius->isNotEmpty()): ?>--box-shadow-ambient-blur-radius: <?= $ambientBlurRadius ?>;<?php endif?>
   
   <?php if($ambientSpreadRadius->isNotEmpty()): ?>--box-shadow-ambient-spread-radius: <?= $ambientSpreadRadius ?>;<?php endif?>
+
+  <?php /* if variables are missing they get filled by defaults from css */ ?>
+
+  box-shadow: 
+    /* direct-shadow */ 
+    var(--box-shadow-offset-x)
+    var(--box-shadow-offset-y) 
+    var(--box-shadow-blur-radius)
+    var(--box-shadow-spread-radius) 
+    var(--box-shadow-direct-color),
+
+    /* ambient shadow */ 
+    var(--box-shadow-ambient-offset-x)
+    var(--box-shadow-ambient-offset-y) 
+    var(--box-shadow-ambient-blur-radius)
+    var(--box-shadow-ambient-spread-radius) 
+    var(--box-shadow-ambient-color);
+
 
 <?php if($renderCssClass): ?>
 }

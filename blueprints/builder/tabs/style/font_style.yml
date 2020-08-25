@@ -1,0 +1,5 @@
+type: select
+label: Font-Style
+options:
+  font-style--italic: italic
+  font-style--normal: normal (reset italic)

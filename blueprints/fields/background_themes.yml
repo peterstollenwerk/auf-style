@@ -1,22 +1,29 @@
 label: Background Themes
 type: structure
+translate: false
 help: >
   creates css-variables: <br>
   <code>--background-UID: { --background: linear-gradient(red, blue), ... }</code>
 columns:
-  uid:
-    width: 1/10
+  autoid:
+    width: 1/13
   label:
   background:
+  css_selector:
+    width: 1/10
 fields:
-  uid:
-    label: UID
-    type: text
-    help: >
-      never change the UID when background is already in use!
+  autoid:
+    type: autoid
+    translate: false
+    width: 1/3
   label:
     label: Label
     type: text
+    width: 1/3
+  css_selector:
+    label: CSS Selector
+    type: text
+    width: 1/3
   # BACKGROUND
   background:
     label: Background

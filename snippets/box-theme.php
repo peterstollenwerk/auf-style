@@ -6,48 +6,75 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 ?>
 
 <?php 
-  $autoid = $boxTheme->autoid();
-  $css_class = 'box-theme--'. $autoid;
-  $css_selector = $boxTheme->css_selector();
+
+  $autoidClass = option('auf.style.boxTheme.boxCssClassPrefix') . $boxTheme->autoid();
+  $boxesClass = option('auf.style.boxTheme.boxesCssClassPrefix') . $boxTheme->autoid();
+  $cssClasses = ['autoidClass' => $autoidClass];
+  $cssSelector = $boxTheme->css_selector();
+  if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
+  $cssClass = implode(', ', $cssClasses);
+
   $label = $boxTheme->label();
-  $colorThemeUid = $boxTheme->color_theme();
-  $backgroundThemeUid = $boxTheme->background_theme();
-  $borderThemeUid = $boxTheme->border_theme();
-  $outlineThemeUid = $boxTheme->outline_theme();
-  $boxShadowThemeUid = $boxTheme->box_shadow_theme();
+  $colorThemeAutoid = $boxTheme->color_theme();
+  $backgroundThemeAutoid = $boxTheme->background_theme();
+  $borderThemeAutoid = $boxTheme->border_theme();
+  $outlineThemeAutoid = $boxTheme->outline_theme();
+  $textShadowThemeAutoid = $boxTheme->text_shadow_theme();
+  $boxShadowThemeAutoid = $boxTheme->box_shadow_theme();
   $customTheme = $boxTheme->custom_theme();
 ?>
 
 <?php if($preview): ?>
-  <article class="box <?= $css_class ?> border--outset">
-    <h3 class="safe-text">.<?= $css_class ?> <span>.box .border--outset</span></h3>
-    <h2><?= $label ?></h2>
+  <section>
+    <h3 class="font-size--0">Boxes Test</h3>
+    <style> 
+    .boxes-preview-1 {
+      display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 1rem;
+    }
+    .boxes-preview-1 > * {
+      margin-top: initial;
+    }
+    </style>
+    <ol class="boxes <?= $boxesClass ?> boxes-preview-1">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ol>
+  </section>
+  <section>
+    <h3 class="font-size--0">Box Test</h3>
+  
+  <article class="box <?= $autoidClass ?> border--outset">
+    <h4>.<?= $cssClass ?></h3>
+    <h5 class="font-size--0"><?= $label ?></h2>
     <button class="button--primary">.primary</button>
     <button class="button--secondary">.secondary</button>
     <button class="button--tertiary">.tertiary</button>
     <button>Default</button>
     <a class="button" href="https://aufdesign.de" target="_blank">a.button</a>
-    <h4>.safe-text</h4>
-    <p class="safe-text"> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
-    <h4>.safe-text--extra <small>.box-shadow--inset .border-radius</small></h4>
+    <h4 class="safe-text">Headline</h4>
+    <p> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
+    <h4>.safe-text <small>.box-shadow--inset .border-radius</small></h4>
 <?php endif?>
 
 <?php if($wrapTag): ?>
-  <<?= $wrapTag ?> class="safe-text--extra box-shadow--inset border-radius">
+  <<?= $wrapTag ?> class="box safe-text box-shadow--inset border-radius" style="border-radius: 0.618rem; --border-style: none;">
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-  .<?= $css_class ?><?php if($css_selector->isNotEmpty()): ?>, <?= $css_selector ?><?php endif?> {
+  .<?= $cssClass ?>,
+  .<?= $boxesClass ?> > *
+  {
 <?php endif?>
     
 <?php /* START: COLOR THEME --------------------------*/ ?>
-<?php if($colorThemeUid->isNotEmpty()): ?>
+<?php if($colorThemeAutoid->isNotEmpty()): ?>
 <?php 
-  $colorTheme = $site->color_themes()->toStructure()->findBy('uid', $colorThemeUid->toString()); 
+  $colorTheme = $site->color_themes()->toStructure()->findBy('autoid', $colorThemeAutoid->toString()); 
   if(!$colorTheme) {
-    echo '/* ERROR: color-theme »' . $colorThemeUid . '« NOT FOUND */';
+    echo '/* ERROR: color-theme »' . $colorThemeAutoid . '« NOT FOUND */';
   } else {
-    echo '/* color-theme: ' . $colorThemeUid . ' */';
+    echo '/* color-theme: ' . $colorThemeAutoid . ' */';
     snippet('auf-style/color-theme', [
       'colorTheme' => $colorTheme, 
       'renderCssClass' => false
@@ -56,13 +83,13 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php /* END: COLOR THEME --------------------------*/ ?>
 
 <?php /* START: BACKGROUND-THEME --------------------------*/ ?>
-<?php if($backgroundThemeUid->isNotEmpty()): ?>
+<?php if($backgroundThemeAutoid->isNotEmpty()): ?>
 <?php 
-  $backgroundTheme = $site->background_themes()->toStructure()->findBy('uid', $backgroundThemeUid->toString()); 
+  $backgroundTheme = $site->background_themes()->toStructure()->findBy('autoid', $backgroundThemeAutoid->toString()); 
   if(!$backgroundTheme) {
-    echo '/* ERROR: background-theme »' . $backgroundThemeUid . '« NOT FOUND */';
+    echo '/* ERROR: background-theme »' . $backgroundThemeAutoid . '« NOT FOUND */';
   } else {
-    echo '/* background-theme: ' . $backgroundThemeUid . ' */';
+    echo '/* background-theme: ' . $backgroundThemeAutoid . ' */';
     snippet('auf-style/background-theme', [
       'backgroundTheme' => $backgroundTheme, 
       'renderCssClass' => false
@@ -71,13 +98,13 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php /* END: BACKGROUND-THEME --------------------------*/ ?>
 
 <?php /* START: BORDER-THEME --------------------------*/ ?>
-<?php if($borderThemeUid->isNotEmpty()): ?>
+<?php if($borderThemeAutoid->isNotEmpty()): ?>
 <?php 
-  $borderTheme = $site->border_themes()->toStructure()->findBy('uid', $borderThemeUid->toString()); 
+  $borderTheme = $site->border_themes()->toStructure()->findBy('autoid', $borderThemeAutoid->toString()); 
   if(!$borderTheme) {
-    echo '/* ERROR: border-theme »' . $borderThemeUid . '« NOT FOUND */';
+    echo '/* ERROR: border-theme »' . $borderThemeAutoid . '« NOT FOUND */';
   } else {
-    echo '/* border-theme: ' . $borderThemeUid . ' */';
+    echo '/* border-theme: ' . $borderThemeAutoid . ' */';
     snippet('auf-style/border-theme', [
       'borderTheme' => $borderTheme, 
       'renderCssClass' => false
@@ -86,13 +113,13 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php /* END: BORDER-THEME --------------------------*/ ?>
 
 <?php /* START: OUTLINE-THEME --------------------------*/ ?>
-<?php if($outlineThemeUid->isNotEmpty()): ?>
+<?php if($outlineThemeAutoid->isNotEmpty()): ?>
 <?php 
-  $outlineTheme = $site->outline_themes()->toStructure()->findBy('uid', $outlineThemeUid->toString()); 
+  $outlineTheme = $site->outline_themes()->toStructure()->findBy('autoid', $outlineThemeAutoid->toString()); 
   if(!$outlineTheme) {
-    echo '/* ERROR: outline-theme »' . $outlineThemeUid . '« NOT FOUND */';
+    echo '/* ERROR: outline-theme »' . $outlineThemeAutoid . '« NOT FOUND */';
   } else {
-    echo '/* outline-theme: ' . $outlineThemeUid . ' */';
+    echo '/* outline-theme: ' . $outlineThemeAutoid . ' */';
     snippet('auf-style/outline-theme', [
       'outlineTheme' => $outlineTheme, 
       'renderCssClass' => false
@@ -100,14 +127,29 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php endif?>
 <?php /* END: OUTLINE-THEME --------------------------*/ ?>
 
-<?php /* START: BOX-SHADOW-THEME --------------------------*/ ?>
-<?php if($boxShadowThemeUid->isNotEmpty()): ?>
+<?php /* START: TEXT-SHADOW-THEME --------------------------*/ ?>
+<?php if($textShadowThemeAutoid->isNotEmpty()): ?>
 <?php 
-  $boxShadowTheme = $site->box_shadow_themes()->toStructure()->findBy('uid', $boxShadowThemeUid->toString()); 
-  if(!$boxShadowTheme) {
-    echo '/* ERROR: box-shadow-theme »' . $boxShadowThemeUid . '« NOT FOUND */';
+  $textShadowTheme = $site->text_shadow_themes()->toStructure()->findBy('autoid', $textShadowThemeAutoid->toString()); 
+  if(!$textShadowTheme) {
+    echo '/* ERROR: text-shadow-theme »' . $textShadowThemeAutoid . '« NOT FOUND */';
   } else {
-    echo '/* box-shadow-theme: ' . $boxShadowThemeUid . ' */';
+    echo '/* text-shadow-theme: ' . $textShadowThemeAutoid . ' */';
+    snippet('auf-style/text-shadow-theme', [
+      'textShadowTheme' => $textShadowTheme, 
+      'renderCssClass' => false
+    ]); }?>
+<?php endif?>
+
+<?php /* END: BOX-SHADOW-THEME --------------------------*/ ?>
+<?php /* START: BOX-SHADOW-THEME --------------------------*/ ?>
+<?php if($boxShadowThemeAutoid->isNotEmpty()): ?>
+<?php 
+  $boxShadowTheme = $site->box_shadow_themes()->toStructure()->findBy('autoid', $boxShadowThemeAutoid->toString()); 
+  if(!$boxShadowTheme) {
+    echo '/* ERROR: box-shadow-theme »' . $boxShadowThemeAutoid . '« NOT FOUND */';
+  } else {
+    echo '/* box-shadow-theme: ' . $boxShadowThemeAutoid . ' */';
     snippet('auf-style/box-shadow-theme', [
       'boxShadowTheme' => $boxShadowTheme, 
       'renderCssClass' => false
@@ -133,4 +175,5 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 
 <?php if($preview): ?>
   </article>
+  </section>
 <?php endif?>

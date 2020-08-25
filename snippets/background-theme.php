@@ -7,25 +7,30 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 ?>
 
 <?php 
-  $uid = $backgroundTheme->uid();
-  $css_theme_variable = 'background-theme--'. $uid;
+  $autoidClass ='background-theme--' . $backgroundTheme->autoid();
+  $cssClasses = ['autoidClass' => $autoidClass];
+  $cssSelector = $backgroundTheme->css_selector();
+  if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
+  $cssClass = implode(', ', $cssClasses);
+
   $label = $backgroundTheme->label();
   $backgrounds = [];
 ?>
 
 <?php if($preview): ?>
-  <h3>.<?= $css_theme_variable ?></h3>
-  <div class="box <?= $css_theme_variable ?>" style="height: 33vh"></div>
+  <h3><?= $label ?></h3>
+  <h4>.<?= $cssClass ?></h4>
+  <div class="box <?= $autoidClass ?>" style="height: 33vh"></div>
 <?php endif?>
 
 <?php /* START CLASS --------------------- */ ?>
 
 <?php if($wrapTag): ?>
-  <<?= $wrapTag ?> class="box  box-shadow--inset" style="--background-color: transparent"> 
+  <<?= $wrapTag ?> class="box box-shadow--inset border-radius" style="background-color: transparent"> 
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-  .<?= $css_theme_variable ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
+  .<?= $cssClass ?> { <?php if($label->isNotEmpty()): ?>/* <?= $label ?>; */<?php endif?>
 <?php endif?>
 
 <?php foreach($backgroundTheme->background()->toStructure() as $index => $background): ?>

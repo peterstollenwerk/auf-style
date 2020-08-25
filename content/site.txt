@@ -2,12 +2,43 @@ Title: Auf-Style-Plugin
 
 ----
 
+Type-themes:
+
+- 
+  autoid: utjficgp
+  label: H1
+  css_selector: h1
+  font_size: font-size--7
+  font_weight: ""
+  font_style: ""
+  custom_theme: ""
+- 
+  autoid: d9shovvo
+  label: H2
+  css_selector: ""
+  font_size: font-size--1
+  font_weight: font-weight--normal
+  font_style: font-style--italic
+  custom_theme: ""
+- 
+  autoid: zd3292r8
+  label: Empty
+  css_selector: ""
+  font_size: ""
+  font_weight: ""
+  font_style: ""
+  custom_theme: |
+    border-left: 4px solid red;
+    padding-left: 1em;
+
+----
+
 Box-themes:
 
 - 
-  autoid: izfitu62
-  label: Default
-  css_selector: :root
+  autoid: 37vkqkdr
+  label: Box
+  css_selector: ""
   color_theme: ""
   background_theme: ""
   border_theme: ""
@@ -15,64 +46,71 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: 47tvau07
+  label: WTF
+  css_selector: ""
+  color_theme: 9n5rbn98
+  background_theme: i506ropu
+  border_theme: ""
+  outline_theme: 1n90iti1
+  text_shadow_theme: ciot9vfp
+  box_shadow_theme: pr4o8za5
+  custom_theme: ""
 
 ----
 
 Color-themes:
 
 - 
-  uid: page-day
-  label: Page (Light)
-  color: 'hsla(225, 10%, 15%)'
-  background: 'hsla(25, 10%, 95%)'
-  border: 'hsla(225, 10%, 15%)'
-  outline: 'hsla(25, 10%, 15%)'
-  text_shadow: '#00000040'
-  box_shadow_ambient: '#00000040'
+  autoid: zcindkmv
+  label: Red Blue
+  css_selector: ""
+  color: '#ff0000'
+  background: '#001adb'
+  border: '#ff0000'
+  outline: '#ffea00'
+  text_shadow: '#332832'
+  box_shadow_ambient: '#fbff00'
 - 
-  uid: page-night
-  label: Page (Night)
-  color: 'hsla(25, 10%, 95%)'
-  background: 'hsla(225, 10%, 15%)'
-  border: 'hsla(25, 10%, 95%)'
-  outline: 'hsla(25, 10%, 95%)'
-  text_shadow: 'hsla(25, 15%, 95%, 0.5)'
-  box_shadow_ambient: 'hsla(25, 15%, 95%, 0.5)'
-- 
-  uid: box-day
-  label: Box (Day)
+  autoid: ia0a5vcj
+  label: ""
+  css_selector: ""
   color: '#000000'
-  background: '#ffffff'
-  border: '#000000'
-  outline: '#000000'
-  text_shadow: '#00000040'
-  box_shadow_ambient: '#ffffff40'
+  background: '#ff9500'
+  border: '#ffaa33'
+  outline: '#bd6e00'
+  text_shadow: '#8a5000'
+  box_shadow_ambient: '#ff9500'
 - 
-  uid: box-night
-  label: Box (Night)
+  autoid: 9n5rbn98
+  label: WTF
+  css_selector: .site--dark
   color: '#ffffff'
-  background: '#000000'
-  border: '#ffffff'
-  outline: '#ffffff'
-  text_shadow: '#ffffff40'
-  box_shadow_ambient: '#ffffff'
+  background: '#008ee6'
+  border: null
+  outline: null
+  text_shadow: '#2a2f3280'
+  box_shadow_ambient: '#008ee6'
 - 
-  uid: crazy-shit
-  label: Crazy Shit
-  color: '#00ff7b'
-  background: '#0023d1'
-  border: '#00ff7b'
-  outline: '#00ff7b'
-  text_shadow: '#ff00dd'
-  box_shadow_ambient: '#0023d1'
+  autoid: 2ng0e1fh
+  label: Focus Color
+  css_selector: '*:focus'
+  color: null
+  background: null
+  border: null
+  outline: '#ff00ee'
+  text_shadow: null
+  box_shadow_ambient: null
 
 ----
 
 Background-themes:
 
 - 
-  uid: "1"
+  autoid: t2cwte21
   label: Black Hearts – Pattern (small)
+  css_selector: ""
   background:
     - 
       type: gradient
@@ -161,8 +199,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: "2"
+  autoid: c3rjh6po
   label: Muhammad Superjumbo Cover
+  css_selector: ""
   background:
     - 
       type: image
@@ -183,8 +222,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: "3"
+  autoid: 3nq51t77
   label: Blue Diagonal Stripes on Orange Gradient
+  css_selector: ""
   background:
     - 
       type: gradient
@@ -255,8 +295,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: "4"
+  autoid: i506ropu
   label: Blue Red Transition
+  css_selector: ""
   background:
     - 
       type: gradient
@@ -281,7 +322,7 @@ Background-themes:
           linear_gradient_direction_to_y: right
           linear_gradient_direction_deg: ""
           linear_gradient_direction_turn: ""
-      size: custom
+      size: ""
       size_x: 50px
       size_y: 100px
       position_x: center
@@ -293,12 +334,9 @@ Background-themes:
       origin: ""
       clip: ""
 - 
-  uid: button
-  label: Transparent
-  background: [ ]
-- 
-  uid: pink-button
+  autoid: c9uohbys
   label: Pink Button Gradient
+  css_selector: ""
   background:
     - 
       type: gradient
@@ -334,102 +372,149 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
+- 
+  autoid: y34wahnw
+  label: Page Gradient Light
+  css_selector: .page-theme--light
+  background:
+    - 
+      type: gradient
+      label: Page-Gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: Grey to Grey
+          gradient_color_stops:
+            - 
+              color: '#f2f2f2'
+              start: ""
+              end: ""
+            - 
+              color: '#c9c9c9'
+              start: ""
+              end: ""
+          linear_gradient_direction: ""
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: c2clwkab
+  label: Site Dark
+  css_selector: .site--dark
+  background:
+    - 
+      type: gradient
+      label: ""
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: ""
+          gradient_color_stops:
+            - 
+              color: '#1d1b1b'
+              start: ""
+              end: ""
+            - 
+              color: '#a85e0b'
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: top
+          linear_gradient_direction_to_y: right
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
 
 ----
 
 Border-themes:
 
 - 
-  uid: "1"
-  label: Small
-  border_width: 3rem^
-  border_style: solid
-  border_radius: 1rem
-- 
-  uid: "2"
-  label: Medium
+  autoid: 8vtoylcm
+  label: 'Button '
+  css_selector: button, .button
   border_width: 2px
   border_style: solid
-  border_radius: 0.5rem
+  border_radius: ""
 - 
-  uid: "3"
-  label: Large
-  border_width: 2px
-  border_style: solid
-  border_radius: 1rem
+  autoid: lg0ni6g5
+  label: 'border-style: none'
+  css_selector: ""
+  border_width: ""
+  border_style: none
+  border_radius: ""
 - 
-  uid: button
-  label: Button
-  border_width: 2px
-  border_style: solid
-  border_radius: 1rem
-- 
-  uid: pink-button
-  label: Pink Button
-  border_width: 1px
-  border_style: dotted
-  border_radius: 5px
+  autoid: kmhu1o2p
+  label: 2rem double r-4px
+  css_selector: ""
+  border_width: 2rem
+  border_style: double
+  border_radius: 4px
 
 ----
 
 Outline-themes:
 
 - 
-  uid: solid
-  label: Solid
-  outline_width: ""
-  outline_style: solid
-  outline_offset: ""
-- 
-  uid: dotted
-  label: Dotted
-  outline_width: ""
-  outline_style: dotted
-  outline_offset: ""
-- 
-  uid: dashed
-  label: Dashed
-  outline_width: ""
+  autoid: 1n90iti1
+  label: Focus
+  css_selector: '*:focus'
+  outline_width: 12px
   outline_style: dashed
-  outline_offset: ""
+  outline_offset: 2px
+
+----
+
+Text-shadow-themes:
+
 - 
-  uid: double
-  label: Double
-  outline_width: ""
-  outline_style: double
-  outline_offset: ""
-- 
-  uid: groove
-  label: Groove
-  outline_width: ""
-  outline_style: groove
-  outline_offset: ""
-- 
-  uid: ridge
-  label: Ridge
-  outline_width: ""
-  outline_style: ridge
-  outline_offset: ""
-- 
-  uid: inset
-  label: Inset
-  outline_width: ""
-  outline_style: inset
-  outline_offset: ""
-- 
-  uid: outset
-  label: outset
-  outline_width: ""
-  outline_style: outset
-  outline_offset: ""
+  autoid: ciot9vfp
+  label: WTF
+  css_selector: ""
+  text_shadows:
+    - 
+      offset_x: ""
+      offset_y: 1px
+      blur_radius: ""
+    - 
+      offset_x: -12px
+      offset_y: -2px
+      blur_radius: 3px
 
 ----
 
 Box-shadow-themes:
 
 - 
-  uid: level-1
+  autoid: atkpxr4n
   label: 'Level 1: Button'
+  css_selector: ""
   box_shadows:
     - 
       offset_x: ""
@@ -443,8 +528,9 @@ Box-shadow-themes:
   box_shadow: [ ]
   box_shadow_ambient: null
 - 
-  uid: level-2
+  autoid: i29tzknb
   label: Level 2
+  css_selector: ""
   box_shadows:
     - 
       offset_x: ""
@@ -458,8 +544,9 @@ Box-shadow-themes:
   box_shadow: [ ]
   box_shadow_ambient: null
 - 
-  uid: level-3
+  autoid: 1moo7gjf
   label: 'Level 3: Drop-Down'
+  css_selector: ""
   box_shadows:
     - 
       offset_x: ""
@@ -473,8 +560,9 @@ Box-shadow-themes:
   box_shadow: [ ]
   box_shadow_ambient: null
 - 
-  uid: level-4
+  autoid: pr4o8za5
   label: Level 4
+  css_selector: ""
   box_shadows:
     - 
       offset_x: ""
@@ -488,8 +576,9 @@ Box-shadow-themes:
   box_shadow: [ ]
   box_shadow_ambient: null
 - 
-  uid: level-5
+  autoid: wh7qy73z
   label: 'Level 5: Modal'
+  css_selector: ""
   box_shadows:
     - 
       offset_x: ""

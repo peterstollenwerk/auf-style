@@ -4,46 +4,24 @@
 
 ## Setup
 
-```<body 
-  class="page page-theme--dark" 
-  data-active-theme="page-theme--dark">
-```
+```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
+
+Open:
+``css/auf-style-fluid-typography.css``
+
+Adjust Sizes to your likeing:
+```--size-7: 4.75;```
+
+Set the root font-size, this is going to be the min-font-size for fluid typo:
+```--root-font-size-unitless: 14;```
+
+Set Fluid Typography min and max screen range
+
+```--min-screensize: 100;```
+
+```--max-screensize: 1200;```
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-## We need to create proper box-themes.
-
-Instead of hacking button-styles together on the button element, why not use:
-
-```<button class="box--primary-button">Primary</button>```
-
-In oder to do this we can:
-
-a. put all needed variables in the css-root and reference them in the class like:
-
-```css
-:root {
-  --background-1: ...
-  --background-theme-1-color: ...
-  --background-theme-1-background-color: ...
-}
-.box--primary-button {
-  --background: var(--background-1);
-  --color: (--background-theme-1-color);
-  --background-color: (--background-theme-1-background-color);
-}
-```
-
-b. Or just generate the proper box with all variables without creating the root elements:
-
-```
-.box--primary-button {
-  --background: url('...');
-  --color: #FF0000;
-  --background-color: black;
-}
-```
-
-We should use box--button-primary on buttons to design them.
 
 ## Included Dependencies
 
@@ -79,19 +57,43 @@ Color Convert Methods:
 
 * [X] ~~*[target: 2h; performance: 11.5h] Fine Tune CSS Styles // Import Prototype V4 and work with test boxes Vererbung!*~~ [2020-08-19]
 
+* [X] ~~*[target: 3h; performance: 3h] Implement UID from Structure UID Field*~~ [2020-08-19]
+    * [X] ~~*Color-Themes*~~ [2020-08-19]
+    * [X] ~~*Background-Themes*~~ [2020-08-19]
+    * [X] ~~*Border-Themes*~~ [2020-08-19]
+    * [X] ~~*Outline-Themes*~~ [2020-08-19]
+    * [X] ~~*Box-Shadow-Themes*~~ [2020-08-19]
+    * [ ] Text-Shadow-Themes
+
+* [X] ~~*[target: 1h] Implement missing box-variables in page-theming-21.html:*~~ [2020-08-24] 
+  * [X] ~~*outlines, etc...*~~ [2020-08-24]
+
+* [X] ~~*[target: 1h; performance: 4h] Implement page-theming-21.html into backend*~~ [2020-08-25]
+
+* [X] ~~*Set the classnames "box-theme-" and "boxes-theme-"-prefix in the config, because we will need them for our auf elements implementation*~~ [2020-08-25]
+
+* [X] ~~*[target: 0.5; performance: 1h] Implement hardcoded fluid-typography.html --> css*~~ [2020-08-25]
+
+* [X] ~~*[target: 2h; performance: 1.5h] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>*~~ [2020-08-25]
+
+* [X] ~~*Font-weight*~~ [2020-08-25]
+
+* [X] ~~*1h Font-style*~~ [2020-08-25]
+
+* [X] ~~*[target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now*~~ [2020-08-25]
+
+* [X] ~~*[target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>*~~ [2020-08-25]
+
+* [X] ~~*[performance: 1h] Type-Themes: Implement Font-Size-Themes to overwrite default styles and set custom css_selectors*~~ [2020-08-25]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
-* [ ] Implement new css theming defaults: page-themeing-10.html
-
-* [ ] [target: 3h;] Implement UID from Structure UID Field
-
-* [ ] Create Prototype for Site / Page / Box / Table / Button-Styles
-
-* [ ] [target: 0.5h; performance:] Implement Text-Shadow-Theme: Use custom-field for now
-
-* [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
+* [ ] Implement Box Helpers 
+  * [ ] .safe-text, .safe-texts
+  * [ ] .border-outset, .borders-outset
+  * [ ] .padding-outset, .paddings-outset
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -103,12 +105,11 @@ Color Convert Methods:
 
 * [ ] [target: 10m;] add --box-shadow-color to the color_themes
 
-
-* [ ] [target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
-
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P3
+
+* [ ] Create Testpage for Site / Page / Box / Table / Button-Styles
 
 * [ ] [target: 5h] Select Starting Theme individually per Page
 
@@ -133,3 +134,17 @@ As an editor i want a fast backend to concentrate on the content and be producti
 
 * [ ] [target: 1d] Google Fonts
 
+* [ ] implement box helper classes:
+  * [ ] .border-outset
+
+.outline {
+  outline-color: var(--outline-color);
+  outline-width: var(--outline-width);
+  outline-style: var(--outline-style);
+  outline-offset: var(--outline-offset);
+}
+*, my-outlins-selector {
+  --outline-width: 2px;
+  --outline-style: dashed;
+  --outline-offset: 2px;
+}

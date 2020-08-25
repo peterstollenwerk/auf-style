@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="site site--light" data-active-theme="site--light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Theming 17</title>
+  <style>
+
+/* TODOS
+
+  1. Implement Outline-Themes
+  2. Implement Border-Radius Themes
+  3. Move all hardcoded value to root variable
+  4. Implement Primary Color Theme with Variable Hue & Saturation
+
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-height: 100%;
+}
+* + *:not(body) {
+  --margin: 1rem;
+  margin-top: var(--margin);
+}
+:root {
+  
+  --site-padding: 1.618rem;
+  --site-border-width: 0px;
+  
+  --box-padding: 3.618rem;
+  --box-border-width: 0px;
+  
+  --button-padding: 0.618rem;
+  --button-border-width: 2px;
+  --button-border-style: solid;
+
+  --box-shadow-direct-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.site *,
+.box *,
+button *, .button *,
+input[type="text"] { 
+  /* Reset Backgrounds Text-Shadows and Box-Shadows */
+  --background: initial;
+  --text-shadow: initial;
+  --text-shadow-color: initial;
+  --box-shadow: initial;
+}
+.site,
+.box,
+button, .button,
+input[type="text"] 
+{
+  padding: var(--padding);
+  
+  color: var(--color, inherit);
+  background: var(--background);
+  background-color: var(--background-color);
+
+  border-color: var(--border-color, inherit);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+
+  text-shadow: var(--text-shadow, initial); /* Initial is needed to not show the text-shadow by default */
+  --text-shadow-color: rgba(0, 0, 0, 0.5);
+
+  box-shadow: var(--box-shadow);
+  --box-shadow-ambient-color: var(--background-color);
+  
+}
+
+.site {
+  --padding: var(--site-padding);
+}
+.box {
+  --padding: var(--box-padding);
+}
+.button, button {
+  --padding: var(--button-padding);
+  --border-width: var(--button-border-width);
+  --border-color: var(--button-border-color);
+  --border-style: var(--button-border-style);
+}
+input[type="text"] {
+  --padding: calc(var(--button-padding) + var(--button-border-width));
+  --color: black;
+  --background-color: white;
+  --border-width: 0;
+  --box-shadow-ambient-color: transparent;
+  --box-shadow:
+    inset 0 1px 4px 0 var(--box-shadow-ambient-color),
+    inset 0px 1px 4px 0 var(--box-shadow-direct-color);
+}
+
+/* Box - Exceptions  */
+
+.box--inverted {
+  color: var(--background-color);
+  background-color: var(--color);
+  border-color: var(--border-color, inherit);
+  --box-shadow-ambient-color: var(--color);
+}
+
+/* Button - Exceptions */
+
+.box--inverted  button, 
+.box--inverted .button {
+  color: var(--background-color);
+  background-color: var(--color);
+}
+ button.primary, 
+.button.primary {
+  color: var(--background-color);
+  background-color: var(--color);
+  border-color: var(--color);
+  box-shadow:
+   0px 1px 2px 0 var(--box-shadow-direct-color);
+}
+.box--inverted  button.primary,
+.box--inverted .button.primary {
+  color: var(--color);
+  background-color: var(--background-color);
+  border-color: var(--background-color);
+}
+ button.tertiary,
+.button.tertiary {
+  border-color: var(--background-color);
+}
+.box--inverted  button.tertiary
+.box--inverted .button.tertiary {
+  border-color: var(--color);
+}
+
+/* Default Theming which can be overridden by the backend */
+
+
+/* Overrides comes here... */
+
+.site {
+  --text-shadow: 
+    0   1px 5px red,
+    0  -1px 5px blue;
+  --background: repeating-linear-gradient(-45deg, 
+      transparent 0 20px, 
+      black 20px 40px);
+}
+.site--light {
+  --color: red;
+  --background-color: yellow;
+}
+.site--dark {
+  --color: yellow;
+  --background-color: grey;
+}
+.box {
+  --color: orange;
+  --background-color: purple;
+  --border-style: none;
+  --box-shadow: 
+    0 2px 12px 0 var(--box-shadow-ambient-color),
+    0 2px  6px 0 var(--box-shadow-direct-color);
+}
+.box--inverted {
+  --text-shadow-color: orange;
+}
+.site--dark .box {
+  --color: purple;
+  --background-color: red;
+}
+.site--dark .box {
+  --text-shadow-color: red;
+  --text-shadow: 
+    0 1px 0px orange, 0 2px 0px var(--text-shadow-color),
+    0 3px 0px orange, 0 4px 0px var(--text-shadow-color), 
+    0 5px 0px orange, 0 6px 0px var(--text-shadow-color);
+}
+.site--dark .box--inverted {
+  --text-shadow-color: purple;
+}
+.theme-toggle {
+  --color: blue;
+  --background: linear-gradient(blue, red);
+  --text-shadow-color: red;
+  --text-shadow: 
+    1px 1px 0px var(--text-shadow-color);
+  --box-shadow: 
+    3px 3px 12px green;
+}
+
+
+  </style>
+</head>
+<body>
+
+    <button class="theme-toggle">Toggle Theme</button>
+  
+    <section class="box">
+      <h2>Box</h2>
+      <p>The border-color is the text color by default!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
+      <form action="">
+        <input type="text">
+        <button class="primary">Submit</button>
+        <button class="secondary">Reset</button>
+        <button class="tertiary">Help</button>
+      </form>
+    </section>
+    <section>
+      <h2>No Box</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
+      <form action="">
+        <input type="text">
+        <button class="primary">Submit</button>
+        <button class="secondary">Reset</button>
+        <button class="tertiary">Help</button>
+      </form>
+    </section>
+    <section class="box box--inverted">
+      <h2>Box. Box--Inverted</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi omnis, in maiores similique eligendi, praesentium dolor ullam nesciunt illum culpa excepturi placeat dolorem quam alias optio rerum nobis accusamus.</p>
+      <form action="">
+        <input type="text">
+        <button class="primary">Submit</button>
+        <button class="secondary">Reset</button>
+        <button class="tertiary">Help</button>
+      </form>
+    </section>
+  </div>
+  
+  <script>
+    const themeToggleEl = document.getElementsByClassName('theme-toggle')[0];
+    const siteEl = document.getElementsByClassName('site')[0];
+    const setActiveTheme = function(value) {
+      siteEl.dataset.activeTheme = value;
+    }
+    const getActiveTheme = function() {
+      return siteEl.dataset.activeTheme;
+    }
+    themeToggleEl.addEventListener('click', function() {
+      const oldTheme = getActiveTheme();
+      let newTheme = '';
+      if (oldTheme === 'site--light') {
+        newTheme = 'site--dark';
+        siteEl.classList.remove(oldTheme);
+        setActiveTheme(newTheme);
+        siteEl.classList.add(newTheme);
+      } else {
+        newTheme = 'site--light';
+        siteEl.classList.remove(oldTheme);
+        setActiveTheme(newTheme);
+        siteEl.classList.add(newTheme);
+      }
+    });
+  </script>
+</body>
+</html>
