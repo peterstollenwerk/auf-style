@@ -130,3 +130,9 @@ p, .p {
 .font-size--static * {
   font-size: calc(var(--fontsize-factor) * 1rem);
 }
+
+.font-weight--normal  { font-weight: normal; }
+.font-weight--bold    { font-weight: bold; }
+
+.font-style--normal { font-style: normal; }
+.font-style--italic { font-style: italic; }

@@ -5,3 +5,10 @@ fields:
     extends: auf_style/blueprints/builder/tabs/style/box_theme
   font_size: 
     extends: auf_style/blueprints/builder/tabs/style/font_size
+    width: 1/3
+  font_weight: 
+    extends: auf_style/blueprints/builder/tabs/style/font_weight
+    width: 1/3
+  font_style: 
+    extends: auf_style/blueprints/builder/tabs/style/font_style
+    width: 1/3

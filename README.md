@@ -7,7 +7,7 @@
 ```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
 
 Open:
-``assets/css/auf-style-fluid-typography.css``
+``css/auf-style-fluid-typography.css``
 
 Adjust Sizes to your likeing:
 ```--size-7: 4.75;```
@@ -22,41 +22,6 @@ Set Fluid Typography min and max screen range
 ```--max-screensize: 1200;```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-## We need to create proper box-themes.
-
-Instead of hacking button-styles together on the button element, why not use:
-
-```<button class="box--primary-button">Primary</button>```
-
-In oder to do this we can:
-
-a. put all needed variables in the css-root and reference them in the class like:
-
-```css
-:root {
-  --background-1: ...
-  --background-theme-1-color: ...
-  --background-theme-1-background-color: ...
-}
-.box--primary-button {
-  --background: var(--background-1);
-  --color: (--background-theme-1-color);
-  --background-color: (--background-theme-1-background-color);
-}
-```
-
-b. Or just generate the proper box with all variables without creating the root elements:
-
-```
-.box--primary-button {
-  --background: url('...');
-  --color: #FF0000;
-  --background-color: black;
-}
-```
-
-We should use box--button-primary on buttons to design them.
 
 ## Included Dependencies
 
@@ -107,17 +72,18 @@ Color Convert Methods:
 
 * [X] ~~*Set the classnames "box-theme-" and "boxes-theme-"-prefix in the config, because we will need them for our auf elements implementation*~~ [2020-08-25]
 
+* [X] ~~*[target: 0.5; performance: 1h] Implement hardcoded fluid-typography.html --> css*~~ [2020-08-25]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
-* [ ] [target: 0.5] Implement hardcoded fluid-typography.html --> css
 
 * [ ] Implement Font-Size-Theme »...custom«
   
   * [ ] [target: 2h;] Implement hardcoded Font-Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
   * [ ] Font-weight
-  * [ ] Font-style
+  * [X] ~~*1h Font-style*~~ [2020-08-25]
 
 * [ ] [target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now
 
