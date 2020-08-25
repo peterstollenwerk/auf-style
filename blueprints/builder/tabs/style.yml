@@ -1,6 +1,11 @@
 label: Style
 # icon: Style
 fields:
+  style_settings:
+    label: Style Settings
+    type: auf_style_settings
+
+
   box_theme: 
     extends: auf_style/blueprints/builder/tabs/style/box_theme
   font_size: 

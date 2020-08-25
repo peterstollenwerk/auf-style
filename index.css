@@ -1,1 +1,6 @@
-/* optional scoped styles for the component */
+/* optional scoped styles for the component */.loading {
+  display: none;
+}
+*[data-loading="true"] .loading {
+  display: block;
+}

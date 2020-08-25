@@ -24,7 +24,8 @@ Kirby::plugin('auf/style', [
     'fields' => [
         'auf_style_background' => [
             // here we could define the backend logic for our field if needed
-        ]
+        ],
+        'auf_style_settings' => []
     ],
     'snippets' => [
         'auf-style/site-header' => __DIR__ . '/snippets/site-header.php',
