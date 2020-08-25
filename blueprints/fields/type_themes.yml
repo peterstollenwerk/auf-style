@@ -1,0 +1,50 @@
+type: structure
+label: Type Themes
+translate: false
+help: >
+  creates css-classes: <br>
+  <code>.type-theme--AUTOID { ... }</code>
+columns:
+  autoid:
+    width: 1/13
+  label:
+  font_size:
+  font_weight:
+  font_style:
+  custom_theme:
+  css_selector:
+    width: 1/10
+fields:
+
+  autoid:
+    type: autoid
+    translate: false 
+    width: 1/3
+  label:
+    type: text
+    label: Label
+    width: 1/3
+  css_selector:
+    type: text
+    label: CSS Selector
+    width: 1/3
+
+  theme_divider:
+    type: headline
+    label: Themes
+
+  font_size: 
+    extends: auf_style/blueprints/builder/tabs/style/font_size
+    width: 1/3
+  font_weight: 
+    extends: auf_style/blueprints/builder/tabs/style/font_weight
+    width: 1/3
+  font_style: 
+    extends: auf_style/blueprints/builder/tabs/style/font_style
+    width: 1/3
+
+  custom_theme:
+    type: textarea
+    label: Custom Theme
+    buttons: false
+  

@@ -46,6 +46,8 @@ Kirby::plugin('auf/style', [
         'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
         'auf-style/box-themes' => __DIR__ . '/snippets/box-themes.php',
         'auf-style/box-theme' => __DIR__ . '/snippets/box-theme.php',
+        'auf-style/type-themes' => __DIR__ . '/snippets/type-themes.php',
+        'auf-style/type-theme' => __DIR__ . '/snippets/type-theme.php',
         'auf-style/button-themes' => __DIR__ . '/snippets/button-themes.php',
         
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
@@ -58,6 +60,7 @@ Kirby::plugin('auf/style', [
     ],
     'blueprints' => [
         # SITE
+        'auf_style/blueprints/fields/type_themes' => __DIR__ . '/blueprints/fields/type_themes.yml',
         'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
         'auf_style/blueprints/fields/background_themes' => __DIR__ . '/blueprints/fields/background_themes.yml',
         'auf_style/blueprints/fields/border_themes' => __DIR__ . '/blueprints/fields/border_themes.yml',

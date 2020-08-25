@@ -2,6 +2,27 @@ Title: Auf-Style-Plugin
 
 ----
 
+Type-themes:
+
+- 
+  autoid: utjficgp
+  label: H1
+  css_selector: h1
+  font_size: font-size--7
+  font_weight: font-weight--normal
+  font_style: font-style--italic
+  custom_theme: 'border-left: 5px solid green;'
+- 
+  autoid: d9shovvo
+  label: h2
+  css_selector: h2
+  font_size: font-size--0
+  font_weight: font-weight--normal
+  font_style: font-style--italic
+  custom_theme: ""
+
+----
+
 Box-themes:
 
 - 

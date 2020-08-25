@@ -82,14 +82,15 @@ Color Convert Methods:
 
 * [X] ~~*[target: 0.5h] Implement Text-Shadow-Theme: Use custom-field for now*~~ [2020-08-25]
 
+* [X] ~~*[target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>*~~ [2020-08-25]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
+* [ ] Type-Themes: Implement Font-Size-Themes to overwrite default styles and set custom css_selectors
+
 * [ ] Implement Box Helpers .safe-text, etc.
-
-* [ ] Implement Font-Size-Themes to overwrite default styles
-
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -100,8 +101,6 @@ Color Convert Methods:
 * [ ] [target: 0.5h;] Separate Border-Radius-Theme! As a Designer I want to set a border-radius independently of the border style, to give even boxes without border a radius.
 
 * [ ] [target: 10m;] add --box-shadow-color to the color_themes
-
-* [ ] [target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -4,6 +4,7 @@
 
 <style>
 <?php 
+  snippet('auf-style/type-themes');
   snippet('auf-style/color-themes');
   snippet('auf-style/background-themes');
   snippet('auf-style/outline-themes');

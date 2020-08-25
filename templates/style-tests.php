@@ -19,6 +19,11 @@
 
 
 <section>
+  <h2 id="type-themes">Type-Themes</h2>
+  <?= snippet('auf-style/type-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
+</section>
+
+<section>
   <h2 id="button-themes">Button-Themes</h2>
   <?= snippet('auf-style/button-themes', ['wrapTag' => 'pre', 'preview' => true]); ?>
 </section>
