@@ -242,6 +242,9 @@ hr {
   --box-shadow-offset-y: 1px;
   --box-shadow-blur-radius: 3px;
   --box-shadow-spread-radius: 0;
+  /* 
+  --box-shadow-direct-color; 
+  */
 
   --box-shadow-ambient-offset-x: 0;
   --box-shadow-ambient-offset-y: 1px;
@@ -249,26 +252,38 @@ hr {
   --box-shadow-ambient-spread-radius: 0;
   --box-shadow-ambient-color: var(--background-color);
 
-  /* this is the background-color with new alpha value! */
-
   box-shadow: 
-    /* direct-shadow */ var(--box-shadow-offset-x)
-      var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
-      var(--box-shadow-spread-radius) var(--box-shadow-direct-color, black),
+    /* direct-shadow */ 
+    var(--box-shadow-offset-x)
+    var(--box-shadow-offset-y)
+    var(--box-shadow-blur-radius)
+    var(--box-shadow-spread-radius)
+    var(--box-shadow-direct-color, black),
 
-    /* ambient shadow */ var(--box-shadow-ambient-offset-x)
-      var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
-      var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+    /* ambient shadow */ 
+    var(--box-shadow-ambient-offset-x)
+    var(--box-shadow-ambient-offset-y)
+    var(--box-shadow-ambient-blur-radius)
+    var(--box-shadow-ambient-spread-radius)
+    var(--box-shadow-ambient-color);
 }
 .box-shadow--inset {
   box-shadow: 
-    /* direct-shadow */ inset var(--box-shadow-offset-x)
-      var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
-      var(--box-shadow-spread-radius) var(--box-shadow-direct-color, black),
+    /* direct-shadow */ 
+    inset 
+    var(--box-shadow-offset-x)
+    var(--box-shadow-offset-y) 
+    var(--box-shadow-blur-radius)
+    var(--box-shadow-spread-radius) 
+    var(--box-shadow-direct-color, black),
 
-    /* ambient shadow */ inset var(--box-shadow-ambient-offset-x)
-      var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
-      var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+    /* ambient shadow */ 
+    inset 
+    var(--box-shadow-ambient-offset-x)
+    var(--box-shadow-ambient-offset-y) 
+    var(--box-shadow-ambient-blur-radius)
+    var(--box-shadow-ambient-spread-radius) 
+    var(--box-shadow-ambient-color);
 }
 
 
@@ -308,26 +323,35 @@ hr {
 
  */
 
-:root {
+:root 
+{
   --theme-color-h: 25;
-  --theme-color-s: 0%;
+  --theme-color-s:  0%;
   --theme-color-l: 50%;
   --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
   --theme-color: hsl(var(--theme-color-h-s-l))
 }
-.site--light {
-  --color: hsl(var(--theme-color-h), var(--theme-color-s), 15%);
-  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 80%);
-  --background-color-2: hsl(var(--theme-color-h), var(--theme-color-s), 90%);
+.site--light 
+{
+  --color:                hsl(var(--theme-color-h), var(--theme-color-s), 15%);
+  --background-color:     hsl(var(--theme-color-h), var(--theme-color-s), 80%);
+  --background-color-2:   hsl(var(--theme-color-h), var(--theme-color-s), 90%);
   --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 95%);
-  --background: linear-gradient(var(--background-color-2), var(--background-color));
+  --background: linear-gradient(
+    var(--background-color-2), 
+    var(--background-color)
+  );
 }
-.site--dark {
-  --color: hsl(var(--theme-color-h), var(--theme-color-s), 85%);
-  --background-color: hsl(var(--theme-color-h), var(--theme-color-s), 10%);
-  --background-color-2: hsl(var(--theme-color-h), var(--theme-color-s), 20%);
+.site--dark 
+{
+  --color:                hsl(var(--theme-color-h), var(--theme-color-s), 85%);
+  --background-color:     hsl(var(--theme-color-h), var(--theme-color-s), 10%);
+  --background-color-2:   hsl(var(--theme-color-h), var(--theme-color-s), 20%);
   --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
-  --background: linear-gradient(var(--background-color-2), var(--background-color));
+  --background: linear-gradient(
+      var(--background-color-2), 
+      var(--background-color)
+  );
 }
 .boxes > *,
 .box {
@@ -335,19 +359,22 @@ hr {
   --background-color: var(--box-background-color);
 }
 .boxes > * .box,
-.box .box {
+.box .box 
+{
   --border-style: solid;
   --background-color: inherit;
 }
 
 
-.theme-toggle {
-  --color: hsl(var(--theme-color-h), 100%, 10%);
+.theme-toggle 
+{
+  --color:            hsl(var(--theme-color-h), 100%, 10%);
   --background-color: hsl(var(--theme-color-h), 100%, 50%);
-  --border-color: hsl(var(--theme-color-h), 100%, 50%);
+  --border-color:     hsl(var(--theme-color-h), 100%, 50%);
 }
 
-.box--muhammad {
+.box--muhammad 
+{
   --color: white;
   --background-color: black;
   --background: url('https://api.time.com/wp-content/uploads/2018/06/muhammad-ali-pardon.jpg') center center / cover repeat fixed;
