@@ -1,8 +1,8 @@
 {
-    "name": "peterstollenwerk/auf-kirby-plugin-template",
-    "description": "auf kirby plugin template",
-    "type": "kirby-plugin",
-    "license": "MIT",
+    "name": "peterstollenwerk/auf-style",
+    "description": "auf-style",
+    "type": "plugin",
+    "license": "",
     "authors": [
         {
             "name": "Peter Stollenwerk",
