@@ -7,19 +7,31 @@ Type-themes:
 - 
   autoid: utjficgp
   label: H1
-  css_selector: h1
+  css_selector: ""
   font_size: font-size--7
   font_weight: font-weight--normal
   font_style: font-style--italic
-  custom_theme: 'border-left: 5px solid green;'
+  custom_theme: |
+    border-left: 5px solid green;
+    padding-left: 1em;
 - 
   autoid: d9shovvo
   label: h2
-  css_selector: h2
+  css_selector: ""
   font_size: font-size--0
-  font_weight: font-weight--normal
+  font_weight: font-weight--bold
   font_style: font-style--italic
   custom_theme: ""
+- 
+  autoid: fcdq23hz
+  label: Empty
+  css_selector: ""
+  font_size: ""
+  font_weight: ""
+  font_style: ""
+  custom_theme: |
+    border-left: 4px solid red;
+    padding-left: 1em;
 
 ----
 
