@@ -1,6 +1,6 @@
 <?php snippet('auf-style/site-header'); ?>
 
-<h1>Theme</h1>
+<h1><?= $page->title() ?></h1>
 
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum dolores eum corporis soluta! Non quis rem quod blanditiis vel provident, magni dolorem at obcaecati eveniet! Optio animi aperiam voluptatibus ea.</p>
 
@@ -14,7 +14,6 @@
     <a class="button button--tertiary" href="https://aufdesign.de" target="_blank">a.button</a>
     <h4>.safe-text</h4>
     <p class="safe-text"> Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipisicing elit. Iure ad accusantium quis eligendi, perferendis molestias soluta neque quasi laudantium debitis dolores mollitia et voluptatibus modi velit beatae nulla cumque rerum!</p>
-    <h4>.safe-text--extra <small>.box-shadow--inset .border-radius</small></h4>
 </section>
 <section class="box">
   <h2>.box</h2>

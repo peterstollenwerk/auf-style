@@ -76,7 +76,7 @@ Kirby::plugin('auf/style', [
                     'template' => 'style-tests',
                     'model' => 'style-tests',
                     'content' => [
-                        'title' => 'Style Tests',
+                        'title' => 'Style: Tests',
                     ]
                 ]);
           }
@@ -89,7 +89,7 @@ Kirby::plugin('auf/style', [
                     'template' => 'style-boxes-preview',
                     'model' => 'style-boxes-preview',
                     'content' => [
-                        'title' => 'Style Boxes Preview',
+                        'title' => 'Style: Boxes Preview',
                     ]
                 ]);
           }
@@ -102,7 +102,7 @@ Kirby::plugin('auf/style', [
                     'template' => 'style-page-theme',
                     'model' => 'style-page-theme',
                     'content' => [
-                        'title' => 'Style Page Theme',
+                        'title' => 'Style: Page Theme',
                     ]
                 ]);
           }

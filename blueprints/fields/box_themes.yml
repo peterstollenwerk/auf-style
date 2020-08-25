@@ -3,15 +3,21 @@ label: Box Themes
 translate: false
 help: >
   creates css-classes: <br>
-  <code>.box-theme--UID: { 
+  <code>.box-theme--AUTOID, .boxes-theme--AUTOID { 
     /\* color-theme: \*/
-    --color: var(--color-UID); 
+    --color: ...; 
     ...
     /\* background-theme: \*/
-    --background: var(--background-UID);
+    --background: ...;
     ...  
     }
   </code>
+  <p>
+    you can overwrite the <code>.box</code> and <code>.box--inverted</code> default theme with the css-selector field.
+    <br>
+    put this theme/s first, or they override your other box-styles too!
+    <strong>Last theme wins.</strong>
+  </p>
 columns:
   autoid:
     width: 1/13

@@ -1,6 +1,6 @@
 <?php snippet('auf-style/site-header'); ?>
 
-<h1>Theme v21</h1>
+<h1><?= $page->title() ?></h1>
 
 <section>
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius ipsam pariatur corporis minima, nam nemo ducimus nostrum asperiores officia similique rerum, explicabo, accusantium aliquam dolore excepturi! Voluptatem quod dolor soluta!</p>

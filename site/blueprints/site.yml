@@ -24,11 +24,11 @@ tabs:
         type: info
         text: >
           
-          <a href="../style-page-theme" target="_blank">Style Page Theme</a>
+          <a href="../style-boxes-preview" target="_blank">Style: Box/es Theme/s</a>
           <br>
-          <a href="../style-tests" target="_blank">Style Tests</a>
+          <a href="../style-tests" target="_blank">Style: Tests</a>
           <br>
-          <a href="../style-boxes-preview" target="_blank">Style Boxes Preview</a>
+          <a href="../style-page-theme" target="_blank">Style: Page Theme</a>
 
       box_themes:
         extends: auf_style/blueprints/fields/box_themes
