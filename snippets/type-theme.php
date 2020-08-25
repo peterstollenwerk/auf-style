@@ -45,8 +45,6 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
   ];
 
 $customTheme = $typeTheme->custom_theme();
-
-
 ?>
 
 <?php if($preview): ?>

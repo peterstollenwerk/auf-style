@@ -84,11 +84,11 @@ Color Convert Methods:
 
 * [X] ~~*[target: 2h] Implement Sizes: <https://cdpn.io/stollenwerk/debug/MWyaNzZ/RBrOJXnGzEWM>*~~ [2020-08-25]
 
+* [X] ~~*[performance: 1h] Type-Themes: Implement Font-Size-Themes to overwrite default styles and set custom css_selectors*~~ [2020-08-25]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
-
-* [ ] Type-Themes: Implement Font-Size-Themes to overwrite default styles and set custom css_selectors
 
 * [ ] Implement Box Helpers .safe-text, etc.
 

@@ -5,6 +5,7 @@
 <nav>
   <h2>On this page</h2>
   <ol>
+    <li><a href="#type-themes">Type-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#button-themes">Button-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#color-themes">Color-Themes</a>  ↓ ↓ ↓</li>
     <li><a href="#background-themes">Background-Themes</a>  ↓ ↓ ↓</li>
