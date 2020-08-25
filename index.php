@@ -67,7 +67,9 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
         'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
         # BUILDER TABS FIELDS
-        'auf_style/builder/tabs/style/box_theme' => __DIR__ . '/blueprints/builder/tabs/style/box_theme.yml',
+        'auf_style/blueprints/builder/tabs/style' => __DIR__ . '/blueprints/builder/tabs/style.yml',
+        'auf_style/blueprints/builder/tabs/style/box_theme' => __DIR__ . '/blueprints/builder/tabs/style/box_theme.yml',
+        'auf_style/blueprints/builder/tabs/style/font_size' => __DIR__ . '/blueprints/builder/tabs/style/font_size.yml',
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',

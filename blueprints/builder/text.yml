@@ -12,9 +12,5 @@ tabs:
       text:
         label: Text
         type: textarea
-  style:
-    label: Style    
-    # icon: Style
-    fields:
-      box_theme: 
-        extends: auf_style/builder/tabs/style/box_theme
+  styles_tab:
+    extends: auf_style/blueprints/builder/tabs/style

@@ -7,7 +7,7 @@ html {
   min-height: 100%;
 }
 * + *:not(body) {
-  --margin: 1em;
+  --margin: 1.61rem;
   margin-top: var(--margin);
 }
 pre {

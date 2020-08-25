@@ -122,7 +122,7 @@ input[type="text"] {
 hr {
   --padding: 0;
   border: 0;
-  --border-width: calc(var(--size-2) * 1em);
+  --border-width: calc(var(--size-1) * 1em);
   --border-style: solid;
   --border-color: currentColor;
   border-top-width: var(--border-width);
