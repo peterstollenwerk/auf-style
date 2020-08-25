@@ -3,7 +3,8 @@ label: Outline Themes
 translate: false
 help: >
   creates css-variables: <br>
-  <code>--outline-UID: { --outline-width: 2px; --outline-style: solid; ... }</code>
+  <code>--outline-AUTOID { --outline-width: 2px; --outline-style: solid; ... }</code>
+  <p>you can overwrite the default focus style with the custom css-selector: <code>*:focus</code></p>
 columns:
   autoid:
     width: 1/13

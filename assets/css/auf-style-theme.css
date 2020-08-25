@@ -1,7 +1,8 @@
 :root {
   /* 
-    We leave the variables in the root,
-    to use them wherever needed. See for example:
+    Put all variables in the root,
+    to use them wherever needed. 
+    See for example:
     --input-padding: calc(var(--button-padding) + var(--button-border-width));
    */
 

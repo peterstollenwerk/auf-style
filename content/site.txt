@@ -32,16 +32,6 @@ Box-themes:
 Color-themes:
 
 - 
-  autoid: ozwzlnrx
-  label: Orange Box
-  css_selector: ""
-  color: '#1f1f1f'
-  background: '#ffae00'
-  border: null
-  outline: null
-  text_shadow: null
-  box_shadow_ambient: '#ffae00'
-- 
   autoid: zcindkmv
   label: Red Blue
   css_selector: ""
@@ -51,16 +41,6 @@ Color-themes:
   outline: '#ffea00'
   text_shadow: '#332832'
   box_shadow_ambient: '#fbff00'
-- 
-  autoid: hot4b5dj
-  label: ""
-  css_selector: ""
-  color: '#4a4a4a'
-  background: '#c1aeae'
-  border: '#b2b422'
-  outline: '#e9ed1d'
-  text_shadow: '#ff0000'
-  box_shadow_ambient: '#c1aeae'
 - 
   autoid: ia0a5vcj
   label: ""
@@ -474,7 +454,7 @@ Outline-themes:
   autoid: 1n90iti1
   label: Focus
   css_selector: '*:focus'
-  outline_width: 2px
+  outline_width: 12px
   outline_style: dashed
   outline_offset: 2px
 
