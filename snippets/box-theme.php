@@ -8,6 +8,7 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php 
 
   $autoidClass ='box-theme--' . $boxTheme->autoid();
+  $boxesClass ='boxes-theme--' . $boxTheme->autoid();
   $cssClasses = ['autoidClass' => $autoidClass];
   $cssSelector = $boxTheme->css_selector();
   if($cssSelector->isNotEmpty()) array_push($cssClasses, $cssSelector);
@@ -23,6 +24,25 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 ?>
 
 <?php if($preview): ?>
+  <section>
+    <h3>Boxes Test</h3>
+    <style> 
+    .boxes-preview-1 {
+      display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 1rem;
+    }
+    .boxes-preview-1 > * {
+      margin-top: initial;
+    }
+    </style>
+    <ol class="boxes <?= $boxesClass ?> boxes-preview-1">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ol>
+  </section>
+  <section>
+    <h3>Box Test</h3>
+  
   <article class="box <?= $autoidClass ?> border--outset">
     <h3>.<?= $cssClass ?></h3>
     <h2><?= $label ?></h2>
@@ -41,7 +61,9 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 <?php endif?>
 
 <?php if($renderCssClass): ?>
-  .<?= $cssClass ?> {
+  .<?= $cssClass ?>,
+  .<?= $boxesClass ?> > *
+  {
 <?php endif?>
     
 <?php /* START: COLOR THEME --------------------------*/ ?>
@@ -137,4 +159,5 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
 
 <?php if($preview): ?>
   </article>
+  </section>
 <?php endif?>

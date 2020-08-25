@@ -24,6 +24,7 @@
   <h2>.box.box--inverted</h2>
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In unde veritatis, laudantium deserunt fugiat earum nesciunt amet nulla aliquam eum soluta iusto minus, sunt dolorum iste, sed illum assumenda. Ipsam!</p>
 </section>
+
   
 <h2>Box-Themes</h2>
 

@@ -101,6 +101,7 @@ input[type="text"]
 }
 
 .button, button {
+  cursor: pointer;
   display: inline-block;
   text-decoration: none;
   --padding: var(--button-padding);
@@ -169,6 +170,11 @@ input[type="text"] {
 .boxes--inverted input[type="text"],
 .box--inverted   input[type="text"] {
   outline-color: var(--background-color);
+}
+
+.box,
+.boxes > li {
+  list-style-position: inside;
 }
 
 /* Helper Classes */
@@ -309,10 +315,12 @@ input[type="text"] {
   --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
   --background: linear-gradient(var(--background-color-2), var(--background-color));
 }
+.boxes > *,
 .box {
   --border-style: none;
   --background-color: var(--box-background-color);
 }
+.boxes > * .box,
 .box .box {
   --border-style: solid;
   --background-color: inherit;

@@ -11,5 +11,6 @@ html {
   margin-top: var(--margin);
 }
 pre {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
+

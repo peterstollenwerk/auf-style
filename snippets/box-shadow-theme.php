@@ -61,15 +61,22 @@
   
   <?php if($ambientSpreadRadius->isNotEmpty()): ?>--box-shadow-ambient-spread-radius: <?= $ambientSpreadRadius ?>;<?php endif?>
 
+  <?php /* if variables are missing they get filled by defaults from css */ ?>
 
   box-shadow: 
-  /* direct-shadow */ var(--box-shadow-offset-x)
-    var(--box-shadow-offset-y) var(--box-shadow-blur-radius)
-    var(--box-shadow-spread-radius) var(--box-shadow-direct-color),
+    /* direct-shadow */ 
+    var(--box-shadow-offset-x)
+    var(--box-shadow-offset-y) 
+    var(--box-shadow-blur-radius)
+    var(--box-shadow-spread-radius) 
+    var(--box-shadow-direct-color),
 
-  /* ambient shadow */ var(--box-shadow-ambient-offset-x)
-    var(--box-shadow-ambient-offset-y) var(--box-shadow-ambient-blur-radius)
-    var(--box-shadow-ambient-spread-radius) var(--box-shadow-ambient-color);
+    /* ambient shadow */ 
+    var(--box-shadow-ambient-offset-x)
+    var(--box-shadow-ambient-offset-y) 
+    var(--box-shadow-ambient-blur-radius)
+    var(--box-shadow-ambient-spread-radius) 
+    var(--box-shadow-ambient-color);
 
 
 <?php if($renderCssClass): ?>
