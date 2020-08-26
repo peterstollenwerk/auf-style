@@ -5,8 +5,96 @@ Title: AUF Style Plugin
 Builder:
 
 - 
+  type: section
+  builder:
+    - 
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      box_theme: box--inverted
+      type_theme: null
+      font_size: ""
+      font_style: ""
+      font_weight: ""
+      style_settings: null
+      box_theme_new: null
+      _key: text
+      _uid: text_1597675181451_366
+      box_theme_divider: null
+      style_settings_divider: null
+      style_settings_info: null
+    - 
+      type: section
+      builder:
+        - 
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          box_theme: ""
+          type_theme: null
+          font_size: ""
+          font_style: ""
+          font_weight: ""
+          style_settings: null
+          box_theme_new: null
+          _key: text
+          _uid: text_1597675265398_624
+          box_theme_divider: null
+          style_settings_divider: null
+          style_settings_info: null
+        - 
+          type: button
+          url: https://twitter.com
+          text: Twitter
+          box_theme: ""
+          type_theme: null
+          font_size: ""
+          font_style: ""
+          font_weight: ""
+          style_settings: null
+          box_theme_new: null
+          _key: link
+          _uid: link_1597675517822_547
+          box_theme_divider: null
+          style_settings_divider: null
+          style_settings_info: null
+      box_theme: 5saskxbq
+      type_theme: null
+      font_size: ""
+      font_style: ""
+      font_weight: ""
+      style_settings: null
+      box_theme_new: null
+      _key: container
+      _uid: container_1597675261436_366
+      box_theme_divider: null
+      style_settings_divider: null
+      style_settings_info: null
+    - 
+      text: Gute Nachrichten lesen wir selten.
+      box_theme: ""
+      type_theme: null
+      font_size: ""
+      font_style: ""
+      font_weight: ""
+      style_settings: null
+      box_theme_new: null
+      _key: text
+      _uid: text_1597676437013_3355
+      box_theme_divider: null
+      style_settings_divider: null
+      style_settings_info: null
+  box_theme: box--inverted
+  type_theme: null
+  font_size: ""
+  font_style: ""
+  font_weight: ""
+  style_settings: null
+  box_theme_new: null
+  _key: container
+  _uid: container_1597674807537_122
+  box_theme_divider: null
+  style_settings_divider: null
+  style_settings_info: null
+- 
   text: '[{"attrs":[],"content":"One Day I\u00b4m gonna be a master baby.","id":"_u59yb8sg5","type":"info"},{"attrs":[],"content":"Check","id":"_7uywmtvow","type":"ol"},{"attrs":{"indent":0},"content":"This","id":"_i4qmg50zc","type":"ol"},{"attrs":{"indent":0},"content":"Out","id":"_ol2i2oo38","type":"ol"},{"attrs":{"indent":0},"content":"","id":"_bjes21k7k","type":"hr"},{"attrs":[],"content":"<em>Whenever<\/em> <del>you<\/del> <strong>need<\/strong> <u>me<\/u>, \u2026 <code>asdfasdf asdffdsasdf<\/code> sdflk\u00f6lkadsf","id":"_6213i1rmt","type":"paragraph"},{"attrs":{"src":"https:\/\/www.youtube.com\/watch?v=85eyYV1fAbQ&t=10s","caption":"Nice Video for fans"},"content":"","id":"_vgb7i809b","type":"video"},{"attrs":{"columns":[{"id":"_rbrtldgju","label":""},{"id":"_71n4kk45r","label":""}],"rows":[["Yeah","Lets"],["Rock","That"],["?","Shit"]]},"content":"","id":"_vvinpfdma","type":"table"}]'
-  box_theme: 5saskxbq
+  box_theme: 47tvau07
   type_theme: ""
   font_size: ""
   font_style: ""
@@ -57,126 +145,6 @@ Builder:
   snippet_path: ""
   _key: link
   _uid: link_1597664093325_122
-  box_theme_divider: null
-  style_settings_divider: null
-  style_settings_info: null
-- 
-  type: section
-  builder:
-    - 
-      type: button
-      url: https://tickets.de
-      text: Tickets
-      box_theme: ""
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: link
-      _uid: link_1597674818191_511
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-    - 
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      box_theme: ""
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: text
-      _uid: text_1597675181451_366
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-    - 
-      type: section
-      builder:
-        - 
-          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          box_theme: ""
-          type_theme: null
-          font_size: ""
-          font_style: ""
-          font_weight: ""
-          style_settings: null
-          box_theme_new: null
-          _key: text
-          _uid: text_1597675265398_624
-          box_theme_divider: null
-          style_settings_divider: null
-          style_settings_info: null
-        - 
-          type: button
-          url: https://twitter.com
-          text: Twitter
-          box_theme: ""
-          type_theme: null
-          font_size: ""
-          font_style: ""
-          font_weight: ""
-          style_settings: null
-          box_theme_new: null
-          _key: link
-          _uid: link_1597675517822_547
-          box_theme_divider: null
-          style_settings_divider: null
-          style_settings_info: null
-        - 
-          type: button
-          url: https://tickets.de
-          text: Tickets
-          box_theme: ""
-          type_theme: null
-          font_size: ""
-          font_style: ""
-          font_weight: ""
-          style_settings: null
-          box_theme_new: null
-          _key: link
-          _uid: link_1597675538684_547
-          box_theme_divider: null
-          style_settings_divider: null
-          style_settings_info: null
-      box_theme: ""
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: container
-      _uid: container_1597675261436_366
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-    - 
-      text: Gute Nachrichten lesen wir selten.
-      box_theme: ""
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: text
-      _uid: text_1597676437013_3355
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-  box_theme: ""
-  type_theme: null
-  font_size: ""
-  font_style: ""
-  font_weight: ""
-  style_settings: null
-  box_theme_new: null
-  _key: container
-  _uid: container_1597674807537_122
   box_theme_divider: null
   style_settings_divider: null
   style_settings_info: null

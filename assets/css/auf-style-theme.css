@@ -366,7 +366,7 @@ hr {
 .box .box 
 {
   --border-style: solid;
-  /* --background-color: inherit; */
+  --background-color: inherit;
 }
 
 
