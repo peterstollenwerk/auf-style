@@ -68,7 +68,7 @@ export default {
       const site = await this.$api.site.get();
       const boxThemes = site.content.box_themes;
       const options = [];
-      boxThemes.push(this.boxThemeCustom);
+      // boxThemes.push(this.boxThemeCustom);
       boxThemes.forEach(boxTheme => {
         options.push({
           value: boxTheme.autoid, 

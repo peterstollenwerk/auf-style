@@ -8,6 +8,10 @@
         label: 'Box Theme',
         type: 'auf_style_box_theme'
       },
+      type_theme: {
+        label: 'Type Theme',
+        type: 'auf_style_type_theme',
+      },
       font_size: {
         label: 'Font Size',
         type: 'auf_style_font_size',

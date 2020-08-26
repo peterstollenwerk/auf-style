@@ -86,16 +86,20 @@ Color Convert Methods:
 
 * [X] ~~*[performance: 1h] Type-Themes: Implement Font-Size-Themes to overwrite default styles and set custom css_selectors*~~ [2020-08-25]
 
+* [X] ~~*Check if it´s possible to resize the font-size via >html style="--root-font-size: 12;"> Yes!*~~ [2020-08-26]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
-* Create Custom Style Settings Field
-  * [ ] Create BoxThemeField
-  * [ ] Implement Box-Theme-Field into StyleSettingsField and check performance
+* [X] ~~*Create Custom Style Settings Field*~~ [2020-08-26]
+  * [X] ~~*Create BoxThemeField*~~ [2020-08-26]
+  * [X] ~~*Implement Box-Theme-Field into StyleSettingsField and check performance*~~ [2020-08-26]
 
 * [ ] Inline Styles can and should be realized with Kirby Editor!
   * [ ] Test Kirby Editor functionality!
+
+* [ ] Make it impossible to remove style fields??: https://forum.getkirby.com/t/structure-field-disable-add-delete-row-only/14391/9
 
 
 * [ ] Implement Box Helpers 

@@ -8976,8 +8976,8 @@ var _default = {
               case 2:
                 site = _context.sent;
                 boxThemes = site.content.box_themes;
-                options = [];
-                boxThemes.push(_this.boxThemeCustom);
+                options = []; // boxThemes.push(this.boxThemeCustom);
+
                 boxThemes.forEach(function (boxTheme) {
                   options.push({
                     value: boxTheme.autoid,
@@ -8986,7 +8986,7 @@ var _default = {
                 });
                 _this.options = options;
 
-              case 8:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -9197,8 +9197,8 @@ var _default = {
               case 2:
                 site = _context.sent;
                 typeThemes = site.content.type_themes;
-                options = [];
-                typeThemes.push(_this.typeThemeCustom);
+                options = []; // typeThemes.push(this.typeThemeCustom);
+
                 typeThemes.forEach(function (typeTheme) {
                   options.push({
                     value: typeTheme.autoid,
@@ -9207,7 +9207,7 @@ var _default = {
                 });
                 _this.options = options;
 
-              case 8:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -9820,6 +9820,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   props: {
     help: String,
@@ -9878,6 +9882,10 @@ exports.default = _default;
             box_theme: {
               label: "Box Theme",
               type: "auf_style_box_theme"
+            },
+            type_theme: {
+              label: "Type Theme",
+              type: "auf_style_type_theme"
             },
             font_size: {
               label: "Font Size",
@@ -9997,7 +10005,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54149" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
