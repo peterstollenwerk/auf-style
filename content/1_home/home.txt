@@ -5,10 +5,10 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  text: '[{"attrs":[],"content":"Check","id":"_lm7ycz0en","type":"ol"},{"attrs":{"indent":0},"content":"This","id":"_i4qmg50zc","type":"ol"},{"attrs":{"indent":0},"content":"Out","id":"_ol2i2oo38","type":"ol"},{"attrs":{"indent":0},"content":"","id":"_bjes21k7k","type":"hr"},{"attrs":[],"content":"<em>Whenever<\/em> <del>you<\/del> <strong>need<\/strong> <u>me<\/u>, \u2026 <code>asdfasdf asdffdsasdf<\/code> sdflk\u00f6lkadsf","id":"_6213i1rmt","type":"paragraph"},{"attrs":{"src":"https:\/\/www.youtube.com\/watch?v=85eyYV1fAbQ&t=10s","caption":"Nice Video for fans"},"content":"","id":"_vgb7i809b","type":"video"}]'
-  box_theme: box--inverted
+  text: '[{"attrs":[],"content":"One Day I\u00b4m gonna be a master baby.","id":"_u59yb8sg5","type":"info"},{"attrs":[],"content":"Check","id":"_7uywmtvow","type":"ol"},{"attrs":{"indent":0},"content":"This","id":"_i4qmg50zc","type":"ol"},{"attrs":{"indent":0},"content":"Out","id":"_ol2i2oo38","type":"ol"},{"attrs":{"indent":0},"content":"","id":"_bjes21k7k","type":"hr"},{"attrs":[],"content":"<em>Whenever<\/em> <del>you<\/del> <strong>need<\/strong> <u>me<\/u>, \u2026 <code>asdfasdf asdffdsasdf<\/code> sdflk\u00f6lkadsf","id":"_6213i1rmt","type":"paragraph"},{"attrs":{"src":"https:\/\/www.youtube.com\/watch?v=85eyYV1fAbQ&t=10s","caption":"Nice Video for fans"},"content":"","id":"_vgb7i809b","type":"video"},{"attrs":{"columns":[{"id":"_rbrtldgju","label":""},{"id":"_71n4kk45r","label":""}],"rows":[["Yeah","Lets"],["Rock","That"],["?","Shit"]]},"content":"","id":"_vvinpfdma","type":"table"}]'
+  box_theme: ""
   type_theme: ""
-  font_size: font-size--1
+  font_size: ""
   font_style: ""
   font_weight: null
   style_settings: null

@@ -92,15 +92,15 @@ Color Convert Methods:
   * [X] ~~*Create BoxThemeField*~~ [2020-08-26]
   * [X] ~~*Implement Box-Theme-Field into StyleSettingsField and check performance*~~ [2020-08-26]
 
+* [X] ~~*Inline Styles can and should be realized with Kirby Editor!*~~ [2020-08-26]
+  * [X] ~~*Test Kirby Editor functionality!*~~ [2020-08-26]
+    * [X] ~~*Seems like the editor needs »pretty: false« setting in the yml config: https://github.com/TimOetting/kirby-builder/issues/132*~~ [2020-08-26]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
-* [ ] Inline Styles can and should be realized with Kirby Editor!
-  * [X] ~~*Test Kirby Editor functionality!*~~ [2020-08-26]
-    * [X] ~~*Seems like the editor needs »pretty: false« setting in the yml config: https://github.com/TimOetting/kirby-builder/issues/132*~~ [2020-08-26]
-
-
+* [ ] Maybe the Box-Themes shoudln´t be using variables!?
 
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts

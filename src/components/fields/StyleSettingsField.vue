@@ -9,7 +9,6 @@
         label: 'Box Theme',
         type: 'auf_style_box_theme',
         width: '1/2',
-        when: { is_box: true }
       },
       type_theme: {
         label: 'Type Theme',

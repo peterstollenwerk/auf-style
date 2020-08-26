@@ -9838,7 +9838,6 @@ exports.default = void 0;
 //
 //
 //
-//
 var _default = {
   props: {
     help: String,
@@ -9897,8 +9896,7 @@ exports.default = _default;
             box_theme: {
               label: "Box Theme",
               type: "auf_style_box_theme",
-              width: "1/2",
-              when: { is_box: true }
+              width: "1/2"
             },
             type_theme: {
               label: "Type Theme",

@@ -12,6 +12,8 @@ tabs:
       text:
         label: Text
         type: editor
+        disallowed: 
+          - image
         pretty: false
   styles_tab:
     extends: auf_style/blueprints/builder/tabs/style

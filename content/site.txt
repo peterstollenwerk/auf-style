@@ -26,6 +26,17 @@ Box-themes:
   text_shadow_theme: ciot9vfp
   box_shadow_theme: pr4o8za5
   custom_theme: 'border-left: 5px solid red;'
+- 
+  autoid: 5saskxbq
+  label: ""
+  css_selector: .info
+  color_theme: idhxhber
+  background_theme: ""
+  border_theme: 8ep0nu0b
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
 
 ----
 
@@ -92,6 +103,16 @@ Color-themes:
   outline: '#ff00ee'
   text_shadow: null
   box_shadow_ambient: null
+- 
+  autoid: idhxhber
+  label: Info
+  css_selector: ""
+  color: '#0d3640'
+  background: '#94eaff'
+  border: '#47daff'
+  outline: null
+  text_shadow: null
+  box_shadow_ambient: '#94eaff'
 
 ----
 
@@ -248,9 +269,9 @@ Border-themes:
   border_radius: ""
 - 
   autoid: kmhu1o2p
-  label: 2rem double r-4px
+  label: 12px double r-4px
   css_selector: ""
-  border_width: 2rem
+  border_width: 12px
   border_style: double
   border_radius: 4px
 - 
