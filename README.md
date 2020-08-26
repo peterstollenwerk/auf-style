@@ -100,6 +100,24 @@ Color Convert Methods:
 
 ### P1
 
+box_theme: 
+
+safe_text: NEEDED
+
+border_toggle:
+border_radius_toggle:
+text_shadow_toggle:
+
+oder 
+box_theme_custom: ...
+
+color_theme:
+background_theme:
+border_theme:
+outline_theme:
+box_shadow_theme:
+
+
 * [ ] Maybe the Box-Themes shoudln´t be using variables!?
 
 * [ ] Implement --inverted-color and --inverted-background-color

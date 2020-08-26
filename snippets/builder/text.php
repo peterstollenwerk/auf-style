@@ -3,11 +3,11 @@
 
   $text = $data->text()->kirbytextinline();
   
-  $type = $data->type();
-  $typeClass = ($type->isNotEmpty()) ? $type : '';
-
   $boxTheme = $data->box_theme();
   $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
+
+  $type = $data->type();
+  $typeClass = ($type->isNotEmpty()) ? $type : '';
   
   $typeTheme = $data->type_theme();
   $typeThemeClass = ($typeTheme->isNotEmpty()) ? 'type-theme--'. $typeTheme : '';

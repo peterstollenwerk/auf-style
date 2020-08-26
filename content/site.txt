@@ -74,6 +74,28 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: 649sx8rr
+  label: Big Button
+  css_selector: ""
+  color_theme: p8mk5urv
+  background_theme: ""
+  border_theme: 8vtoylcm
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: atkpxr4n
+  custom_theme: ""
+- 
+  autoid: gi6s7ug9
+  label: Black Hearts Pattern Medium
+  css_selector: ""
+  color_theme: ""
+  background_theme: yu0x055a
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
 
 ----
 
@@ -129,6 +151,16 @@ Color-themes:
   outline: null
   text_shadow: null
   box_shadow_ambient: '#94eaff'
+- 
+  autoid: p8mk5urv
+  label: Big Button
+  css_selector: ""
+  color: '#dedede'
+  background: '#303030'
+  border: '#000000'
+  outline: '#000000'
+  text_shadow: '#000000'
+  box_shadow_ambient: '#303030'
 
 ----
 
@@ -175,7 +207,7 @@ Background-themes:
       clip: ""
 - 
   autoid: t2cwte21
-  label: Black Hearts – Pattern (small)
+  label: 'Black Hearts – Pattern - Small'
   css_selector: ""
   background:
     - 
@@ -264,6 +296,29 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
+- 
+  autoid: yu0x055a
+  label: 'Black Hearts - Pattern - Medium'
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: Heart
+      custom: ""
+      image:
+        - np_heart_888700_000000.svg
+      gradient: [ ]
+      size: custom
+      size_x: 1rem
+      size_y: ""
+      position_x: center
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: repeat
+      attachment: ""
+      origin: ""
+      clip: ""
 
 ----
 
@@ -271,25 +326,11 @@ Border-themes:
 
 - 
   autoid: 8vtoylcm
-  label: 'Button '
+  label: 'button '
   css_selector: button, .button
-  border_width: 2px
+  border_width: 0.25em
   border_style: solid
   border_radius: ""
-- 
-  autoid: lg0ni6g5
-  label: 'border-style: none'
-  css_selector: ""
-  border_width: ""
-  border_style: none
-  border_radius: ""
-- 
-  autoid: kmhu1o2p
-  label: 12px double r-4px
-  css_selector: ""
-  border_width: 12px
-  border_style: double
-  border_radius: 4px
 - 
   autoid: 8ep0nu0b
   label: hr
