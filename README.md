@@ -88,19 +88,16 @@ Color Convert Methods:
 
 * [X] ~~*Check if it´s possible to resize the font-size via >html style="--root-font-size: 12;"> Yes!*~~ [2020-08-26]
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-### P1
-
 * [X] ~~*Create Custom Style Settings Field*~~ [2020-08-26]
   * [X] ~~*Create BoxThemeField*~~ [2020-08-26]
   * [X] ~~*Implement Box-Theme-Field into StyleSettingsField and check performance*~~ [2020-08-26]
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+### P1
+
 * [ ] Inline Styles can and should be realized with Kirby Editor!
   * [ ] Test Kirby Editor functionality!
-
-* [ ] Make it impossible to remove style fields??: https://forum.getkirby.com/t/structure-field-disable-add-delete-row-only/14391/9
-
 
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts
@@ -110,6 +107,8 @@ Color Convert Methods:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P2
+
+* [ ] Make it impossible to remove style fields??: https://forum.getkirby.com/t/structure-field-disable-add-delete-row-only/14391/9
 
 * [ ] [target: 1h;] Implement Link Field: https://getkirby.com/plugins/oblikstudio/link-field
 
