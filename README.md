@@ -102,6 +102,9 @@ Color Convert Methods:
 
 * [ ] Maybe the Box-Themes shoudln´t be using variables!?
 
+* [ ] Implement --inverted-color and --inverted-background-color
+
+
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts
   * [ ] .border-outset, .borders-outset

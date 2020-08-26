@@ -2,6 +2,27 @@ Title: Auf-Style-Plugin
 
 ----
 
+Type-themes:
+
+- 
+  autoid: utjficgp
+  label: H1
+  css_selector: h1
+  font_size: font-size--7
+  font_weight: ""
+  font_style: null
+  custom_theme: ""
+- 
+  autoid: d9shovvo
+  label: H2
+  css_selector: ""
+  font_size: font-size--6
+  font_weight: null
+  font_style: null
+  custom_theme: ""
+
+----
+
 Box-themes:
 
 - 
@@ -28,35 +49,14 @@ Box-themes:
   custom_theme: 'border-left: 5px solid red;'
 - 
   autoid: 5saskxbq
-  label: ""
-  css_selector: .info
+  label: Info Box
+  css_selector: ""
   color_theme: idhxhber
   background_theme: ""
   border_theme: 8ep0nu0b
   outline_theme: ""
   text_shadow_theme: ""
   box_shadow_theme: ""
-  custom_theme: ""
-
-----
-
-Type-themes:
-
-- 
-  autoid: utjficgp
-  label: H1
-  css_selector: h1
-  font_size: font-size--7
-  font_weight: ""
-  font_style: null
-  custom_theme: ""
-- 
-  autoid: d9shovvo
-  label: H2
-  css_selector: ""
-  font_size: font-size--6
-  font_weight: null
-  font_style: null
   custom_theme: ""
 
 ----
@@ -105,7 +105,7 @@ Color-themes:
   box_shadow_ambient: null
 - 
   autoid: idhxhber
-  label: Info
+  label: Info Box
   css_selector: ""
   color: '#0d3640'
   background: '#94eaff'
