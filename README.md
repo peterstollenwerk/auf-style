@@ -104,6 +104,10 @@ Color Convert Methods:
 
 * [ ] Implement --inverted-color and --inverted-background-color
 
+* [ ] Implement Icons for Template Switching
+
+* [ ] Implement Font-Size Component?
+
 
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts
