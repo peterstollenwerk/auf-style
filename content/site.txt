@@ -8,25 +8,16 @@ Type-themes:
   autoid: utjficgp
   label: H1
   css_selector: h1
-  font_size: font-size--7
-  font_weight: ""
-  font_style: ""
   custom_theme: ""
 - 
   autoid: d9shovvo
   label: H2
   css_selector: ""
-  font_size: font-size--1
-  font_weight: font-weight--normal
-  font_style: font-style--italic
   custom_theme: ""
 - 
   autoid: zd3292r8
   label: Empty
   css_selector: ""
-  font_size: ""
-  font_weight: ""
-  font_style: ""
   custom_theme: |
     border-left: 4px solid red;
     padding-left: 1em;
@@ -216,6 +207,32 @@ Background-themes:
       position_x: center
       position_x_custom: ""
       position_y: top
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+    - 
+      type: gradient
+      label: Blue Red 45deg
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: ""
+          gradient_color_stops: [ ]
+          linear_gradient_direction: ""
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
       position_y_custom: ""
       repeat: ""
       attachment: ""

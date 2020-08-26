@@ -1,5 +1,0 @@
-type: select
-label: Font-Weight
-options:
-  font-weight--bold: bold
-  font-weight--normal: normal (reset bold)
