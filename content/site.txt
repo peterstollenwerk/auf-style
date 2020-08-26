@@ -20,14 +20,6 @@ Type-themes:
   font_weight: null
   font_style: null
   custom_theme: ""
-- 
-  autoid: zd3292r8
-  label: Default with Red Border
-  css_selector: ""
-  font_size: ""
-  font_weight: null
-  font_style: null
-  custom_theme: 'border-left: 4px solid red;'
 
 ----
 
@@ -54,7 +46,7 @@ Box-themes:
   outline_theme: 1n90iti1
   text_shadow_theme: ciot9vfp
   box_shadow_theme: pr4o8za5
-  custom_theme: ""
+  custom_theme: 'border-left: 5px solid red;'
 
 ----
 

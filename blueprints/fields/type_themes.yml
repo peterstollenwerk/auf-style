@@ -36,14 +36,17 @@ fields:
   font_size:
     label: Font Size
     type: auf_style_font_size
+    width: 1/3
   
   font_weight:
     label: Font Weight
     type: auf_style_font_weight
+    width: 1/3
   
   font_style:
     label: Font Style
     type: auf_style_font_style
+    width: 1/3
 
   custom_theme:
     type: textarea

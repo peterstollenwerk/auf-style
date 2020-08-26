@@ -6,26 +6,31 @@
     <k-fieldset v-model="style_settings" @input="input" :fields="{
       box_theme: {
         label: 'Box Theme',
-        type: 'auf_style_box_theme'
+        type: 'auf_style_box_theme',
+        width: '1/2'
       },
       type_theme: {
         label: 'Type Theme',
         type: 'auf_style_type_theme',
+        width: '1/2'
       },
       font_size: {
         label: 'Font Size',
         type: 'auf_style_font_size',
-        width: '1/3'
+        width: '1/3',
+        when: { type_theme: 'custom' }
       },
       font_weight: {
         label: 'Font Weight',
         type: 'auf_style_font_weight',
-        width: '1/3'
+        width: '1/3',
+        when: { type_theme: 'custom' }
       },
       font_style: {
         label: 'Font Style',
         type: 'auf_style_font_style',
-        width: '1/3'
+        width: '1/3',
+        when: { type_theme: 'custom' }
       },
     }" />
 

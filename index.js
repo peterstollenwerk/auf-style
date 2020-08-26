@@ -9197,8 +9197,8 @@ var _default = {
               case 2:
                 site = _context.sent;
                 typeThemes = site.content.type_themes;
-                options = []; // typeThemes.push(this.typeThemeCustom);
-
+                options = [];
+                typeThemes.push(_this.typeThemeCustom);
                 typeThemes.forEach(function (typeTheme) {
                   options.push({
                     value: typeTheme.autoid,
@@ -9207,7 +9207,7 @@ var _default = {
                 });
                 _this.options = options;
 
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -9824,6 +9824,11 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   props: {
     help: String,
@@ -9881,26 +9886,31 @@ exports.default = _default;
           fields: {
             box_theme: {
               label: "Box Theme",
-              type: "auf_style_box_theme"
+              type: "auf_style_box_theme",
+              width: "1/2"
             },
             type_theme: {
               label: "Type Theme",
-              type: "auf_style_type_theme"
+              type: "auf_style_type_theme",
+              width: "1/2"
             },
             font_size: {
               label: "Font Size",
               type: "auf_style_font_size",
-              width: "1/3"
+              width: "1/3",
+              when: { type_theme: "custom" }
             },
             font_weight: {
               label: "Font Weight",
               type: "auf_style_font_weight",
-              width: "1/3"
+              width: "1/3",
+              when: { type_theme: "custom" }
             },
             font_style: {
               label: "Font Style",
               type: "auf_style_font_style",
-              width: "1/3"
+              width: "1/3",
+              when: { type_theme: "custom" }
             }
           }
         },

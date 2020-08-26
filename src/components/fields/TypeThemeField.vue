@@ -61,7 +61,7 @@ export default {
       const site = await this.$api.site.get();
       const typeThemes = site.content.type_themes;
       const options = [];
-      // typeThemes.push(this.typeThemeCustom);
+      typeThemes.push(this.typeThemeCustom);
       typeThemes.forEach(typeTheme => {
         options.push({
           value: typeTheme.autoid, 
