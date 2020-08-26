@@ -56,11 +56,8 @@
 .box *,
 button *, .button *,
 input[type="text"] { 
-  /* Reset Backgrounds Text-Shadows and Box-Shadows */
+  /* Reset Backgrounds of dark and light theme */
   --background: initial;
-  /* --border-color: initial; */
-  /* --text-shadow: initial; */
-  /* --box-shadow: initial; */
 }
 .site,
 .boxes > *,
@@ -75,14 +72,16 @@ hr
   background: var(--background);
   background-color: var(--background-color);
 
-  border-color: var(--border-color, inherit);
+  border-color: var(--border-color);
   border-width: var(--border-width);
   border-style: var(--border-style);
   border-radius: var(--border-radius);
 
-  text-shadow: var(--text-shadow);
+  /* text-shadow: var(--text-shadow); */
 
-  box-shadow: var(--box-shadow);
+  
+  /* box-shadow: var(--box-shadow); */
+  --box-shadow-ambient-color: var(--background-color, rgba(0,0,0,0.5));
 }
 
 .site {
@@ -358,18 +357,17 @@ hr {
   );
 }
 .boxes > *,
-.box {
+.box 
+{
   --border-style: none;
   --background-color: var(--box-background-color);
 }
-.boxes > * .box,
-.box .box 
+.boxes > * .box:not([class*="box-theme--"]),
+.box .box:not([class*="box-theme--"]) 
 {
   --border-style: solid;
   --background-color: inherit;
 }
-
-
 .theme-toggle 
 {
   --color:            hsl(var(--theme-color-h), 100%, 10%);
@@ -377,7 +375,7 @@ hr {
   --border-color:     hsl(var(--theme-color-h), 100%, 50%);
 }
 
-.box--muhammad 
+/* .box--muhammad 
 {
   --color: white;
   --background-color: black;
@@ -385,4 +383,4 @@ hr {
   --text-shadow: 0px 1px 3px black;
   --border-width: 1rem;
   --border-style: solid;
-}
+} */

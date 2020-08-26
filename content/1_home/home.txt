@@ -5,7 +5,7 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_4s0u29tqh","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
+  text: '[{"attrs":[],"content":"Title","id":"_4s0u29tqh","type":"h1"},{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
   box_theme: box
   type_theme: ""
   font_size: null
@@ -17,8 +17,22 @@ Builder:
   style_settings_divider: null
   style_settings_info: null
 - 
-  text: '[{"attrs":[],"content":"Die winzige Elefantenspitzmaus hat einen R\u00fcssel wie ein Elefant und ist mit diesen auch tats\u00e4chlich verwandt. N\u00e4here Verwandtschaft pflegt das kleine S\u00e4ugetier allerdings mit den R\u00fcsselspringern oder auch Sengis genannt. Entfernt verwandt ist sie mit Elefanten, Seek\u00fchen und Erdferkeln. Alle diese Arten geh\u00f6ren zu den sogenannten Afrotheria. Dieser Zweig von S\u00e4ugetieren hat sich in Afrika entwickelt, als der afrikanische Kontinent noch nicht mit Eurasien verbunden war. Die Afrotheria entwickelten so eine Reihe ganz unterschiedlicher K\u00f6rperbaupl\u00e4ne, damit die vorhandenen Bedingungen optimal ausgenutzt werden konnten.&nbsp;Die Somali-Elefantenspitzmaus hat jahrzehntelang in der felsigen und trockenen Landschaft von Ostafrika \u00fcberlebt. Die Tiere leben monogam und bleiben in ihrem recht kleinen Revier. In Dschibuti, wo diese Art zu Hause ist, gibt es offenbar eine gesunde Population der verschwunden geglaubten Tiere.&nbsp;","id":"_8pipgiqf4","type":"paragraph"},{"attrs":[],"content":"Cool","id":"_xs0jc7yui","type":"ol"},{"attrs":{"indent":0},"content":"Mega","id":"_52csxqj73","type":"ol"},{"attrs":{"indent":0},"content":"Great","id":"_ixzixzeig","type":"ol"}]'
+  text: |
+    - YOYOYO
+    - NONONO
   box_theme: null
+  type_theme: null
+  font_size: null
+  font_style: null
+  font_weight: null
+  style_settings: null
+  _key: text
+  _uid: text_1598484053902_274
+  style_settings_divider: null
+  style_settings_info: null
+- 
+  text: '[{"attrs":[],"content":"Cool","id":"_xs0jc7yui","type":"ol"},{"attrs":{"indent":0},"content":"Mega","id":"_52csxqj73","type":"ol"},{"attrs":{"indent":0},"content":"Great","id":"_ixzixzeig","type":"ol"},{"attrs":[],"content":"Die winzige Elefantenspitzmaus hat einen R\u00fcssel wie ein Elefant und ist mit diesen auch tats\u00e4chlich verwandt. N\u00e4here Verwandtschaft pflegt das kleine S\u00e4ugetier allerdings mit den R\u00fcsselspringern oder auch Sengis genannt. Entfernt verwandt ist sie mit Elefanten, Seek\u00fchen und Erdferkeln. Alle diese Arten geh\u00f6ren zu den sogenannten Afrotheria. Dieser Zweig von S\u00e4ugetieren hat sich in Afrika entwickelt, als der afrikanische Kontinent noch nicht mit Eurasien verbunden war. Die Afrotheria entwickelten so eine Reihe ganz unterschiedlicher K\u00f6rperbaupl\u00e4ne, damit die vorhandenen Bedingungen optimal ausgenutzt werden konnten.&nbsp;Die Somali-Elefantenspitzmaus hat jahrzehntelang in der felsigen und trockenen Landschaft von Ostafrika \u00fcberlebt. Die Tiere leben monogam und bleiben in ihrem recht kleinen Revier. In Dschibuti, wo diese Art zu Hause ist, gibt es offenbar eine gesunde Population der verschwunden geglaubten Tiere.&nbsp;","id":"_8pipgiqf4","type":"paragraph"}]'
+  box_theme: box
   type_theme: null
   font_size: null
   font_style: null
@@ -106,5 +120,56 @@ Builder:
   style_settings: null
   _key: container
   _uid: container_1598477341949_140
+  style_settings_divider: null
+  style_settings_info: null
+- 
+  type: div
+  builder:
+    - 
+      type: div
+      builder:
+        - 
+          type: div
+          builder:
+            - 
+              text: '# Wow'
+              box_theme: box
+              type_theme: null
+              font_size: null
+              font_style: null
+              font_weight: null
+              style_settings: null
+              _key: text
+              _uid: text_1598483590818_1707
+              style_settings_divider: null
+              style_settings_info: null
+          box_theme: null
+          type_theme: null
+          font_size: null
+          font_style: null
+          font_weight: null
+          style_settings: null
+          _key: container
+          _uid: container_1598483585516_1649
+          style_settings_divider: null
+          style_settings_info: null
+      box_theme: box
+      type_theme: null
+      font_size: null
+      font_style: null
+      font_weight: null
+      style_settings: null
+      _key: container
+      _uid: container_1598483576140_1396
+      style_settings_divider: null
+      style_settings_info: null
+  box_theme: box
+  type_theme: null
+  font_size: null
+  font_style: null
+  font_weight: null
+  style_settings: null
+  _key: container
+  _uid: container_1598483421268_274
   style_settings_divider: null
   style_settings_info: null

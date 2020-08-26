@@ -31,11 +31,11 @@
 <?php if($renderCssClass): ?>
   .<?= $cssClass ?> {
 <?php endif?>
-    <?php if($width->isNotEmpty()): ?>--outline-width: <?= $width ?>;<?php endif?>
+    <?php if($width->isNotEmpty()): ?>outline-width: <?= $width ?>;<?php endif?>
 
-    <?php if($style->isNotEmpty()): ?>--outline-style: <?= $style?>;<?php endif?>
+    <?php if($style->isNotEmpty()): ?>outline-style: <?= $style?>;<?php endif?>
 
-    <?php if($offset->isNotEmpty()): ?>--outline-offset: <?= $offset ?>;<?php endif?>
+    <?php if($offset->isNotEmpty()): ?>outline-offset: <?= $offset ?>;<?php endif?>
 
 <?php if($renderCssClass): ?>
 }

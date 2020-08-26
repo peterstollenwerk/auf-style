@@ -54,12 +54,14 @@
 <?php endif?>
     
   <?php if($backgroundColor->isNotEmpty()): ?>--background-color: <?= $backgroundColor ?>;<?php endif?>
+  
+  <?php if($backgroundColor->isNotEmpty()): ?>background-color: <?= $backgroundColor ?>;<?php endif?>
 
-  <?php if($color->isNotEmpty()): ?>--color: <?= $color ?>;<?php endif?>
+  <?php if($color->isNotEmpty()): ?>color: <?= $color ?>;<?php endif?>
     
-  <?php if($borderColor->isNotEmpty()): ?>--border-color: <?= $borderColor ?>;<?php endif?>
+  <?php if($borderColor->isNotEmpty()): ?>border-color: <?= $borderColor ?>;<?php endif?>
     
-  <?php if($outlineColor->isNotEmpty()): ?>--outline-color: <?= $outlineColor ?>;<?php endif?>
+  <?php if($outlineColor->isNotEmpty()): ?>outline-color: <?= $outlineColor ?>;<?php endif?>
     
   <?php if($textShadowColor->isNotEmpty()): ?>--text-shadow-color: <?= $textShadowColor ?>;<?php endif?>
     
