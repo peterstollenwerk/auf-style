@@ -23,8 +23,10 @@ Kirby::plugin('auf/style', [
     ],
     'fields' => [
         'auf_style_box_theme' => [
-            // here we could define the backend logic for our field if needed
+            // here we could define the backend logic for our field if needed like:
+            // 'props' => []
         ],
+        'auf_style_type_theme' => [],
         'auf_style_font_size' => [],
         'auf_style_font_style' => [],
         'auf_style_font_weight' => [],

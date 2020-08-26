@@ -8,19 +8,26 @@ Type-themes:
   autoid: utjficgp
   label: H1
   css_selector: h1
+  font_size: font-size--7
+  font_weight: font-weight--bold
+  font_style: null
   custom_theme: ""
 - 
   autoid: d9shovvo
   label: H2
   css_selector: ""
+  font_size: font-size--6
+  font_weight: null
+  font_style: null
   custom_theme: ""
 - 
   autoid: zd3292r8
-  label: Empty
+  label: Default with Red Border
   css_selector: ""
-  custom_theme: |
-    border-left: 4px solid red;
-    padding-left: 1em;
+  font_size: ""
+  font_weight: null
+  font_style: null
+  custom_theme: 'border-left: 4px solid red;'
 
 ----
 
@@ -42,7 +49,7 @@ Box-themes:
   label: WTF
   css_selector: ""
   color_theme: 9n5rbn98
-  background_theme: i506ropu
+  background_theme: 0mhv8ty0
   border_theme: ""
   outline_theme: 1n90iti1
   text_shadow_theme: ciot9vfp
@@ -99,6 +106,45 @@ Color-themes:
 Background-themes:
 
 - 
+  autoid: 0mhv8ty0
+  label: Blue Red Gradient
+  css_selector: ""
+  background:
+    - 
+      type: gradient
+      label: Blue Red Gradient
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: Blue Red Gradient
+          gradient_color_stops:
+            - 
+              color: '#3700ff'
+              start: ""
+              end: ""
+            - 
+              color: '#ff0000'
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: top
+          linear_gradient_direction_to_y: right
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
   autoid: t2cwte21
   label: Black Hearts – Pattern (small)
   css_selector: ""
@@ -118,7 +164,7 @@ Background-themes:
               start: ""
               end: ""
             - 
-              color: 'hsla(32, 100%, 50%, 0.75)'
+              color: '#ff9500'
               start: ""
               end: ""
           linear_gradient_direction: ""
@@ -171,284 +217,6 @@ Background-themes:
               end: ""
             - 
               color: orange
-              start: ""
-              end: ""
-          linear_gradient_direction: to
-          linear_gradient_direction_to_x: top
-          linear_gradient_direction_to_y: right
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-- 
-  autoid: c3rjh6po
-  label: Muhammad Superjumbo Cover
-  css_selector: ""
-  background:
-    - 
-      type: image
-      label: ""
-      custom: ""
-      image:
-        - 04ali-superjumbo.jpg
-      gradient: [ ]
-      size: cover
-      size_x: ""
-      size_y: ""
-      position_x: center
-      position_x_custom: ""
-      position_y: top
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-    - 
-      type: gradient
-      label: Blue Red 45deg
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_label: ""
-          gradient_color_stops: [ ]
-          linear_gradient_direction: ""
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-- 
-  autoid: 3nq51t77
-  label: Blue Diagonal Stripes on Orange Gradient
-  css_selector: ""
-  background:
-    - 
-      type: gradient
-      label: Stripes
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: repeating_linear_gradient
-          gradient_label: ""
-          gradient_color_stops:
-            - 
-              color: '#ffdd00'
-              start: 0px
-              end: 2px
-            - 
-              color: '#ff000000'
-              start: 2px
-              end: 10px
-          linear_gradient_direction: to
-          linear_gradient_direction_to_x: top
-          linear_gradient_direction_to_y: right
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-    - 
-      type: gradient
-      label: Yellow-Orange Gradient
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_label: ""
-          gradient_color_stops:
-            - 
-              color: orange
-              start: ""
-              end: ""
-            - 
-              color: yellow
-              start: ""
-              end: ""
-          linear_gradient_direction: deg
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: "345"
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-- 
-  autoid: i506ropu
-  label: Blue Red Transition
-  css_selector: ""
-  background:
-    - 
-      type: gradient
-      label: ""
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_label: ""
-          gradient_color_stops:
-            - 
-              color: '#ff0000'
-              start: ""
-              end: ""
-            - 
-              color: '#3700ff'
-              start: ""
-              end: ""
-          linear_gradient_direction: to
-          linear_gradient_direction_to_x: top
-          linear_gradient_direction_to_y: right
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: 50px
-      size_y: 100px
-      position_x: center
-      position_x_custom: ""
-      position_y: center
-      position_y_custom: ""
-      repeat: repeat
-      attachment: ""
-      origin: ""
-      clip: ""
-- 
-  autoid: c9uohbys
-  label: Pink Button Gradient
-  css_selector: ""
-  background:
-    - 
-      type: gradient
-      label: Pink Gradient
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_label: Pink Gradient
-          gradient_color_stops:
-            - 
-              color: '#ffc2f5'
-              start: ""
-              end: ""
-            - 
-              color: '#fb00ff00'
-              start: ""
-              end: ""
-          linear_gradient_direction: to
-          linear_gradient_direction_to_x: bottom
-          linear_gradient_direction_to_y: right
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-- 
-  autoid: y34wahnw
-  label: Page Gradient Light
-  css_selector: .page-theme--light
-  background:
-    - 
-      type: gradient
-      label: Page-Gradient
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_label: Grey to Grey
-          gradient_color_stops:
-            - 
-              color: '#f2f2f2'
-              start: ""
-              end: ""
-            - 
-              color: '#c9c9c9'
-              start: ""
-              end: ""
-          linear_gradient_direction: ""
-          linear_gradient_direction_to_x: ""
-          linear_gradient_direction_to_y: ""
-          linear_gradient_direction_deg: ""
-          linear_gradient_direction_turn: ""
-      size: ""
-      size_x: ""
-      size_y: ""
-      position_x: ""
-      position_x_custom: ""
-      position_y: ""
-      position_y_custom: ""
-      repeat: ""
-      attachment: ""
-      origin: ""
-      clip: ""
-- 
-  autoid: c2clwkab
-  label: Site Dark
-  css_selector: .site--dark
-  background:
-    - 
-      type: gradient
-      label: ""
-      custom: ""
-      image: [ ]
-      gradient:
-        - 
-          gradient_type: linear_gradient
-          gradient_label: ""
-          gradient_color_stops:
-            - 
-              color: '#1d1b1b'
-              start: ""
-              end: ""
-            - 
-              color: '#a85e0b'
               start: ""
               end: ""
           linear_gradient_direction: to

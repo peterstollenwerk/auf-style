@@ -65,7 +65,7 @@ $customTheme = $typeTheme->custom_theme();
 
   <?php if($fontWeight): ?>font-weight: <?= $fontWeightMap[$fontWeight] ?>;<?php endif?>
 
-  <?php if($fontWeight): ?>font-style: <?= $fontStyleMap[$fontStyle] ?>;<?php endif?>
+  <?php if($fontStyle): ?>font-style: <?= $fontStyleMap[$fontStyle] ?>;<?php endif?>
   
   <?php if($customTheme->isNotEmpty()): ?><?= $customTheme ?><?php endif?>
 

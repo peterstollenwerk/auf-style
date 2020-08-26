@@ -8884,7 +8884,430 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-},{}],"components/fields/FontSizeField.vue":[function(require,module,exports) {
+},{}],"components/fields/BoxThemeField.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    value: String,
+    label: String,
+    help: String,
+    // disabled: Boolean,
+    after: String,
+    before: String,
+    required: Boolean
+  },
+  data: function data() {
+    return {
+      selected: this.value,
+      boxThemeCustom: {
+        autoid: "custom",
+        label: "Custom..."
+      },
+      options: []
+    };
+  },
+  computed: {
+    isLoading: function isLoading() {
+      return this.$store.state.isLoading;
+    },
+    disabled: function disabled() {
+      return this.isLoading;
+    }
+  },
+  created: function created() {
+    this.load();
+  },
+  methods: {
+    setOptions: function setOptions() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var site, boxThemes, options;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.$api.site.get();
+
+              case 2:
+                site = _context.sent;
+                boxThemes = site.content.box_themes;
+                options = [];
+                boxThemes.push(_this.boxThemeCustom);
+                boxThemes.forEach(function (boxTheme) {
+                  options.push({
+                    value: boxTheme.autoid,
+                    text: boxTheme.label
+                  });
+                });
+                _this.options = options;
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    load: function load() {
+      this.setOptions();
+    },
+    onChange: function onChange(value) {
+      this.$emit("input", value);
+    }
+  }
+};
+exports.default = _default;
+        var $2b02c4 = exports.default || module.exports;
+      
+      if (typeof $2b02c4 === 'function') {
+        $2b02c4 = $2b02c4.options;
+      }
+    
+        /* template */
+        Object.assign($2b02c4, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "span",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.isLoading,
+              expression: "isLoading"
+            }
+          ],
+          staticClass: "k-topbar-loader"
+        },
+        [
+          _c("svg", { attrs: { viewBox: "0 0 16 18" } }, [
+            _c("path", {
+              attrs: {
+                fill: "white",
+                d:
+                  "M8,0 L16,4.50265232 L16,13.5112142 L8,18.0138665 L0,13.5112142 L0,4.50265232 L8,0 Z M2.10648757,5.69852516 L2.10648757,12.3153414 L8,15.632396 L13.8935124,12.3153414 L13.8935124,5.69852516 L8,2.38147048 L2.10648757,5.69852516 Z"
+              }
+            })
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "k-field",
+        {
+          staticClass: "k-grid-field",
+          attrs: {
+            disabled: _vm.disabled,
+            help: _vm.help,
+            label: _vm.label,
+            required: _vm.required
+          }
+        },
+        [
+          _c("k-input", {
+            attrs: {
+              options: _vm.options,
+              name: "box_theme",
+              type: "select",
+              theme: "field"
+            },
+            on: { input: _vm.onChange },
+            model: {
+              value: _vm.value,
+              callback: function($$v) {
+                _vm.value = $$v
+              },
+              expression: "value"
+            }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$2b02c4', $2b02c4);
+          } else {
+            api.reload('$2b02c4', $2b02c4);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/TypeThemeField.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    value: String,
+    label: String,
+    help: String,
+    // disabled: Boolean,
+    after: String,
+    before: String,
+    required: Boolean
+  },
+  data: function data() {
+    return {
+      typeThemeCustom: {
+        autoid: "custom",
+        label: "Custom..."
+      },
+      options: []
+    };
+  },
+  computed: {
+    isLoading: function isLoading() {
+      return this.$store.state.isLoading;
+    },
+    disabled: function disabled() {
+      return this.isLoading;
+    }
+  },
+  created: function created() {
+    this.load();
+  },
+  methods: {
+    setOptions: function setOptions() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var site, typeThemes, options;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.$api.site.get();
+
+              case 2:
+                site = _context.sent;
+                typeThemes = site.content.type_themes;
+                options = [];
+                typeThemes.push(_this.typeThemeCustom);
+                typeThemes.forEach(function (typeTheme) {
+                  options.push({
+                    value: typeTheme.autoid,
+                    text: typeTheme.label
+                  });
+                });
+                _this.options = options;
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    load: function load() {
+      this.setOptions();
+    },
+    onChange: function onChange(value) {
+      this.$emit("input", value);
+    }
+  }
+};
+exports.default = _default;
+        var $06de21 = exports.default || module.exports;
+      
+      if (typeof $06de21 === 'function') {
+        $06de21 = $06de21.options;
+      }
+    
+        /* template */
+        Object.assign($06de21, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "k-field",
+        {
+          staticClass: "k-grid-field",
+          attrs: {
+            disabled: _vm.disabled,
+            help: _vm.help,
+            label: _vm.label,
+            required: _vm.required
+          }
+        },
+        [
+          _c("k-input", {
+            attrs: {
+              options: _vm.options,
+              name: "type_theme",
+              type: "select",
+              theme: "field"
+            },
+            on: { input: _vm.onChange },
+            model: {
+              value: _vm.value,
+              callback: function($$v) {
+                _vm.value = $$v
+              },
+              expression: "value"
+            }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$06de21', $06de21);
+          } else {
+            api.reload('$06de21', $06de21);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/FontSizeField.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9358,234 +9781,6 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/BoxThemeField.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  props: {
-    value: String,
-    label: String,
-    help: String,
-    // disabled: Boolean,
-    after: String,
-    before: String,
-    required: Boolean
-  },
-  data: function data() {
-    return {
-      selected: this.value,
-      boxThemeCustom: {
-        autoid: "custom",
-        label: "Custom..."
-      },
-      options: []
-    };
-  },
-  computed: {
-    isLoading: function isLoading() {
-      return this.$store.state.isLoading;
-    },
-    disabled: function disabled() {
-      return this.isLoading;
-    }
-  },
-  created: function created() {
-    this.load();
-  },
-  methods: {
-    setOptions: function setOptions() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-        var site, boxThemes, options;
-        return regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return _this.$api.site.get();
-
-              case 2:
-                site = _context.sent;
-                boxThemes = site.content.box_themes;
-                options = [];
-                boxThemes.push(_this.boxThemeCustom);
-                boxThemes.forEach(function (boxTheme) {
-                  options.push({
-                    value: boxTheme.autoid,
-                    text: boxTheme.label
-                  });
-                });
-                _this.options = options;
-
-              case 8:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    load: function load() {
-      this.setOptions();
-    },
-    onChange: function onChange(value) {
-      this.$emit("input", value);
-    }
-  }
-};
-exports.default = _default;
-        var $2b02c4 = exports.default || module.exports;
-      
-      if (typeof $2b02c4 === 'function') {
-        $2b02c4 = $2b02c4.options;
-      }
-    
-        /* template */
-        Object.assign($2b02c4, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "span",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.isLoading,
-              expression: "isLoading"
-            }
-          ],
-          staticClass: "k-topbar-loader"
-        },
-        [
-          _c("svg", { attrs: { viewBox: "0 0 16 18" } }, [
-            _c("path", {
-              attrs: {
-                fill: "white",
-                d:
-                  "M8,0 L16,4.50265232 L16,13.5112142 L8,18.0138665 L0,13.5112142 L0,4.50265232 L8,0 Z M2.10648757,5.69852516 L2.10648757,12.3153414 L8,15.632396 L13.8935124,12.3153414 L13.8935124,5.69852516 L8,2.38147048 L2.10648757,5.69852516 Z"
-              }
-            })
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "k-field",
-        {
-          staticClass: "k-grid-field",
-          attrs: {
-            disabled: _vm.disabled,
-            help: _vm.help,
-            label: _vm.label,
-            required: _vm.required
-          }
-        },
-        [
-          _c("k-input", {
-            attrs: {
-              options: _vm.options,
-              name: "box_theme",
-              type: "select",
-              theme: "field"
-            },
-            on: { input: _vm.onChange },
-            model: {
-              value: _vm.value,
-              callback: function($$v) {
-                _vm.value = $$v
-              },
-              expression: "value"
-            }
-          })
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$2b02c4', $2b02c4);
-          } else {
-            api.reload('$2b02c4', $2b02c4);
-          }
-        }
-
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
 },{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/StyleSettingsField.vue":[function(require,module,exports) {
 "use strict";
 
@@ -9593,6 +9788,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -9625,11 +9832,7 @@ var _default = {
   },
   data: function data() {
     return {
-      style_settings: {},
-      boxThemes: [{
-        value: 'custom...',
-        text: 'Custom...'
-      }]
+      style_settings: {}
     };
   },
   created: function created() {
@@ -9640,8 +9843,6 @@ var _default = {
       if (this.value) {
         this.style_settings = JSON.parse(this.value);
       }
-
-      this.getBoxThemes();
     },
     input: function input() {
       this.$emit("input", JSON.stringify(this.style_settings, function (key, value) {
@@ -9652,19 +9853,6 @@ var _default = {
 
         return value;
       }));
-    },
-    getBoxThemes: function getBoxThemes() {
-      var _this = this;
-
-      this.$api.site.get().then(function (res) {
-        var boxThemes = res.content.box_themes;
-        boxThemes.forEach(function (theme) {
-          _this.boxThemes.unshift({
-            value: theme.autoid,
-            text: theme.label
-          });
-        });
-      });
     }
   }
 };
@@ -9684,15 +9872,27 @@ exports.default = _default;
   return _c(
     "div",
     [
-      _c("p", { staticClass: "loading" }, [_vm._v("Loading...")]),
-      _vm._v(" "),
       _c("k-fieldset", {
         attrs: {
           fields: {
-            box_theme_2: {
-              label: "Box Theme 2",
-              type: "select",
-              options: _vm.boxThemes
+            box_theme: {
+              label: "Box Theme",
+              type: "auf_style_box_theme"
+            },
+            font_size: {
+              label: "Font Size",
+              type: "auf_style_font_size",
+              width: "1/3"
+            },
+            font_weight: {
+              label: "Font Weight",
+              type: "auf_style_font_weight",
+              width: "1/3"
+            },
+            font_style: {
+              label: "Font Style",
+              type: "auf_style_font_style",
+              width: "1/3"
             }
           }
         },
@@ -9745,13 +9945,15 @@ render._withStripped = true
 },{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
+var _BoxThemeField = _interopRequireDefault(require("./components/fields/BoxThemeField.vue"));
+
+var _TypeThemeField = _interopRequireDefault(require("./components/fields/TypeThemeField.vue"));
+
 var _FontSizeField = _interopRequireDefault(require("./components/fields/FontSizeField.vue"));
 
 var _FontStyleField = _interopRequireDefault(require("./components/fields/FontStyleField.vue"));
 
 var _FontWeightField = _interopRequireDefault(require("./components/fields/FontWeightField.vue"));
-
-var _BoxThemeField = _interopRequireDefault(require("./components/fields/BoxThemeField.vue"));
 
 var _StyleSettingsField = _interopRequireDefault(require("./components/fields/StyleSettingsField.vue"));
 
@@ -9759,14 +9961,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 panel.plugin('auf/style', {
   fields: {
+    auf_style_box_theme: _BoxThemeField.default,
+    auf_style_type_theme: _TypeThemeField.default,
     auf_style_font_size: _FontSizeField.default,
     auf_style_font_style: _FontStyleField.default,
     auf_style_font_weight: _FontWeightField.default,
-    auf_style_box_theme: _BoxThemeField.default,
     auf_style_settings: _StyleSettingsField.default
   }
 });
-},{"./components/fields/FontSizeField.vue":"components/fields/FontSizeField.vue","./components/fields/FontStyleField.vue":"components/fields/FontStyleField.vue","./components/fields/FontWeightField.vue":"components/fields/FontWeightField.vue","./components/fields/BoxThemeField.vue":"components/fields/BoxThemeField.vue","./components/fields/StyleSettingsField.vue":"components/fields/StyleSettingsField.vue"}],"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/fields/BoxThemeField.vue":"components/fields/BoxThemeField.vue","./components/fields/TypeThemeField.vue":"components/fields/TypeThemeField.vue","./components/fields/FontSizeField.vue":"components/fields/FontSizeField.vue","./components/fields/FontStyleField.vue":"components/fields/FontStyleField.vue","./components/fields/FontWeightField.vue":"components/fields/FontWeightField.vue","./components/fields/StyleSettingsField.vue":"components/fields/StyleSettingsField.vue"}],"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9794,7 +9997,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58016" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54149" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

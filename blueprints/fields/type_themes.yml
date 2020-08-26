@@ -33,15 +33,17 @@ fields:
     type: headline
     label: Themes
 
-  font_size: 
-    extends: auf_style/blueprints/builder/tabs/style/font_size
-    width: 1/3
-  font_weight: 
-    extends: auf_style/blueprints/builder/tabs/style/font_weight
-    width: 1/3
-  font_style: 
-    extends: auf_style/blueprints/builder/tabs/style/font_style
-    width: 1/3
+  font_size:
+    label: Font Size
+    type: auf_style_font_size
+  
+  font_weight:
+    label: Font Weight
+    type: auf_style_font_weight
+  
+  font_style:
+    label: Font Style
+    type: auf_style_font_style
 
   custom_theme:
     type: textarea

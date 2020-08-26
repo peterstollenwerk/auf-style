@@ -2,27 +2,26 @@ label: Style
 # icon: Style
 fields:
 
-  style_settings:
-    label: Style Settings
-    type: auf_style_settings
+  # style_settings:
+  #   label: Style Settings
+  #   type: auf_style_settings
 
-  # box_theme:
-  #   label: Box Theme
-  #   type: auf_style_box_theme
+  box_theme:
+    label: Box Theme
+    type: auf_style_box_theme
 
-  # font_size:
-  #   label: Font Size
-  #   type: auf_style_font_size
-  
-  # font_style:
-  #   label: Font Style
-  #   type: auf_style_font_style
-  
-  # font_weight:
-  #   label: Font Weight
-  #   type: auf_style_font_weight
+  type_theme:
+    label: Type Theme
+    type: auf_style_type_theme
 
-
+  font_size:
+    label: Font Size
+    type: auf_style_font_size
   
+  font_style:
+    label: Font Style
+    type: auf_style_font_style
   
-  
+  font_weight:
+    label: Font Weight
+    type: auf_style_font_weight

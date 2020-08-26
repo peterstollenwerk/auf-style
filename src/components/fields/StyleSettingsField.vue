@@ -3,13 +3,25 @@
   <div>
 
 
-    <p class="loading">Loading...</p>
-
     <k-fieldset v-model="style_settings" @input="input" :fields="{
-      box_theme_2: {
-        label: 'Box Theme 2',
-        type: 'select',
-        options: boxThemes,
+      box_theme: {
+        label: 'Box Theme',
+        type: 'auf_style_box_theme'
+      },
+      font_size: {
+        label: 'Font Size',
+        type: 'auf_style_font_size',
+        width: '1/3'
+      },
+      font_weight: {
+        label: 'Font Weight',
+        type: 'auf_style_font_weight',
+        width: '1/3'
+      },
+      font_style: {
+        label: 'Font Style',
+        type: 'auf_style_font_style',
+        width: '1/3'
       },
     }" />
 
@@ -32,9 +44,6 @@ export default {
   data() {
     return {
       style_settings: {},
-      boxThemes: [
-        {value: 'custom...', text: 'Custom...'},
-      ]
     }
   },
   created() {
@@ -45,7 +54,6 @@ export default {
       if(this.value) {
         this.style_settings = JSON.parse(this.value);
       }
-      this.getBoxThemes();
     },
     input() {
       this.$emit("input", JSON.stringify(this.style_settings, function(key, value){
@@ -54,28 +62,10 @@ export default {
         return value;
       }));
     },
-    getBoxThemes() {
-      this.$api.site.get()
-        .then(res => {
-          const boxThemes = res.content.box_themes;
-          boxThemes.forEach(theme => {
-            this.boxThemes.unshift({value: theme.autoid, text: theme.label});
-          });
-        });
-    },
   }
 }
 </script>
 
 <style>
-  .loading {
-    display: none;
-    padding: 1.618rem;
-    margin-bottom: 1.618em;
-    color: black;
-    background-color: orangered;
-  }
-  *[data-loading="true"] .loading {
-    display: block;
-  }
+  
 </style>
