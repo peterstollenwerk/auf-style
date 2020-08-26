@@ -49,7 +49,11 @@ export default {
       boxThemeCustom: { 
         autoid: "custom", 
         label: "Custom..."},
-      options: [],
+      options: [
+        { value: 'box', text: 'Box (default Theme)' },
+        { value: 'box--inverted', text: 'Box--Inverted (default Theme)' },
+        { value: 'box--not-existant', text: '--------' },
+      ],
     }
   },
   computed: {
@@ -70,12 +74,13 @@ export default {
       const options = [];
       // boxThemes.push(this.boxThemeCustom);
       boxThemes.forEach(boxTheme => {
-        options.push({
+        this.options.push({
           value: boxTheme.autoid, 
           text: boxTheme.label
         });
       });
-      this.options = options;
+
+      // this.options = options;
     },
     load() {
       this.setOptions();

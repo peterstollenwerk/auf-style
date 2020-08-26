@@ -8946,7 +8946,16 @@ var _default = {
         autoid: "custom",
         label: "Custom..."
       },
-      options: []
+      options: [{
+        value: 'box',
+        text: 'Box (default Theme)'
+      }, {
+        value: 'box--inverted',
+        text: 'Box--Inverted (default Theme)'
+      }, {
+        value: 'box--not-existant',
+        text: '--------'
+      }]
     };
   },
   computed: {
@@ -8979,14 +8988,13 @@ var _default = {
                 options = []; // boxThemes.push(this.boxThemeCustom);
 
                 boxThemes.forEach(function (boxTheme) {
-                  options.push({
+                  _this.options.push({
                     value: boxTheme.autoid,
                     text: boxTheme.label
                   });
-                });
-                _this.options = options;
+                }); // this.options = options;
 
-              case 7:
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -9829,6 +9837,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   props: {
     help: String,
@@ -9887,7 +9897,8 @@ exports.default = _default;
             box_theme: {
               label: "Box Theme",
               type: "auf_style_box_theme",
-              width: "1/2"
+              width: "1/2",
+              when: { is_box: true }
             },
             type_theme: {
               label: "Type Theme",
