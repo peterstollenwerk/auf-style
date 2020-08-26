@@ -253,6 +253,13 @@ Border-themes:
   border_width: 2rem
   border_style: double
   border_radius: 4px
+- 
+  autoid: 8ep0nu0b
+  label: hr
+  css_selector: hr
+  border_width: 4px
+  border_style: solid
+  border_radius: ""
 
 ----
 

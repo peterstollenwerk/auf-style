@@ -124,10 +124,14 @@ hr {
   border: 0;
   --border-width: calc(var(--size-1) * 1em);
   --border-style: solid;
-  --border-color: currentColor;
+  --border-color: var(--color);
   border-top-width: var(--border-width);
   border-top-style: var(--border-style);
   border-top-color: var(--border-color);
+}
+.boxes--inverted hr,
+.box--inverted hr {
+  --border-color: var(--background-color);
 }
 
 /* Box - Exceptions  */

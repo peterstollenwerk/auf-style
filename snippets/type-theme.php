@@ -57,6 +57,7 @@ $customTheme = $typeTheme->custom_theme();
 <?php endif?>
 
 <?php if($renderCssClass): ?>
+  .<?= $autoidClass ?> *,
   .<?= $cssClass ?>
   {
 <?php endif?>
