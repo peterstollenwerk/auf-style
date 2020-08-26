@@ -1,8 +1,8 @@
 name: Text # The name option is used as a label for the buttons to add new fieldsets. It is also used as a label in the header of the fieldset, if the label option is not set explicitly (see next line).
 label: 'Text: {{label}}'
-preview:
-  snippet: blocks/link
-  css: /assets/css/builder/link.css
+# preview:
+#   snippet: blocks/link
+#   css: /assets/css/builder/link.css
 defaultView: content
 tabs:
   content:

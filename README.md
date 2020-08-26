@@ -95,6 +95,9 @@ Color Convert Methods:
   * [ ] Implement Box-Theme-Field into StyleSettingsField and check performance
 
 
+* [ ] Inline Styles can and should be realized with Kirby Editor!
+
+
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts
   * [ ] .border-outset, .borders-outset

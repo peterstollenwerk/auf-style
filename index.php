@@ -25,7 +25,11 @@ Kirby::plugin('auf/style', [
         'auf_style_background' => [
             // here we could define the backend logic for our field if needed
         ],
-        'auf_style_settings' => []
+        'auf_style_box_theme' => [],
+        'auf_style_font_size' => [],
+        'auf_style_font_style' => [],
+        'auf_style_font_weight' => [],
+        'auf_style_settings' => [],
     ],
     'snippets' => [
         'auf-style/site-header' => __DIR__ . '/snippets/site-header.php',
@@ -50,8 +54,9 @@ Kirby::plugin('auf/style', [
         'auf-style/type-themes' => __DIR__ . '/snippets/type-themes.php',
         'auf-style/type-theme' => __DIR__ . '/snippets/type-theme.php',
         'auf-style/button-themes' => __DIR__ . '/snippets/button-themes.php',
-        
+        // Theme-Toggle
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
+        // CSSs
         'auf-style/style' => __DIR__ . '/snippets/style.php',
         // BUILDER SNIPPETS
         'auf-style/snippets/builder/container'        => __DIR__ . '/snippets/builder/container.php',
@@ -73,12 +78,8 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
         'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
         'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
-        # BUILDER TABS FIELDS
+        # BUILDER TABS
         'auf_style/blueprints/builder/tabs/style' => __DIR__ . '/blueprints/builder/tabs/style.yml',
-        'auf_style/blueprints/builder/tabs/style/box_theme' => __DIR__ . '/blueprints/builder/tabs/style/box_theme.yml',
-        'auf_style/blueprints/builder/tabs/style/font_size' => __DIR__ . '/blueprints/builder/tabs/style/font_size.yml',
-        'auf_style/blueprints/builder/tabs/style/font_weight' => __DIR__ . '/blueprints/builder/tabs/style/font_weight.yml',
-        'auf_style/blueprints/builder/tabs/style/font_style' => __DIR__ . '/blueprints/builder/tabs/style/font_style.yml',
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',

@@ -1,8 +1,8 @@
 name: Container
 label: 'Container: {{type}} (Theme: {{box_theme}})'
-preview:
-  snippet: blocks/container
-  css: /assets/css/builder/link.css
+# preview:
+#   snippet: blocks/container
+#   css: /assets/css/builder/link.css
 defaultView: content
 tabs:
   content:

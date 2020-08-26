@@ -9058,6 +9058,708 @@ render._withStripped = true
       
       }
     })();
+},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/BoxThemeField.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    value: String,
+    label: String,
+    help: String,
+    // disabled: Boolean,
+    after: String,
+    before: String,
+    required: Boolean
+  },
+  data: function data() {
+    return {
+      selected: this.value,
+      boxThemeCustom: {
+        autoid: "custom",
+        label: "Custom..."
+      },
+      options: []
+    };
+  },
+  computed: {
+    isLoading: function isLoading() {
+      return this.$store.state.isLoading;
+    },
+    disabled: function disabled() {
+      return this.isLoading;
+    }
+  },
+  created: function created() {
+    this.load();
+  },
+  methods: {
+    setOptions: function setOptions() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var site, boxThemes, options;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _this.$api.site.get();
+
+              case 2:
+                site = _context.sent;
+                boxThemes = site.content.box_themes;
+                options = [];
+                boxThemes.push(_this.boxThemeCustom);
+                boxThemes.forEach(function (boxTheme) {
+                  options.push({
+                    value: boxTheme.autoid,
+                    text: boxTheme.label
+                  });
+                });
+                _this.options = options;
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    load: function load() {
+      this.setOptions();
+    },
+    onChange: function onChange(value) {
+      this.$emit("input", value);
+    }
+  }
+};
+exports.default = _default;
+        var $2b02c4 = exports.default || module.exports;
+      
+      if (typeof $2b02c4 === 'function') {
+        $2b02c4 = $2b02c4.options;
+      }
+    
+        /* template */
+        Object.assign($2b02c4, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "span",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.isLoading,
+              expression: "isLoading"
+            }
+          ],
+          staticClass: "k-topbar-loader"
+        },
+        [
+          _c("svg", { attrs: { viewBox: "0 0 16 18" } }, [
+            _c("path", {
+              attrs: {
+                fill: "white",
+                d:
+                  "M8,0 L16,4.50265232 L16,13.5112142 L8,18.0138665 L0,13.5112142 L0,4.50265232 L8,0 Z M2.10648757,5.69852516 L2.10648757,12.3153414 L8,15.632396 L13.8935124,12.3153414 L13.8935124,5.69852516 L8,2.38147048 L2.10648757,5.69852516 Z"
+              }
+            })
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "k-field",
+        {
+          staticClass: "k-grid-field",
+          attrs: {
+            disabled: _vm.disabled,
+            help: _vm.help,
+            label: _vm.label,
+            required: _vm.required
+          }
+        },
+        [
+          _c("k-input", {
+            attrs: {
+              options: _vm.options,
+              name: "box_theme",
+              type: "select",
+              theme: "field"
+            },
+            on: { input: _vm.onChange },
+            model: {
+              value: _vm.value,
+              callback: function($$v) {
+                _vm.value = $$v
+              },
+              expression: "value"
+            }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$2b02c4', $2b02c4);
+          } else {
+            api.reload('$2b02c4', $2b02c4);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/FontSizeField.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    value: String,
+    label: String,
+    help: String,
+    // disabled: Boolean, // see computed!
+    after: String,
+    before: String,
+    required: Boolean
+  },
+  computed: {
+    isLoading: function isLoading() {
+      return this.$store.state.isLoading;
+    },
+    disabled: function disabled() {
+      return this.isLoading;
+    }
+  },
+  data: function data() {
+    return {
+      options: [{
+        value: 'font-size--7',
+        text: '  7 (h1)'
+      }, {
+        value: 'font-size--6',
+        text: '  6 (h2)'
+      }, {
+        value: 'font-size--5',
+        text: '  5 (h3)'
+      }, {
+        value: 'font-size--4',
+        text: '  4 (h4)'
+      }, {
+        value: 'font-size--3',
+        text: '  3 (h5)'
+      }, {
+        value: 'font-size--2',
+        text: '  2 (h6)'
+      }, {
+        value: 'font-size--1',
+        text: '  1 (text)'
+      }, {
+        value: 'font-size--0',
+        text: '  0 (small)'
+      }, {
+        value: 'font-size---1',
+        text: '-1 (x-small) ☝︎ use positive values above to ensure readability!'
+      }, {
+        value: 'font-size---2',
+        text: '-2 (xx-small) ☝︎ ☝︎ '
+      }, {
+        value: 'font-size---3',
+        text: '-3 (xxx-small) ☝︎ ☝︎ ☝︎ '
+      }, {
+        value: 'font-size---4',
+        text: '-4 (too-small!) ☝︎ ☝︎ ☝︎ ☝︎ '
+      }]
+    };
+  },
+  created: function created() {
+    this.load();
+  },
+  methods: {
+    load: function load() {},
+    onChange: function onChange(value) {
+      this.$emit("input", value);
+    }
+  }
+};
+exports.default = _default;
+        var $cfc6b6 = exports.default || module.exports;
+      
+      if (typeof $cfc6b6 === 'function') {
+        $cfc6b6 = $cfc6b6.options;
+      }
+    
+        /* template */
+        Object.assign($cfc6b6, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "k-field",
+    {
+      staticClass: "k-grid-field",
+      attrs: {
+        disabled: _vm.disabled,
+        help: _vm.help,
+        label: _vm.label,
+        required: _vm.required
+      }
+    },
+    [
+      _c("k-input", {
+        attrs: {
+          options: _vm.options,
+          name: "font_size",
+          type: "select",
+          theme: "field"
+        },
+        on: { input: _vm.onChange },
+        model: {
+          value: _vm.value,
+          callback: function($$v) {
+            _vm.value = $$v
+          },
+          expression: "value"
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$cfc6b6', $cfc6b6);
+          } else {
+            api.reload('$cfc6b6', $cfc6b6);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/FontStyleField.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    value: String,
+    label: String,
+    help: String,
+    // disabled: Boolean, // see computed!
+    after: String,
+    before: String,
+    required: Boolean
+  },
+  computed: {
+    isLoading: function isLoading() {
+      return this.$store.state.isLoading;
+    },
+    disabled: function disabled() {
+      return this.isLoading;
+    }
+  },
+  data: function data() {
+    return {
+      options: [{
+        value: 'font-style--italic',
+        text: 'italic'
+      }, {
+        value: 'font-style--normal',
+        text: 'normal (reset italic)'
+      }]
+    };
+  },
+  created: function created() {
+    this.load();
+  },
+  methods: {
+    load: function load() {},
+    onChange: function onChange(value) {
+      this.$emit("input", value);
+    }
+  }
+};
+exports.default = _default;
+        var $6f1851 = exports.default || module.exports;
+      
+      if (typeof $6f1851 === 'function') {
+        $6f1851 = $6f1851.options;
+      }
+    
+        /* template */
+        Object.assign($6f1851, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "k-field",
+    {
+      staticClass: "k-grid-field",
+      attrs: {
+        disabled: _vm.disabled,
+        help: _vm.help,
+        label: _vm.label,
+        required: _vm.required
+      }
+    },
+    [
+      _c("k-input", {
+        attrs: {
+          options: _vm.options,
+          name: "font_style",
+          type: "select",
+          theme: "field"
+        },
+        on: { input: _vm.onChange },
+        model: {
+          value: _vm.value,
+          callback: function($$v) {
+            _vm.value = $$v
+          },
+          expression: "value"
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$6f1851', $6f1851);
+          } else {
+            api.reload('$6f1851', $6f1851);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/FontWeightField.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    value: String,
+    label: String,
+    help: String,
+    // disabled: Boolean, // see computed!
+    after: String,
+    before: String,
+    required: Boolean
+  },
+  computed: {
+    isLoading: function isLoading() {
+      return this.$store.state.isLoading;
+    },
+    disabled: function disabled() {
+      return this.isLoading;
+    }
+  },
+  data: function data() {
+    return {
+      options: [{
+        value: 'font-weight--bold',
+        text: 'bold'
+      }, {
+        value: 'font-weight--normal',
+        text: 'normal (reset bold)'
+      }]
+    };
+  },
+  created: function created() {
+    this.load();
+  },
+  methods: {
+    load: function load() {},
+    onChange: function onChange(value) {
+      this.$emit("input", value);
+    }
+  }
+};
+exports.default = _default;
+        var $a03468 = exports.default || module.exports;
+      
+      if (typeof $a03468 === 'function') {
+        $a03468 = $a03468.options;
+      }
+    
+        /* template */
+        Object.assign($a03468, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "k-field",
+    {
+      staticClass: "k-grid-field",
+      attrs: {
+        disabled: _vm.disabled,
+        help: _vm.help,
+        label: _vm.label,
+        required: _vm.required
+      }
+    },
+    [
+      _c("k-input", {
+        attrs: {
+          options: _vm.options,
+          name: "font_weight",
+          type: "select",
+          theme: "field"
+        },
+        on: { input: _vm.onChange },
+        model: {
+          value: _vm.value,
+          callback: function($$v) {
+            _vm.value = $$v
+          },
+          expression: "value"
+        }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$a03468', $a03468);
+          } else {
+            api.reload('$a03468', $a03468);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
 },{"_css_loader":"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.runtime.esm.js"}],"components/fields/StyleSettingsField.vue":[function(require,module,exports) {
 "use strict";
 
@@ -9219,6 +9921,14 @@ render._withStripped = true
 
 var _BackgroundField = _interopRequireDefault(require("./components/fields/BackgroundField.vue"));
 
+var _BoxThemeField = _interopRequireDefault(require("./components/fields/BoxThemeField.vue"));
+
+var _FontSizeField = _interopRequireDefault(require("./components/fields/FontSizeField.vue"));
+
+var _FontStyleField = _interopRequireDefault(require("./components/fields/FontStyleField.vue"));
+
+var _FontWeightField = _interopRequireDefault(require("./components/fields/FontWeightField.vue"));
+
 var _StyleSettingsField = _interopRequireDefault(require("./components/fields/StyleSettingsField.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -9226,10 +9936,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 panel.plugin('auf/style', {
   fields: {
     auf_style_background: _BackgroundField.default,
+    auf_style_box_theme: _BoxThemeField.default,
+    auf_style_font_size: _FontSizeField.default,
+    auf_style_font_style: _FontStyleField.default,
+    auf_style_font_weight: _FontWeightField.default,
     auf_style_settings: _StyleSettingsField.default
   }
 });
-},{"./components/fields/BackgroundField.vue":"components/fields/BackgroundField.vue","./components/fields/StyleSettingsField.vue":"components/fields/StyleSettingsField.vue"}],"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/fields/BackgroundField.vue":"components/fields/BackgroundField.vue","./components/fields/BoxThemeField.vue":"components/fields/BoxThemeField.vue","./components/fields/FontSizeField.vue":"components/fields/FontSizeField.vue","./components/fields/FontStyleField.vue":"components/fields/FontStyleField.vue","./components/fields/FontWeightField.vue":"components/fields/FontWeightField.vue","./components/fields/StyleSettingsField.vue":"components/fields/StyleSettingsField.vue"}],"../../../../../../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9257,7 +9971,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60421" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58016" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
