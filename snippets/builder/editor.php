@@ -1,26 +1,15 @@
 <?php
-  $text = $data->text()->blocks();
+
+  use auf\Style;
+
+  $blocks = $data->text()->blocks();
   
   $type = $data->type();
   $typeClass = ($type->isNotEmpty()) ? $type : '';
   
   $boxTheme = $data->box_theme();
-  $getBoxThemeClass = function() use ($boxTheme){
-    if($boxTheme->isEmpty()) {
-      return '';
-    }
-    elseif($boxTheme == 'box') {
-      return 'box';
-    }
-    elseif($boxTheme == 'box--inverted') {
-      return 'box box--inverted';
-    }
-    else {
-      return 'box box-theme--'. $boxTheme;
-    }
-  };
 
-  $boxThemeClass = $getBoxThemeClass();
+  $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
   
   $typeTheme = $data->type_theme();
   $typeThemeClass = ($typeTheme->isNotEmpty()) ? 'type-theme--'. $typeTheme : '';
@@ -45,6 +34,10 @@
   $cssClass = implode(' ', array_filter($cssClasses));
 ?>
 
+
 <div class="<?= $cssClass ?>">
-  <?= $text ?>
+<?php foreach($blocks as $block): ?>
+  <?php $block->attrs()->update(['class' => $cssClass]); ?>
+    <?= $block ?>
+  <?php endforeach?>
 </div>

@@ -5,6 +5,7 @@ fields:
     type: builder
     label: Builder
     fieldsets:
+      page_title: auf_style/blueprints/builder/page_title
       editor: auf_style/blueprints/builder/editor
       text: auf_style/blueprints/builder/text
       link: auf_style/blueprints/builder/link

@@ -1,29 +1,18 @@
 <?php
+
+  use auf\Style;
+
   $type = $data->type();
   $boxTheme = $data->box_theme();
-  $getBoxThemeClass = function() use ($boxTheme){
-    if($boxTheme->isEmpty()) {
-      return '';
-    }
-    elseif($boxTheme == 'box') {
-      return 'box';
-    }
-    elseif($boxTheme == 'box--inverted') {
-      return 'box box--inverted';
-    }
-    else {
-      return 'box box-theme--'. $boxTheme;
-    }
-  };
-
-  $boxThemeClass = $getBoxThemeClass();
+  $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
 
 ?>
 
-
 <?php if($type->isNotEmpty()): ?>
+
   <<?= $type ?> class="<?= $boxThemeClass ?>">
-<?php endif?>
+
+  <?php endif?>
 
 <?php foreach($data->builder()->toBuilderBlocks() as $block): ?>
 
@@ -36,7 +25,8 @@
 
 <?php endforeach?>
 
-
 <?php if($type->isNotEmpty()): ?>
+
   </<?= $type ?>>
+
 <?php endif?>

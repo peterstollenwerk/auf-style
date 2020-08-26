@@ -1,12 +1,14 @@
 <?php
+
   use auf\Style;
 
-  $text = $data->text()->kirbytextinline();
+  $blocks = $data->text()->blocks();
   
   $type = $data->type();
   $typeClass = ($type->isNotEmpty()) ? $type : '';
-
+  
   $boxTheme = $data->box_theme();
+
   $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
   
   $typeTheme = $data->type_theme();
@@ -32,6 +34,9 @@
   $cssClass = implode(' ', array_filter($cssClasses));
 ?>
 
-<p class="<?= $cssClass ?>">
-  <?= $text ?>
-</p>
+<header class="element--page-title <?= $cssClass ?>">
+  <?php foreach($blocks as $block): ?>
+    <?php $block->attrs()->update(['class' => $cssClass]); ?>
+    <?= $block ?>
+  <?php endforeach?>
+</header>

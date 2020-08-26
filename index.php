@@ -8,11 +8,6 @@ use Kirby\Cms\Page;
 
 @include_once __DIR__ . '/vendor/autoload.php'; # all classes set in composer.json > psr-4 are loaded here!
 
-load([
-    'auf\\plugin\\testclass' => 'lib/TestClass.php'
-], __DIR__);
-
-
 Kirby::plugin('auf/style', [
     
     'options' => [ // use the options in php like this: option('auf.style.boxTheme.boxCssClassPrefix')
@@ -32,6 +27,25 @@ Kirby::plugin('auf/style', [
         'auf_style_font_weight' => [],
         'auf_style_settings' => [],
     ],
+    'blueprints' => [
+        # SITE
+        'auf_style/blueprints/fields/type_themes' => __DIR__ . '/blueprints/fields/type_themes.yml',
+        'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
+        'auf_style/blueprints/fields/background_themes' => __DIR__ . '/blueprints/fields/background_themes.yml',
+        'auf_style/blueprints/fields/border_themes' => __DIR__ . '/blueprints/fields/border_themes.yml',
+        'auf_style/blueprints/fields/outline_themes' => __DIR__ . '/blueprints/fields/outline_themes.yml',
+        'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
+        'auf_style/blueprints/fields/text_shadow_themes' => __DIR__ . '/blueprints/fields/text_shadow_themes.yml',
+        'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
+        # BUILDER
+        'auf_style/blueprints/builder/page_title' => __DIR__ . '/blueprints/builder/page_title.yml',
+        'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
+        'auf_style/blueprints/builder/editor' => __DIR__ . '/blueprints/builder/editor.yml',
+        'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
+        'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
+        # BUILDER TABS
+        'auf_style/blueprints/builder/tabs/style' => __DIR__ . '/blueprints/builder/tabs/style.yml',
+    ],    
     'snippets' => [
         'auf-style/site-header' => __DIR__ . '/snippets/site-header.php',
         'auf-style/site-footer' => __DIR__ . '/snippets/site-footer.php',
@@ -60,29 +74,12 @@ Kirby::plugin('auf/style', [
         // CSSs
         'auf-style/style' => __DIR__ . '/snippets/style.php',
         // BUILDER SNIPPETS
-        'auf-style/snippets/builder/container'        => __DIR__ . '/snippets/builder/container.php',
-        'auf-style/snippets/builder/editor'        => __DIR__ . '/snippets/builder/editor.php',
+        'auf-style/snippets/builder/page_title'  => __DIR__ . '/snippets/builder/page-title.php',
+        'auf-style/snippets/builder/container'   => __DIR__ . '/snippets/builder/container.php',
+        'auf-style/snippets/builder/editor'      => __DIR__ . '/snippets/builder/editor.php',
         'auf-style/snippets/builder/text'        => __DIR__ . '/snippets/builder/text.php',
         'auf-style/snippets/builder/link'        => __DIR__ . '/snippets/builder/link.php',
         'auf-style/snippets/builder/link-button' => __DIR__ . '/snippets/builder/link-button.php',
-    ],
-    'blueprints' => [
-        # SITE
-        'auf_style/blueprints/fields/type_themes' => __DIR__ . '/blueprints/fields/type_themes.yml',
-        'auf_style/blueprints/fields/color_themes' => __DIR__ . '/blueprints/fields/color_themes.yml',
-        'auf_style/blueprints/fields/background_themes' => __DIR__ . '/blueprints/fields/background_themes.yml',
-        'auf_style/blueprints/fields/border_themes' => __DIR__ . '/blueprints/fields/border_themes.yml',
-        'auf_style/blueprints/fields/outline_themes' => __DIR__ . '/blueprints/fields/outline_themes.yml',
-        'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
-        'auf_style/blueprints/fields/text_shadow_themes' => __DIR__ . '/blueprints/fields/text_shadow_themes.yml',
-        'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
-        # BUILDER
-        'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
-        'auf_style/blueprints/builder/editor' => __DIR__ . '/blueprints/builder/editor.yml',
-        'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
-        'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
-        # BUILDER TABS
-        'auf_style/blueprints/builder/tabs/style' => __DIR__ . '/blueprints/builder/tabs/style.yml',
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',

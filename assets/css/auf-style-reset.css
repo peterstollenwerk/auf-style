@@ -18,3 +18,17 @@ li {
 pre {
   overflow-x: auto;
 }
+
+h1 + h2,
+h1 + h3,
+h2 + h1,
+h2 + h3,
+h3 + h1,
+h3 + h2
+{
+  margin-top: initial;
+}
+
+li + li {
+  margin-top: calc(var(--margin) / 2);
+}

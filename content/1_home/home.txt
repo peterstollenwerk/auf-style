@@ -5,146 +5,51 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  type: section
-  builder:
-    - 
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      box_theme: box--inverted
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: text
-      _uid: text_1597675181451_366
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-    - 
-      type: section
-      builder:
-        - 
-          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          box_theme: ""
-          type_theme: null
-          font_size: ""
-          font_style: ""
-          font_weight: ""
-          style_settings: null
-          box_theme_new: null
-          _key: text
-          _uid: text_1597675265398_624
-          box_theme_divider: null
-          style_settings_divider: null
-          style_settings_info: null
-        - 
-          type: button
-          url: https://twitter.com
-          text: Twitter
-          box_theme: ""
-          type_theme: null
-          font_size: ""
-          font_style: ""
-          font_weight: ""
-          style_settings: null
-          box_theme_new: null
-          _key: link
-          _uid: link_1597675517822_547
-          box_theme_divider: null
-          style_settings_divider: null
-          style_settings_info: null
-      box_theme: 5saskxbq
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: container
-      _uid: container_1597675261436_366
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-    - 
-      text: Gute Nachrichten lesen wir selten.
-      box_theme: ""
-      type_theme: null
-      font_size: ""
-      font_style: ""
-      font_weight: ""
-      style_settings: null
-      box_theme_new: null
-      _key: text
-      _uid: text_1597676437013_3355
-      box_theme_divider: null
-      style_settings_divider: null
-      style_settings_info: null
-  box_theme: box--inverted
-  type_theme: null
-  font_size: ""
-  font_style: ""
-  font_weight: ""
-  style_settings: null
-  box_theme_new: null
-  _key: container
-  _uid: container_1597674807537_122
-  box_theme_divider: null
-  style_settings_divider: null
-  style_settings_info: null
-- 
-  text: '[{"attrs":[],"content":"One Day I\u00b4m gonna be a master baby.","id":"_u59yb8sg5","type":"info"},{"attrs":[],"content":"Check","id":"_7uywmtvow","type":"ol"},{"attrs":{"indent":0},"content":"This","id":"_i4qmg50zc","type":"ol"},{"attrs":{"indent":0},"content":"Out","id":"_ol2i2oo38","type":"ol"},{"attrs":{"indent":0},"content":"","id":"_bjes21k7k","type":"hr"},{"attrs":[],"content":"<em>Whenever<\/em> <del>you<\/del> <strong>need<\/strong> <u>me<\/u>, \u2026 <code>asdfasdf asdffdsasdf<\/code> sdflk\u00f6lkadsf","id":"_6213i1rmt","type":"paragraph"},{"attrs":{"src":"https:\/\/www.youtube.com\/watch?v=85eyYV1fAbQ&t=10s","caption":"Nice Video for fans"},"content":"","id":"_vgb7i809b","type":"video"},{"attrs":{"columns":[{"id":"_rbrtldgju","label":""},{"id":"_71n4kk45r","label":""}],"rows":[["Yeah","Lets"],["Rock","That"],["?","Shit"]]},"content":"","id":"_vvinpfdma","type":"table"}]'
-  box_theme: 47tvau07
+  text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_4s0u29tqh","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
+  box_theme: box
   type_theme: ""
-  font_size: ""
-  font_style: ""
-  font_weight: null
-  style_settings: null
-  _key: editor
-  _uid: editor_1598452532801_140
-  style_settings_divider: null
-  style_settings_info: null
-- 
-  text: Hallo ich bin ein Text.
-  box_theme: 37vkqkdr
-  type_theme: utjficgp
   font_size: null
   font_style: null
   font_weight: null
-  style_settings: '{}'
-  _key: text
-  _uid: text_1598446410629_140
+  style_settings: null
+  _key: page_title
+  _uid: page_title_1598475296941_140
   style_settings_divider: null
   style_settings_info: null
 - 
-  type: button
-  url: https://facebook.com
-  text: Facebook
+  text: '[{"attrs":[],"content":"Die winzige Elefantenspitzmaus hat einen R\u00fcssel wie ein Elefant und ist mit diesen auch tats\u00e4chlich verwandt. N\u00e4here Verwandtschaft pflegt das kleine S\u00e4ugetier allerdings mit den R\u00fcsselspringern oder auch Sengis genannt. Entfernt verwandt ist sie mit Elefanten, Seek\u00fchen und Erdferkeln. Alle diese Arten geh\u00f6ren zu den sogenannten Afrotheria. Dieser Zweig von S\u00e4ugetieren hat sich in Afrika entwickelt, als der afrikanische Kontinent noch nicht mit Eurasien verbunden war. Die Afrotheria entwickelten so eine Reihe ganz unterschiedlicher K\u00f6rperbaupl\u00e4ne, damit die vorhandenen Bedingungen optimal ausgenutzt werden konnten.&nbsp;Die Somali-Elefantenspitzmaus hat jahrzehntelang in der felsigen und trockenen Landschaft von Ostafrika \u00fcberlebt. Die Tiere leben monogam und bleiben in ihrem recht kleinen Revier. In Dschibuti, wo diese Art zu Hause ist, gibt es offenbar eine gesunde Population der verschwunden geglaubten Tiere.&nbsp;","id":"_8pipgiqf4","type":"paragraph"},{"attrs":[],"content":"Cool","id":"_xs0jc7yui","type":"ol"},{"attrs":{"indent":0},"content":"Mega","id":"_52csxqj73","type":"ol"},{"attrs":{"indent":0},"content":"Great","id":"_ixzixzeig","type":"ol"}]'
   box_theme: null
   type_theme: null
   font_size: null
   font_style: null
   font_weight: null
-  style_settings: '{"box_theme":"47tvau07","font_size":"font-size---4","font_weight":"font-weight--normal","font_style":"font-style--normal"}'
-  _key: link
-  _uid: link_1597663626105_122
-  box_theme_divider: null
+  style_settings: null
+  _key: editor
+  _uid: editor_1598476578681_140
   style_settings_divider: null
   style_settings_info: null
 - 
-  type: button
-  url: https://twitter.com
-  text: Twitter
-  box_theme: ""
+  type: section
+  builder:
+    - 
+      text: '[{"attrs":[],"content":"Productions","id":"_fv3wur36h","type":"h2"}]'
+      box_theme: box
+      type_theme: null
+      font_size: null
+      font_style: null
+      font_weight: null
+      style_settings: null
+      _key: editor
+      _uid: editor_1598477351839_429
+      style_settings_divider: null
+      style_settings_info: null
+  box_theme: 47tvau07
   type_theme: null
-  font_size: ""
-  font_style: ""
-  font_weight: ""
+  font_size: null
+  font_style: null
+  font_weight: null
   style_settings: null
-  box_theme_new: null
-  snippet_path: ""
-  _key: link
-  _uid: link_1597664093325_122
-  box_theme_divider: null
+  _key: container
+  _uid: container_1598477341949_140
   style_settings_divider: null
   style_settings_info: null
