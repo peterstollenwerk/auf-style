@@ -10,6 +10,11 @@ html {
   --margin: 1.61rem;
   margin-top: var(--margin);
 }
+
+li {
+  list-style-position: inside;
+}
+
 pre {
   overflow-x: auto;
 }
