@@ -61,6 +61,7 @@ Kirby::plugin('auf/style', [
         'auf-style/style' => __DIR__ . '/snippets/style.php',
         // BUILDER SNIPPETS
         'auf-style/snippets/builder/container'        => __DIR__ . '/snippets/builder/container.php',
+        'auf-style/snippets/builder/editor'        => __DIR__ . '/snippets/builder/editor.php',
         'auf-style/snippets/builder/text'        => __DIR__ . '/snippets/builder/text.php',
         'auf-style/snippets/builder/link'        => __DIR__ . '/snippets/builder/link.php',
         'auf-style/snippets/builder/link-button' => __DIR__ . '/snippets/builder/link-button.php',
@@ -77,6 +78,7 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
         # BUILDER
         'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
+        'auf_style/blueprints/builder/editor' => __DIR__ . '/blueprints/builder/editor.yml',
         'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
         'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
         # BUILDER TABS

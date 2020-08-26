@@ -1,11 +1,10 @@
 <?php
-  $text = $data->text()->kirbytextinline();
+  $text = $data->text()->blocks();
   
   $type = $data->type();
   $typeClass = ($type->isNotEmpty()) ? $type : '';
   
   $boxTheme = $data->box_theme();
-
   $getBoxThemeClass = function() use ($boxTheme){
     if($boxTheme->isEmpty()) {
       return '';
@@ -20,6 +19,7 @@
       return 'box box-theme--'. $boxTheme;
     }
   };
+
   $boxThemeClass = $getBoxThemeClass();
   
   $typeTheme = $data->type_theme();
@@ -45,6 +45,6 @@
   $cssClass = implode(' ', array_filter($cssClasses));
 ?>
 
-<p class="<?= $cssClass ?>">
+<div class="<?= $cssClass ?>">
   <?= $text ?>
-</p>
+</div>

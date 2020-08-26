@@ -22,7 +22,8 @@
         "hananils/kirby-colors": "^1.1",
         "sylvainjule/previews": "^1.0",
         "timoetting/kirby-builder": "v2.0.15",
-        "bnomei/kirby3-autoid": "^2.7"
+        "bnomei/kirby3-autoid": "^2.7",
+        "getkirby/editor": "^1.0"
     },
     "require-dev": {
         "getkirby/cms": "^3.4.2",

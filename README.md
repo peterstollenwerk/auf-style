@@ -97,7 +97,10 @@ Color Convert Methods:
 ### P1
 
 * [ ] Inline Styles can and should be realized with Kirby Editor!
-  * [ ] Test Kirby Editor functionality!
+  * [X] ~~*Test Kirby Editor functionality!*~~ [2020-08-26]
+    * [X] ~~*Seems like the editor needs »pretty: false« setting in the yml config: https://github.com/TimOetting/kirby-builder/issues/132*~~ [2020-08-26]
+
+
 
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts

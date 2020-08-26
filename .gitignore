@@ -21,6 +21,7 @@ Icon
 /vendor
 /node_modules
 /.cache
+/site/plugins/editor
 /site/plugins/kirby-builder
 /site/plugins/kirby3-autoid
 /site/plugins/kirby-colors
