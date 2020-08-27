@@ -45,7 +45,6 @@ class Style {
 
   static function getBoxThemeClassByBoxTheme( Field $boxTheme ) : String 
   {
-  
     if($boxTheme->isEmpty()) { 
       return '';
     }
