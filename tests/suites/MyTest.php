@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace auf;
 
+
 use PHPUnit\Framework\TestCase;
 use auf\TestClass;
 
