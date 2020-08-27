@@ -11,6 +11,7 @@ Builder:
   font_size: null
   font_style: null
   font_weight: null
+  text_align: text-align--left
   style_settings: null
   _key: page_title
   _uid: page_title_1598475296941_140
@@ -18,14 +19,16 @@ Builder:
   style_settings_info: null
 - 
   text: |
-    - YOYOYO
-    - NONONO
-  box_theme: null
+    ## Lego verschenkt Steine mit Blindenschrift
+    
+    Der Spielzeughersteller Lego schenkt Schulen und ähnlichen Einrichtungen Bausteine, die mit der Blindenschrift Braille versehen sind; eine neue Art von Milchschokolade ist genauso gesund wie Bitterschokolade; und Forscher haben einen neuen Rekord in puncto Internetgeschwindigkeit erzielt. Das sind die Good News des Tages.
+  box_theme: gi6s7ug9
   type_theme: null
   font_size: null
   font_style: null
   font_weight: null
-  style_settings: null
+  text_align: text-align--center
+  style_settings: '{"box_theme":"box","type_theme":"ez2fexws","text_align":"text-align--center","font_size":"font-size--0","font_weight":"font-weight--bold","font_style":"font-style--italic"}'
   _key: text
   _uid: text_1598484053902_274
   style_settings_divider: null
@@ -37,6 +40,7 @@ Builder:
   font_size: null
   font_style: null
   font_weight: null
+  text_align: null
   style_settings: null
   _key: editor
   _uid: editor_1598476578681_140
@@ -52,6 +56,7 @@ Builder:
       font_size: null
       font_style: null
       font_weight: null
+      text_align: null
       style_settings: null
       _key: editor
       _uid: editor_1598477351839_429
@@ -67,6 +72,7 @@ Builder:
           font_size: null
           font_style: null
           font_weight: null
+          text_align: null
           style_settings: null
           _key: text
           _uid: text_1598477868422_3505
@@ -83,6 +89,7 @@ Builder:
           font_size: null
           font_style: null
           font_weight: null
+          text_align: null
           style_settings: null
           _key: text
           _uid: text_1598477885531_3505
@@ -97,6 +104,7 @@ Builder:
           font_size: font-size--4
           font_style: null
           font_weight: null
+          text_align: null
           style_settings: null
           _key: link
           _uid: link_1598478177253_1357
@@ -107,6 +115,7 @@ Builder:
       font_size: null
       font_style: null
       font_weight: null
+      text_align: null
       style_settings: null
       _key: container
       _uid: container_1598477857724_2567
@@ -117,6 +126,7 @@ Builder:
   font_size: null
   font_style: null
   font_weight: null
+  text_align: null
   style_settings: null
   _key: container
   _uid: container_1598477341949_140
@@ -138,6 +148,7 @@ Builder:
               font_size: null
               font_style: null
               font_weight: null
+              text_align: null
               style_settings: null
               _key: text
               _uid: text_1598483590818_1707
@@ -148,6 +159,7 @@ Builder:
           font_size: null
           font_style: null
           font_weight: null
+          text_align: null
           style_settings: null
           _key: container
           _uid: container_1598483585516_1649
@@ -158,6 +170,7 @@ Builder:
       font_size: null
       font_style: null
       font_weight: null
+      text_align: null
       style_settings: null
       _key: container
       _uid: container_1598483576140_1396
@@ -168,6 +181,7 @@ Builder:
   font_size: null
   font_style: null
   font_weight: null
+  text_align: null
   style_settings: null
   _key: container
   _uid: container_1598483421268_274

@@ -15,23 +15,25 @@
         type: 'auf_style_type_theme',
         width: '1/2'
       },
+      text_align: {
+        label: 'Text Align',
+        type: 'auf_style_text_align',
+        width: '1/4',
+      },
       font_size: {
         label: 'Font Size',
         type: 'auf_style_font_size',
-        width: '1/3',
-        when: { type_theme: 'custom' }
+        width: '1/4',
       },
       font_weight: {
         label: 'Font Weight',
         type: 'auf_style_font_weight',
-        width: '1/3',
-        when: { type_theme: 'custom' }
+        width: '1/4',
       },
       font_style: {
         label: 'Font Style',
         type: 'auf_style_font_style',
-        width: '1/3',
-        when: { type_theme: 'custom' }
+        width: '1/4',
       },
     }" />
 

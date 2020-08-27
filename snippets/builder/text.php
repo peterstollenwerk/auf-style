@@ -1,7 +1,14 @@
 <?php
   use auf\Style;
 
-  $text = $data->text()->kirbytextinline();
+  $text = $data->text()->kirbytext();
+
+
+// TODO: NEXT
+
+  echo $cssStyles = $data->style_settings();
+
+  // var_dump($cssStyles);
   
   $boxTheme = $data->box_theme();
   $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
@@ -18,6 +25,9 @@
   $fontWeight = $data->font_weight();
   $fontWeightClass = ($fontWeight->isNotEmpty()) ? $fontWeight : '';
   
+  $textAlign = $data->text_align();
+  $textAlignClass = ($textAlign->isNotEmpty()) ? $textAlign : '';
+  
   $fontStyle = $data->font_style();
   $fontStyleClass = ($fontStyle->isNotEmpty()) ? $fontStyle : '';
 
@@ -27,11 +37,12 @@
   array_push($cssClasses, $typeThemeClass);
   array_push($cssClasses, $fontSizeClass);
   array_push($cssClasses, $fontWeightClass);
-  array_push($cssClasses, $fontStyleClass);
+  array_push($cssClasses, $fontWeightClass);
+  array_push($cssClasses, $textAlignClass);
 
   $cssClass = implode(' ', array_filter($cssClasses));
 ?>
 
-<p class="<?= $cssClass ?>">
+<div class="<?= $cssClass ?>">
   <?= $text ?>
-</p>
+</div>

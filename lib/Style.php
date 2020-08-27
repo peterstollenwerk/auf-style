@@ -4,11 +4,15 @@ namespace auf;
 
 use Kirby\Cms\Field;
 
-class Style {
+class Style extends Field {
 
-  static $test = 'ASDF';
+  public function __toString(): string
+  {
+      return 'ASDFASDFASDF';
+      return $this->toString();
+  }
 
-  static function getBoxThemeClassByBoxTheme( Field $boxTheme ) {
+  static function getBoxThemeClassByBoxTheme( Field $boxTheme ) : String {
     if($boxTheme->isEmpty()) {
       return '';
     }

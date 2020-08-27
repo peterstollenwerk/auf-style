@@ -4,12 +4,12 @@
 # set them in the composer json
 # to make the classes work with php unit!
 
+use auf\Style;
 use Kirby\Cms\Page;
 
 @include_once __DIR__ . '/vendor/autoload.php'; # all classes set in composer.json > psr-4 are loaded here!
 
 Kirby::plugin('auf/style', [
-    
     'options' => [ // use the options in php like this: option('auf.style.boxTheme.boxCssClassPrefix')
         'boxTheme' => [
             'boxCssClassPrefix' => 'box-theme--',
@@ -25,6 +25,7 @@ Kirby::plugin('auf/style', [
         'auf_style_font_size' => [],
         'auf_style_font_style' => [],
         'auf_style_font_weight' => [],
+        'auf_style_text_align' => [],
         'auf_style_settings' => [],
     ],
     'blueprints' => [
@@ -37,13 +38,13 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
         'auf_style/blueprints/fields/text_shadow_themes' => __DIR__ . '/blueprints/fields/text_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
-        # BUILDER
+        # BUILDER Blocks
         'auf_style/blueprints/builder/page_title' => __DIR__ . '/blueprints/builder/page_title.yml',
         'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
         'auf_style/blueprints/builder/editor' => __DIR__ . '/blueprints/builder/editor.yml',
         'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
         'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
-        # BUILDER TABS
+        # BUILDER Tab
         'auf_style/blueprints/builder/tabs/style' => __DIR__ . '/blueprints/builder/tabs/style.yml',
     ],    
     'snippets' => [

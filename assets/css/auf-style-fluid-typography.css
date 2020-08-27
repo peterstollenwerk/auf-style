@@ -136,3 +136,8 @@ p, .p {
 
 .font-style--normal { font-style: normal; }
 .font-style--italic { font-style: italic; }
+
+.text-align--center  { text-align: center; }
+.text-align--left    { text-align: left; }
+.text-align--right   { text-align: right; }
+.text-align--justify { text-align: justify; }
