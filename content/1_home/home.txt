@@ -5,7 +5,7 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  text: ""
+  text: Unit Testing anyone?
   box_theme: null
   type_theme: null
   font_size: null
