@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace auf;
 
 use PHPUnit\Framework\TestCase;
-use auf\TestClass;
 use Kirby\Cms\Field;
 
 final class StyleTest extends TestCase {
@@ -16,6 +15,19 @@ final class StyleTest extends TestCase {
   public $json4 = '{"font_size":"font-size--4"}';
   public $json5 = '';
   public $json6 = NULL;
+  public $json7 = '{"type_theme":"utjficgp","font_size":"font-size---2","font_style":"font-style--normal"}';
+  
+  public $expected0 = [
+    'box box-theme--649sx8rr',
+    'type-theme--utjficgp',
+    'text-align--center',
+    'font-size--4',
+    'font-weight--bold',
+    'font-style--italic'
+  ];
+  public $expected0toString = 'box box-theme--649sx8rr type-theme--utjficgp text-align--center font-size--4 font-weight--bold font-style--italic';
+  public $expected7toString = 'type-theme--utjficgp font-size---2 font-style--normal';
+  
   
   public function styleSettingsField () {
     return site()->find('home')->builder()->toBuilderBlocks()->first()->style_settings();
@@ -42,5 +54,26 @@ final class StyleTest extends TestCase {
   public function testCreatesTextAlignClass () {
     $this->assertEquals('text-align--center', $this->style($this->json0)->textAlignClass());
     $this->assertEquals(false, $this->style($this->json5)->textAlignClass());
+  }
+  public function testCreatesFontSizeClass () {
+    $this->assertEquals('font-size--4', $this->style($this->json0)->fontSizeClass());
+    $this->assertEquals(false, $this->style($this->json5)->fontSizeClass());
+  }
+  public function testCreatesFontWeightClass () {
+    $this->assertEquals('font-weight--bold', $this->style($this->json0)->fontWeightClass());
+    $this->assertEquals(false, $this->style($this->json5)->fontWeightClass());
+  }
+  public function testCreatesFontStyleClass () {
+    $this->assertEquals('font-style--italic', $this->style($this->json0)->fontStyleClass());
+    $this->assertEquals(false, $this->style($this->json5)->fontStyleClass());
+  }
+  public function testCreatesCssClasses () {
+    $this->assertEquals($this->expected0, $this->style($this->json0)->cssClasses());
+  }
+  public function testToStringOutputsCssClassesAsString () {
+    $this->assertEquals($this->expected0toString, $this->style($this->json0)->toString());
+    $this->assertEquals($this->expected7toString, $this->style($this->json7)->toString());
+    $this->assertEquals($this->expected0toString, $this->style($this->json0));
+    $this->assertEquals($this->expected7toString, $this->style($this->json7));
   }
 }

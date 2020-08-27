@@ -3,7 +3,7 @@
 namespace auf;
 
 use Kirby\Cms\Field;
-use Kirby\Data\Json;
+use phpDocumentor\Reflection\Types\This;
 
 class Style {
 
@@ -17,7 +17,11 @@ class Style {
   }
 
   public function __toString(): string {
-    return '';
+    return $this->toString();
+  }
+
+  public function toString() {
+    return implode(' ', array_filter($this->cssClasses()));
   }
 
   public function hasSetting(string $setting) {
@@ -41,18 +45,43 @@ class Style {
       return 'box box-theme--'. $boxTheme;
     }
   }
-  public function typeThemeClass()
+  public function typeThemeClass() 
   {
-    $typeTheme = $this->hasSetting('type_theme') ? $this->settings['type_theme'] : false;
-    if($typeTheme) {
-      return 'type-theme--' . $typeTheme;
+    if($typeTheme = $this->hasSetting('type_theme') ? $this->settings['type_theme'] : false) { 
+      return 'type-theme--' . $typeTheme; 
     }
   }
+  
   public function textAlignClass()
   {
-    return $textAlignClass = $this->hasSetting('text_align') ? $this->settings['text_align'] : false;
+    return $this->hasSetting('text_align') ? $this->settings['text_align'] : false;
+  }
+  
+  public function fontSizeClass()
+  {
+    return $this->hasSetting('font_size') ? $this->settings['font_size'] : false;
+  }
+  
+  public function fontWeightClass()
+  {
+    return $this->hasSetting('font_weight') ? $this->settings['font_weight'] : false;
+  }
+  
+  public function fontStyleClass()
+  {
+    return $this->hasSetting('font_style') ? $this->settings['font_style'] : false;
   }
 
+  public function cssClasses () {
+    return [
+      $this->boxThemeClass(),
+      $this->typeThemeClass(),
+      $this->textAlignClass(),
+      $this->fontSizeClass(),
+      $this->fontWeightClass(),
+      $this->fontStyleClass()
+    ];
+  }
 
   // STATIC METHODS FOR 
 
