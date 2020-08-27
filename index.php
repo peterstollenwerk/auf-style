@@ -5,11 +5,17 @@
 # to make the classes work with php unit!
 
 use auf\Style;
+use Kirby\Cms\Field;
 use Kirby\Cms\Page;
 
 @include_once __DIR__ . '/vendor/autoload.php'; # all classes set in composer.json > psr-4 are loaded here!
 
 Kirby::plugin('auf/style', [
+    'fieldMethods' => [
+        'toStyle' => function (Field $field) : string {
+            return new Style($field);
+        },
+    ],
     'options' => [ // use the options in php like this: option('auf.style.boxTheme.boxCssClassPrefix')
         'boxTheme' => [
             'boxCssClassPrefix' => 'box-theme--',

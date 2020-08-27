@@ -5,14 +5,27 @@ Title: AUF Style Plugin
 Builder:
 
 - 
+  text: ""
+  box_theme: null
+  type_theme: null
+  font_size: null
+  font_style: null
+  font_weight: null
+  text_align: null
+  style_settings: '{"type_theme":"utjficgp","box_theme":"649sx8rr"}'
+  _key: text
+  _uid: text_1598523267008_140
+  style_settings_divider: null
+  style_settings_info: null
+- 
   text: '[{"attrs":[],"content":"Title","id":"_4s0u29tqh","type":"h1"},{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
-  box_theme: box
+  box_theme: ""
   type_theme: ""
   font_size: null
   font_style: null
   font_weight: null
   text_align: text-align--left
-  style_settings: null
+  style_settings: '{"box_theme":"47tvau07"}'
   _key: page_title
   _uid: page_title_1598475296941_140
   style_settings_divider: null
@@ -28,7 +41,7 @@ Builder:
   font_style: null
   font_weight: null
   text_align: text-align--center
-  style_settings: '{"box_theme":"box","type_theme":"ez2fexws","text_align":"text-align--center","font_size":"font-size--0","font_weight":"font-weight--bold","font_style":"font-style--italic"}'
+  style_settings: '{"box_theme":"47tvau07","type_theme":"ez2fexws","text_align":"text-align--center","font_size":"font-size--0","font_weight":"font-weight--bold","font_style":"font-style--italic"}'
   _key: text
   _uid: text_1598484053902_274
   style_settings_divider: null
@@ -130,60 +143,5 @@ Builder:
   style_settings: null
   _key: container
   _uid: container_1598477341949_140
-  style_settings_divider: null
-  style_settings_info: null
-- 
-  type: div
-  builder:
-    - 
-      type: div
-      builder:
-        - 
-          type: div
-          builder:
-            - 
-              text: '# Wow'
-              box_theme: box
-              type_theme: null
-              font_size: null
-              font_style: null
-              font_weight: null
-              text_align: null
-              style_settings: null
-              _key: text
-              _uid: text_1598483590818_1707
-              style_settings_divider: null
-              style_settings_info: null
-          box_theme: null
-          type_theme: null
-          font_size: null
-          font_style: null
-          font_weight: null
-          text_align: null
-          style_settings: null
-          _key: container
-          _uid: container_1598483585516_1649
-          style_settings_divider: null
-          style_settings_info: null
-      box_theme: box
-      type_theme: null
-      font_size: null
-      font_style: null
-      font_weight: null
-      text_align: null
-      style_settings: null
-      _key: container
-      _uid: container_1598483576140_1396
-      style_settings_divider: null
-      style_settings_info: null
-  box_theme: box
-  type_theme: null
-  font_size: null
-  font_style: null
-  font_weight: null
-  text_align: null
-  style_settings: null
-  _key: container
-  _uid: container_1598483421268_274
   style_settings_divider: null
   style_settings_info: null

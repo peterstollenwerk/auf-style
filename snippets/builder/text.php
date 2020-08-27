@@ -3,12 +3,14 @@
 
   $text = $data->text()->kirbytext();
 
+  // TODO: NEXT
 
-// TODO: NEXT
+  $style1 = $data->style_settings()->toStyle();
 
-  echo $cssStyles = $data->style_settings();
+  $style2 = new Style($data->style_settings());
 
-  // var_dump($cssStyles);
+  echo $style2->boxTheme();
+
   
   $boxTheme = $data->box_theme();
   $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
