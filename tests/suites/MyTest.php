@@ -6,7 +6,7 @@ namespace auf;
 use PHPUnit\Framework\TestCase;
 use auf\TestClass;
 
-final class PluginTest extends TestCase {
+final class MyTest extends TestCase {
   public function testTitleValue () {
     $this->assertEquals(site()->title()->value(), 'Auf-Style-Plugin');
   }
