@@ -1,6 +1,6 @@
 <?php
   $text = $data->text()->kirbytextinline();
   $url = $data->url();
-  $class = 'button box box-theme--'. $data->box_theme();
+  $cssClasses = $data->style_settings()->toCssClasses();
 ?>
-<a class="<?= $class ?>" href="<?= $url ?>"><?= $text ?></a>
+<a class="<?= $cssClasses ?>" href="<?= $url ?>"><?= $text ?></a>
