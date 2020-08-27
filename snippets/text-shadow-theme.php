@@ -78,7 +78,7 @@
   $textShadowVariable = $getTextShadowVariable($textShadows->count());
 ?>
 
---text-shadow: <?= $textShadowVariable ?>;
+text-shadow: <?= $textShadowVariable ?>;
 
 
 

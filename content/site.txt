@@ -59,7 +59,7 @@ Box-themes:
   color_theme: 9n5rbn98
   background_theme: 0mhv8ty0
   border_theme: ""
-  outline_theme: 1n90iti1
+  outline_theme: ""
   text_shadow_theme: ciot9vfp
   box_shadow_theme: pr4o8za5
   custom_theme: 'border-left: 5px solid red;'
@@ -328,7 +328,7 @@ Border-themes:
   autoid: 8vtoylcm
   label: 'button '
   css_selector: button, .button
-  border_width: 0.25em
+  border_width: 0.125em
   border_style: solid
   border_radius: ""
 - 
@@ -376,7 +376,7 @@ Box-shadow-themes:
 - 
   autoid: atkpxr4n
   label: 'Level 1: Button'
-  css_selector: ""
+  css_selector: .button--primary
   box_shadows:
     - 
       offset_x: ""

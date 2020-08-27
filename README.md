@@ -96,9 +96,21 @@ Color Convert Methods:
   * [X] ~~*Test Kirby Editor functionality!*~~ [2020-08-26]
     * [X] ~~*Seems like the editor needs »pretty: false« setting in the yml config: https://github.com/TimOetting/kirby-builder/issues/132*~~ [2020-08-26]
 
+* [X] ~~*Maybe the Box-Themes shoudln´t be using variables!?*~~ [2020-08-27]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
+
+style_box
+
+style_children
+
+safe-text--textshadow
+safe-text--background
+
+custom_style="background-color: red;"
+
 
 box_theme: 
 
@@ -117,12 +129,15 @@ border_theme:
 outline_theme:
 box_shadow_theme:
 
+* [ ] Implement Component Style: Every custom component »Element« could be styled via builder-dummy
 
-* [ ] Maybe the Box-Themes shoudln´t be using variables!?
+* [ ] Create Class to get all CSS classes from Style Tab
+
+
 
 * [ ] Implement --inverted-color and --inverted-background-color
 
-* [ ] Implement Icons for Template Switching
+* [ ] Implement Sun-/Moon Icons for Template Switching
 
 * [ ] Implement Font-Size Component?
 

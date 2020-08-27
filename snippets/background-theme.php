@@ -105,7 +105,7 @@ $value = function() use ($backgrounds) {
   }
   return implode(', ' , $vs);
 };
-$key = '--background';
+$key = 'background';
 echo $backgroundVariable = $key .': '. $value() . ';';
   
 ?>

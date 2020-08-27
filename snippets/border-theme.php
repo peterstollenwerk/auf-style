@@ -32,11 +32,11 @@
   .<?= $cssClass ?> {
 <?php endif?>
 
-  <?php if($width->isNotEmpty()): ?>--border-width: <?= $width ?>;<?php endif?>
+  <?php if($width->isNotEmpty()): ?>border-width: <?= $width ?>;<?php endif?>
 
-  <?php if($style->isNotEmpty()): ?>--border-style: <?= $style?>;<?php endif?>
+  <?php if($style->isNotEmpty()): ?>border-style: <?= $style?>;<?php endif?>
 
-  <?php if($radius->isNotEmpty()): ?>--border-radius: <?= $radius ?>;<?php endif?>
+  <?php if($radius->isNotEmpty()): ?>border-radius: <?= $radius ?>;<?php endif?>
 
 <?php if($renderCssClass): ?>
 }
