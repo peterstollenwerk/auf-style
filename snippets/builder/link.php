@@ -1,12 +1,12 @@
 <?php
-  use auf\Style;
 
   $text = $data->text()->kirbytextinline();
   $url = $data->url();
 
+  $type = $data->type();
   $cssClasses = $data->style_settings()->toCssClasses();
 
 ?>
-<a href="<?= $url ?>" class="<?= $cssClasses ?>">
+<a href="<?= $url ?>" class="<?= $type ?> <?= $cssClasses ?>">
   <?= $text ?>
 </a>
