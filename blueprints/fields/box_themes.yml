@@ -53,7 +53,7 @@ fields:
   color_theme:
     type: select
     label: Color Theme
-    width: 1/2
+    width: 1/6
     options: query
     query: 
       fetch: site.color_themes.toStructure
@@ -62,7 +62,7 @@ fields:
   background_theme:
     type: select
     label: Background Theme
-    width: 1/2
+    width: 1/6
     options: query
     query: 
       fetch: site.background_themes.toStructure
@@ -71,7 +71,7 @@ fields:
   border_theme:
     type: select
     label: Border Theme
-    width: 1/2
+    width: 1/6
     options: query
     query: 
       fetch: site.border_themes.toStructure
@@ -80,7 +80,7 @@ fields:
   outline_theme:
     type: select
     label: Outline Theme
-    width: 1/2
+    width: 1/6
     options: query
     query: 
       fetch: site.outline_themes.toStructure
@@ -89,7 +89,7 @@ fields:
   text_shadow_theme:
     type: select
     label: Text Shadow Theme
-    width: 1/2
+    width: 1/6
     options: query
     query: 
       fetch: site.text_shadow_themes.toStructure
@@ -98,7 +98,7 @@ fields:
   box_shadow_theme:
     type: select
     label: Box Shadow Theme
-    width: 1/2
+    width: 1/6
     options: query
     query: 
       fetch: site.box_shadow_themes.toStructure

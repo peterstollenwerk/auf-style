@@ -98,49 +98,38 @@ Color Convert Methods:
 
 * [X] ~~*Maybe the Box-Themes shoudln´t be using variables!?*~~ [2020-08-27]
 
+* [X] ~~*Create Class to get all CSS classes from Style Tab*~~ [2020-08-27]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
-style_box
+By default boxes have
 
-style_children
-
-safe-text--textshadow
-safe-text--background
-
-custom_style="background-color: red;"
+.box
+--color
+--background-color
+--border
 
 
-box_theme: 
-
-safe_text: NEEDED
-
-border_toggle:
-border_radius_toggle:
-text_shadow_toggle:
-
-oder 
-box_theme_custom: ...
-
-color_theme:
-background_theme:
-border_theme:
-outline_theme:
-box_shadow_theme:
-
-* [ ] Implement Component Style: Every custom component »Element« could be styled via builder-dummy
-
-* [ ] Create Class to get all CSS classes from Style Tab
+inline-styles
+margin-top:    +-1rem
+margin-bottom: +-1rem
 
 
+
+* [ ] style_children
+* [ ] safe-text--textshadow
+* [ ] safe-text--background
+* [ ] custom_style="background-color: red;"
+
+* [ ] Implement Component-Style: Every custom component »Element« could be styled via builder-dummy
 
 * [ ] Implement --inverted-color and --inverted-background-color
 
 * [ ] Implement Sun-/Moon Icons for Template Switching
 
 * [ ] Implement Font-Size Component?
-
 
 * [ ] Implement Box Helpers 
   * [ ] .safe-text, .safe-texts

@@ -109,6 +109,17 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: tc8l6jzz
+  label: Twt
+  css_selector: ""
+  color_theme: ""
+  background_theme: 5sa4v6y6
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
 
 ----
 
@@ -137,7 +148,7 @@ Color-themes:
 - 
   autoid: 9n5rbn98
   label: WTF
-  css_selector: .site--dark
+  css_selector: ""
   color: '#ffffff'
   background: '#008ee6'
   border: null
@@ -168,12 +179,12 @@ Color-themes:
   autoid: p8mk5urv
   label: Big Button
   css_selector: ""
-  color: '#dedede'
-  background: '#303030'
-  border: '#000000'
-  outline: '#000000'
-  text_shadow: '#000000'
-  box_shadow_ambient: '#303030'
+  color: '#383533'
+  background: 'hsla(25, 100%, 50%)'
+  border: '#383533'
+  outline: '#383533'
+  text_shadow: '#383533'
+  box_shadow_ambient: '#383533'
 
 ----
 
@@ -332,6 +343,49 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
+- 
+  autoid: 5sa4v6y6
+  label: Trans White Trans
+  css_selector: ""
+  background:
+    - 
+      type: gradient
+      label: ""
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: from top to bottom
+          gradient_color_stops:
+            - 
+              color: '#ffffff00'
+              start: ""
+              end: ""
+            - 
+              color: '#ffffff'
+              start: ""
+              end: ""
+            - 
+              color: '#ffffff00'
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: bottom
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
 
 ----
 
@@ -339,17 +393,24 @@ Border-themes:
 
 - 
   autoid: 8vtoylcm
-  label: 'button '
+  label: Button Radius
   css_selector: button, .button
-  border_width: 0.125em
-  border_style: solid
-  border_radius: ""
+  border_width: ""
+  border_style: ""
+  border_radius: 0.25em
 - 
   autoid: 8ep0nu0b
   label: hr
   css_selector: hr
   border_width: 4px
   border_style: solid
+  border_radius: ""
+- 
+  autoid: 6nya08ep
+  label: 'Border: None'
+  css_selector: .box
+  border_width: ""
+  border_style: none
   border_radius: ""
 
 ----
