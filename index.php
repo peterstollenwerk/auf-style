@@ -12,7 +12,7 @@ use Kirby\Cms\Page;
 
 Kirby::plugin('auf/style', [
     'fieldMethods' => [
-        'toStyle' => function (Field $field) : string {
+        'toCssClasses' => function (Field $field) : string {
             return new Style($field);
         },
     ],

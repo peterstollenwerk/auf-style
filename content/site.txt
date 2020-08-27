@@ -36,6 +36,14 @@ Type-themes:
   font_weight: null
   font_style: null
   custom_theme: ""
+- 
+  autoid: le0fp82g
+  label: no font-size
+  css_selector: ""
+  font_size: null
+  font_weight: font-weight--bold
+  font_style: font-style--italic
+  custom_theme: ""
 
 ----
 
