@@ -4,4 +4,4 @@
   $cssClasses = $data->style_settings()->toCssClasses();
 ?>
 
-<img src="<?= $src ?>" class="<?= $cssClasses ?>" alt="<?= $alt ?>" style="max-width: 20%;">
+<img src="<?= $src ?>" class="<?= $cssClasses ?>" alt="<?= $alt ?>" style="max-height: 50vh;">

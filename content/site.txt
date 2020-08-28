@@ -745,6 +745,7 @@ Files:
 - waves-pattern_secondary.svg
 - waves-pattern_primary.svg
 - dots-pattern_secondary.svg
+- cellar-and-secrets.jpg
 
 ----
 
