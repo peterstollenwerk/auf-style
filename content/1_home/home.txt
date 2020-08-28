@@ -22,7 +22,7 @@ Builder:
   builder:
     - 
       text: '[{"attrs":[],"content":"Productions","id":"_nzyi4hlly","type":"h2"}]'
-      style_settings: '{"box_theme":"tc8l6jzz"}'
+      style_settings: '{}'
       _key: editor
       _uid: editor_1598558239553_1663
     - 
@@ -50,7 +50,7 @@ Builder:
           style_settings: null
           _key: link
           _uid: link_1598561482471_351
-      style_settings: '{"box_theme":"box--inverted"}'
+      style_settings: '{"box_theme":"box"}'
       _key: container
       _uid: container_1598558258404_1663
     - 
@@ -60,6 +60,6 @@ Builder:
       style_settings: '{"box_theme":"649sx8rr","font_size":"font-size--2"}'
       _key: link
       _uid: link_1598558680750_2591
-  style_settings: '{"box_theme":"gi6s7ug9"}'
+  style_settings: '{"box_theme":"k158ky0i"}'
   _key: container
   _uid: container_1598558234097_140

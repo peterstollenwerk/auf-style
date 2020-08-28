@@ -1,9 +1,9 @@
 label: Background Themes
 type: structure
 translate: false
-help: >
-  creates css-variables: <br>
-  <code>--background-UID: { --background: linear-gradient(red, blue), ... }</code>
+# help: >
+#   creates css-variables: <br>
+#   <code>--background-UID: { --background: linear-gradient(red, blue), ... }</code>
 columns:
   autoid:
     width: 1/13
@@ -168,10 +168,10 @@ fields:
 
       # GRADIENT END
       # SIZE START
-      size_headline:
-        type: headline
-        label: Size
-        number: false
+      # size_headline:
+      #   type: headline
+      #   label: Size
+      #   number: false
       size:
         type: select
         label: Size
@@ -195,14 +195,14 @@ fields:
           size: custom
       # SIZE END
       # POSITION START
-      position_headline:
-        type: headline
-        label: Position
-        number: false
+      # position_headline:
+      #   type: headline
+      #   label: Position
+      #   number: false
       position_x:
         type: select
         label: Position X
-        width: 1/2
+        width: 1/6
         options:
           left
           center
@@ -218,7 +218,7 @@ fields:
       position_y:
         type: select
         label: Position Y
-        width: 1/2
+        width: 1/6
         options:
           top
           center
@@ -233,10 +233,10 @@ fields:
           position_y: custom
       # POSITION END
       # REPEAT START
-      repeat_headline:
-        type: headline
-        label: Repeat
-        number: false
+      # repeat_headline:
+      #   type: headline
+      #   label: Repeat
+      #   number: false
       repeat:
         type: select
         options:
@@ -244,11 +244,12 @@ fields:
           repeat-x
           repeat-y
           no-repeat
+        width: 1/6
       # REPEAT END
       # ATTACHMENT START
-      attachment_headline:
-        type: headline
-        label: Attachment
+      # attachment_headline:
+      #   type: headline
+      #   label: Attachment
       attachment:
         type: select
         label: Attachment
@@ -256,11 +257,12 @@ fields:
           scroll: Scroll
           fixed: Fixed
           local: Local
+        width: 1/6
       # ATTACHMENT END
       # ORIGIN START
-      origin_headline:
-        type: headline
-        label: Origin
+      # origin_headline:
+      #   type: headline
+      #   label: Origin
       origin:
         type: select
         label: Origin
@@ -268,11 +270,12 @@ fields:
           - border-box
           - padding-box
           - content-box
+        width: 1/6
       # ORIGIN END
       # CLIP START
-      clip_headline:
-        type: headline
-        label: Clip
+      # clip_headline:
+      #   type: headline
+      #   label: Clip
       clip:
         type: select
         label: Clip
@@ -281,19 +284,5 @@ fields:
           - padding-box
           - content-box
           - text
+        width: 1/6
       # CLIP END
-  # INFO START
-  info:
-    type: info
-    text: >
-      creates a css-variable and a css-class based on the uid:<br>
-      <code>
-      :root {
-        --background-uid: XXXXXXXXXXXX ;
-      }
-      <br>
-      .background-uid {
-        background: var(--background-uid);
-      }
-      </code>
-  # INFO END      
