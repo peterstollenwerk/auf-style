@@ -10,9 +10,6 @@ html {
   --margin: 1.61rem;
   margin-top: var(--margin);
 }
-img {
-  display: block;
-}
 a {
   text-decoration: underline;
 }

@@ -38,7 +38,7 @@ Builder:
   builder:
     - 
       content_label: tanzCompany
-      text: '[{"attrs":[],"content":"tanzCompany","id":"_nzyi4hlly","type":"h2"}]'
+      text: '[{"attrs":[],"content":"<em>tanz<\/em>company","id":"_nzyi4hlly","type":"h2"}]'
       style_settings: '{}'
       _key: editor
       _uid: editor_1598558239553_1663
@@ -66,7 +66,7 @@ Builder:
           style_settings: '{"box_theme":"8dt47fw1"}'
           _key: link
           _uid: link_1598561482471_351
-      style_settings: '{"box_theme":"box"}'
+      style_settings: '{"box_theme":"box","text_align":"text-align--left"}'
       _key: container
       _uid: container_1598558258404_1663
     - 
@@ -76,6 +76,6 @@ Builder:
       style_settings: '{"box_theme":"oa9nnj0e","font_size":"font-size--2","type_theme":"ofyyv3xp"}'
       _key: link
       _uid: link_1598558680750_2591
-  style_settings: '{"box_theme":"k158ky0i"}'
+  style_settings: '{"box_theme":"k158ky0i","text_align":"text-align--center"}'
   _key: container
   _uid: container_1598558234097_140

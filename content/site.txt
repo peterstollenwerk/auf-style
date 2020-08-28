@@ -71,7 +71,7 @@ Type-themes:
   autoid: mg5vxjd0
   label: page-title h1
   css_selector: .element--page-title h1
-  font_size: font-size--3
+  font_size: font-size--5
   font_weight: null
   font_style: null
   text_align: null
@@ -81,7 +81,7 @@ Type-themes:
   label: page-title h2
   css_selector: .element--page-title h2
   font_size: font-size--2
-  font_weight: null
+  font_weight: font-weight--normal
   font_style: null
   text_align: null
   custom_theme: ""
@@ -287,9 +287,27 @@ Background-themes:
 
 - 
   autoid: ula7szc6
-  label: tanzCompany
+  label: 'tanzCompany - Dark - Waves'
   css_selector: ""
   background:
+    - 
+      type: image
+      label: Waves
+      custom: ""
+      image:
+        - waves-pattern_secondary.svg
+      gradient: [ ]
+      size: custom
+      size_x: 66px
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
     - 
       type: gradient
       label: Grey 10 to Grey 40
@@ -723,6 +741,10 @@ Files:
 
 - np_heart_888700_000000.svg
 - 04ali-superjumbo.jpg
+- dots-pattern_primary.svg
+- waves-pattern_secondary.svg
+- waves-pattern_primary.svg
+- dots-pattern_secondary.svg
 
 ----
 

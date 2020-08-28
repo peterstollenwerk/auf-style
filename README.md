@@ -114,18 +114,9 @@ Color Convert Methods:
 .element--page-title .subtitle {}
 .element--page-title .tagline {}
 
+* [ ] We need a »custom_inline_styles« field!
 
-By default boxes have
-
-.box
---color
---background-color
---border
-
-
-inline-styles
-margin-top:    +-1rem
-margin-bottom: +-1rem
+* [ ] Implement Padding-Theme?
 
 
 
