@@ -98,10 +98,10 @@ hr
   --border-radius: var(--box-border-radius);
 }
 
+a.box,
 .button, button {
   cursor: pointer;
   display: inline-block;
-  text-decoration: none;
   --padding: var(--button-padding);
   --border-width: var(--button-border-width);
   --border-style: var(--button-border-style);
@@ -359,15 +359,15 @@ hr {
 .boxes > *,
 .box 
 {
-  --border-style: none;
+  border-style: none;
+  background-color: var(--box-background-color);
   --background-color: var(--box-background-color);
 }
-.boxes > * .box:not([class*="box-theme--"]),
+/* .boxes > * .box:not([class*="box-theme--"]),
 .box .box:not([class*="box-theme--"]) 
 {
-  --border-style: solid;
-  --background-color: inherit;
-}
+  border-style: solid;
+} */
 .theme-toggle 
 {
   --color:            hsl(var(--theme-color-h), 100%, 10%);

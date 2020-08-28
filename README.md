@@ -104,6 +104,11 @@ Color Convert Methods:
 
 ### P1
 
+* [ ] implement margin
+  margin-top: +-rem
+  margin-bottom +-rem
+
+
 * [ ] Create Usable Default Font-sizes Theme!
 
 * [ ] We need the possibility to add a .new-class to an element
@@ -114,19 +119,12 @@ Color Convert Methods:
 .element--page-title .subtitle {}
 .element--page-title .tagline {}
 
+* [ ] We need a »custom_inline_styles« field!
 
-By default boxes have
-
-.box
---color
---background-color
---border
+* [ ] Implement Padding-Theme?
 
 
-inline-styles
-margin-top:    +-1rem
-margin-bottom: +-1rem
-
+Deko Bilder müssen als Content geladen werden, damit Z-Index überlappungen wie gewünscht funktionieren.
 
 
 * [ ] style_children

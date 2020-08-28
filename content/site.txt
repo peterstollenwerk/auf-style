@@ -23,7 +23,7 @@ Type-themes:
   text_align: null
   custom_theme: ""
 - 
-  autoid: dv218sr8
+  autoid: z5m3jd7v
   label: H3
   css_selector: ""
   font_size: font-size--1
@@ -68,25 +68,25 @@ Type-themes:
   text_align: null
   custom_theme: ""
 - 
-  autoid: ckkyeh4y
+  autoid: mg5vxjd0
   label: page-title h1
   css_selector: .element--page-title h1
-  font_size: font-size--3
+  font_size: font-size--5
   font_weight: null
   font_style: null
   text_align: null
   custom_theme: ""
 - 
-  autoid: i03z6veu
+  autoid: f27j8dn2
   label: page-title h2
   css_selector: .element--page-title h2
   font_size: font-size--2
-  font_weight: null
+  font_weight: font-weight--normal
   font_style: null
   text_align: null
   custom_theme: ""
 - 
-  autoid: mhe8h5z7
+  autoid: r27x620d
   label: page-title h3
   css_selector: .element--page-title h3
   font_size: font-size--0
@@ -115,12 +115,41 @@ Box-themes:
   label: Button
   css_selector: ""
   color_theme: p8mk5urv
-  background_theme: ""
+  background_theme: x7n0kiuv
   border_theme: 8vtoylcm
   outline_theme: ""
   text_shadow_theme: ""
   box_shadow_theme: atkpxr4n
   custom_theme: 'padding: 0.5em 1em;'
+- 
+  autoid: oa9nnj0e
+  label: 'Button - Dark - Arrow-Right'
+  css_selector: ""
+  color_theme: otenx524
+  background_theme: x7n0kiuv
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: atkpxr4n
+  custom_theme: |
+    padding-right: 3.5em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+- 
+  autoid: 8dt47fw1
+  label: 'Link - Arrow Right (Trans Orange)'
+  css_selector: ""
+  color_theme: ""
+  background_theme: zs31ek19
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: |
+    padding-left: 0;
+    padding-right: 2.5em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
 - 
   autoid: k158ky0i
   label: tanzCompany
@@ -132,6 +161,24 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: s56d6nkz
+  label: 'Square - Position Right'
+  css_selector: ""
+  color_theme: ""
+  background_theme: 3ti85p89
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: |
+    height: 17vw;
+    width: 17vw;
+    margin-top: -14vw;
+    margin-bottom: calc(-3vw - 1rem);
+    margin-right: 3vw;
+    margin-left: auto;
+    padding: 0;
 - 
   autoid: tc8l6jzz
   label: Twt
@@ -176,19 +223,59 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: jizhdvwz
+  label: Zitat Bild
+  css_selector: ""
+  color_theme: ""
+  background_theme: ""
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: 1moo7gjf
+  custom_theme: |
+    --padding: 1.618rem;
+    height: 10rem;
+    width: 8rem;
+    margin-top: calc(-2 * var(--padding));
+    margin-bottom: -7rem;
+    margin-right: 1rem;
+    margin-left: auto;
+    padding: 0;
+- 
+  autoid: pcxjucot
+  label: Zitat Box
+  css_selector: ""
+  color_theme: f79pio9u
+  background_theme: 43bt8oo2
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: 'margin-top: 5rem;'
 
 ----
 
 Color-themes:
 
 - 
+  autoid: 2ng0e1fh
+  label: Focus Color
+  css_selector: '*:focus'
+  color: null
+  background: null
+  border: null
+  outline: '#ff6a00'
+  text_shadow: null
+  box_shadow_ambient: null
+- 
   autoid: p8mk5urv
-  label: Big Button
+  label: Primary Button
   css_selector: ""
   color: '#383533'
   background: 'hsla(25, 100%, 50%)'
   border: 'hsla(25, 100%, 45%)'
-  outline: '#383533'
+  outline: ""
   text_shadow: 'hsla(25, 100%, 60%)'
   box_shadow_ambient: '#383533'
 - 
@@ -201,16 +288,6 @@ Color-themes:
   outline: null
   text_shadow: '#2a2f3280'
   box_shadow_ambient: '#008ee6'
-- 
-  autoid: 2ng0e1fh
-  label: Focus Color
-  css_selector: '*:focus'
-  color: null
-  background: null
-  border: null
-  outline: '#ff00ee'
-  text_shadow: null
-  box_shadow_ambient: null
 - 
   autoid: idhxhber
   label: Info Box
@@ -233,7 +310,7 @@ Color-themes:
   box_shadow_ambient: null
 - 
   autoid: wwh0hut0
-  label: tanzCompany
+  label: 'tanzCompany - Cold'
   css_selector: ""
   color: '#ff6600'
   background: '#2e3237'
@@ -241,6 +318,26 @@ Color-themes:
   outline: null
   text_shadow: null
   box_shadow_ambient: '#2e3237'
+- 
+  autoid: otenx524
+  label: Dark Button Arrow Right
+  css_selector: ""
+  color: '#ff6a00'
+  background: '#383533'
+  border: null
+  outline: null
+  text_shadow: null
+  box_shadow_ambient: '#383533'
+- 
+  autoid: f79pio9u
+  label: Dark--Theme
+  css_selector: ""
+  color: '#ffffff'
+  background: '#2f3032'
+  border: null
+  outline: null
+  text_shadow: '#636363'
+  box_shadow_ambient: '#2f3032'
 
 ----
 
@@ -248,9 +345,27 @@ Background-themes:
 
 - 
   autoid: ula7szc6
-  label: tanzCompany
+  label: 'tanzCompany - Dark - Waves'
   css_selector: ""
   background:
+    - 
+      type: image
+      label: Waves
+      custom: ""
+      image:
+        - waves-pattern_secondary.svg
+      gradient: [ ]
+      size: custom
+      size_x: 66px
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
     - 
       type: gradient
       label: Grey 10 to Grey 40
@@ -481,6 +596,120 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
+- 
+  autoid: x7n0kiuv
+  label: Icon Arrow Right (Orange Black)
+  css_selector: .icon--arrow-right
+  background:
+    - 
+      type: image
+      label: arrow-right.svg
+      custom: ""
+      image:
+        - arrow-right.svg
+      gradient: [ ]
+      size: contain
+      size_x: ""
+      size_y: ""
+      position_x: right
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: no-repeat
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: zs31ek19
+  label: Icon Arrow Right (Trans Orange)
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image:
+        - arrow-right-trans-orange.svg
+      gradient: [ ]
+      size: contain
+      size_x: ""
+      size_y: ""
+      position_x: right
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: no-repeat
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: preob99p
+  label: 'Square - Waves - Orange'
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image:
+        - waves-pattern_primary.svg
+      gradient: [ ]
+      size: custom
+      size_x: 66px
+      size_y: ""
+      position_x: right
+      position_x_custom: ""
+      position_y: top
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: 3ti85p89
+  label: Transparent
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image: [ ]
+      gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: 43bt8oo2
+  label: Zitat Background
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image:
+        - bg-blur.png
+      gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: center
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
 
 ----
 
@@ -638,6 +867,11 @@ Files:
 
 - np_heart_888700_000000.svg
 - 04ali-superjumbo.jpg
+- dots-pattern_primary.svg
+- waves-pattern_secondary.svg
+- waves-pattern_primary.svg
+- dots-pattern_secondary.svg
+- cellar-and-secrets.jpg
 
 ----
 

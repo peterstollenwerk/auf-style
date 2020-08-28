@@ -1,7 +1,15 @@
 <?php
-  $src = $data->image()->toFile()->url();
+
+
+  $file = $data->image()->toFile();
+
+  if($file == false )return;
+
+  $src = $file->url();
   $alt = $data->alt();
   $cssClasses = $data->style_settings()->toCssClasses();
 ?>
 
-<img src="<?= $src ?>" class="<?= $cssClasses ?>" alt="<?= $alt ?>" style="max-width: 20%;">
+<div class="<?= $cssClasses ?>">
+  <img src="<?= $src ?>"  alt="<?= $alt ?>">
+</div>
