@@ -106,11 +106,13 @@ Color Convert Methods:
 
 * [ ] Create Usable Default Font-sizes Theme!
 
-Every element needs his own element
-h2->element->style
-h3->element->style
-
 * [ ] We need the possibility to add a .new-class to an element
+
+* [ ] We need to setup special classes in the backend »element--themes«!
+.element--related-page {}
+.element--related-page .title {}
+.element--related-page .subtitle {}
+.element--related-page .tagline {}
 
 
 By default boxes have

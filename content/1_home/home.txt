@@ -5,6 +5,7 @@ Title: AUF Style Plugin
 Builder:
 
 - 
+  type: ""
   text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_3783fm5lg","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
   style_settings: '{"box_theme":"box"}'
   my_label: asdfasdf
@@ -20,8 +21,8 @@ Builder:
   style_settings_info: null
   content_label: ""
 - 
-  content_label: tanzCompany teaser
   type: section
+  content_label: tanzCompany teaser
   builder:
     - 
       content_label: tanzCompany
@@ -30,8 +31,8 @@ Builder:
       _key: editor
       _uid: editor_1598558239553_1663
     - 
-      content_label: Featured Production
       type: article
+      content_label: 'Cellar & Secrets'
       builder:
         - 
           image:
@@ -41,22 +42,30 @@ Builder:
           _key: image
           _uid: image_1598593632866_396
         - 
-          content_label: ""
-          text: |
-            #### 1. PRODUKTION EINER 3-JÄHRIGEN KONZEPTION
-            ### Cellar and Secrets
-            ##### Internationales Tanztheater Projekt in Deutschland und Spanien
+          type: related-page-title
+          text: '[{"attrs":[],"content":"1. PRODUKTION EINER 3-J\u00c4HRIGEN KONZEPTION","id":"_gkn0x9ptq","type":"h3"},{"attrs":[],"content":"Cellar &amp; Secrets","id":"_tr0xcti75","type":"h1"},{"attrs":[],"content":"Internationales Tanztheater Projekt in Deutschland und Spanien","id":"_cg9dgj1i6","type":"h2"}]'
           style_settings: null
-          _key: text
-          _uid: text_1598591017691_2280
+          _key: page_title
+          _uid: page_title_1598596666157_412
+        - 
+          type: ""
+          url: https://aufdesign.de
+          text: Zur Produktion
+          style_settings: null
+          _key: link
+          _uid: link_1598561482471_351
         - 
           type: button
           url: https://aufdesign.de
           text: Zur Produktion
           style_settings: null
           _key: link
-          _uid: link_1598561482471_351
-      style_settings: '{"box_theme":"box--inverted"}'
+          uniquekey: 0
+          showpreviewinitially: false
+          expandedinitially: false
+          activefieldsetinitially: content
+          _uid: link_1598596879257_2486
+      style_settings: '{"box_theme":"box"}'
       _key: container
       _uid: container_1598558258404_1663
     - 

@@ -1,5 +1,5 @@
 name: Container
-label: 'Container {{type}}: {{content_label}} {{box_theme}}'
+label: 'Container:{{type}}: {{content_label}} {{box_theme}}'
 # preview:
 #   snippet: blocks/container
 #   css: /assets/css/builder/link.css
@@ -9,9 +9,6 @@ tabs:
     label: Content
     # icon: edit
     fields:
-      content_label:
-        type: text
-        label: Label
       type:
         label: Type
         type: select
@@ -22,6 +19,11 @@ tabs:
           div: Div
           header: Header
           footer: Footer
+        width: 1/2
+      content_label:
+        type: text
+        label: Label
+        width: 1/2
       builder:
         type: builder
         label: Builder
@@ -31,6 +33,7 @@ tabs:
           image: auf_style/blueprints/builder/image
           link: auf_style/blueprints/builder/link
           container: auf_style/blueprints/builder/container
+          page_title: auf_style/blueprints/builder/page_title
 
   styles_tab:
     extends: auf_style/blueprints/builder/tabs/style

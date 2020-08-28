@@ -1,5 +1,5 @@
 name: Link # The name option is used as a label for the buttons to add new fieldsets. It is also used as a label in the header of the fieldset, if the label option is not set explicitly (see next line).
-label: 'Link: {{type}} {{text}} {{url}}'
+label: 'Link:{{type}}: {{text}} {{url}}'
 # preview:
 #   snippet: blocks/link
 #   css: /assets/css/builder/link.css
