@@ -108,11 +108,11 @@ Color Convert Methods:
 
 * [ ] We need the possibility to add a .new-class to an element
 
-* [ ] We need to setup special classes in the backend »element--themes«!
-.element--related-page {}
-.element--related-page .title {}
-.element--related-page .subtitle {}
-.element--related-page .tagline {}
+* [ ] We need »element--themes«!
+.element--page-title {}
+.element--page-title .title {}
+.element--page-title .subtitle {}
+.element--page-title .tagline {}
 
 
 By default boxes have

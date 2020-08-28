@@ -1,5 +1,5 @@
 name: Container
-label: 'Container:{{type}}: {{content_label}} {{box_theme}}'
+label: 'Container:{{type}}: {{content_label}}'
 # preview:
 #   snippet: blocks/container
 #   css: /assets/css/builder/link.css

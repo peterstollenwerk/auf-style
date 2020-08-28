@@ -7,7 +7,7 @@ Type-themes:
 - 
   autoid: utjficgp
   label: H1
-  css_selector: h1
+  css_selector: ""
   font_size: font-size--7
   font_weight: ""
   font_style: null
@@ -23,9 +23,9 @@ Type-themes:
   text_align: null
   custom_theme: ""
 - 
-  autoid: z4ciobuk
+  autoid: dv218sr8
   label: H3
-  css_selector: h3
+  css_selector: ""
   font_size: font-size--1
   font_weight: null
   font_style: null
@@ -43,7 +43,7 @@ Type-themes:
 - 
   autoid: ez2fexws
   label: Page Title H2
-  css_selector: .element--page-title h2
+  css_selector: ""
   font_size: font-size--3
   font_weight: null
   font_style: null
@@ -52,7 +52,7 @@ Type-themes:
 - 
   autoid: a68thzft
   label: Page Title h3
-  css_selector: .element--page-title h3
+  css_selector: ""
   font_size: font-size--1
   font_weight: null
   font_style: null
@@ -65,6 +65,33 @@ Type-themes:
   font_size: null
   font_weight: font-weight--bold
   font_style: font-style--italic
+  text_align: null
+  custom_theme: ""
+- 
+  autoid: ckkyeh4y
+  label: page-title h1
+  css_selector: .element--page-title h1
+  font_size: font-size--3
+  font_weight: null
+  font_style: null
+  text_align: null
+  custom_theme: ""
+- 
+  autoid: i03z6veu
+  label: page-title h2
+  css_selector: .element--page-title h2
+  font_size: font-size--2
+  font_weight: null
+  font_style: null
+  text_align: null
+  custom_theme: ""
+- 
+  autoid: mhe8h5z7
+  label: page-title h3
+  css_selector: .element--page-title h3
+  font_size: font-size--0
+  font_weight: null
+  font_style: null
   text_align: null
   custom_theme: ""
 

@@ -5,6 +5,18 @@ Title: AUF Style Plugin
 Builder:
 
 - 
+  content_label: Just some Type
+  text: >
+    These are just some basic examples to
+    give you an idea. You can filter and
+    find files by type, template, by their
+    meta data etc. More information on the
+    available file and files methods in the
+    Reference.
+  style_settings: null
+  _key: text
+  _uid: text_1598598093082_150
+- 
   type: ""
   text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_3783fm5lg","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
   style_settings: '{"box_theme":"box"}'
