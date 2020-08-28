@@ -108,6 +108,7 @@ Color Convert Methods:
   margin-top: +-rem
   margin-bottom +-rem
 
+* [ ] Create Snippets for DecoElements!
 
 * [ ] Create Usable Default Font-sizes Theme!
 
