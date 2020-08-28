@@ -10,6 +10,9 @@ html {
   --margin: 1.61rem;
   margin-top: var(--margin);
 }
+img {
+  max-width: 100%;
+}
 a {
   text-decoration: underline;
 }

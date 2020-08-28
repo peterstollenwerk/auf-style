@@ -51,21 +51,28 @@ Builder:
       _uid: image_1598600273788_330
     - 
       type: article
-      content_label: 'Cellar & Secrets'
+      content_label: 'Produktion: Cellar & Secrets'
       builder:
+        - 
+          type: article
+          content_label: Square
+          builder: [ ]
+          style_settings: '{"box_theme":"s56d6nkz"}'
+          _key: container
+          _uid: container_1598611254489_552
         - 
           type: related-page-title
           text: '[{"attrs":[],"content":"1. PRODUKTION EINER 3-J\u00c4HRIGEN KONZEPTION","id":"_gkn0x9ptq","type":"h3"},{"attrs":[],"content":"Cellar &amp; Secrets","id":"_tr0xcti75","type":"h1"},{"attrs":[],"content":"Internationales Tanztheater Projekt in Deutschland und Spanien","id":"_rjz13vi3e","type":"h2"}]'
-          style_settings: null
+          style_settings: '{}'
           _key: page_title
           _uid: page_title_1598596666157_412
         - 
           type: ""
-          url: https://aufdesign.de
+          url: https://twitter.com
           text: Zur Produktion
           style_settings: '{"box_theme":"8dt47fw1"}'
           _key: link
-          _uid: link_1598561482471_351
+          _uid: link_1598611331773_552
       style_settings: '{"box_theme":"box","text_align":"text-align--left"}'
       _key: container
       _uid: container_1598558258404_1663

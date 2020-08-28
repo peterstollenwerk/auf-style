@@ -1,5 +1,11 @@
 <?php
-  $src = $data->image()->toFile()->url();
+
+
+  $file = $data->image()->toFile();
+
+  if($file == false )return;
+
+  $src = $file->url();
   $alt = $data->alt();
   $cssClasses = $data->style_settings()->toCssClasses();
 ?>
