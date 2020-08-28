@@ -6,7 +6,11 @@ $getBackgroundVars = function() use ($background, $index) {
 
   // --background-image
   $backgroundImageValue = function() use ($background) {
-    $url = $background->image()->toFile()->url();
+
+    $file = $background->image()->toFile();
+    if($file == false) return;
+
+    $url = $file->url();
     if ($url) {
       return 'url(' . $url . ')';
     }

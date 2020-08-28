@@ -43,6 +43,8 @@ Builder:
       _key: editor
       _uid: editor_1598558239553_1663
     - 
+      type: ""
+      content_label: ""
       image:
         - test.png
       alt: Throw your hand up
@@ -54,12 +56,14 @@ Builder:
       content_label: 'Produktion: Cellar & Secrets'
       builder:
         - 
-          type: article
-          content_label: Square
-          builder: [ ]
+          type: ""
+          content_label: ""
+          image:
+            - orange-square-25deg-minus.svg
+          alt: ""
           style_settings: '{"box_theme":"s56d6nkz"}'
-          _key: container
-          _uid: container_1598611254489_552
+          _key: image
+          _uid: image_1598617567505_3524
         - 
           type: related-page-title
           text: '[{"attrs":[],"content":"1. PRODUKTION EINER 3-J\u00c4HRIGEN KONZEPTION","id":"_gkn0x9ptq","type":"h3"},{"attrs":[],"content":"Cellar &amp; Secrets","id":"_tr0xcti75","type":"h1"},{"attrs":[],"content":"Internationales Tanztheater Projekt in Deutschland und Spanien","id":"_rjz13vi3e","type":"h2"}]'

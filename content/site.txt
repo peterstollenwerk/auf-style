@@ -163,10 +163,10 @@ Box-themes:
   custom_theme: ""
 - 
   autoid: s56d6nkz
-  label: 'Square - Waves - Orange'
+  label: 'Square - Position Right'
   css_selector: ""
   color_theme: ""
-  background_theme: preob99p
+  background_theme: 3ti85p89
   border_theme: ""
   outline_theme: ""
   text_shadow_theme: ""
@@ -177,6 +177,8 @@ Box-themes:
     margin-top: -14vw;
     margin-bottom: calc(-3vw - 1rem);
     margin-right: 3vw;
+    margin-left: auto;
+    padding: 0;
 - 
   autoid: tc8l6jzz
   label: Twt
@@ -618,6 +620,28 @@ Background-themes:
       position_x: right
       position_x_custom: ""
       position_y: top
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: 3ti85p89
+  label: Transparent
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image: [ ]
+      gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
       position_y_custom: ""
       repeat: ""
       attachment: ""

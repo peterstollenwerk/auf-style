@@ -119,6 +119,8 @@ Color Convert Methods:
 * [ ] Implement Padding-Theme?
 
 
+Deko Bilder müssen als Content geladen werden, damit Z-Index überlappungen wie gewünscht funktionieren.
+
 
 * [ ] style_children
 * [ ] safe-text--textshadow

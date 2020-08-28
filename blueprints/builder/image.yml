@@ -1,5 +1,5 @@
 name: Image # The name option is used as a label for the buttons to add new fieldsets. It is also used as a label in the header of the fieldset, if the label option is not set explicitly (see next line).
-label: 'Image: {{alt}}'
+label: 'Image:{{type}}: {{content_label}}{{alt}}'
 # preview:
 #   snippet: blocks/link
 #   css: /assets/css/builder/link.css
@@ -8,11 +8,23 @@ tabs:
   content:
     label: Content
     fields:
+      type:
+        label: type
+        type: select
+        options:
+          decorative: Decorative
+        width: 1/2
+      content_label:
+        label: Label
+        type: text
+        width: 1/2
       image:
         label: Image
         type: files
       alt:
         label: Alternative Text
         type: text
+        when:
+          type: ''
   styles_tab:
     extends: auf_style/blueprints/builder/tabs/style
