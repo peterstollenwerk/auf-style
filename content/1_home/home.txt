@@ -43,16 +43,16 @@ Builder:
       _key: editor
       _uid: editor_1598558239553_1663
     - 
+      image:
+        - test.png
+      alt: Throw your hand up
+      style_settings: null
+      _key: image
+      _uid: image_1598600273788_330
+    - 
       type: article
       content_label: 'Cellar & Secrets'
       builder:
-        - 
-          image:
-            - test.png
-          alt: Throw your hands up
-          style_settings: null
-          _key: image
-          _uid: image_1598593632866_396
         - 
           type: related-page-title
           text: '[{"attrs":[],"content":"1. PRODUKTION EINER 3-J\u00c4HRIGEN KONZEPTION","id":"_gkn0x9ptq","type":"h3"},{"attrs":[],"content":"Cellar &amp; Secrets","id":"_tr0xcti75","type":"h1"},{"attrs":[],"content":"Internationales Tanztheater Projekt in Deutschland und Spanien","id":"_cg9dgj1i6","type":"h2"}]'
@@ -63,28 +63,17 @@ Builder:
           type: ""
           url: https://aufdesign.de
           text: Zur Produktion
-          style_settings: null
+          style_settings: '{}'
           _key: link
           _uid: link_1598561482471_351
-        - 
-          type: button
-          url: https://aufdesign.de
-          text: Zur Produktion
-          style_settings: null
-          _key: link
-          uniquekey: 0
-          showpreviewinitially: false
-          expandedinitially: false
-          activefieldsetinitially: content
-          _uid: link_1598596879257_2486
       style_settings: '{"box_theme":"box"}'
       _key: container
       _uid: container_1598558258404_1663
     - 
-      type: button
+      type: ""
       url: https://facebook.com
       text: Alle Produktionen
-      style_settings: '{"box_theme":"649sx8rr","font_size":"font-size--2"}'
+      style_settings: '{"box_theme":"oa9nnj0e","font_size":"font-size--2","type_theme":"ofyyv3xp"}'
       _key: link
       _uid: link_1598558680750_2591
   style_settings: '{"box_theme":"k158ky0i"}'

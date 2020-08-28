@@ -66,21 +66,6 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
   .<?= $boxesClass ?> > *
   {
 <?php endif?>
-    
-<?php /* START: COLOR THEME --------------------------*/ ?>
-<?php if($colorThemeAutoid->isNotEmpty()): ?>
-<?php 
-  $colorTheme = $site->color_themes()->toStructure()->findBy('autoid', $colorThemeAutoid->toString()); 
-  if(!$colorTheme) {
-    echo '/* ERROR: color-theme »' . $colorThemeAutoid . '« NOT FOUND */';
-  } else {
-    echo '/* color-theme: ' . $colorThemeAutoid . ' */';
-    snippet('auf-style/color-theme', [
-      'colorTheme' => $colorTheme, 
-      'renderCssClass' => false
-    ]); }?>
-<?php endif?>
-<?php /* END: COLOR THEME --------------------------*/ ?>
 
 <?php /* START: BACKGROUND-THEME --------------------------*/ ?>
 <?php if($backgroundThemeAutoid->isNotEmpty()): ?>
@@ -96,6 +81,23 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
     ]); }?>
 <?php endif?>
 <?php /* END: BACKGROUND-THEME --------------------------*/ ?>
+
+<?php /* START: COLOR THEME Needs to be after background-theme, 
+so that the background-color stays intact for image overlays!
+! --------------------------*/ ?>
+<?php if($colorThemeAutoid->isNotEmpty()): ?>
+<?php 
+  $colorTheme = $site->color_themes()->toStructure()->findBy('autoid', $colorThemeAutoid->toString()); 
+  if(!$colorTheme) {
+    echo '/* ERROR: color-theme »' . $colorThemeAutoid . '« NOT FOUND */';
+  } else {
+    echo '/* color-theme: ' . $colorThemeAutoid . ' */';
+    snippet('auf-style/color-theme', [
+      'colorTheme' => $colorTheme, 
+      'renderCssClass' => false
+    ]); }?>
+<?php endif?>
+<?php /* END: COLOR THEME --------------------------*/ ?>
 
 <?php /* START: BORDER-THEME --------------------------*/ ?>
 <?php if($borderThemeAutoid->isNotEmpty()): ?>

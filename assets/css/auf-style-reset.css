@@ -11,6 +11,16 @@ html {
   margin-top: var(--margin);
 }
 
+img {
+  display: block;
+}
+a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
 li {
   list-style-position: inside;
 }
