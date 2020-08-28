@@ -223,6 +223,36 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: jizhdvwz
+  label: Zitat Bild
+  css_selector: ""
+  color_theme: ""
+  background_theme: ""
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: 1moo7gjf
+  custom_theme: |
+    --padding: 1.618rem;
+    height: 10rem;
+    width: 8rem;
+    margin-top: calc(-2 * var(--padding));
+    margin-bottom: -7rem;
+    margin-right: 1rem;
+    margin-left: auto;
+    padding: 0;
+- 
+  autoid: pcxjucot
+  label: Zitat Box
+  css_selector: ""
+  color_theme: f79pio9u
+  background_theme: 43bt8oo2
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: 'margin-top: 5rem;'
 
 ----
 
@@ -298,6 +328,16 @@ Color-themes:
   outline: null
   text_shadow: null
   box_shadow_ambient: '#383533'
+- 
+  autoid: f79pio9u
+  label: Dark--Theme
+  css_selector: ""
+  color: '#ffffff'
+  background: '#2f3032'
+  border: null
+  outline: null
+  text_shadow: '#636363'
+  box_shadow_ambient: '#2f3032'
 
 ----
 
@@ -642,6 +682,29 @@ Background-themes:
       position_x: ""
       position_x_custom: ""
       position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: 43bt8oo2
+  label: Zitat Background
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image:
+        - bg-blur.png
+      gradient: [ ]
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: center
+      position_x_custom: ""
+      position_y: center
       position_y_custom: ""
       repeat: ""
       attachment: ""

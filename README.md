@@ -104,6 +104,11 @@ Color Convert Methods:
 
 ### P1
 
+* [ ] implement margin
+  margin-top: +-rem
+  margin-bottom +-rem
+
+
 * [ ] Create Usable Default Font-sizes Theme!
 
 * [ ] We need the possibility to add a .new-class to an element

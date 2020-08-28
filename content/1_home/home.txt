@@ -90,3 +90,39 @@ Builder:
   style_settings: '{"box_theme":"k158ky0i","text_align":"text-align--center"}'
   _key: container
   _uid: container_1598558234097_140
+- 
+  type: section
+  content_label: Pressestimme
+  builder:
+    - 
+      type: ""
+      content_label: ""
+      image:
+        - tanz.png
+      alt: >
+        Din A13 auf dem Cover der Zeitschrift
+        Tanz
+      style_settings: '{"box_theme":"jizhdvwz"}'
+      _key: image
+      _uid: image_1598620245270_3608
+    - 
+      content_label: 'h2: PRESSESTIMME'
+      text: '[{"attrs":[],"content":"PRESSESTIMME","id":"_9hvwsljnj","type":"h2"}]'
+      style_settings: '{"font_size":"font-size--0"}'
+      _key: editor
+      _uid: editor_1598619963667_1347
+    - 
+      content_label: 'h3: Arnd Wesemann'
+      text: '[{"attrs":[],"content":"Arnd Wesemann","id":"_ld46bgmkd","type":"h3"},{"attrs":[],"content":"Redakteur, tanz","id":"_pganhv4ro","type":"paragraph"}]'
+      style_settings: '{"font_size":"font-size--2"}'
+      _key: editor
+      _uid: editor_1598620057435_1347
+    - 
+      content_label: Quote
+      text: '[{"attrs":[],"content":"\u201eDie K\u00f6lner K\u00f6nigin des so genannten \u201emixed-abled Tanzes\u201c l\u00f6st vor dem erstaunten Publikum erstaunliche Denkblockaden, wenn sie herrlich lakonisch Sch\u00f6nheitsideale nicht aus dem Katalog bezieht, sondern sie mit Haut und Haar verschlingt. Sie legt die \u201eGestalt\u201c des Tanzes in Gips, sie vern\u00e4ht die Grenzen zwischen K\u00f6rpern zu symbiotisch doppelk\u00f6pfigen Wesen. Ihre Kompanie DIN A 13 \u2013 genannt \u201emit und ohne Besonderheiten\u201c \u2013 ist pure Avantgarde.","id":"_rb6yONnu6","type":"paragraph"},{"attrs":[],"content":"Gerda K\u00f6nig kann alles, \u201eblo\u00df nicht normal\u201c sein. Exhibitionismus und Intelligenz liegen bei ihr auf gleicher Wellenl\u00e4nge. Sie sprengt die K\u00e4fige und tanzt irgendwo zwischen S\u00e3o Paulo und Nairobi an der Lust, \u201edass Normalit\u00e4t nur das ist, was man daraus macht.\u201c","id":"_Q24Sx9wIf","type":"paragraph"}]'
+      style_settings: null
+      _key: editor
+      _uid: editor_1598620178475_1347
+  style_settings: '{"box_theme":"pcxjucot"}'
+  _key: container
+  _uid: container_1598619916377_158
