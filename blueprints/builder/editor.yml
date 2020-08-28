@@ -1,5 +1,5 @@
 name: Editor # The name option is used as a label for the buttons to add new fieldsets. It is also used as a label in the header of the fieldset, if the label option is not set explicitly (see next line).
-label: 'Editor: {{label}}'
+label: 'Editor: {{content_label}}'
 # preview:
 #   snippet: blocks/link
 #   css: /assets/css/builder/link.css
@@ -9,6 +9,9 @@ tabs:
     label: Content
     # icon: edit
     fields:
+      content_label:
+        type: text
+        label: Label
       text:
         label: Text
         type: editor

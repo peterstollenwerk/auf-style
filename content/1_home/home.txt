@@ -7,6 +7,7 @@ Builder:
 - 
   text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_3783fm5lg","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
   style_settings: '{"box_theme":"box"}'
+  my_label: asdfasdf
   box_theme: ""
   type_theme: ""
   font_size: null
@@ -17,40 +18,45 @@ Builder:
   _uid: page_title_1598475296941_140
   style_settings_divider: null
   style_settings_info: null
+  content_label: ""
 - 
+  content_label: tanzCompany teaser
   type: section
   builder:
     - 
-      text: '[{"attrs":[],"content":"Productions","id":"_nzyi4hlly","type":"h2"}]'
+      content_label: tanzCompany
+      text: '[{"attrs":[],"content":"tanzCompany","id":"_nzyi4hlly","type":"h2"}]'
       style_settings: '{}'
       _key: editor
       _uid: editor_1598558239553_1663
     - 
-      type: section
+      content_label: Featured Production
+      type: article
       builder:
         - 
-          text: '[{"attrs":[],"content":"Super Dream Production","id":"_g8cawzq8u","type":"h3"}]'
+          image:
+            - test.png
+          alt: Throw your hands up
           style_settings: null
-          _key: editor
-          _uid: editor_1598558268996_1943
+          _key: image
+          _uid: image_1598593632866_396
         - 
-          text: '[{"attrs":[],"content":"This is an image. : ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : ): ) : ) : ) : ) : ) : ) : )","id":"_icwkmxm5g","type":"paragraph"}]'
+          content_label: ""
+          text: |
+            #### 1. PRODUKTION EINER 3-JÄHRIGEN KONZEPTION
+            ### Cellar and Secrets
+            ##### Internationales Tanztheater Projekt in Deutschland und Spanien
           style_settings: null
-          _key: editor
-          _uid: editor_1598558304728_1943
+          _key: text
+          _uid: text_1598591017691_2280
         - 
-          text: '[{"attrs":[],"content":"Afrika hat die wilde Form der Kinderl\u00e4hmung erfolgreich ausgerottet; ein Unternehmer hat eine L\u00f6sung f\u00fcr mangelnde Infrastruktur im l\u00e4ndlichen Raum gefunden; und Karlsruhe testet das dynamische drahtlose Laden von E-Bussen: Das sind die Good News des Tages.","id":"_xr0obchy8","type":"paragraph"}]'
-          style_settings: null
-          _key: editor
-          _uid: editor_1598558348268_1943
-        - 
-          type: ""
+          type: button
           url: https://aufdesign.de
           text: Zur Produktion
           style_settings: null
           _key: link
           _uid: link_1598561482471_351
-      style_settings: '{"box_theme":"box"}'
+      style_settings: '{"box_theme":"box--inverted"}'
       _key: container
       _uid: container_1598558258404_1663
     - 

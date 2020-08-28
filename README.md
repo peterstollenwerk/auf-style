@@ -104,6 +104,15 @@ Color Convert Methods:
 
 ### P1
 
+* [ ] Create Usable Default Font-sizes Theme!
+
+Every element needs his own element
+h2->element->style
+h3->element->style
+
+* [ ] We need the possibility to add a .new-class to an element
+
+
 By default boxes have
 
 .box

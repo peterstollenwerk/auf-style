@@ -4,6 +4,12 @@
 
 
     <k-fieldset v-model="style_settings" @input="input" :fields="{
+      box_theme: {
+        label: 'Box Theme',
+        type: 'auf_style_box_theme',
+        width: '6/6',
+      },
+      
       type_theme: {
         label: 'Type Theme',
         type: 'auf_style_type_theme',
@@ -29,11 +35,7 @@
         type: 'auf_style_text_align',
         width: '1/6',
       },
-      box_theme: {
-        label: 'Box Theme',
-        type: 'auf_style_box_theme',
-        width: '2/6',
-      },
+      
 
     }" />
 

@@ -9994,6 +9994,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   props: {
     help: String,
@@ -10049,6 +10051,12 @@ exports.default = _default;
       _c("k-fieldset", {
         attrs: {
           fields: {
+            box_theme: {
+              label: "Box Theme",
+              type: "auf_style_box_theme",
+              width: "6/6"
+            },
+
             type_theme: {
               label: "Type Theme",
               type: "auf_style_type_theme",
@@ -10073,11 +10081,6 @@ exports.default = _default;
               label: "Text Align",
               type: "auf_style_text_align",
               width: "1/6"
-            },
-            box_theme: {
-              label: "Box Theme",
-              type: "auf_style_box_theme",
-              width: "2/6"
             }
           }
         },
@@ -10185,7 +10188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65332" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53387" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

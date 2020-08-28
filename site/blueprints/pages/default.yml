@@ -8,5 +8,6 @@ fields:
       page_title: auf_style/blueprints/builder/page_title
       editor: auf_style/blueprints/builder/editor
       text: auf_style/blueprints/builder/text
+      image: auf_style/blueprints/builder/image
       link: auf_style/blueprints/builder/link
       container: auf_style/blueprints/builder/container

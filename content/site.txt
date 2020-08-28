@@ -23,6 +23,15 @@ Type-themes:
   text_align: null
   custom_theme: ""
 - 
+  autoid: z4ciobuk
+  label: H3
+  css_selector: h3
+  font_size: font-size--1
+  font_weight: null
+  font_style: null
+  text_align: null
+  custom_theme: ""
+- 
   autoid: ofyyv3xp
   label: Button
   css_selector: button, .button
