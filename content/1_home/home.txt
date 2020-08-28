@@ -55,7 +55,7 @@ Builder:
       builder:
         - 
           type: related-page-title
-          text: '[{"attrs":[],"content":"1. PRODUKTION EINER 3-J\u00c4HRIGEN KONZEPTION","id":"_gkn0x9ptq","type":"h3"},{"attrs":[],"content":"Cellar &amp; Secrets","id":"_tr0xcti75","type":"h1"},{"attrs":[],"content":"Internationales Tanztheater Projekt in Deutschland und Spanien","id":"_cg9dgj1i6","type":"h2"}]'
+          text: '[{"attrs":[],"content":"1. PRODUKTION EINER 3-J\u00c4HRIGEN KONZEPTION","id":"_gkn0x9ptq","type":"h3"},{"attrs":[],"content":"Cellar &amp; Secrets","id":"_tr0xcti75","type":"h1"},{"attrs":[],"content":"Internationales Tanztheater Projekt in Deutschland und Spanien","id":"_rjz13vi3e","type":"h2"}]'
           style_settings: null
           _key: page_title
           _uid: page_title_1598596666157_412
@@ -63,7 +63,7 @@ Builder:
           type: ""
           url: https://aufdesign.de
           text: Zur Produktion
-          style_settings: '{}'
+          style_settings: '{"box_theme":"8dt47fw1"}'
           _key: link
           _uid: link_1598561482471_351
       style_settings: '{"box_theme":"box"}'

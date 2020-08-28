@@ -132,8 +132,22 @@ Box-themes:
   text_shadow_theme: ""
   box_shadow_theme: atkpxr4n
   custom_theme: |
-    text-transform: uppercase;
     padding-right: 3.5em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+- 
+  autoid: 8dt47fw1
+  label: 'Link - Arrow Right (Trans Orange)'
+  css_selector: ""
+  color_theme: ""
+  background_theme: zs31ek19
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: |
+    padding-left: 0;
+    padding-right: 2.5em;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
 - 
@@ -508,7 +522,7 @@ Background-themes:
       clip: ""
 - 
   autoid: x7n0kiuv
-  label: Icon Arrow Right
+  label: Icon Arrow Right (Orange Black)
   css_selector: .icon--arrow-right
   background:
     - 
@@ -517,6 +531,29 @@ Background-themes:
       custom: ""
       image:
         - arrow-right.svg
+      gradient: [ ]
+      size: contain
+      size_x: ""
+      size_y: ""
+      position_x: right
+      position_x_custom: ""
+      position_y: center
+      position_y_custom: ""
+      repeat: no-repeat
+      attachment: ""
+      origin: ""
+      clip: ""
+- 
+  autoid: zs31ek19
+  label: Icon Arrow Right (Trans Orange)
+  css_selector: ""
+  background:
+    - 
+      type: image
+      label: ""
+      custom: ""
+      image:
+        - arrow-right-trans-orange.svg
       gradient: [ ]
       size: contain
       size_x: ""
