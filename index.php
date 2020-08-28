@@ -12,7 +12,7 @@ use Kirby\Cms\Page;
 
 Kirby::plugin('auf/style', [
     'fieldMethods' => [
-        'toStyle' => function (Field $field) : string {
+        'toCssClasses' => function (Field $field) : string {
             return new Style($field);
         },
     ],
@@ -50,6 +50,7 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/builder/editor' => __DIR__ . '/blueprints/builder/editor.yml',
         'auf_style/blueprints/builder/text' => __DIR__ . '/blueprints/builder/text.yml',
         'auf_style/blueprints/builder/link' => __DIR__ . '/blueprints/builder/link.yml',
+        'auf_style/blueprints/builder/image' => __DIR__ . '/blueprints/builder/image.yml',
         # BUILDER Tab
         'auf_style/blueprints/builder/tabs/style' => __DIR__ . '/blueprints/builder/tabs/style.yml',
     ],    
@@ -87,6 +88,7 @@ Kirby::plugin('auf/style', [
         'auf-style/snippets/builder/text'        => __DIR__ . '/snippets/builder/text.php',
         'auf-style/snippets/builder/link'        => __DIR__ . '/snippets/builder/link.php',
         'auf-style/snippets/builder/link-button' => __DIR__ . '/snippets/builder/link-button.php',
+        'auf-style/snippets/builder/image' => __DIR__ . '/snippets/builder/image.php',
     ],
     'templates' => [
         'style-tests' => __DIR__ . '/templates/style-tests.php',

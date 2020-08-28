@@ -1,16 +1,13 @@
 <?php
 
-  use auf\Style;
-
   $type = $data->type();
-  $boxTheme = $data->box_theme();
-  $boxThemeClass = Style::getBoxThemeClassByBoxTheme($boxTheme);
+  $cssClasses = $data->style_settings()->toCssClasses();
 
 ?>
 
 <?php if($type->isNotEmpty()): ?>
 
-  <<?= $type ?> class="<?= $boxThemeClass ?>">
+  <<?= $type ?> class="<?= $cssClasses ?>">
 
   <?php endif?>
 

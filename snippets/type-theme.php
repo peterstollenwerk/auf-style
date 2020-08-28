@@ -43,8 +43,17 @@ $renderCssClass = isset($renderCssClass) ? $renderCssClass : true;
     'font-style--normal' => 'normal',
     'font-style--italic' => 'italic',
   ];
+  
+  $textAlign = (string) $typeTheme->text_align();
 
-$customTheme = $typeTheme->custom_theme();
+  $textAlignMap = [
+    'text-align--center'  => 'center',
+    'text-align--left'    => 'left',
+    'text-align--right'   => 'right',
+    'text-align--justify' => 'justify',
+  ];
+
+  $customTheme = $typeTheme->custom_theme();
 ?>
 
 <?php if($preview): ?>
@@ -67,6 +76,8 @@ $customTheme = $typeTheme->custom_theme();
   <?php if($fontWeight): ?>font-weight: <?= $fontWeightMap[$fontWeight] ?>;<?php endif?>
 
   <?php if($fontStyle): ?>font-style: <?= $fontStyleMap[$fontStyle] ?>;<?php endif?>
+  
+  <?php if($textAlign): ?>text-align: <?= $textAlignMap[$textAlign] ?>;<?php endif?>
   
   <?php if($customTheme->isNotEmpty()): ?><?= $customTheme ?><?php endif?>
 

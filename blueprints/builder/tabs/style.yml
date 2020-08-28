@@ -2,41 +2,41 @@ label: Style
 # icon: Style
 fields:
 
-  box_theme:
-    label: Box Theme
-    type: auf_style_box_theme
+  # box_theme:
+  #   label: Box Theme
+  #   type: auf_style_box_theme
 
-  type_theme:
-    label: Type Theme
-    type: auf_style_type_theme
+  # type_theme:
+  #   label: Type Theme
+  #   type: auf_style_type_theme
 
-  font_size:
-    label: Font Size
-    type: auf_style_font_size
-    width: 1/3
+  # font_size:
+  #   label: Font Size
+  #   type: auf_style_font_size
+  #   width: 1/3
   
-  font_style:
-    label: Font Style
-    type: auf_style_font_style
-    width: 1/3
+  # font_style:
+  #   label: Font Style
+  #   type: auf_style_font_style
+  #   width: 1/3
   
-  font_weight:
-    label: Font Weight
-    type: auf_style_font_weight
-    width: 1/3
+  # font_weight:
+  #   label: Font Weight
+  #   type: auf_style_font_weight
+  #   width: 1/3
   
-  text_align:
-    label: Text Align
-    type: auf_style_text_align
-    width: 1/3
+  # text_align:
+  #   label: Text Align
+  #   type: auf_style_text_align
+  #   width: 1/3
 
-  style_settings_divider:
-    type: headline
-    label: Style Settings Field (Demo)
+  # style_settings_divider:
+  #   type: headline
+  #   label: Style Settings Field (Demo)
   
-  style_settings_info:
-    type: info
-    text: nothing is working here, use fields above to generate output (Text-Component only!!!).
+  # style_settings_info:
+  #   type: info
+  #   text: nothing is working here, use fields above to generate output (Text-Component only!!!).
 
   style_settings:
     label: Style Settings

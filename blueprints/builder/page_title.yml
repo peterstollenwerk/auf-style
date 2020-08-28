@@ -1,5 +1,5 @@
 name: Page Title # The name option is used as a label for the buttons to add new fieldsets. It is also used as a label in the header of the fieldset, if the label option is not set explicitly (see next line).
-label: 'Page Title: {{label}}'
+label: 'Page Title'
 # preview:
 #   snippet: blocks/link
 #   css: /assets/css/builder/link.css
@@ -9,6 +9,13 @@ tabs:
     label: Content
     # icon: edit
     fields:
+      type:
+        label: Type
+        type: select
+        default: section
+        options:
+          page-title: Page Title (default)
+          related-page-title: Related Page Title
       text:
         label: Headlines
         type: editor
@@ -16,6 +23,7 @@ tabs:
           - h1
           - h2
           - h3
+          - h4
           - paragraph
         # disallowed: 
         #   - image

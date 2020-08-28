@@ -11,6 +11,7 @@ Type-themes:
   font_size: font-size--7
   font_weight: ""
   font_style: null
+  text_align: ""
   custom_theme: ""
 - 
   autoid: d9shovvo
@@ -19,7 +20,26 @@ Type-themes:
   font_size: font-size--6
   font_weight: null
   font_style: null
+  text_align: null
   custom_theme: ""
+- 
+  autoid: z4ciobuk
+  label: H3
+  css_selector: h3
+  font_size: font-size--1
+  font_weight: null
+  font_style: null
+  text_align: null
+  custom_theme: ""
+- 
+  autoid: ofyyv3xp
+  label: Button
+  css_selector: button, .button
+  font_size: null
+  font_weight: font-weight--bold
+  font_style: null
+  text_align: null
+  custom_theme: 'text-transform: uppercase;'
 - 
   autoid: ez2fexws
   label: Page Title H2
@@ -27,6 +47,7 @@ Type-themes:
   font_size: font-size--3
   font_weight: null
   font_style: null
+  text_align: null
   custom_theme: ""
 - 
   autoid: a68thzft
@@ -35,6 +56,16 @@ Type-themes:
   font_size: font-size--1
   font_weight: null
   font_style: null
+  text_align: null
+  custom_theme: ""
+- 
+  autoid: le0fp82g
+  label: no font-size
+  css_selector: ""
+  font_size: null
+  font_weight: font-weight--bold
+  font_style: font-style--italic
+  text_align: null
   custom_theme: ""
 
 ----
@@ -47,6 +78,39 @@ Box-themes:
   css_selector: ""
   color_theme: ""
   background_theme: ""
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
+- 
+  autoid: 649sx8rr
+  label: Button
+  css_selector: ""
+  color_theme: p8mk5urv
+  background_theme: ""
+  border_theme: 8vtoylcm
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: atkpxr4n
+  custom_theme: 'padding: 0.5em 1em;'
+- 
+  autoid: k158ky0i
+  label: tanzCompany
+  css_selector: ""
+  color_theme: wwh0hut0
+  background_theme: ula7szc6
+  border_theme: ""
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
+- 
+  autoid: tc8l6jzz
+  label: Twt
+  css_selector: ""
+  color_theme: me4gwaxf
+  background_theme: 5sa4v6y6
   border_theme: ""
   outline_theme: ""
   text_shadow_theme: ""
@@ -75,17 +139,6 @@ Box-themes:
   box_shadow_theme: ""
   custom_theme: ""
 - 
-  autoid: 649sx8rr
-  label: Big Button
-  css_selector: ""
-  color_theme: p8mk5urv
-  background_theme: ""
-  border_theme: 8vtoylcm
-  outline_theme: ""
-  text_shadow_theme: ""
-  box_shadow_theme: atkpxr4n
-  custom_theme: ""
-- 
   autoid: gi6s7ug9
   label: Black Hearts Pattern Medium
   css_selector: ""
@@ -102,29 +155,19 @@ Box-themes:
 Color-themes:
 
 - 
-  autoid: zcindkmv
-  label: Red Blue
+  autoid: p8mk5urv
+  label: Big Button
   css_selector: ""
-  color: '#ff0000'
-  background: '#001adb'
-  border: '#ff0000'
-  outline: '#ffea00'
-  text_shadow: '#332832'
-  box_shadow_ambient: '#fbff00'
-- 
-  autoid: ia0a5vcj
-  label: ""
-  css_selector: ""
-  color: '#000000'
-  background: '#ff9500'
-  border: '#ffaa33'
-  outline: '#bd6e00'
-  text_shadow: '#8a5000'
-  box_shadow_ambient: '#ff9500'
+  color: '#383533'
+  background: 'hsla(25, 100%, 50%)'
+  border: 'hsla(25, 100%, 45%)'
+  outline: '#383533'
+  text_shadow: 'hsla(25, 100%, 60%)'
+  box_shadow_ambient: '#383533'
 - 
   autoid: 9n5rbn98
   label: WTF
-  css_selector: .site--dark
+  css_selector: ""
   color: '#ffffff'
   background: '#008ee6'
   border: null
@@ -152,20 +195,69 @@ Color-themes:
   text_shadow: null
   box_shadow_ambient: '#94eaff'
 - 
-  autoid: p8mk5urv
-  label: Big Button
+  autoid: me4gwaxf
+  label: Twt
   css_selector: ""
-  color: '#dedede'
-  background: '#303030'
-  border: '#000000'
-  outline: '#000000'
-  text_shadow: '#000000'
-  box_shadow_ambient: '#303030'
+  color: '#303030'
+  background: null
+  border: null
+  outline: null
+  text_shadow: null
+  box_shadow_ambient: null
+- 
+  autoid: wwh0hut0
+  label: tanzCompany
+  css_selector: ""
+  color: '#ff6600'
+  background: '#2e3237'
+  border: null
+  outline: null
+  text_shadow: null
+  box_shadow_ambient: '#2e3237'
 
 ----
 
 Background-themes:
 
+- 
+  autoid: ula7szc6
+  label: tanzCompany
+  css_selector: ""
+  background:
+    - 
+      type: gradient
+      label: Grey 10 to Grey 40
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: Grey 10 to Grey 40
+          gradient_color_stops:
+            - 
+              color: '#2e3237'
+              start: ""
+              end: ""
+            - 
+              color: '#606468'
+              start: ""
+              end: ""
+          linear_gradient_direction: ""
+          linear_gradient_direction_to_x: ""
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
 - 
   autoid: 0mhv8ty0
   label: Blue Red Gradient
@@ -319,6 +411,49 @@ Background-themes:
       attachment: ""
       origin: ""
       clip: ""
+- 
+  autoid: 5sa4v6y6
+  label: Trans White Trans
+  css_selector: ""
+  background:
+    - 
+      type: gradient
+      label: ""
+      custom: ""
+      image: [ ]
+      gradient:
+        - 
+          gradient_type: linear_gradient
+          gradient_label: from top to bottom
+          gradient_color_stops:
+            - 
+              color: '#ffffff00'
+              start: ""
+              end: ""
+            - 
+              color: '#ffffff'
+              start: ""
+              end: ""
+            - 
+              color: '#ffffff00'
+              start: ""
+              end: ""
+          linear_gradient_direction: to
+          linear_gradient_direction_to_x: bottom
+          linear_gradient_direction_to_y: ""
+          linear_gradient_direction_deg: ""
+          linear_gradient_direction_turn: ""
+      size: ""
+      size_x: ""
+      size_y: ""
+      position_x: ""
+      position_x_custom: ""
+      position_y: ""
+      position_y_custom: ""
+      repeat: ""
+      attachment: ""
+      origin: ""
+      clip: ""
 
 ----
 
@@ -326,10 +461,17 @@ Border-themes:
 
 - 
   autoid: 8vtoylcm
-  label: 'button '
+  label: Button
   css_selector: button, .button
-  border_width: 0.125em
+  border_width: ""
   border_style: solid
+  border_radius: 0.125em
+- 
+  autoid: 6nya08ep
+  label: 'Border: None'
+  css_selector: .box
+  border_width: ""
+  border_style: none
   border_radius: ""
 - 
   autoid: 8ep0nu0b
@@ -355,6 +497,15 @@ Outline-themes:
 
 Text-shadow-themes:
 
+- 
+  autoid: otae9av1
+  label: Button
+  css_selector: ""
+  text_shadows:
+    - 
+      offset_x: -1px
+      offset_y: 1px
+      blur_radius: 3px
 - 
   autoid: ciot9vfp
   label: WTF

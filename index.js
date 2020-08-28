@@ -9994,6 +9994,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   props: {
     help: String,
@@ -10052,32 +10054,33 @@ exports.default = _default;
             box_theme: {
               label: "Box Theme",
               type: "auf_style_box_theme",
-              width: "1/2"
+              width: "6/6"
             },
+
             type_theme: {
               label: "Type Theme",
               type: "auf_style_type_theme",
-              width: "1/2"
-            },
-            text_align: {
-              label: "Text Align",
-              type: "auf_style_text_align",
-              width: "1/4"
+              width: "2/6"
             },
             font_size: {
               label: "Font Size",
               type: "auf_style_font_size",
-              width: "1/4"
+              width: "1/6"
             },
             font_weight: {
               label: "Font Weight",
               type: "auf_style_font_weight",
-              width: "1/4"
+              width: "1/6"
             },
             font_style: {
               label: "Font Style",
               type: "auf_style_font_style",
-              width: "1/4"
+              width: "1/6"
+            },
+            text_align: {
+              label: "Text Align",
+              type: "auf_style_text_align",
+              width: "1/6"
             }
           }
         },
@@ -10185,7 +10188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49738" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53387" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
