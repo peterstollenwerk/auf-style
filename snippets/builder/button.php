@@ -7,4 +7,4 @@
   $inlineStyle = $style->inlineStyles();
 
 ?>
-<a class="<?= $cssClasses ?>" style="<?= $style ?>" href="<?= $url ?>"><?= $text ?></a>
+<a class="<?= $cssClasses ?>" style="<?= $inlineStyle ?>" href="<?= $url ?>"><?= $text ?></a>

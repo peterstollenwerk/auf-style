@@ -2,8 +2,8 @@
 
   <div>
 
-
     <k-fieldset v-model="style_settings" @input="input" :fields="{
+      
       box_theme: {
         label: 'Box Theme',
         type: 'auf_style_box_theme',
@@ -32,19 +32,28 @@
       },
       text_align: {
         label: 'Text Align',
-        type: 'auf_style_text_align',
+        type:  'auf_style_text_align',
         width: '1/6',
       },
-      
+      margin_top: {
+        label: 'Margin Top',
+        type:  'number',
+        width: '1/2',
+        after: 'rem'
+      },
+      margin_bottom: {
+        label: 'Margin Bottom',
+        type:  'number',
+        width: '1/2',
+        after: 'rem'
+      },
       custom_inline_style: {
         label: 'Custom Inline Style',
-        type: 'text',
+        type:  'text',
         width: '1/1',
       },
       
-
     }" />
-
     
   </div>
 

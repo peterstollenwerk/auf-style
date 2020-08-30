@@ -13,6 +13,6 @@
   $inlineStyle = $style->inlineStyles();
 ?>
 
-<div class="<?= $cssClasses ?>" style="<?= $style ?>">
+<div class="<?= $cssClasses ?>" style="<?= $inlineStyle ?>">
   <img src="<?= $src ?>"  alt="<?= $alt ?>">
 </div>

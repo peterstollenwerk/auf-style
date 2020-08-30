@@ -102,11 +102,11 @@ Color Convert Methods:
 
 * [X] ~~*Implement --inverted-color and --inverted-background-color*~~ [2020-08-30]
 
+* [X] ~~*custom_inline_style="background-color: red;"*~~ [2020-08-30]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
-
-* [ ] custom_inline_style="background-color: red;"
 
 * [ ] We need the possibility to add a .new-class as tag(?) to an element
 

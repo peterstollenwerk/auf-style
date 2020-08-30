@@ -14,7 +14,7 @@
 ?>
 
 
-<div class="<?= $cssClasses ?>" style="<?= $style ?>">
+<div class="<?= $cssClasses ?>" style="<?= $inlineStyle ?>">
 <?php foreach($blocks as $block): ?>
   <?php $block->attrs()->update(['class' => $cssClasses]); ?>
     <?= $block ?>

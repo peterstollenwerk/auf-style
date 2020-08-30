@@ -88,11 +88,29 @@ class Style {
   }
 
   public function inlineStyles () {
-    return $this->customInlineStyles();
+    $inlineStyles = [
+      $this->marginTopVar(),
+      $this->marginBottomVar(),
+      $this->customInlineStyles(),
+    ];
+    return implode(' ', array_filter($inlineStyles));
   }
   
   public function customInlineStyles () {
     return $this->hasSetting('custom_inline_style') ? $this->settings['custom_inline_style'] : false;
+  }
+  
+  public function marginTopVar () {
+    if( $this->hasSetting('margin_top') ) {
+      $marginTop = $this->settings['margin_top'];
+      return 'margin-top: calc( var(--margin, 1rem) * ' . $marginTop . ');';
+    } else { return false; }
+  }
+  public function marginBottomVar () {
+    if( $this->hasSetting('margin_bottom') ) {
+      $marginBottom = $this->settings['margin_bottom'];
+      return 'margin-bottom: calc( var(--margin, 1rem) * ' . $marginBottom . ');';
+    } else { return false; }
   }
 
   // STATIC METHODS FOR 

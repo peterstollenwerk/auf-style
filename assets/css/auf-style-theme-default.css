@@ -67,7 +67,7 @@ input[type="text"],
 hr
 {
   padding: var(--padding);
-  
+
   color: var(--color, inherit);
   background: var(--background);
   background-color: var(--background-color);
@@ -78,7 +78,6 @@ hr
   border-radius: var(--border-radius);
 
   /* text-shadow: var(--text-shadow); */
-
   
   /* box-shadow: var(--box-shadow); */
   --box-shadow-ambient-color: var(--background-color, rgba(0,0,0,0.5));
@@ -87,8 +86,6 @@ hr
   --background-color: var(--box-background-color);
   --inverted-color: var(--background-color);
   --inverted-background-color: var(--color);
-
-
 }
 
 .site {

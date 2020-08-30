@@ -237,8 +237,6 @@ Box-themes:
     --padding: 1.618rem;
     height: 10rem;
     width: 8rem;
-    margin-top: calc(-2 * var(--padding));
-    margin-bottom: -7rem;
     margin-right: 1rem;
     margin-left: auto;
     padding: 0;
@@ -252,7 +250,7 @@ Box-themes:
   outline_theme: ""
   text_shadow_theme: 9hd9xldk
   box_shadow_theme: ""
-  custom_theme: 'margin-top: 5rem;'
+  custom_theme: ""
 
 ----
 

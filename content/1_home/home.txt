@@ -5,15 +5,9 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  content_label: Just some Type
-  text: >
-    These are just some basic examples to
-    give you an idea. You can filter and
-    find files by type, template, by their
-    meta data etc. More information on the
-    available file and files methods in the
-    Reference.
-  style_settings: '{"font_size":"font-size--4","custom_inline_style":"background: red; padding: blue;"}'
+  content_label: ""
+  text: ""
+  style_settings: '{"custom_inline_style":"min-height: 1rem;","box_theme":"47tvau07"}'
   _key: text
   _uid: text_1598598093082_150
 - 
@@ -102,7 +96,7 @@ Builder:
       alt: >
         Din A13 auf dem Cover der Zeitschrift
         Tanz
-      style_settings: '{"box_theme":"jizhdvwz"}'
+      style_settings: '{"box_theme":"jizhdvwz","margin_top":-2,"margin_bottom":-5}'
       _key: image
       _uid: image_1598620245270_3608
     - 
@@ -123,6 +117,6 @@ Builder:
       style_settings: null
       _key: editor
       _uid: editor_1598620178475_1347
-  style_settings: '{"box_theme":"pcxjucot"}'
+  style_settings: '{"box_theme":"pcxjucot","margin_top":2}'
   _key: container
   _uid: container_1598619916377_158

@@ -10,7 +10,7 @@
 
 <?php if($type->isNotEmpty()): ?>
 
-  <<?= $type ?> class="<?= $cssClasses ?>" style="<?= $style ?>">
+  <<?= $type ?> class="<?= $cssClasses ?>" style="<?= $inlineStyle ?>">
 
   <?php endif?>
 
