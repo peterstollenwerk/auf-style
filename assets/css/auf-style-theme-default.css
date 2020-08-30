@@ -332,7 +332,11 @@ hr {
   --theme-color-s:  0%;
   --theme-color-l: 50%;
   --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
-  --theme-color: hsl(var(--theme-color-h-s-l))
+  --theme-color: hsl(var(--theme-color-h-s-l));
+
+  --inverted-color: red;
+  --inverted-background-color: blue;
+
 }
 .site--light 
 {

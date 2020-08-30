@@ -227,7 +227,7 @@ Box-themes:
   autoid: jizhdvwz
   label: Zitat Bild
   css_selector: ""
-  color_theme: ""
+  color_theme: f79pio9u
   background_theme: ""
   border_theme: ""
   outline_theme: ""
@@ -250,7 +250,7 @@ Box-themes:
   background_theme: 43bt8oo2
   border_theme: ""
   outline_theme: ""
-  text_shadow_theme: ""
+  text_shadow_theme: 9hd9xldk
   box_shadow_theme: ""
   custom_theme: 'margin-top: 5rem;'
 
@@ -336,7 +336,7 @@ Color-themes:
   background: '#2f3032'
   border: null
   outline: null
-  text_shadow: '#636363'
+  text_shadow: '#000000'
   box_shadow_ambient: '#2f3032'
 
 ----
@@ -753,6 +753,15 @@ Outline-themes:
 
 Text-shadow-themes:
 
+- 
+  autoid: 9hd9xldk
+  label: Standard
+  css_selector: ""
+  text_shadows:
+    - 
+      offset_x: "0"
+      offset_y: 1px
+      blur_radius: 3px
 - 
   autoid: otae9av1
   label: Button

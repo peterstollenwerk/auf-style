@@ -105,12 +105,20 @@ Color Convert Methods:
 ### P1
 
 * [ ] implement margin
-  margin-top: +-rem
+  margin-top: rem..., custom... [auto, initial, unser]
+    - allowed Features
+      - rem
+      - auto
+      - custom
   margin-bottom +-rem
 
-* [ ] Create Snippets for DecoElements!
+* [ ] min-height: ...rem -> element-box / custom-box
+
+* [ ] Create Snippets for DecoElements to ensure Z-Index Layering
 
 * [ ] Create Usable Default Font-sizes Theme!
+  * [ ] Maybe calc the padding depending on the screen-size?
+  * [ ] Maybe calc the margin depending on the screen-size?
 
 * [ ] We need the possibility to add a .new-class to an element
 
@@ -124,9 +132,7 @@ Color Convert Methods:
 
 * [ ] Implement Padding-Theme?
 
-
 Deko Bilder müssen als Content geladen werden, damit Z-Index überlappungen wie gewünscht funktionieren.
-
 
 * [ ] style_children
 * [ ] safe-text--textshadow
