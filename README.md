@@ -106,7 +106,7 @@ Color Convert Methods:
 
 ### P1
 
-* [ ] custom_style="background-color: red;"
+* [ ] custom_inline_style="background-color: red;"
 * [ ] We need a »custom_inline_styles« field!
 
 * [ ] We need the possibility to add a .new-class as tag(?) to an element
