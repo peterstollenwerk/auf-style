@@ -1,6 +1,10 @@
 <?php
   $text = $data->text()->kirbytextinline();
   $url = $data->url();
-  $cssClasses = $data->style_settings()->toCssClasses();
+  
+  $style = $data->style_settings()->toStyle();
+  $cssClasses = $style->toCssClasses();
+  $inlineStyle = $style->inlineStyles();
+
 ?>
-<a class="<?= $cssClasses ?>" href="<?= $url ?>"><?= $text ?></a>
+<a class="<?= $cssClasses ?>" style="<?= $style ?>" href="<?= $url ?>"><?= $text ?></a>

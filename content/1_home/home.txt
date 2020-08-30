@@ -13,7 +13,7 @@ Builder:
     meta data etc. More information on the
     available file and files methods in the
     Reference.
-  style_settings: null
+  style_settings: '{"font_size":"font-size--4","custom_inline_style":"background: red; padding: blue;"}'
   _key: text
   _uid: text_1598598093082_150
 - 

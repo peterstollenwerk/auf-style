@@ -9996,6 +9996,12 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
   props: {
     help: String,
@@ -10081,6 +10087,12 @@ exports.default = _default;
               label: "Text Align",
               type: "auf_style_text_align",
               width: "1/6"
+            },
+
+            custom_inline_style: {
+              label: "Custom Inline Style",
+              type: "text",
+              width: "1/1"
             }
           }
         },
@@ -10188,7 +10200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53387" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57237" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

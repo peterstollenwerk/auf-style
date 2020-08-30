@@ -7,11 +7,14 @@
   $type = $data->type();
   $typeClass = ($type->isNotEmpty()) ? $type : '';
   
-  $cssClasses = $data->style_settings()->toCssClasses();
+  $style = $data->style_settings()->toStyle();
+  $cssClasses = $style->toCssClasses();
+  $inlineStyle = $style->inlineStyles();
+  
 ?>
 
 
-<div class="<?= $cssClasses ?>">
+<div class="<?= $cssClasses ?>" style="<?= $style ?>">
 <?php foreach($blocks as $block): ?>
   <?php $block->attrs()->update(['class' => $cssClasses]); ?>
     <?= $block ?>

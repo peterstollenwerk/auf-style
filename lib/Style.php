@@ -21,7 +21,7 @@ class Style {
   }
 
   public function toString() {
-    return implode(' ', array_filter($this->cssClasses()));
+    return $this->toCssClasses();
   }
 
   public function hasSetting(string $setting) {
@@ -81,6 +81,18 @@ class Style {
       $this->fontWeightClass(),
       $this->fontStyleClass()
     ];
+  }
+
+  public function toCssClasses() {
+    return implode(' ', array_filter($this->cssClasses()));
+  }
+
+  public function inlineStyles () {
+    return $this->customInlineStyles();
+  }
+  
+  public function customInlineStyles () {
+    return $this->hasSetting('custom_inline_style') ? $this->settings['custom_inline_style'] : false;
   }
 
   // STATIC METHODS FOR 

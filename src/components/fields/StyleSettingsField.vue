@@ -36,6 +36,12 @@
         width: '1/6',
       },
       
+      custom_inline_style: {
+        label: 'Custom Inline Style',
+        type: 'text',
+        width: '1/1',
+      },
+      
 
     }" />
 

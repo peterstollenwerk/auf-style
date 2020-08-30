@@ -4,9 +4,13 @@
   $url = $data->url();
 
   $type = $data->type();
-  $cssClasses = $data->style_settings()->toCssClasses();
+  
+  $style = $data->style_settings()->toStyle();
+  $cssClasses = $style->toCssClasses();
+  $inlineStyle = $style->inlineStyles();
+
 
 ?>
-<a href="<?= $url ?>" class="<?= $type ?> <?= $cssClasses ?>">
+<a href="<?= $url ?>" class="<?= $type ?> <?= $cssClasses ?>" style="<?= $inlineStyle ?>">
   <?= $text ?>
 </a>

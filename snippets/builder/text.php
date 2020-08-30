@@ -1,9 +1,13 @@
 <?php
   $text = $data->text()->kirbytext();
-  $cssClasses = $data->style_settings()->toCssClasses();
+
+  $style = $data->style_settings()->toStyle();
+  $cssClasses = $style->toCssClasses();
+  $inlineStyle = $style->inlineStyles();
+
 ?>
 
-<div class="<?= $cssClasses ?>">
+<div class="<?= $cssClasses ?>" style="<?= $inlineStyle ?>">
 
   <?= $text ?>
 

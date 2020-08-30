@@ -1,13 +1,16 @@
 <?php
 
   $type = $data->type();
-  $cssClasses = $data->style_settings()->toCssClasses();
+
+  $style = $data->style_settings()->toStyle();
+  $cssClasses = $style->toCssClasses();
+  $inlineStyle = $style->inlineStyles();
 
 ?>
 
 <?php if($type->isNotEmpty()): ?>
 
-  <<?= $type ?> class="<?= $cssClasses ?>">
+  <<?= $type ?> class="<?= $cssClasses ?>" style="<?= $style ?>">
 
   <?php endif?>
 
