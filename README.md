@@ -100,11 +100,13 @@ Color Convert Methods:
 
 * [X] ~~*Create Class to get all CSS classes from Style Tab*~~ [2020-08-27]
 
+* [X] ~~*Implement --inverted-color and --inverted-background-color*~~ [2020-08-30]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
 
-* [ ] implement margin
+* [ ] P1: InlineStyle: margin, oder --margin-left: 4rem;
   margin-top: rem..., custom... [auto, initial, unser]
     - allowed Features
       - rem
@@ -112,15 +114,25 @@ Color Convert Methods:
       - custom
   margin-bottom +-rem
 
+* [ ] P2: Implement Box Helpers 
+  * [ ] .border-outset, .borders-outset
+  * [ ] .padding-outset, .paddings-outset
+  * [ ] .safe-text, .safe-texts
+
+* [ ] We need a »custom_inline_styles« field!
+
 * [ ] min-height: ...rem -> element-box / custom-box
 
-* [ ] Create Snippets for DecoElements to ensure Z-Index Layering
+* [ ] We need the possibility to add a .new-class as tag(?) to an element
+
+* [ ] style_children
+* [ ] safe-text--textshadow
+* [ ] safe-text--background
+* [ ] custom_style="background-color: red;"
 
 * [ ] Create Usable Default Font-sizes Theme!
   * [ ] Maybe calc the padding depending on the screen-size?
   * [ ] Maybe calc the margin depending on the screen-size?
-
-* [ ] We need the possibility to add a .new-class to an element
 
 * [ ] We need »element--themes«!
 .element--page-title {}
@@ -128,29 +140,16 @@ Color Convert Methods:
 .element--page-title .subtitle {}
 .element--page-title .tagline {}
 
-* [ ] We need a »custom_inline_styles« field!
-
 * [ ] Implement Padding-Theme?
 
 Deko Bilder müssen als Content geladen werden, damit Z-Index überlappungen wie gewünscht funktionieren.
-
-* [ ] style_children
-* [ ] safe-text--textshadow
-* [ ] safe-text--background
-* [ ] custom_style="background-color: red;"
+* [ ] Create Snippets for Reusable DecoElements in the backend to ensure Z-Index Layering
 
 * [ ] Implement Component-Style: Every custom component »Element« could be styled via builder-dummy
-
-* [ ] Implement --inverted-color and --inverted-background-color
 
 * [ ] Implement Sun-/Moon Icons for Template Switching
 
 * [ ] Implement Font-Size Component?
-
-* [ ] Implement Box Helpers 
-  * [ ] .safe-text, .safe-texts
-  * [ ] .border-outset, .borders-outset
-  * [ ] .padding-outset, .paddings-outset
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
