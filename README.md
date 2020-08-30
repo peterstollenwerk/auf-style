@@ -106,6 +106,11 @@ Color Convert Methods:
 
 ### P1
 
+* [ ] custom_style="background-color: red;"
+* [ ] We need a »custom_inline_styles« field!
+
+* [ ] We need the possibility to add a .new-class as tag(?) to an element
+
 * [ ] P1: InlineStyle: margin, oder --margin-left: 4rem;
   margin-top: rem..., custom... [auto, initial, unser]
     - allowed Features
@@ -117,18 +122,13 @@ Color Convert Methods:
 * [ ] P2: Implement Box Helpers 
   * [ ] .border-outset, .borders-outset
   * [ ] .padding-outset, .paddings-outset
-  * [ ] .safe-text, .safe-texts
-
-* [ ] We need a »custom_inline_styles« field!
+  * [ ] .text-safe, .texts-safe
+    * [ ] safe-text--textshadow
+    * [ ] safe-text--background
 
 * [ ] min-height: ...rem -> element-box / custom-box
 
-* [ ] We need the possibility to add a .new-class as tag(?) to an element
-
 * [ ] style_children
-* [ ] safe-text--textshadow
-* [ ] safe-text--background
-* [ ] custom_style="background-color: red;"
 
 * [ ] Create Usable Default Font-sizes Theme!
   * [ ] Maybe calc the padding depending on the screen-size?
