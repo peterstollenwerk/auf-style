@@ -82,6 +82,13 @@ hr
   
   /* box-shadow: var(--box-shadow); */
   --box-shadow-ambient-color: var(--background-color, rgba(0,0,0,0.5));
+  
+  --color: var(--box-color);
+  --background-color: var(--box-background-color);
+  --inverted-color: var(--background-color);
+  --inverted-background-color: var(--color);
+
+
 }
 
 .site {
@@ -128,18 +135,20 @@ hr {
   border-top-style: var(--border-style);
   border-top-color: var(--border-color);
 }
-.boxes--inverted hr,
-.box--inverted hr {
-  --border-color: var(--background-color);
-}
+
 
 /* Box - Exceptions  */
 .boxes--inverted > *,
 .box--inverted {
-  color: var(--background-color);
-  background-color: var(--color);
-  border-color: var(--border-color);
-  --box-shadow-ambient-color: var(--color);
+  color: var(--inverted-color);
+  background-color: var(--inverted-background-color);
+  border-color: var(--inverted-border-color);
+  --box-shadow-ambient-color: var(--inverted-background-color);
+}
+
+.boxes--inverted hr,
+.box--inverted hr {
+  --border-color: var(--background-color);
 }
 
 /* Button - Exceptions */
@@ -334,38 +343,35 @@ hr {
   --theme-color-h-s-l: var(--theme-color-h), var(--theme-color-s), var(--theme-color-l);
   --theme-color: hsl(var(--theme-color-h-s-l));
 
-  --inverted-color: red;
-  --inverted-background-color: blue;
-
 }
 .site--light 
 {
   --color:                hsl(var(--theme-color-h), var(--theme-color-s), 15%);
   --background-color:     hsl(var(--theme-color-h), var(--theme-color-s), 80%);
   --background-color-2:   hsl(var(--theme-color-h), var(--theme-color-s), 90%);
-  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 95%);
   --background: linear-gradient(
     var(--background-color-2), 
     var(--background-color)
-  );
+    );
+  --box-color:            var(--coolor);
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 93%);
 }
 .site--dark 
 {
   --color:                hsl(var(--theme-color-h), var(--theme-color-s), 85%);
   --background-color:     hsl(var(--theme-color-h), var(--theme-color-s), 10%);
   --background-color-2:   hsl(var(--theme-color-h), var(--theme-color-s), 20%);
-  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 25%);
   --background: linear-gradient(
       var(--background-color-2), 
       var(--background-color)
   );
+  --box-color:            var(--coolor);
+  --box-background-color: hsl(var(--theme-color-h), var(--theme-color-s), 27%);
 }
 .boxes > *,
 .box 
 {
   border-style: none;
-  background-color: var(--box-background-color);
-  --background-color: var(--box-background-color);
 }
 /* .boxes > * .box:not([class*="box-theme--"]),
 .box .box:not([class*="box-theme--"]) 
