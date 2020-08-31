@@ -42,6 +42,7 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/text_shadow_themes' => __DIR__ . '/blueprints/fields/text_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
         'auf_style/blueprints/fields/custom_css_blocks' => __DIR__ . '/blueprints/fields/custom_css_blocks.yml',
+        'auf_style/site_style_settings' => __DIR__ . '/blueprints/site_style_settings.yml',
         # BUILDER Blocks
         'auf_style/blueprints/builder/page_title' => __DIR__ . '/blueprints/builder/page_title.yml',
         'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',

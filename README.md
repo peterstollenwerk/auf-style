@@ -4,6 +4,14 @@
 
 ## Setup
 
+copy ```site/plugins/auf-style/assets/css```
+
+to ```my-kirby-site/assets/css```
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+add theme-class to your html:
+
 ```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
 
 Open:
@@ -22,6 +30,13 @@ Set Fluid Typography min and max screen range
 ```--max-screensize: 1200;```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+```$page->style_settings()->toStyle()->toCssClasses();```
+
+```$page->style_settings()->toStyle()->inlineStyles();```
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
 ## Included Dependencies
 
