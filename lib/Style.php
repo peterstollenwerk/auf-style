@@ -72,6 +72,16 @@ class Style {
     return $this->hasSetting('font_style') ? $this->settings['font_style'] : false;
   }
 
+  public function customClasses() {
+    if($customClasses = $this->hasSetting('custom_classes') ? $this->settings['custom_classes'] : false) {
+      $classes = [];
+      foreach($customClasses as $customClass) {
+        array_push($classes, $customClass['value']);
+      }
+      return implode(' ', $classes );
+    }
+  }
+
   public function cssClasses () {
     return [
       $this->boxThemeClass(),
@@ -79,7 +89,8 @@ class Style {
       $this->textAlignClass(),
       $this->fontSizeClass(),
       $this->fontWeightClass(),
-      $this->fontStyleClass()
+      $this->fontStyleClass(),
+      $this->customClasses()
     ];
   }
 

@@ -52,6 +52,10 @@
         type:  'text',
         width: '1/1',
       },
+      custom_classes: {
+        label: 'Custom Classes',
+        type:  'tags',
+      },
       
     }" />
     
