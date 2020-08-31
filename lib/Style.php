@@ -1,9 +1,8 @@
 <?php
 
-namespace auf;
+namespace auf_style;
 
 use Kirby\Cms\Field;
-use phpDocumentor\Reflection\Types\This;
 
 class Style {
 

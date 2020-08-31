@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "auf\\": "lib/"
+            "auf_style\\": "lib/"
         }
     },
     "config": {
