@@ -112,11 +112,13 @@ Color Convert Methods:
       - custom
   margin-bottom +-rem
 
+* [X] ~~*Do we need to apply custom-classes?*~~ [2020-08-31]
+
+* [X] ~~*Do we need the possibility to add a .new-class to an element?*~~ [2020-08-31]
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### P1
-
-
 
 * [ ] We need »layout--themes« for Style and Grid-Settings!
   * [ ] This could and should be generated from demo »element«-live-builds in the backend.
@@ -126,9 +128,7 @@ Color Convert Methods:
 .element--page-title .subtitle {}
 .element--page-title .tagline {}
 
-* [ ] Do we need to apply custom-classes?
 
-* [ ] Do we need the possibility to add a .new-class to an element?
 
 * [ ] P2: Implement Box Helpers 
   * [ ] .border-outset, .borders-outset

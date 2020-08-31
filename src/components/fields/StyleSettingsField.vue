@@ -4,17 +4,17 @@
 
     <k-fieldset v-model="style_settings" @input="input" :fields="{
       
-      box_theme: {
-        label: 'Box Theme',
-        type: 'auf_style_box_theme',
-        width: '6/6',
-      },
-      
       type_theme: {
         label: 'Type Theme',
         type: 'auf_style_type_theme',
-        width: '2/6'
+        width: '1/2'
       },
+      box_theme: {
+        label: 'Box Theme',
+        type: 'auf_style_box_theme',
+        width: '1/2',
+      },
+      
       font_size: {
         label: 'Font Size',
         type: 'auf_style_font_size',
@@ -38,23 +38,25 @@
       margin_top: {
         label: 'Margin Top',
         type:  'number',
-        width: '1/2',
+        width: '1/6',
         after: 'rem'
       },
       margin_bottom: {
         label: 'Margin Bottom',
         type:  'number',
-        width: '1/2',
+        width: '1/6',
         after: 'rem'
       },
       custom_inline_style: {
         label: 'Custom Inline Style',
         type:  'text',
-        width: '1/1',
+        width: '1/2',
       },
       custom_classes: {
         label: 'Custom Classes',
         type:  'tags',
+        width: '1/2',
+        afer: ''
       },
       
     }" />

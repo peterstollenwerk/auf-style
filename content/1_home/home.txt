@@ -31,7 +31,7 @@ Builder:
     tincidunt nunc. Dignissim enim sit amet
     venenatis urna cursus eget nunc.
     Accumsan tortor posuere ac ut.
-  style_settings: '{"custom_classes":[{"text":"tag","value":"tag"},{"text":"super-combo","value":"super-combo"}],"type_theme":"ez2fexws"}'
+  style_settings: '{"type_theme":"ez2fexws"}'
   _key: text
   _uid: text_1598869239274_166
 - 
