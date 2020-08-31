@@ -17,5 +17,6 @@
     snippet('auf-style/text-shadow-themes');
     snippet('auf-style/box-shadow-themes');
     snippet('auf-style/box-themes');
+    snippet('auf-style/custom-css-blocks');
   ?>
 </style>

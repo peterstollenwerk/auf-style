@@ -222,6 +222,11 @@ hr {
   margin-left: calc( var(--border-width) * -1);
   margin-right: calc( var(--border-width) * -1);
 }
+.padding--outset.border--outset,
+.paddings--outset.borders--outset > * {
+  margin-left: calc( (var(--padding) + var(--border-width)) * -1);
+  margin-right: calc( (var(--padding) + var(--border-width)) * -1);
+}
 .outline,
 .outlines > * {
   outline-width:  var(--outline-width, 2px);

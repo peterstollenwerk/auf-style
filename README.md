@@ -104,19 +104,31 @@ Color Convert Methods:
 
 * [X] ~~*custom_inline_style="background-color: red;"*~~ [2020-08-30]
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-### P1
-
-* [ ] We need the possibility to add a .new-class as tag(?) to an element
-
-* [ ] P1: InlineStyle: margin, oder --margin-left: 4rem;
+* [X] ~~*P1: InlineStyle: margin, oder --margin-left: 4rem;*~~ [2020-08-30]
   margin-top: rem..., custom... [auto, initial, unser]
     - allowed Features
       - rem
       - auto
       - custom
   margin-bottom +-rem
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+### P1
+
+
+
+* [ ] We need »layout--themes« for Style and Grid-Settings!
+  * [ ] This could and should be generated from demo »element«-live-builds in the backend.
+
+.element--page-title {}
+.element--page-title .title {}
+.element--page-title .subtitle {}
+.element--page-title .tagline {}
+
+* [ ] Do we need to apply custom-classes?
+
+* [ ] Do we need the possibility to add a .new-class to an element?
 
 * [ ] P2: Implement Box Helpers 
   * [ ] .border-outset, .borders-outset
@@ -133,15 +145,11 @@ Color Convert Methods:
   * [ ] Maybe calc the padding depending on the screen-size?
   * [ ] Maybe calc the margin depending on the screen-size?
 
-* [ ] We need »element--themes«!
-.element--page-title {}
-.element--page-title .title {}
-.element--page-title .subtitle {}
-.element--page-title .tagline {}
 
 * [ ] Implement Padding-Theme?
 
 Deko Bilder müssen als Content geladen werden, damit Z-Index überlappungen wie gewünscht funktionieren.
+
 * [ ] Create Snippets for Reusable DecoElements in the backend to ensure Z-Index Layering
 
 * [ ] Implement Component-Style: Every custom component »Element« could be styled via builder-dummy

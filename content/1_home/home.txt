@@ -5,15 +5,9 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  content_label: ""
-  text: ""
-  style_settings: '{"custom_inline_style":"min-height: 1rem;","box_theme":"47tvau07"}'
-  _key: text
-  _uid: text_1598598093082_150
-- 
   type: ""
   text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_3783fm5lg","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
-  style_settings: '{"box_theme":"box"}'
+  style_settings: '{"box_theme":"s88br4ad"}'
   my_label: asdfasdf
   box_theme: ""
   type_theme: ""

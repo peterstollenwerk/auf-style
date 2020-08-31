@@ -44,6 +44,7 @@ Kirby::plugin('auf/style', [
         'auf_style/blueprints/fields/box_shadow_themes' => __DIR__ . '/blueprints/fields/box_shadow_themes.yml',
         'auf_style/blueprints/fields/text_shadow_themes' => __DIR__ . '/blueprints/fields/text_shadow_themes.yml',
         'auf_style/blueprints/fields/box_themes' => __DIR__ . '/blueprints/fields/box_themes.yml',
+        'auf_style/blueprints/fields/custom_css_blocks' => __DIR__ . '/blueprints/fields/custom_css_blocks.yml',
         # BUILDER Blocks
         'auf_style/blueprints/builder/page_title' => __DIR__ . '/blueprints/builder/page_title.yml',
         'auf_style/blueprints/builder/container' => __DIR__ . '/blueprints/builder/container.yml',
@@ -77,6 +78,7 @@ Kirby::plugin('auf/style', [
         'auf-style/type-themes' => __DIR__ . '/snippets/type-themes.php',
         'auf-style/type-theme' => __DIR__ . '/snippets/type-theme.php',
         'auf-style/button-themes' => __DIR__ . '/snippets/button-themes.php',
+        'auf-style/custom-css-blocks' => __DIR__ . '/snippets/custom-css-blocks.php',
         // Theme-Toggle
         'auf-style/page-theme-toggle-button' => __DIR__ . '/snippets/page-theme-toggle-button.php',
         // CSSs

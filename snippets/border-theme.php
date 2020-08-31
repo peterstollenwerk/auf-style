@@ -32,7 +32,7 @@
   .<?= $cssClass ?> {
 <?php endif?>
 
-  <?php if($width->isNotEmpty()): ?>border-width: <?= $width ?>;<?php endif?>
+  <?php if($width->isNotEmpty()): ?>--border-width: <?= $width ?>;<?php endif?>
 
   <?php if($style->isNotEmpty()): ?>border-style: <?= $style?>;<?php endif?>
 

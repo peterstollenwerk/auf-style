@@ -251,6 +251,17 @@ Box-themes:
   text_shadow_theme: 9hd9xldk
   box_shadow_theme: ""
   custom_theme: ""
+- 
+  autoid: s88br4ad
+  label: Big Border Box
+  css_selector: ""
+  color_theme: ""
+  background_theme: ""
+  border_theme: yiv6ztpj
+  outline_theme: ""
+  text_shadow_theme: ""
+  box_shadow_theme: ""
+  custom_theme: ""
 
 ----
 
@@ -734,6 +745,13 @@ Border-themes:
   border_width: 4px
   border_style: solid
   border_radius: ""
+- 
+  autoid: yiv6ztpj
+  label: Big Border
+  css_selector: ""
+  border_width: 2rem
+  border_style: dashed
+  border_radius: 1rem
 
 ----
 
@@ -870,6 +888,20 @@ Box-shadow-themes:
 
 ----
 
+Custom-css-blocks:
+
+- 
+  autoid: 0rfxuyhf
+  label: Page Title
+  enabled: 'true'
+  custom_css: |
+    .element--page-title h1 {
+    color: red;
+    }
+  disable: 'false'
+
+----
+
 Files:
 
 - np_heart_888700_000000.svg
@@ -879,6 +911,14 @@ Files:
 - waves-pattern_primary.svg
 - dots-pattern_secondary.svg
 - cellar-and-secrets.jpg
+
+----
+
+Custom-css: 
+
+----
+
+Custom-css-themes: 
 
 ----
 

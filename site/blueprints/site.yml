@@ -47,6 +47,7 @@ tabs:
         
       box_themes:
         extends: auf_style/blueprints/fields/box_themes
+      
 
 
       style_themes_divider:
@@ -66,7 +67,12 @@ tabs:
       box_shadow_themes:
         extends: auf_style/blueprints/fields/box_shadow_themes
       
-      
+      custom_css_blocks_divider:
+        type: headline
+        label: Custom CSS Blocks
+        
+      custom_css_blocks:
+        extends: auf_style/blueprints/fields/custom_css_blocks
 
   #FILES-TAB
   files:
