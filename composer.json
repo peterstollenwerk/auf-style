@@ -1,7 +1,7 @@
 {
     "name": "peterstollenwerk/auf-style",
     "description": "auf-style",
-    "type": "plugin",
+    "type": "kirby-plugin",
     "license": "proprietary",
     "authors": [
         {
