@@ -5,10 +5,6 @@
   $cssClasses = $style->toCssClasses();
   $inlineStyle = $style->inlineStyles();
   
-  $customClasses = $style->customClasses();
-
-  var_dump($customClasses);
-
 ?>
 
 

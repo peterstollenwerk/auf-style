@@ -5,39 +5,9 @@ Title: AUF Style Plugin
 Builder:
 
 - 
-  content_label: Custom Classes Test
-  text: >
-    Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna
-    aliqua. Odio pellentesque diam volutpat
-    commodo sed egestas egestas fringilla.
-    Nulla at volutpat diam ut venenatis
-    tellus in. Etiam sit amet nisl purus in
-    mollis nunc. Eget arcu dictum varius
-    duis at. Porttitor eget dolor morbi non
-    arcu risus quis varius quam. Praesent
-    elementum facilisis leo vel fringilla
-    est. Nec sagittis aliquam malesuada
-    bibendum arcu vitae elementum. Venenatis
-    tellus in metus vulputate eu
-    scelerisque. Ipsum consequat nisl vel
-    pretium lectus quam id leo. Mauris
-    ultrices eros in cursus turpis massa
-    tincidunt dui. Interdum varius sit amet
-    mattis vulputate enim. Nisl tincidunt
-    eget nullam non nisi est sit amet
-    facilisis. Quis imperdiet massa
-    tincidunt nunc. Dignissim enim sit amet
-    venenatis urna cursus eget nunc.
-    Accumsan tortor posuere ac ut.
-  style_settings: '{"type_theme":"ez2fexws"}'
-  _key: text
-  _uid: text_1598869239274_166
-- 
   type: ""
   text: '[{"attrs":[],"content":"Tagline","id":"_0svzpzpq6","type":"h3"},{"attrs":[],"content":"Title","id":"_3783fm5lg","type":"h1"},{"attrs":[],"content":"Subtitle","id":"_p9g1o5fy4","type":"h2"}]'
-  style_settings: '{"box_theme":"s88br4ad","custom_classes":[{"text":"text-align--center","value":"text-align--center"},{"text":"no-need-for-a-class","value":"no-need-for-a-class"}]}'
+  style_settings: '{"box_theme":"box"}'
   my_label: asdfasdf
   box_theme: ""
   type_theme: ""
