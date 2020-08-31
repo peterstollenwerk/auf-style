@@ -1,6 +1,6 @@
 <?php
 
-namespace auf_style;
+namespace auf;
 
 use Kirby\Cms\Field;
 
