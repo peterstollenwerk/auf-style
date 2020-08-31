@@ -4,6 +4,14 @@
 
 ## Setup
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+somewhere in your site.yml:
+
+```style_settings: auf_style/site_style_settings```
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 copy ```site/plugins/auf-style/assets/css```
 
 to ```my-kirby-site/assets/css```
@@ -12,7 +20,7 @@ to ```my-kirby-site/assets/css```
 
 add theme-class to your html:
 
-```<html class="site site-theme--dark" data-active-theme="site-theme--dark">```
+```<html class="site site--dark" data-active-theme="site--dark">```
 
 Open:
 ``css/auf-style-fluid-typography.css``

@@ -57,7 +57,7 @@ Kirby::plugin('auf/style', [
         'auf-style/site-header' => __DIR__ . '/snippets/site-header.php',
         'auf-style/site-footer' => __DIR__ . '/snippets/site-footer.php',
         'auf-style/theme-toggle-component' => __DIR__ . '/snippets/theme-toggle-component.php',
-        
+        'auf-style/theme-hue-saturation-slider' => __DIR__ . '/snippets/theme-hue-saturation-slider.php',
         'auf-style/color-themes' => __DIR__ . '/snippets/color-themes.php',
         'auf-style/color-theme' => __DIR__ . '/snippets/color-theme.php',
         'auf-style/background-themes' => __DIR__ . '/snippets/background-themes.php',

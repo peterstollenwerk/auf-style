@@ -19,3 +19,4 @@
 <body>
   
   <?= snippet('auf-style/theme-toggle-component'); ?>
+  <?= snippet('auf-style/theme-hue-saturation-slider'); ?>
